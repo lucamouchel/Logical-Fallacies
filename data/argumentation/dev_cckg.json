@@ -1,0 +1,1992 @@
+[
+    {
+        "topic": "marriage is pase.",
+        "argument": "Not everyone believes in marriage anymore.",
+        "label": 1
+    },
+    {
+        "topic": "marriage is the best for a family unit.",
+        "argument": "Marriage is a predictor of health and happiness.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment shouldn't be legalized since it puts people into false situations.",
+        "argument": "Entrapment is really a trick",
+        "label": 1
+    },
+    {
+        "topic": "Marriage is the backbone of society.",
+        "argument": "Marriage forms strong families.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment causes police to abuse citizens and extort from them.",
+        "argument": "Entrapment causes harm to citizens",
+        "label": 1
+    },
+    {
+        "topic": "Marriage is outdated.",
+        "argument": "Most people get married.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage is a sacred institution, and shouldn't be abandoned.",
+        "argument": "God supports marriage",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is justified and should be legal.",
+        "argument": "A crime is a crime whether it was set up or not.",
+        "label": 1
+    },
+    {
+        "topic": "entrapment is efficient.",
+        "argument": "Entrapment catches criminals.",
+        "label": 1
+    },
+    {
+        "topic": "marriage is important for society.",
+        "argument": "One does not need marriage to have a deeper relationship with God.",
+        "label": -1
+    },
+    {
+        "topic": "The idea of marriage can be changed, without abandoning marriage.",
+        "argument": "Marriage needs to evolve.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment isn't fair to the person being trapped.",
+        "argument": "Entrapment tricks criminals to behave a certain way.",
+        "label": 1
+    },
+    {
+        "topic": "marriage is useless nowadays.",
+        "argument": "Most people in society get married.",
+        "label": -1
+    },
+    {
+        "topic": "Urban neighborhoods are dangerous.",
+        "argument": "Urban neighborhoods are less safe than the suburban areas.",
+        "label": 1
+    },
+    {
+        "topic": "The couple should decide if they want a wedding, not the government.",
+        "argument": "A wedding is about love.",
+        "label": 1
+    },
+    {
+        "topic": "marriage has many benefits.",
+        "argument": "Marriage offers tax benefits.",
+        "label": 1
+    },
+    {
+        "topic": "law enforcement can use entrapment to catch criminals sooner and keep many more people safe.",
+        "argument": "Sometimes you can't have sufficient evidence to catch criminals.",
+        "label": 1
+    },
+    {
+        "topic": "Marriage should continue, because it is good for society, and is a good union for people.",
+        "argument": "Religion shouldn't guide relationships.",
+        "label": -1
+    },
+    {
+        "topic": "Police entrapment should not be allowed",
+        "argument": "Police entrapment relies on the baseless assumption that the person being entrapped would have committed the crime even without the entrapment",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is a good tactic to catch a criminal.",
+        "argument": "Entrapment is very illegal.",
+        "label": -1
+    },
+    {
+        "topic": "Entrapment prevents crimes and catches criminals",
+        "argument": "Even criminals shouldn't be treated appropriately",
+        "label": 1
+    },
+    {
+        "topic": "Marriage is important to families.",
+        "argument": "A strong union is necessary for a stable home.",
+        "label": 1
+    },
+    {
+        "topic": "marriage is outdated.",
+        "argument": "marriage sets the foundation for strong families.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage is a tradition that shows love and trust between two people, and shouldn't be disposed of.",
+        "argument": "Marriage has deep seeded meaning",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is helpful.",
+        "argument": "Entrapment catches criminals as well as innocents so it is unknown how effective it is.",
+        "label": -1
+    },
+    {
+        "topic": "urbanisation can  damage countryside.",
+        "argument": "urbanisation can promotes more job opportunities.",
+        "label": -1
+    },
+    {
+        "topic": "entrapment should be legal because banning it is arbitrary",
+        "argument": "Entrapment is meant to be a deception.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage should be abandoned.",
+        "argument": "Marriage is no longer necessary.",
+        "label": 1
+    },
+    {
+        "topic": "Marriage does nothing more than living together and is unneeded in this day and age.",
+        "argument": "Residing together is basically the same thing as being married.",
+        "label": 1
+    },
+    {
+        "topic": "marriage should be abandoned.",
+        "argument": "Marriage should be encouraged for the functioning of society.",
+        "label": -1
+    },
+    {
+        "topic": "Because entrapment is deceptive, and tricks law abiding citizens, it brings the law into ill repute.",
+        "argument": "Entrapment is meant to be a deception.",
+        "label": 1
+    },
+    {
+        "topic": "Marriage is a burden.",
+        "argument": "Marriage as an institution has existed and will exist for all time.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage is still important.",
+        "argument": "Marriage is still quite common.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is helpful.",
+        "argument": "Criminal entrapment leads to arrests but it sets up otherwise innocent people.",
+        "label": -1
+    },
+    {
+        "topic": "We should abandon marriage because marriage is a religious ceremony and no one believes it.",
+        "argument": "Marriage is a ceremony that connects two minds, so we have to observe it.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage offers certain protection and privileges rather than dating do not.",
+        "argument": "Marriage certainly offers more security and privileges than dating.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment can be the cause of criminal behavior.",
+        "argument": "Police sometimes set someone up to commit crime.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is wrong.",
+        "argument": "Some criminals are impossible to capture through regular means.",
+        "label": -1
+    },
+    {
+        "topic": "Weddings have no purpose.",
+        "argument": "Weddings might be meaningful to the participants.",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization is a negative for society.",
+        "argument": "Urbanization lowers natural habitats for animals.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is bad for natural habitats.",
+        "argument": "Natural habitats are plentiful enough that urbanization will not destroy too many.",
+        "label": -1
+    },
+    {
+        "topic": "urbanization harms natural habitats for the animals in the world.",
+        "argument": "urbanization causes increase in jobs.",
+        "label": -1
+    },
+    {
+        "topic": "urbanization is terrible for society.",
+        "argument": "urbanization makes society worse off.",
+        "label": 1
+    },
+    {
+        "topic": "Criminals should be caught by any means necessary.",
+        "argument": "It is important to catch criminals while respecting their constitutional rights.",
+        "label": -1
+    },
+    {
+        "topic": "War would happen if we abandon marriage.",
+        "argument": "Marriage gives people a reason to be safe.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment shouldn't be legal, because it creates false situations and isn't fair.",
+        "argument": "Entrapment tricks criminals to behave a certain way.",
+        "label": 1
+    },
+    {
+        "topic": "marriage is outdated.",
+        "argument": "Marriage is no longer needed for healthy families.",
+        "label": 1
+    },
+    {
+        "topic": "Marriage should be abandoned.",
+        "argument": "Marriage creates strong families.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage offers numerous benefits.",
+        "argument": "Marriage is just a piece of paper.",
+        "label": -1
+    },
+    {
+        "topic": "Abolishing marriage means increasing the chance of war.",
+        "argument": "War is usually linked to economic more than social factors.",
+        "label": -1
+    },
+    {
+        "topic": "Entrapment works.",
+        "argument": "Entrapment does the job of catching.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is good if approached intelligently.",
+        "argument": "Urbanization is good only if people solve some difficult environmental issues.",
+        "label": 1
+    },
+    {
+        "topic": "entrapment is wrong",
+        "argument": "The legality of entrapment needs to no longer be ignored",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment by law enforcement is a controlled way to catch criminals.",
+        "argument": "Entrapment is coercive and may catch people who would not otherwise have offended",
+        "label": -1
+    },
+    {
+        "topic": "marriage does not mean much.",
+        "argument": "Marriage is outdated.",
+        "label": 1
+    },
+    {
+        "topic": "Marriage is an outdated concept that, in our current culture, majorly struggles. We are obviously not integrated across several situations and circumstances.",
+        "argument": "Married life is now an old idea that suffers mainly in our present society. Certainly, we really aren't incorporated throughout many conditions and scenarios.",
+        "label": 1
+    },
+    {
+        "topic": "atheism is not legitimate.",
+        "argument": "Atheism is not legitimate as far too many are religious.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay should be shut down.",
+        "argument": "Guantanamo Bay holds terrible people.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning should be banned.",
+        "argument": "Human cloning is not moral.",
+        "label": 1
+    },
+    {
+        "topic": "stem cell research is a positive.",
+        "argument": "Stem cell research is offensive.",
+        "label": -1
+    },
+    {
+        "topic": "Atheism should be supported.",
+        "argument": "Many people believe in atheism.",
+        "label": 1
+    },
+    {
+        "topic": "urbanization is a negative for society.",
+        "argument": "The countryside provides little opportunity.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning is unnatural.",
+        "argument": "Human cloning is not legal.",
+        "label": 1
+    },
+    {
+        "topic": "Religion is a reason to not participate in certain activities.",
+        "argument": "Religion doesn't always have a place in a situation.",
+        "label": 1
+    },
+    {
+        "topic": "Cosmetic surgery can fix severe birth defects that may cause a lower quality of life.",
+        "argument": "There are those that believe cosmetic surgery can help people live a better life because the surgery can fix birth defects.",
+        "label": 1
+    },
+    {
+        "topic": "human cloning paves the way for life-saving breakthroughs.",
+        "argument": "not all life threatening diseases can be tackled by human cloning.",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization is terrible for the planet.",
+        "argument": "Urbanization increases pollution.",
+        "label": 1
+    },
+    {
+        "topic": "Atheism should be adopted.",
+        "argument": "Not everyone believes in atheism.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo Bay is in operation.",
+        "argument": "The US prison in Cuba houses possible terrorists captured from around the world.",
+        "label": 1
+    },
+    {
+        "topic": "cosmetic surgery should be banned.",
+        "argument": "Cosmetic surgery is not worth the risk.",
+        "label": 1
+    },
+    {
+        "topic": "embryonic stem cell research should not be subsidized.",
+        "argument": "Embryonic stem cell research saves lives.",
+        "label": -1
+    },
+    {
+        "topic": "If everyone adopted atheism, there wouldn't be any more wars.",
+        "argument": "religion is behind most wars.",
+        "label": 1
+    },
+    {
+        "topic": "People that might be innocent are being held in inhumane conditions.",
+        "argument": "Innocent people have been in jail",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay is a safe place to hold prisoners",
+        "argument": "Guantanamo Bay is a safely guarded prison",
+        "label": 1
+    },
+    {
+        "topic": "the prisons at guantanamo bay are aided by a detection field.",
+        "argument": "guantanamo bay prisons have had detection help with prisoners",
+        "label": 1
+    },
+    {
+        "topic": "Atheism is not realistic.",
+        "argument": "Many people support atheism and just simply do not want indoctrination.",
+        "label": -1
+    },
+    {
+        "topic": "The information about atheism is a fact.",
+        "argument": "There is an unknown information about atheism given out the community to reduce awareness.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning will contribute to overpopulation.",
+        "argument": "Clones tend to have shorter lifespans.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo Bay Detention camp should stay operational",
+        "argument": "All humans deserve to be treated fairly and criminals, regardless of their transgressions are no exception.",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization allows for cities to take up a lot of space, when using high rises would let more people live in a smaller area",
+        "argument": "High rises encourage benefits of cities but with no sprawl.",
+        "label": 1
+    },
+    {
+        "topic": "Everyone is free to choose their religious beliefs.",
+        "argument": "If one chooses to blindly worship the wrong entity it can lead to bad consequences.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo Bay needs to stay open.",
+        "argument": "Guantanamo Bay keeps the country safe.",
+        "label": 1
+    },
+    {
+        "topic": "Some people do not do well with limiting cosmetic surgery.",
+        "argument": "Some people do not know when to stop getting cosmetic surgery.",
+        "label": 1
+    },
+    {
+        "topic": "cosmetic surgery should be banned.",
+        "argument": "Cosmetic surgery has ruined self esteem.",
+        "label": 1
+    },
+    {
+        "topic": "Cosmetic surgery is a positive.",
+        "argument": "Cosmetic surgery modifies self esteem.",
+        "label": 1
+    },
+    {
+        "topic": "Atheism should be the default religion.",
+        "argument": "Atheism requires you to think more critically.",
+        "label": 1
+    },
+    {
+        "topic": "guantanamo bay needs to be shut down.",
+        "argument": "People need to be kept in guantanamo bay to determine whether or not they are dangerous.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research helps fight diseases.",
+        "argument": "Unlike embryonic stem cell research, no intervention doesn't help fight diseases.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity is sinister and should not be used.",
+        "argument": "Austerity lowers government debt.",
+        "label": -1
+    },
+    {
+        "topic": "Keeping the world safe from terrorists is the reason guantanamo exists.",
+        "argument": "Guantanamo keeps terrorists threats to a minimum.",
+        "label": 1
+    },
+    {
+        "topic": "Embryonic stem cell research should be subsidized.",
+        "argument": "Embryonic stem cell research can help find cancer cures.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning should be banned.",
+        "argument": "Human cloning is terrible for society.",
+        "label": 1
+    },
+    {
+        "topic": "Wars happen over religion but not atheism.",
+        "argument": "Religious arguments can result in bloody battles.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization leads to better lives for people",
+        "argument": "More people can fit in cities than in towns.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay should not be shut down.",
+        "argument": "Prisoners are tortured at Guantanamo Bay.",
+        "label": -1
+    },
+    {
+        "topic": "Embryotic stem cells can save lives",
+        "argument": "Embryotic stem cells are something that is in the interest of science",
+        "label": 1
+    },
+    {
+        "topic": "Embryonic stem cell research needs funding to help cure diseases.",
+        "argument": "Religion should be supportive of science because it does good things for humanity.",
+        "label": 1
+    },
+    {
+        "topic": "Individuals should be allowed to modify their appearance.",
+        "argument": "An individuals appearance is something to be cherished.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo bay has led to suspicion of abuse of prisoners",
+        "argument": "Keeping Guantanamo bay open does not lead to abuse of prisoners",
+        "label": -1
+    },
+    {
+        "topic": "human cloning should not be banned.",
+        "argument": "Without human cloning there would not be as many breakthroughs.",
+        "label": 1
+    },
+    {
+        "topic": "By putting the inmates of guantanamo bay on the streets, we are putting thousands of innocent people at risk.",
+        "argument": "People's lives will be at stake if we release all these inmates.",
+        "label": 1
+    },
+    {
+        "topic": "The government should lower taxes.",
+        "argument": "Collecting revenue is a good thing for the government.",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization attracts investment, and therefore, increases trade.",
+        "argument": "Urbanization creates culture in a town.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity forces the poorest of people to be in greater poverty.",
+        "argument": "Some people believe that Austerity is very bad because it causes more poverty.",
+        "label": 1
+    },
+    {
+        "topic": "Embryonic stem cell research is very expensive, and needs to be subsidized.",
+        "argument": "Embryonic stem cell research helps fight disease.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is necessary to grow economies.",
+        "argument": "Cities have economic struggles.",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization contributes to climate change and needs to be controlled.",
+        "argument": "We need to reduce the consequences of expanding cities on nature.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning should not exist.",
+        "argument": "Human cloning is offensive to religion.",
+        "label": 1
+    },
+    {
+        "topic": "Cosmetic surgery can be dangerous.",
+        "argument": "Cosmetic surgery can cause defects.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is great for the economy.",
+        "argument": "Urbanization increases jobs.",
+        "label": 1
+    },
+    {
+        "topic": "human cloning can lead to transplant breakthroughs.",
+        "argument": "Human cloning is a way of no return.",
+        "label": -1
+    },
+    {
+        "topic": "A prisoner camp should be in the US.",
+        "argument": "It doesn't matter where a prisoner camp is located.",
+        "label": -1
+    },
+    {
+        "topic": "Atheism is the truth.",
+        "argument": "There is no proof that atheism is the truth.",
+        "label": -1
+    },
+    {
+        "topic": "People should believe what they want.",
+        "argument": "Some things that people believe are harmful.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity would not be great for the economy.",
+        "argument": "Austerity would cripple citizens.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning cheapens life, since it makes copies of people, so it should be stopped.",
+        "argument": "Curing disease is a priority.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery should not be banned.",
+        "argument": "Many people with disfigurements get cosmetic surgery.",
+        "label": 1
+    },
+    {
+        "topic": "plastic surgery should be discouraged.",
+        "argument": "Plastic surgery may be used to improve self esteem.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo bay is bad.",
+        "argument": "Guantanamo bay is a serving the purpose of treating prisoners badly.",
+        "label": 1
+    },
+    {
+        "topic": "Stem cell research is helpful to the medical field.",
+        "argument": "Stem cell research is beneficial to the destruction of babies and not the medical field.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity ruins businesses.",
+        "argument": "By over taxing businesses through austerity, the economy will suffer.",
+        "label": 1
+    },
+    {
+        "topic": "Plastic surgery should be banned.",
+        "argument": "Plastic surgery changes self esteem.",
+        "label": -1
+    },
+    {
+        "topic": "Stem cell research can cure disease.",
+        "argument": "Unborn babies are alive.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning is unnatural.",
+        "argument": "Human cloning has nothing to do with God.",
+        "label": 1
+    },
+    {
+        "topic": "plastic surgery can help people overcome their insecurities.",
+        "argument": "Plastic surgery corrects disfigurement.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay has been useful at dealing with intelligent enemies.",
+        "argument": "Guantanamo Bay is necessary for the greater good of the US.",
+        "label": 1
+    },
+    {
+        "topic": "human coning would increase the inequality gap",
+        "argument": "human cloning would cause there to be a lack of resources for others",
+        "label": 1
+    },
+    {
+        "topic": "an austerity regime is unfair to the poor and the sick.",
+        "argument": "an austerity regime is not bad for fiscal deficit.",
+        "label": -1
+    },
+    {
+        "topic": "Regime's shouldn't punish the vulnerable by removing programs they rely on.",
+        "argument": "Poor people don't have a lot of money for food",
+        "label": 1
+    },
+    {
+        "topic": "Austerity forces poor people to become even poorer.",
+        "argument": "Any type of government keeps poor people poor.",
+        "label": -1
+    },
+    {
+        "topic": "Most wars have religious undertones to them",
+        "argument": "Religion warps minds of people",
+        "label": 1
+    },
+    {
+        "topic": "Cloning is good because it leads to greater medical knowledge.",
+        "argument": "God's will is that humans are brought into existence naturally.",
+        "label": -1
+    },
+    {
+        "topic": "morals would decline",
+        "argument": "The depravity would be on the march",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning is positive for society.",
+        "argument": "Human cloning is dangerous.",
+        "label": -1
+    },
+    {
+        "topic": "We shouldn't adopt atheism.",
+        "argument": "Atheists make up a small percentage of the population and religion has great say.",
+        "label": 1
+    },
+    {
+        "topic": "People should believe what they choose to believe.",
+        "argument": "This country has freedom of religion.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning should not be banned.",
+        "argument": "Human cloning leads to medical breakthroughs.",
+        "label": 1
+    },
+    {
+        "topic": "We should fight against urbanization because it destroys the natural beauty of areas.",
+        "argument": "cities don't have green space.",
+        "label": 1
+    },
+    {
+        "topic": "Cosmetic surgery is not helpful",
+        "argument": "People often change their minds",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay should be shut down.",
+        "argument": "Guantanamo Bay sets a poor example.",
+        "label": 1
+    },
+    {
+        "topic": "Embryonic stem cell research should be subsidized",
+        "argument": "Serious illnesses take millions of lives every year, and stem cell research may lead to a cure for some of them",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay is too physically close to America, which is a danger to Americans.",
+        "argument": "If a terrorist escapes, they could wreak havoc in an American city or injure someone trying to find a place to hide.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is bad for farmers.",
+        "argument": "Urbanization will cause more people to move near farmers, causing more demand.",
+        "label": -1
+    },
+    {
+        "topic": "urbanization creates high crime.",
+        "argument": "People migrate to cities in order to make money.",
+        "label": -1
+    },
+    {
+        "topic": "A single mistake can cause great harm to a person.",
+        "argument": "We don't tend to accurately rate how fragile we are, and sometimes our body won't be able to recover from some mistakes.",
+        "label": 1
+    },
+    {
+        "topic": "Atheism is unamerican.",
+        "argument": "Freedom of a religion is a right in America and this includes atheism.",
+        "label": -1
+    },
+    {
+        "topic": "The government controls people's money.",
+        "argument": "The government controls people's money.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization leads to an increase in crime",
+        "argument": "Urbanization causes more jobs to be created and people's money to increase, which leads to lower crime rates",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cells are of incredible benefit to medical science, as they can be used to cure diseases and save lives.",
+        "argument": "It is immoral to save a life by taking someone else's life, even if it is an embryo.",
+        "label": -1
+    },
+    {
+        "topic": "Stem cell research is too expensive.",
+        "argument": "Stem cell research is not worth it.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is a positive for society.",
+        "argument": "Urbanization encourages job growth.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning is not right.",
+        "argument": "Human cloning can bring out potential breakthroughs.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo Bay is necessary.",
+        "argument": "Guantanamo Bay keeps terrorists.",
+        "label": 1
+    },
+    {
+        "topic": "Religious taxpayers will be offended if we use their money to finance this research.",
+        "argument": "The religious taxpayers will be offended if we fund this research with their money.",
+        "label": 1
+    },
+    {
+        "topic": "Stem cell research should be banned.",
+        "argument": "Stem cell research saves lives.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning is bad due to the risks",
+        "argument": "If you do not favor medical advancements, human cloning is bad.",
+        "label": 1
+    },
+    {
+        "topic": "austerity doesn't allow poor people to improve their circumstances",
+        "argument": "austerity doesn't improve the lives of poor people",
+        "label": 1
+    },
+    {
+        "topic": "Many diseases could be cured with embryonic stem cell research.",
+        "argument": "Embryonic stem cell research doesn't want disease to continue.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay should have its prisoners transferred to U.S. soil so that American laws apply.",
+        "argument": "The prisoners in Guantanamo Bay must be kept in lockdown.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research gives hope in human life.",
+        "argument": "The embryonic stem cell is unethical because it destroys human life for research purposes.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery can have issues.",
+        "argument": "Cosmetic surgery changes self esteem.",
+        "label": 1
+    },
+    {
+        "topic": "human cloning should not be banned.",
+        "argument": "Human cloning could be used for health advancements",
+        "label": 1
+    },
+    {
+        "topic": "Stem cell research has educated people on how to better try and cure serious diseases and conditions.",
+        "argument": "Scientists can utilize stem cells.",
+        "label": 1
+    },
+    {
+        "topic": "It is within people's rights to change their looks.",
+        "argument": "People's mental health is often improved with plastic surgery.",
+        "label": 1
+    },
+    {
+        "topic": "Since urbanization leads to more cars and pollution, it leads to bad health problems.",
+        "argument": "urbanization removes green space from an area.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is great for society.",
+        "argument": "More people are willing to invest with urbanization.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo bay should be closed down.",
+        "argument": "Guantanamo bay is a torture facility.",
+        "label": 1
+    },
+    {
+        "topic": "Stem cell research could hold the key to curing dangerous diseases, such as alzheimers and cancer.",
+        "argument": "Alzeimers and Cancer kill people.",
+        "label": 1
+    },
+    {
+        "topic": "Atheism is a negative force.",
+        "argument": "People who follow atheism stand for nothing.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is worse for society.",
+        "argument": "People have gotten sick from urbanization.",
+        "label": 1
+    },
+    {
+        "topic": "Embryonic stem cell research should be supported.",
+        "argument": "Embryonic stem cell research aids medicine.",
+        "label": 1
+    },
+    {
+        "topic": "Known killers need to be held.",
+        "argument": "Criminals need to be off the street.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay is a shameful thing for the US.",
+        "argument": "Guantanamo Bay is necessary for the greater good of the US.",
+        "label": -1
+    },
+    {
+        "topic": "cosmetic surgery improves self esteem.",
+        "argument": "Cosmetic surgery makes people feel whole again.",
+        "label": 1
+    },
+    {
+        "topic": "Stem cell research is beneficial for everyone.",
+        "argument": "Stem cell research is being used in the development of new treatments for diseases.",
+        "label": 1
+    },
+    {
+        "topic": "Plastic surgery can be harmful.",
+        "argument": "Plastic surgery helps people.",
+        "label": -1
+    },
+    {
+        "topic": "People should be allowed to believe in fairy tales",
+        "argument": "Fairy tales teach lessons",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is harmful to the environment.",
+        "argument": "Urbanization carries more pollution.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo bay is essential for national security",
+        "argument": "Having Guantanamo bay open will not negatively affect safety",
+        "label": 1
+    },
+    {
+        "topic": "Some people believe that embracing embryonic stem cell research is akin to playing God.",
+        "argument": "Embryonic stem cell research doesn't want disease to continue.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity regime should be implemented.",
+        "argument": "Austerity would get the nation back on track.",
+        "label": 1
+    },
+    {
+        "topic": "Stem cell research should be banned.",
+        "argument": "Stem cell research provides breakthroughs.",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization causes increases in crime rates and pollution.",
+        "argument": "Criminals can be anywhere",
+        "label": -1
+    },
+    {
+        "topic": "Austerity regimes are bad for democracy.",
+        "argument": "Democracy is hindered when austerity regimes are formed.",
+        "label": 1
+    },
+    {
+        "topic": "Stem cell research helps society.",
+        "argument": "Stem cell research can be dangerous for the baby.",
+        "label": -1
+    },
+    {
+        "topic": "people should be able to be whatever religion they would like.",
+        "argument": "Freedom of religion means that people are able to adhere to any religion.",
+        "label": 1
+    },
+    {
+        "topic": "Urban areas destroy natural environments.",
+        "argument": "Urban regions are built over the natural habitats of animals.",
+        "label": 1
+    },
+    {
+        "topic": "An austerity government works theoretically, but only if all people are willing to compromise.",
+        "argument": "Many people are greedy or out for themselves, and would game the system.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research should be supported.",
+        "argument": "Embryonic stem cell research is harmful to babies.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity is a positive for society.",
+        "argument": "Austerity can cripple a society economically.",
+        "label": -1
+    },
+    {
+        "topic": "Countryside is lost by urbanization.",
+        "argument": "Urbanization should be opposed by those who like the countryside.",
+        "label": 1
+    },
+    {
+        "topic": "austerity is simply not realistic.",
+        "argument": "Austerity tends to not be popular.",
+        "label": 1
+    },
+    {
+        "topic": "We should not close Guantanamo bay because there are a lot of bad men there and they don't need to be in the public.",
+        "argument": "Guantanamo bay needs to stay the way it is because there are bad men that live there and the public needs to be protected from them.",
+        "label": 1
+    },
+    {
+        "topic": "Cosmetic surgery can correct an impactful disfigurement.",
+        "argument": "If people can't maintain normal bodily functions after unexpected injuries, they may not survive without cosmetic surgery.",
+        "label": 1
+    },
+    {
+        "topic": "Embryonic stem cell research kills babies, and doesn't deserve money.",
+        "argument": "Some embryonic stem cells are from failed IVF.",
+        "label": -1
+    },
+    {
+        "topic": "Since a moral crisis can be created, and people can be exploited, human cloning shouldn't be allowed.",
+        "argument": "God creates life.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is a positive for society.",
+        "argument": "Urbanization increases jobs.",
+        "label": 1
+    },
+    {
+        "topic": "Fighting over holy lands and religions causes wars",
+        "argument": "Wars are not just about holy lands and religion",
+        "label": -1
+    },
+    {
+        "topic": "People should not be taxed excessively.",
+        "argument": "Lowering taxes increases the amount of money in people's pockets.",
+        "label": 1
+    },
+    {
+        "topic": "Cloning humans is dangerous and can lead to widespread diseases",
+        "argument": "Many scientists believe that cloning humans will lead to cures for many current diseases",
+        "label": -1
+    },
+    {
+        "topic": "Austerity will hurt the economy.",
+        "argument": "Austerity will hurt the tax payers.",
+        "label": 1
+    },
+    {
+        "topic": "urbanization contributes to job growth.",
+        "argument": "Urbanization strengthens the economy.",
+        "label": 1
+    },
+    {
+        "topic": "austerity overwhelmingly impacts the poor and the vulnerable the most",
+        "argument": "the poor and downtrodden in society do better when government spends",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning could spread disease.",
+        "argument": "Human cloning could lead to unexpected consequences.",
+        "label": 1
+    },
+    {
+        "topic": "Cosmetic surgery should not be banned.",
+        "argument": "Cosmetic surgery is popular.",
+        "label": 1
+    },
+    {
+        "topic": "we should adopt atheism since religion is the cause of so many problems",
+        "argument": "being less religious will only make divisions in society less severe",
+        "label": 1
+    },
+    {
+        "topic": "embryonic stem cells are important to medicine.",
+        "argument": "Embryonic stem cell research should not be controversial.",
+        "label": 1
+    },
+    {
+        "topic": "Being too restrictive causes people to rebel",
+        "argument": "It isn't a good idea to cut back too much, elsewise persons might not vote.",
+        "label": 1
+    },
+    {
+        "topic": "Cloning is good because it can replace loved ones.",
+        "argument": "Losing a loved one is hard and cloning does not replace them but comes as close as possible by creating a person of the same genetic makeup.",
+        "label": 1
+    },
+    {
+        "topic": "Atheism should not be forced upon others.",
+        "argument": "This country has freedom of religion.",
+        "label": 1
+    },
+    {
+        "topic": "Urban development is more dangerous.",
+        "argument": "Urban development leads to a stronger economy.",
+        "label": -1
+    },
+    {
+        "topic": "the subsidize of this research should stop.",
+        "argument": "Since when someone is allowed to kill the babies.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity would be terrible for society.",
+        "argument": "Austerity cripples society economically.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity would cripple the population.",
+        "argument": "Austerity raises taxes on citizens.",
+        "label": 1
+    },
+    {
+        "topic": "austerity would be a positive.",
+        "argument": "Austerity tries to reduce debt.",
+        "label": 1
+    },
+    {
+        "topic": "plastic surgery raises patients ' self esteem and allows them to lead normal happy lives.",
+        "argument": "A person is unhappy if she is dissatisfied with her body.",
+        "label": 1
+    },
+    {
+        "topic": "atheism should be adopted.",
+        "argument": "When people practice atheism, they have no moral compass.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning is against human nature, and tampers with things that God should be in control of, and man shouldn't be tampering in.",
+        "argument": "God creates life.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity programs are terrible for the economy.",
+        "argument": "Austerity programs cut funding.",
+        "label": 1
+    },
+    {
+        "topic": "People should be allowed to practice the religion they want, as religions teach people sets of morals and values.",
+        "argument": "Different religions can have many different beliefs and practices.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning should not be banned.",
+        "argument": "Human cloning benefits science.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning should not be banned due to its potential for improving the health of mankind.",
+        "argument": "The loss of human cloning will be a setback for the well being of all people.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning should be allowed.",
+        "argument": "Human cloning is terrifying.",
+        "label": -1
+    },
+    {
+        "topic": "The government should not implement austerity.",
+        "argument": "The government needs austerity to lower debt.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity would benefit society.",
+        "argument": "Austerity would help reduce government debt.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity should not be implemented.",
+        "argument": "Austerity increases taxes.",
+        "label": 1
+    },
+    {
+        "topic": "It is inhumane to torture human being",
+        "argument": "guantanamo bay is bad as they torture criminals there which is bad",
+        "label": 1
+    },
+    {
+        "topic": "Cloning humans means we can clone individual organs and thus eliminate the wait for transplants.",
+        "argument": "Cloning humans can seem bad but it's actually helpful because people who need transplants can get them from cloned organs.",
+        "label": 1
+    },
+    {
+        "topic": "urbanization is a positive for society.",
+        "argument": "Urbanization increases employment for many.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning will help science.",
+        "argument": "Human cloning is not legal.",
+        "label": -1
+    },
+    {
+        "topic": "Certain types of regimes punish the vulnerable who rely on certain programs.",
+        "argument": "The poor need help",
+        "label": 1
+    },
+    {
+        "topic": "Plastic surgery has been a godsend for some people.",
+        "argument": "People with disfigurements often want plastic surgery.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization should be supported.",
+        "argument": "Urbanization displaces people.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research should not be subsidized.",
+        "argument": "Embryonic stem cell research should be paid for privately.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is terrible for society.",
+        "argument": "Urbanization increases jobs.",
+        "label": -1
+    },
+    {
+        "topic": "cosmetic surgery has ruined society.",
+        "argument": "Cosmetic surgery can be addicting.",
+        "label": 1
+    },
+    {
+        "topic": "religious doctrines cause many fights.",
+        "argument": "Religious doctrines are necessary for well being.",
+        "label": -1
+    },
+    {
+        "topic": "atheism violates freedom of religion.",
+        "argument": "Atheism may offend those who are religious.",
+        "label": 1
+    },
+    {
+        "topic": "Prisons have an extra layer of protection at Guantanamo bay.",
+        "argument": "Quite a few people have escaped from guantanamo bay.",
+        "label": -1
+    },
+    {
+        "topic": "plastic surgery can be quite helpful.",
+        "argument": "People need therapy, not surgery.",
+        "label": -1
+    },
+    {
+        "topic": "Plastic surgery is good and allows people to live a normal life.",
+        "argument": "Normal happy lives is the goal of plastic surgery.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning is positive for society.",
+        "argument": "Human cloning has dangers.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research is very important to medicine.",
+        "argument": "Embryonic stem cell research is a no brainer.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning should be banned.",
+        "argument": "There are ethical issues with not creating a human in the most natural way.",
+        "label": 1
+    },
+    {
+        "topic": "lack of government spending can be detrimental to the economy.",
+        "argument": "Unemployment can be exaserbated by reduced government spending.",
+        "label": 1
+    },
+    {
+        "topic": "plastic surgery is terrible for society.",
+        "argument": "Plastic surgery can warp self esteem.",
+        "label": 1
+    },
+    {
+        "topic": "marriage promotes failure in the form of divorce.",
+        "argument": "it is common that many partners break up nowadays.",
+        "label": 1
+    },
+    {
+        "topic": "Marriage is essential to society.",
+        "argument": "Marriage is still popular today",
+        "label": 1
+    },
+    {
+        "topic": "Marriage is beneficial to children since they can see examples of healthy relationships.",
+        "argument": "Marriages are indeed beneficial to children if, and only if, those relationships are healthy, which is a rare scenario nowadays.",
+        "label": -1
+    },
+    {
+        "topic": "If a couple is committed, then they don't need to be married.",
+        "argument": "Religion desires marriage",
+        "label": -1
+    },
+    {
+        "topic": "We should continue getting married as it shows commitment and love.",
+        "argument": "Marriages show commitment.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment can be a good way of catching a criminal",
+        "argument": "Entrapment can be a tactic used by the good guys to catch criminals",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment should be legal.",
+        "argument": "Entrapment catches terrible people.",
+        "label": 1
+    },
+    {
+        "topic": "marriage should not be done away with.",
+        "argument": "Many people still value marriage.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is good if done properly.",
+        "argument": "The bad parts of entrapment can be eliminated if the criminal can be given the opportunity to refuse.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is not right.",
+        "argument": "Entrapment is a poor method for catching someone.",
+        "label": 1
+    },
+    {
+        "topic": "Marriage does not mean much.",
+        "argument": "Marriage is the backbone of society.",
+        "label": -1
+    },
+    {
+        "topic": "marriage is an outdated concept.",
+        "argument": "kids need a happy environment to grow up.",
+        "label": -1
+    },
+    {
+        "topic": "Entrapment isn't honest itself, so it shouldn't be used to keep other people honest.",
+        "argument": "Entrapment tricks criminals to behave a certain way.",
+        "label": 1
+    },
+    {
+        "topic": "Marriage is no longer needed in society anymore.",
+        "argument": "Marriage is a traditional institution.",
+        "label": -1
+    },
+    {
+        "topic": "marriage is no longer relevant, and is outdated in modern times.",
+        "argument": "People still honor marriage",
+        "label": -1
+    },
+    {
+        "topic": "entrapment should not exist.",
+        "argument": "entrapment makes people act in ways they wouldn't.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is necessary to catch dangerous people.",
+        "argument": "Entrapment does not always result in innocent people being charged.",
+        "label": 1
+    },
+    {
+        "topic": "marriage is extremely important for strong families.",
+        "argument": "Marriage has been a staple in society for centuries.",
+        "label": 1
+    },
+    {
+        "topic": "marriage oppresses women.",
+        "argument": "Marriage is the bedrock of society.",
+        "label": -1
+    },
+    {
+        "topic": "If entrapment is legalized people will have less trust in police.",
+        "argument": "Entrapment could be legalized as a means of enabling police to produce evidence.",
+        "label": -1
+    },
+    {
+        "topic": "Since entrapment gets a lot of bad guys off the street, it should be legalized.",
+        "argument": "Criminals deserve due process",
+        "label": -1
+    },
+    {
+        "topic": "entrapment serves to bust criminals but results in them being let go",
+        "argument": "Entrapment is an effective way to make sure criminals are off the streets.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage should continue as an institution, because it is an expression of love and commitment.",
+        "argument": "Young people are still getting married.",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is necessary for law enforcement.",
+        "argument": "Entrapment is a legal quagmire for law enforcement.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage creates many burdens within a relationship.",
+        "argument": "The financial, legal, and social obligations of marriage develop discipline, and personal growth.",
+        "label": -1
+    },
+    {
+        "topic": "Plastic surgery should not be shamed.",
+        "argument": "Plastic surgery is harmful to one's self esteem.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery is unnecessary.",
+        "argument": "Some cosmetic surgeries happen for medical reasons.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery is a positive for women.",
+        "argument": "Women who get plastic surgery do not know when to stop.",
+        "label": -1
+    },
+    {
+        "topic": "Atheism restricts religious freedom",
+        "argument": "The increased number of people becoming Atheists will benefit society",
+        "label": -1
+    },
+    {
+        "topic": "Research on embryonic stem cell should not be tax subsidized because for many it goes against their religious beliefs.",
+        "argument": "There are Christians who disagree with doing research on embryonic stem cells.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity would help get the country back on track.",
+        "argument": "Austerity would cripple the poor.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo should be shut down because it's a violation of the sovereignty of Cuba",
+        "argument": "Guantanamo provides safety from terrorists",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning should be allowed, as it would be a great boon for medical advancements.",
+        "argument": "It is immoral to create people for the sole purpose of curing others.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research is important.",
+        "argument": "Embryonic stem cell research is harmful to babies.",
+        "label": -1
+    },
+    {
+        "topic": "That Guantanamo Bay needs to be closed",
+        "argument": "That people are imprisoned without wrong-doing",
+        "label": 1
+    },
+    {
+        "topic": "Embryonic stem cell research shouldn't be subsidized because the ones that profit are the ones that should be investing money.",
+        "argument": "Patients deserve the research to continue.",
+        "label": -1
+    },
+    {
+        "topic": "We should spend money, not engage in austerity, for economic growth",
+        "argument": "austerity helped European countries recover after WWII",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery is bad.",
+        "argument": "Cosmetic surgery helps dysmorphia.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity will decrease economic activity.",
+        "argument": "Austerity will lower debt quicker.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity is the way.",
+        "argument": "Austerity would cripple the people.",
+        "label": -1
+    },
+    {
+        "topic": "organ transplant is important.",
+        "argument": "A patient with failed kidneys might not die if he gets organ donation.",
+        "label": 1
+    },
+    {
+        "topic": "Human cloning should be allowed.",
+        "argument": "Natural humans would choose specific genes for designer babies.",
+        "label": -1
+    },
+    {
+        "topic": "The human race is capable of causing consequences.",
+        "argument": "The human race can live without rules.",
+        "label": -1
+    },
+    {
+        "topic": "When cloning gives us solution to some diseases, it should be allowed",
+        "argument": "Cloning is a perfect thing to do for us to sustain",
+        "label": 1
+    },
+    {
+        "topic": "We need to subsidize stem cell research.",
+        "argument": "Subsidized stem cell research will be prohibitively expensive in practice.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning can help to make individuals in the world.",
+        "argument": "Human cloning can cause confusion among people.",
+        "label": -1
+    },
+    {
+        "topic": "Every person deserves to believe whatever they want, and not be forced to accept what atheists believe.",
+        "argument": "People believe many different things.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity should not be implemented.",
+        "argument": "Austerity would get the country back on track.",
+        "label": -1
+    },
+    {
+        "topic": "People shouldn't get plastic surgery due to the after effects.",
+        "argument": "Plastic surgery can boost self esteem.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity regimes are useless.",
+        "argument": "Austerity lowers debt.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery should be banned.",
+        "argument": "Cosmetic surgery is popular.",
+        "label": -1
+    },
+    {
+        "topic": "guantanamo bay needs to be closed down.",
+        "argument": "If guantanamo bay should be closed for good.",
+        "label": 1
+    },
+    {
+        "topic": "Cosmetic surgery has some benefits.",
+        "argument": "Cosmetic surgery can cause people to question themselves.",
+        "label": -1
+    },
+    {
+        "topic": "The cons of cosmetic surgery often outweigh the benefits.",
+        "argument": "It is not the case that cosmetic surgery is always performed safely.",
+        "label": 1
+    },
+    {
+        "topic": "Plastic surgery is harmful.",
+        "argument": "People should be allowed to have plastic surgery if they desire.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research should not be subsidized.",
+        "argument": "Many religions have issues with embryonic stem cell research.",
+        "label": 1
+    },
+    {
+        "topic": "Cosmetic surgery is bad.",
+        "argument": "Cosmetic surgery serves a purpose that some mistaken individuals would consider bad.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo Bay should be open.",
+        "argument": "Guantanamo Bay tortures prisoners.",
+        "label": -1
+    },
+    {
+        "topic": "people should have the right to live in an urban area if they desire.",
+        "argument": "Urban areas create a ton of pollution.",
+        "label": -1
+    },
+    {
+        "topic": "people should be content with how they look.",
+        "argument": "the modern world values beauty.",
+        "label": -1
+    },
+    {
+        "topic": "Cloning causes exploitation and pushes moral boundaries so should be banned.",
+        "argument": "Exploration of science can lead to medical discoveries.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning allows us to produce better individuals and creating a better world.",
+        "argument": "We should allow human cloning because we can create a better environment and better people.",
+        "label": 1
+    },
+    {
+        "topic": "austerity regimes exploit the poor.",
+        "argument": "Austerity rips the band aid faster.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stems cells may cure many diseases.",
+        "argument": "Research can be done on different types of stem cells that are not embryonic.",
+        "label": -1
+    },
+    {
+        "topic": "Atheism is superior.",
+        "argument": "Atheism being enforced contradicts freedom of religion.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo Bay is abusive.",
+        "argument": "Guantanamo Bay should not be kept open.",
+        "label": 1
+    },
+    {
+        "topic": "Austerity is the way towards improvement.",
+        "argument": "Austerity reduces debt.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay should be shut down.",
+        "argument": "Guantanamo Bay tortures prisoners.",
+        "label": 1
+    },
+    {
+        "topic": "Guantanamo Bay should shut down.",
+        "argument": "Guantanamo Bay should be moved.",
+        "label": -1
+    },
+    {
+        "topic": "Legalizing entrapment would decrease trust in police",
+        "argument": "Police can build trust in other ways, even if it is damaged by legalized entrapment.",
+        "label": -1
+    },
+    {
+        "topic": "entrapment helps solve crimes.",
+        "argument": "Entrapment violates liberties.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage should be encouraged not abandoned.",
+        "argument": "The idea of marriage should not be encouraged because it's too old fashioned.",
+        "label": -1
+    },
+    {
+        "topic": "Entrapment is helpful.",
+        "argument": "Entrapment pins criminals in one spot though they might not have done anything wrong otherwise.",
+        "label": -1
+    },
+    {
+        "topic": "religion causes many fights.",
+        "argument": "There would be less fights without religious conflicts.",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization creates population centers and this is good because it makes it easier to get jobs.",
+        "argument": "Urbanization may create more jobs but the crime level tends to rise significantly as well.",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization provides opportunities for growth",
+        "argument": "Growth is hard in a crowded area",
+        "label": -1
+    },
+    {
+        "topic": "embryonic sten cell research should not be subsidized due to violation of christian religious beliefs .",
+        "argument": "embryonic sten cell research targets some serious diseases.",
+        "label": -1
+    },
+    {
+        "topic": "Torture goes against the human rights act, and needs to stop.",
+        "argument": "Torture works.",
+        "label": -1
+    },
+    {
+        "topic": "Austerity is the only way for humans to survive in the long run.",
+        "argument": "Species have always found ways to survive, regardless of intelligence.",
+        "label": -1
+    },
+    {
+        "topic": "That Guantanamo Bay prison should be kept open and the prisoners there locked up.",
+        "argument": "People are being held there without charges and this is not debatable.",
+        "label": -1
+    },
+    {
+        "topic": "We need to fight urbanization because it causes poverty, pollution, water use, land clearing, and other waste and health problems.",
+        "argument": "Urbanization creates culture in a town.",
+        "label": -1
+    },
+    {
+        "topic": "Atheism is the logical answer.",
+        "argument": "Atheism is offensive to those who believe.",
+        "label": -1
+    },
+    {
+        "topic": "leadership with austerity in mind will be helpful",
+        "argument": "opening up the government's wallet will do good",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo bay should not be closed down.",
+        "argument": "Guantanamo bay is notorious for its use of torture.",
+        "label": -1
+    },
+    {
+        "topic": "Atheism goes against our rights.",
+        "argument": "The right to religion includes lack of religion.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo bay should not close.",
+        "argument": "Guantanamo Bay is absolute torture and should be shut down.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery is bad for the brain.",
+        "argument": "Self image health is subjective and cosmetic surgery has little impact.",
+        "label": -1
+    },
+    {
+        "topic": "Guantanamo Bay is necessary to house enemies.",
+        "argument": "Many people at Guantanamo Bay are never charged.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning  is great for medicine.",
+        "argument": "Human cloning has many unknowns",
+        "label": -1
+    },
+    {
+        "topic": "embryonic stem cell research should be subsidized.",
+        "argument": "Stem cell research is dangerous for babies.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery will help those that are badly disfigured.",
+        "argument": "Not all disfigured people can afford cosmetic surgery.",
+        "label": -1
+    },
+    {
+        "topic": "People do not engage in something due to their religion.",
+        "argument": "Hindus do not eat beef.",
+        "label": 1
+    },
+    {
+        "topic": "Atheism allows for someone to believe anything",
+        "argument": "Atheism's beliefs are set",
+        "label": -1
+    },
+    {
+        "topic": "Cloning has many medical benefits and should not be banned",
+        "argument": "Cloning is unnatural and goes against what is morally right, so it should be illegal",
+        "label": -1
+    },
+    {
+        "topic": "Cloning is inherently decreasing quality",
+        "argument": "Getting your original out of the copier and putting it against the copy always shows differences",
+        "label": 1
+    },
+    {
+        "topic": "Urbanization is an economic improvement.",
+        "argument": "Some may mistakenly argue that urbanization is a good thing.",
+        "label": -1
+    },
+    {
+        "topic": "the detection field needs to stay",
+        "argument": "Security can still be paramount without the detection field.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery is bad.",
+        "argument": "Autonomy is promoted by cosmetic surgery.",
+        "label": -1
+    },
+    {
+        "topic": "cosmetic surgery leads to health and financial problems because it can be addictive.",
+        "argument": "Plenty of people only get one cosmetic procedure",
+        "label": -1
+    },
+    {
+        "topic": "Stem cell research can cure medical conditions.",
+        "argument": "There are alternatives to stem cell research.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery can help a person's mental health, especially if low body confidence is a problem.",
+        "argument": "Cosmetic surgery is a placebo",
+        "label": -1
+    },
+    {
+        "topic": "When a person is forced to commit a crime, they have a right to the entrapment defense.",
+        "argument": "People are always able to use their free will",
+        "label": -1
+    },
+    {
+        "topic": "entrapment should not be allowed for criminals.",
+        "argument": "Criminals need to be caught with entrapment.",
+        "label": -1
+    },
+    {
+        "topic": "people should get married only if they want to.",
+        "argument": "Marriage is the foundation for society.",
+        "label": -1
+    },
+    {
+        "topic": "Entrapment shouldn't be allowed, because it violates human rights.",
+        "argument": "If you're innocent you can't be trapped.",
+        "label": -1
+    },
+    {
+        "topic": "Government uses marriage as an excuse for interfering and taxes.",
+        "argument": "Single people pay taxes too.",
+        "label": -1
+    },
+    {
+        "topic": "Entrapment shouldn't be legalized, since the police will only focus on convictions, and won't look for other criminals.",
+        "argument": "Convictions are important",
+        "label": -1
+    },
+    {
+        "topic": "Marriage would still be considered the backbone of the family",
+        "argument": "family takes many forms",
+        "label": -1
+    },
+    {
+        "topic": "urbanization is terrible for the environment.",
+        "argument": "Urbanization or not, pollution is everywhere anyways.",
+        "label": -1
+    },
+    {
+        "topic": "Marriage should be abandoned, because divorce promotes failure, and the whole institution is out of date.",
+        "argument": "Divorce is very common",
+        "label": 1
+    },
+    {
+        "topic": "Entrapment is good because it makes it easier to arrest the person who committed a crime.",
+        "argument": "If you don't do bad things you can't be entrapped.",
+        "label": 1
+    },
+    {
+        "topic": "A crime that otherwise wouldn't happen can occur due to entrapment.",
+        "argument": "The motivation for committing a crime is irrelavent.",
+        "label": -1
+    },
+    {
+        "topic": "Criminals are going to commit the crime sooner or later causing law enforcement to use entrapment.",
+        "argument": "To keep more people safe law enforcement has been catching criminals sooner that have committed crimes recently.",
+        "label": 1
+    },
+    {
+        "topic": "It isn't ethical to trick someone into committing a crime.",
+        "argument": "Innocent people wouldn't commit crimes.",
+        "label": -1
+    },
+    {
+        "topic": "Entrapment isn't honest itself, so it shouldn't be used to keep other people honest.",
+        "argument": "Criminals deserve to be caught no matter what.",
+        "label": -1
+    },
+    {
+        "topic": "Atheists take freedom of religion away.",
+        "argument": "To be truly free we must be allowed to not be forced to choose a belief system.",
+        "label": -1
+    },
+    {
+        "topic": "People can believe or not believe in god.",
+        "argument": "Religion should have no place in politics",
+        "label": 1
+    },
+    {
+        "topic": "short term sacrifices are necessary for the country to get out of debt, and see longer term economic benefits.",
+        "argument": "People aren't always able to make personal sacrifices",
+        "label": -1
+    },
+    {
+        "topic": "If a prison camp is set up in the United States it can be fully managed by US laws.",
+        "argument": "It is doubtful whether a prison camp can be fully managed by US laws even if it is in the United States.",
+        "label": -1
+    },
+    {
+        "topic": "Cosmetic surgery does more bad than good.",
+        "argument": "Cosmetic surgery creates an imaginary image of oneself.",
+        "label": 1
+    },
+    {
+        "topic": "It is important to reduce the impact of urbanization, because it is a cause of climate change.",
+        "argument": "People like to live where there is culture",
+        "label": -1
+    },
+    {
+        "topic": "If people have to sacrifice earned income there will be more poverty.",
+        "argument": "Taxes are a way of getting the money needed for essential services.",
+        "label": -1
+    },
+    {
+        "topic": "People would get along better without religious differences.",
+        "argument": "People in religions spread messages of care.",
+        "label": -1
+    },
+    {
+        "topic": "People should not be forced to believe in atheism.",
+        "argument": "Atheism reduces conflict.",
+        "label": -1
+    },
+    {
+        "topic": "Everyone should believe in a God, regardless of which God it is.",
+        "argument": "Some people are atheists.",
+        "label": -1
+    },
+    {
+        "topic": "Atheism cannot be forced on people.",
+        "argument": "Religion can be chosen by some and not chosen by others.",
+        "label": 1
+    },
+    {
+        "topic": "embryonic stem cell research violates religious beliefs.",
+        "argument": "Embryonic stem cell research has nothing to do with babies.",
+        "label": -1
+    },
+    {
+        "topic": "urbanization provides many opportunities for growth.",
+        "argument": "people need countryside to relax their mind.",
+        "label": -1
+    },
+    {
+        "topic": "The citizens should not have to carry the weight of the debt.",
+        "argument": "The government cannot realistically alieviate the debt on its own.",
+        "label": -1
+    },
+    {
+        "topic": "We should all be atheists so that religions can't tie us to their doctrines",
+        "argument": "Religion should be a guiding force in a person's life.",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research should not be subsidized.",
+        "argument": "Embryonic stem cell research should be not allowed because it is a good way to alienate religous people.",
+        "label": 1
+    },
+    {
+        "topic": "We should support research into embryonic stem cell research as it can be great for medical advancement.",
+        "argument": "People opposed to it on a moral basis should not be forced to use their tax money for something they do not support.",
+        "label": -1
+    },
+    {
+        "topic": "People have a right to believe in any God they want, including no God.",
+        "argument": "Religion should be a guiding force in a person's life.",
+        "label": -1
+    },
+    {
+        "topic": "Since the people who are being held are known killers, they need to be held.",
+        "argument": "All people have rights",
+        "label": -1
+    },
+    {
+        "topic": "Cutting government spending is not a wise idea.",
+        "argument": "Inequities will occur whether or not government spending is cut.",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization contributes to pollution.",
+        "argument": "Pollution can happen in cities or suburbs.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning should be allowed because it can create the ability to generate human organs for transplants, which save people.",
+        "argument": "Organs can fail in people",
+        "label": -1
+    },
+    {
+        "topic": "Embryonic stem cell research is opposed by religious people",
+        "argument": "Opposition to embryonic stem cell research is something that should not offend religious people and should not be banned.",
+        "label": -1
+    },
+    {
+        "topic": "For people who are disfigured, cosmetic surgery can make them feel more confident, because they will look more normal.",
+        "argument": "People expect a lot out of cosmetic surgery",
+        "label": -1
+    },
+    {
+        "topic": "Urbanization is bad for the countryside.",
+        "argument": "There's reason in the argument that urbanization implies less countryside, but at the expense of better quality of life for citizens.",
+        "label": 1
+    },
+    {
+        "topic": "the poverty level will increase by taking away income",
+        "argument": "the income could raise others salary's that are at the poverty level",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning is not nature.",
+        "argument": "God does not have an issue with cloning.",
+        "label": -1
+    },
+    {
+        "topic": "there can be a reductions in moral codes and values.",
+        "argument": "there can also be an increase in ethics and values.",
+        "label": -1
+    },
+    {
+        "topic": "Since copies are never as good as the original, cloning would be unpredictable",
+        "argument": "Nothing is ever guaranteed but is still worth it.",
+        "label": -1
+    },
+    {
+        "topic": "Detention centers for certain prisoners is acceptable.",
+        "argument": "These centers just make us a bigger target to take down.",
+        "label": -1
+    },
+    {
+        "topic": "guantanamo bay needs to be kept open to house the worst criminals",
+        "argument": "closing down guantanamo bay does wonder for the war on terror",
+        "label": -1
+    },
+    {
+        "topic": "Permanent disfigurement of a person can be caused by a mistake.",
+        "argument": "Mistakes can be made but there are no mistakes large enough to cause permanent disfigurement to a person.",
+        "label": -1
+    },
+    {
+        "topic": "Human cloning is dangerous for society.",
+        "argument": "We do not know enough about human cloning to truly deem is dangerous.",
+        "label": -1
+    },
+    {
+        "topic": "People should be allowed to believe fairy tales if they want to.",
+        "argument": "Some fairy tales are based on facts with a colorful details added.",
+        "label": 1
+    },
+    {
+        "topic": "Cities are too crowded and crime ridden.",
+        "argument": "Crimes occur in the country and suburbs.",
+        "label": -1
+    },
+    {
+        "topic": "In order to not be linked to doing stuff by some faiths, we could also embrace atheism.",
+        "argument": "Atheism provides a good excuse for not being tied to certain things in belief systems that people may not like.",
+        "label": 1
+    },
+    {
+        "topic": "People who created budget deficits should be the ones to fix it, not hard working people with less money.",
+        "argument": "Rich people are not the only ones who need to do their part in paying for the benefits of the society they live in.",
+        "label": -1
+    }
+]

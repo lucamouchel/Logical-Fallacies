@@ -1,0 +1,162 @@
+[
+    {
+        "type": "sft",
+        "actual_stance": "counter argument",
+        "fallacy_type": "None",
+        "real_stance": "supporting",
+        "topic": "There should be no age restrictions on cosmetic surgery.",
+        "argument": "Cosmetic surgery should be open to all ages"
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "circular reasoning",
+        "real_stance": "counter",
+        "topic": "Creating awareness of the LGBT community, decreases discrimination.",
+        "argument": "Creating awareness of the LGBT community, decreases discrimination."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting",
+        "fallacy_type": "None",
+        "real_stance": "counter",
+        "topic": "Subsidizing student loans is bad.",
+        "argument": "Subsidizing student loans is good."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting",
+        "fallacy_type": "circular reasoning",
+        "real_stance": "counter",
+        "topic": "The sex of a child does not define their value.",
+        "argument": "The sex of a child does not define their value."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "None",
+        "real_stance": "counter",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "argument": "Laws should be changed to accommodate people who are louder than others."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "counter argument",
+        "fallacy_type": "None",
+        "real_stance": "supporting",
+        "topic": "There should not be parades that celebrate homosexuality.",
+        "argument": "Gay pride parades are a violation of the rights of gay people."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "circular reasoning",
+        "real_stance": "counter",
+        "topic": "Journalism is not in need of subsidies.",
+        "argument": "Journalism is not in need of subsidies."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "circular reasoning",
+        "real_stance": "counter",
+        "topic": "Child actors do not live normal lives.",
+        "argument": "Child actors do not live normal lives."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "None",
+        "real_stance": "counter",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "argument": "Laws should be changed to accommodate people who are louder than others."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "None",
+        "real_stance": "counter",
+        "topic": "prostitution has been in existence for long and should not be illegal",
+        "argument": "Prostitution has been in existence for long and should not be illegal"
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting",
+        "fallacy_type": "circular reasoning",
+        "real_stance": "counter",
+        "topic": "Companies should be allowed to decide workers' pay.",
+        "argument": "Companies should be allowed to decide workers' pay."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "circular reasoning",
+        "real_stance": "supporting",
+        "topic": "People who don't trust doctors have the right to try whatever homeopathic remedies they want.",
+        "argument": "People who don't trust doctors have the right to try whatever homeopathic remedies they want."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "None",
+        "real_stance": "counter",
+        "topic": "France, German, Italy, and Spain all believe surrogacy is exploitation, and have it prohibited.",
+        "argument": "Surrogacy is a form of exploitation."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "None",
+        "real_stance": "counter",
+        "topic": "Most economic sanction are not effective.",
+        "argument": "Most economic sanctions are not effective."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting",
+        "fallacy_type": "None",
+        "real_stance": "counter",
+        "topic": "Naturopathy does not harm people.",
+        "argument": "Naturopathy is a natural way of healing."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting",
+        "fallacy_type": "None",
+        "real_stance": "counter",
+        "topic": "Television can be hazardous to our kids",
+        "argument": "Television can be a good way to learn"
+    },
+    {
+        "type": "sft",
+        "actual_stance": "counter argument",
+        "fallacy_type": "None",
+        "real_stance": "supporting",
+        "topic": "IP copyrights should be banned.",
+        "argument": "IP copyrights should be banned"
+    },
+    {
+        "type": "sft",
+        "actual_stance": "counter argument",
+        "fallacy_type": "circular reasoning",
+        "real_stance": "supporting",
+        "topic": "Homeopathic remedies can be bad for your health.",
+        "argument": "Homeopathic remedies can be bad for your health."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "supporting argument",
+        "fallacy_type": "None",
+        "real_stance": "supporting",
+        "topic": "Television can be hazardous to our kids",
+        "argument": "Television can be hazardous to our kids."
+    },
+    {
+        "type": "sft",
+        "actual_stance": "counter argument",
+        "fallacy_type": "None",
+        "real_stance": "supporting",
+        "topic": "Stay at home Dads tends to be lazy",
+        "argument": "Stay at home dads tend to be lazy"
+    }
+]

@@ -1,0 +1,325 @@
+{
+    "faulty generalization":{
+        "definition":"an informal fallacy wherein a conclusion is drawn about all or many instances of a phenomenon on the basis of one or a few instances of that phenomenon. is an example of jumping to conclusions.",
+        "example1": "Flight attendants are the nicest people. I should know—I’ve taken two flights.", 
+		"example2":"The two courses I took at UWI were not very interesting. I don't think its a good university.",
+		"exampleArg1support":{
+            "topic":"Misconceptions and Stereotypes Surrounding Poverty",
+            "fallacy type":"faulty generalization",
+            "faulty generalization fallacy support":"I know four poor families. They are lazy drug addicts. Therefore, all poor people are lazy drug addicts.",
+        },
+        "exampleArg2support":{
+            "topic":"Investing in renewable technologies",
+            "fallacy type":"faulty generalization",
+            "faulty generalization fallacy support":"Investing in renewable technologies is wise because all such investments lead to success.",
+        },
+
+        "exampleArg1counter":{
+            "topic":"Misconceptions and Stereotypes Surrounding Poverty",
+            "fallacy type":"faulty generalization",
+            "faulty generalization fallacy counter": "I met a successful person from poverty. Therefore, all people in poverty can easily overcome be successful without systemic barriers"
+        },
+        "exampleArg2counter":{
+            "topic":"Investing in renewable technologies",
+            "fallacy type":"faulty generalization",
+            "faulty generalization fallacy counter": "I invested once in renewables, and it didn't yield profits. Therefore, investing in all renewable technologies is financially unwise and unprofitable"
+        }
+      },
+
+    "false causality":{
+        "definition":"statement that jumps to a conclusion implying a causal relationship without supporting evidence",
+        "example1": "The bigger a child's shoe size, the better the child's handwriting", 
+		"example2":"I failed Pre-Cal because my teacher doesn’t like me.",
+		"exampleArg1support":{
+            "topic":"The importance of mathematics in schools",
+            "fallacy type":"false causality",
+            "false causality fallacy support":"If Mathematics is made compulsory, then it will lead to guaranteed success in unrelated future endeavors.",
+        },
+        "exampleArg2support":{
+            "topic":"investing in renewable technologies",
+            "fallacy type":"false causality",
+            "false causality fallacy support":"If you invest in renewable technologies, then it will guarantee automatic financial gains without concrete evidence or direct causation.",
+        },
+        "exampleArg1counter":{
+            "topic":"The importance of mathematics in schools",
+            "fallacy type":"false causality",
+            "false causality fallacy counter":"Eliminating mathematics from school boosts creativity in students."
+        },
+        "exampleArg2counter":{
+            "topic":"investing in renewable technologies",
+            "fallacy type":"false causality",
+            "false causality fallacy counter":"If you invest in renewable technologies, you might lose all your money because they are not advanced"
+        }
+    },   
+
+    "circular reasoning":{
+        "definition":"when the end of an argument comes back to the beginning without having proven itself.",
+        "example1": "Mr. Casal was very tired because he had no energy.", 
+		"example2":"The news is fake because so much of the news is fake.",
+		"exampleArg1support":{
+            "topic":"People should not be forced to exercise their right to vote.",
+            "fallacy type":"circular reasoning",
+            "circular reasoning fallacy support":"Forcing people to vote is wrong because it's not right to make them do something they shouldn't be forced to do.",
+        },
+        "exampleArg2support":{
+            "topic":"The origin of the universe",
+            "fallacy type":"circular reasoning",
+            "circular reasoning fallacy support":"The universe has a beginning. Every thing that has a beginning has a cause. Therefore, the universe has a cause called God."
+            
+        },
+        "exampleArg1counter":{
+            "topic":"People should not be forced to exercise their right to vote.",
+            "fallacy type":"circular reasoning",
+            "circular reasoning fallacy counter":"Forcing people to vote is right because it forces them to participate in politics"
+        },
+        "exampleArg2counter":{
+            "topic":"The origin of the universe",
+            "fallacy type":"circular reasoning",
+            "circular reasoning fallacy counter":""
+        }
+    },
+    "ad populum":{
+        "definition":"a fallacious argument which is based on affirming that something is real or better because the majority thinks so",
+        "example1": "Everyone is wearing the new skinny jeans from American Eagle. Are you?", 
+		"example2":"An increasing number of people are keeping ferrets as pets, so they must make wonderful companion animals.",
+		"exampleArg1support":{
+            "topic":"People should not be forced to exercise their right to vote.",
+            "fallacy type":"ad populum",
+            "ad populum fallacy support":"Most people believe that forcing citizens to vote goes against their rights. Therefore, it's wrong to compel individuals to vote."
+        },
+        "exampleArg2support":{
+            "topic":"investing in renewable technologies",
+            "fallacy type":"ad populum",
+            "ad populum fallacy support":"Investing in renewable technologies is the popular choice, so it must be the best financial option."
+        },
+        "exampleArg1counter":{
+            "topic":"Should Mathematics be a Compulsory Course",
+            "fallacy type":"ad populum",
+            "ad populum fallacy counter":"Everyone thinks Mathematics should be compulsory, it must be the right decision."
+        },
+        "exampleArg2counter":{
+            "topic":"Peer pressure",
+            "fallacy type":"ad populum",
+            "ad populum fallacy counter":""
+        }
+    },
+    "ad hominem":{
+        "definition":" instead of addressing someone's argument or position, you irrelevantly attack the person or some aspect of the person who is making the argument."
+        ,
+        "example1": "She is a teacher in a public school, so any claims that she makes about the public school system are biased and untrue.", 
+		"example2":"Vote for me because the other candidate is a cheat and a liar!",
+		"exampleArg1support":{
+            "topic":"Mathematics should be a Compulsory Course",
+            "fallacy type":"ad hominem",
+            "ad hominem fallacy support":"Those who oppose Mathematics as compulsory lack intelligence and are against progress."
+        },
+        "exampleArg2support":{
+            "topic":"Investing in renewable technologies",
+            "fallacy type":"ad hominem",
+            "ad hominem fallacy support":"Critics of investing in renewable technologies are simply ignorant about modern financial strategies."
+        },
+        "exampleArg1counter":{
+            "topic":"Should Mathematics be a Compulsory Course",
+            "fallacy type":"ad hominem",
+            "ad hominem fallacy counter":"Those who oppose Mathematics as compulsory lack intelligence and are against progress."
+        },
+
+        "exampleArg2counter":{
+            "topic":"",
+            "fallacy type":"ad hominem",
+            "ad hominem fallacy counter":""
+        }
+
+
+    },
+    "fallacy of logic":{
+        "definition":"an error in the logical structure of an argument.",
+        "example1": "Not tipping your waiter is like stealing money right out of someone's wallet.", 
+		"example2":"Most heroin users started out smoking pot. If you start smoking pot, you’ll end up a heroin user, too.",
+		"exampleArg1support":{
+            "topic":"Mandatory retirement hurts elderly workers",
+            "fallacy type":"fallacy of logic",
+            "fallacy of logic fallacy support":"All elderly people who retire at a certain age become less productive. Therefore, making retirement optional will instantly make them more productive."
+        },
+        "exampleArg2support":{
+            "topic":"The existence of God",
+            "fallacy type":"fallacy of logic",
+            "fallacy of logic fallacy support":"God must exist because the Bible says so, and the Bible is the word of God."
+        },
+        "exampleArg1counter":{
+            "topic":"Is fast food unhealthy?",
+            "fallacy type":"fallacy of logic",
+            "fallacy of logic fallacy counter":"Fast food is unhealthy because it's bad for your health."
+        },
+        "exampleArg2counter":{
+            "topic":"Does God exist?",
+            "fallacy type":"fallacy of logic",
+            "fallacy of logic fallacy counter":"God must exist because the Bible says so, and the Bible is the word of God."
+        }
+    },
+
+    "appeal to emotion":{
+        "definition":"manipulation of the recipient's emotions in order to win an argument"
+        ,
+        "example1": "You have to give me a passing grade. I spent 150 hours on that project and missed every party this quarter.", 
+		"example2":"Salesguy: You should definitely buy this car.  You look so good in it -- you look at least ten years younger behind that wheel.Tamera: I’ll take it!",
+		"exampleArg1support":{
+            "topic":"Banning animal experiments",
+            "fallacy type":"appeal to emotion",
+            "appeal to emotion fallacy support":"We must stop animal experiments because just the thought of those innocent animals suffering is heartbreaking."
+        },
+        "exampleArg2support":{
+            "topic":"Supporting environmental conservation",
+            "fallacy type":"appeal to emotion",
+            "appeal to emotion fallacy support":"We should support environmental conservation because the future of our children depends on a clean and sustainable environment."
+        },
+
+        "exampleArg1counter":{
+            "topic":"Should cellphones be used during class?",
+            "fallacy type":"appeal to emotion",
+            "appeal to emotion fallacy counter": "No, imagine you were a teacher and everybody would just concentrate on their smartphones? How would that feel?"
+        },
+        "exampleArg2counter":{
+            "topic":"Is nuclear power a reasonable energy source?",
+            "fallacy type":"appeal to emotion",
+            "appeal to emotion fallacy counter":"Nuclear power was the reason of death of millions of people. It should vanish from this planet"
+        }
+    },
+    "false dilemma":{
+        "definition":"presenting only two options or sides when there are many options or sides."
+        ,
+        "example1": "Either go to the party or spend the night in your room crying.", 
+		"example2":"You could either pursue your dream job or stay where you are and be miserable for the rest of your life.",
+		"exampleArg1support":{
+            "topic":"Social media allows people to connect with people that they otherwise could not connect with",
+            "fallacy type":"false dilemma",
+            "false dilemma fallacy support":"You can either use social media to connect with people you wouldn't otherwise, or you can remain isolated and disconnected from the world."
+        },
+        "exampleArg2support":{
+            "topic":"Replacing fossil fuels with renewable energy",
+            "fallacy type":"false dilemma",
+            "false dilemma fallacy support":"We should switch to renewable energy or the world will collapse"
+        },
+        "exampleArg1counter":{
+            "topic":"The importance of mathematics in schools",
+            "fallacy type":"false dilemma",
+            "false dilemma fallacy counter":"Study math or have no critical thinking"
+        },
+        "exampleArg2counter":{
+            "topic":"The importance of mathematics in schools",
+            "fallacy type":"false dilemma",
+            "false dilemma fallacy counter":""
+        }
+
+    },
+    "equivocation":{
+        "definition":"when a key term or phrase in an argument is used in an ambiguous way, with one meaning in one portion of the argument and then another meaning in another portion of the argument."
+        ,
+        "example1": "The officer told me to freeze but it was too hot out to be freezing, so I was justified in running away.", 
+		"example2":"Science shows us that improved quality of life comes through research and invention.",
+		"exampleArg1support":{
+            "topic":"Television is valuable.",
+            "fallacy type":"equivocation",
+            "equivocation fallacy support":"Television is valuable because it holds significant monetary value in the entertainment industry."
+        },
+        "exampleArg2support":{
+            "topic":"Should Gun Control Tighten?",
+            "fallacy type":"equivocation",
+            "equivocation fallacy support":"does the term 'tighten' mean 'enhance security' or 'restrict freedom', it is confusing."
+        },
+        "exampleArg1counter":{
+            "topic":"Should Voting Rights Expand?",
+            "fallacy type":"equivocation",
+            "equivocation fallacy counter":"'Expanding' voting rights blurs 'universal access' and 'changing eligibility', confusing discussions."
+        },
+        "exampleArg2counter":{
+            "topic":"Should Voting Rights Expand?",
+            "fallacy type":"equivocation",
+            "equivocation fallacy counter":""
+        }
+    },
+
+    "fallacy of extension":{
+        "definition":"attacking an exaggerated or caricatured version of your opponent's position."
+        ,
+        "example1": "Person 1: I think pollution is the cause of climate change. Person 2: So you think humans cause hurricanes and tsunamis?", 
+		"example2":"Coronavirus originated in China, therefore all Chinese people are sick.",
+		"exampleArg1support":{
+            "topic":"restricting animal testing",
+            "fallacy type":"fallacy of extension",
+            "fallacy of extension support":"Painting restrictions as total ban misrepresents responsible, humane testing practices in scientific research."
+        },
+        "exampleArg2support":{
+            "topic":"Changing the educational curriculum",
+            "fallacy type":"fallacy of extension",
+            "fallacy of extension support":"Portraying change as erasing core subjects distorts the need for evolving, inclusive educational content."
+        }
+    },
+    "fallacy of relevance":{
+        "definition":"introducing premises or conclusions that have nothing to do with the subject matter.",
+        "exampfle1": "Violent video games are directly related to gun violence in schools and should be banned for teens. The school day should start an hour later.", 
+		"example2":"Why should we be worrying about how the government treats Native people, when people in our city can't get a job?",
+		"exampleArg1support":{
+            "topic":"The importance of mathematics in schools",
+            "fallacy type":"fallacy of relevance",
+            "fallacy of relevance fallacy support":"Mathematics should be mandatory. it builds character, like tasting exotic foods, enriching life experiences."
+        },
+        "exampleArg2support":{
+            "topic":"The existence of God",
+            "fallacy type":"fallacy of relevance",
+            "fallacy of relevance fallacy support":"The existence of God is as crucial as colorful paint in art. Belief fuels innovation, like mixing colors for a masterpiece."
+        }
+    },
+    "fallacy of credibility":{
+        "definition":"attempts to disprove an argument by attacking the character of the speaker."
+        ,
+        "example1": "Beyond Meat burgers are healthy for us because they do not have any meat in them.", 
+		"example2":"I saw Ashton Kutcher in a commercial for male skin care. He's looking good for his age, so I'm willing to try the product. He must know what he's talking about.",
+		"exampleArg1support":{
+            "topic":"banning the death penalty",
+            "fallacy type":"fallacy of credibility",
+            "fallacy of credibility fallacy support":"We should abolish the death penalty. Many respected people, such as actor Guy Handsome, have publicly stated their opposition to it."
+        },
+        "exampleArg2support":{
+            "topic":"looking up to the president",
+            "fallacy type":"fallacy of credibility",
+            "fallacy of credibility fallacy support":"I admire the president for being a good role model. REPLY: But the New York Times says he's a lousy role model, so you're wrong."
+        },
+        "exampleArg1counter":{
+            "topic":"banning the death penalty",
+            "fallacy type":"fallacy of credibility",
+            "fallacy of credibility fallacy support":"We should not abolish the death penalty. Many respected people, have publicly stated their support to it."
+        },
+        "exampleArg2counter":{
+            "topic":"looking up to the president",
+            "fallacy type":"fallacy of credibility",
+            "fallacy of credibility fallacy counter":"I admire the president for being a good role model. REPLY: But the New York Times says he's a lousy role model, so you're wrong."
+        }
+    },
+    "intentional":{
+        "definition":"some intentional (sometimes subconscious) action\/choice to incorrectly support an argument"
+        ,
+    "example1": "Yes, I do think that all drunk drivers should go to prison, but your honor, he is my son! He is a good boy who just made a mistake!", 
+		"example2":"Bill: I think that some people have psychic powers.  Jill: What is your proof? Bill: No one has been able to prove that people do not have psychic powers.",
+		"exampleArg1support":{
+            "topic":"Are aliens real",
+            "fallacy type":"intentional fallacy",
+            "intentional fallacy support":"You can't prove that aliens don't exist, so they must be real"
+        },
+        "exampleArg2support":{
+            "topic":"Should Gun Control Tighten?",
+            "fallacy type":"intentional fallacy",
+            "intentional fallacy support":"How many school shootings should we tolerate before we change the gun laws?"
+        },
+        "exampleArg1counter":{
+            "topic":"Are aliens real",
+            "fallacy type":"intentional fallacy",
+            "intentional fallacy support":"You can't prove that aliens don't exist, so they must not be real"
+        },
+        "exampleArg2counter":{
+            "topic":"Should Gun Control Tighten?",
+            "fallacy type":"intentional fallacy",
+            "intentional fallacy support":""
+        }
+    }
+}

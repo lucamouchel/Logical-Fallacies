@@ -1,0 +1,702 @@
+[
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: There should be no age restrictions on cosmetic surgery.\n### Argument:",
+        "topic": "There should be no age restrictions on cosmetic surgery.",
+        "stance": "SUPPORTING",
+        "original_argument": "The American Medical Association recommends age restrictions on cosmetic procedures be lifted.",
+        "sft_output": "Young people are still developing and should not get cosmetic surgeries until they are fully developed."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Creating awareness of the LGBT community, decreases discrimination.\n### Argument:",
+        "topic": "Creating awareness of the LGBT community, decreases discrimination.",
+        "stance": "COUNTER",
+        "original_argument": "Normalizing the LGBT community is discrimination against christian followers.",
+        "sft_output": "Some people are not cognizant of how they are saying or doing something hurtful."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Subsidizing student loans is bad.\n### Argument:",
+        "topic": "Subsidizing student loans is bad.",
+        "stance": "COUNTER",
+        "original_argument": "Student loans are often the only way that the poor can afford to go to college.",
+        "sft_output": "By subsidizing Student loans, we take away incentives for students to perform well."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: The sex of a child does not define their value.\n### Argument:",
+        "topic": "The sex of a child does not define their value.",
+        "stance": "COUNTER",
+        "original_argument": "The Female sex has more value, in that they are the natural harbingers of life",
+        "sft_output": "People have the right to choose what to do with their baby. It is theirs. Their body."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Just because a few people are louder than others, laws shouldn't be changed to accommodate them.\n### Argument:",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "stance": "COUNTER",
+        "original_argument": "If people feel strongly enough to protest loudly, their opinion should be taken into consideration.",
+        "sft_output": "If some people protest loudly, they don' t get to automatically get their way."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: There should not be parades that celebrate homosexuality.\n### Argument:",
+        "topic": "There should not be parades that celebrate homosexuality.",
+        "stance": "SUPPORTING",
+        "original_argument": "It's unfair for some people to be able to have parades while other ideas aren't as widely celebrated.",
+        "sft_output": "People who are gay can't celebrate with their partner which is heartless."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Journalism is not in need of subsidies.\n### Argument:",
+        "topic": "Journalism is not in need of subsidies.",
+        "stance": "COUNTER",
+        "original_argument": "If journalism was subsidized, Newspapers could keep their level of readership up in the digital age.",
+        "sft_output": "Journalist are always biased irrespective of whom is paying them. Journalist have no incentive to seek out money."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Child actors do not live normal lives.\n### Argument:",
+        "topic": "Child actors do not live normal lives.",
+        "stance": "COUNTER",
+        "original_argument": "Strict laws about child actors' obligations and duties actually protect their rights to a normal life.",
+        "sft_output": "By exposing them to wealth and long working hours, child actors are deprived of a normal life."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Just because a few people are louder than others, laws shouldn't be changed to accommodate them.\n### Argument:",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "stance": "COUNTER",
+        "original_argument": "A few people can have a big influence",
+        "sft_output": "If some people protest loudly, they don' t get to automatically get their way."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: prostitution has been in existence for long and should not be illegal.\n### Argument:",
+        "topic": "prostitution has been in existence for long and should not be illegal",
+        "stance": "COUNTER",
+        "original_argument": "Most people that are into prostitution are forced into it and it should not be allowed",
+        "sft_output": "Prostitution is immoral it should never be legalized."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Companies should be allowed to decide workers' pay.\n### Argument:",
+        "topic": "Companies should be allowed to decide workers' pay.",
+        "stance": "COUNTER",
+        "original_argument": "Companies abused wage autonomy until a federal minimum wage was instituted.",
+        "sft_output": "It is unfair to limit rights."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: People who don't trust doctors have the right to try whatever homeopathic remedies they want.\n### Argument:",
+        "topic": "People who don't trust doctors have the right to try whatever homeopathic remedies they want.",
+        "stance": "SUPPORTING",
+        "original_argument": "Some people prefer homeopathic  remedies to conventional medicine.",
+        "sft_output": "Homeopathy can be very dangerous."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: France, German, Italy, and Spain all believe surrogacy is exploitation, and have it prohibited.\n### Argument:",
+        "topic": "France, German, Italy, and Spain all believe surrogacy is exploitation, and have it prohibited.",
+        "stance": "COUNTER",
+        "original_argument": "For infertile couples, surrogacy gives them a chance to have a child.",
+        "sft_output": "People who are forced to be more active do not know when to stop using surrogate mothers."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Most economic sanction are not effective.\n### Argument:",
+        "topic": "Most economic sanction are not effective.",
+        "stance": "COUNTER",
+        "original_argument": "economic sanction are mostly effective when it is collectively done",
+        "sft_output": "While it is true that some countries can't be sanctioned already, but with no sanctions yet."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Naturopathy does not harm people.\n### Argument:",
+        "topic": "Naturopathy does not harm people.",
+        "stance": "COUNTER",
+        "original_argument": "Naturopathy harms people by inaction; sometimes invasive treatments are the best option.",
+        "sft_output": "People are often ignored by doctors. Naturopathic remedies are effective in some medical cases."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Television can be hazardous to our kids.\n### Argument:",
+        "topic": "Television can be hazardous to our kids",
+        "stance": "COUNTER",
+        "original_argument": "Television is a source of information and also has program that educates kids.",
+        "sft_output": "Kids can't always afford to live."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: IP copyrights should be banned.\n### Argument:",
+        "topic": "IP copyrights should be banned.",
+        "stance": "SUPPORTING",
+        "original_argument": "Free access to ideas will help propel the development of even newer ideas.",
+        "sft_output": "The field of patent law exists to protect individuals rights over their intellectual property."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Homeopathic remedies can be bad for your health.\n### Argument:",
+        "topic": "Homeopathic remedies can be bad for your health.",
+        "stance": "SUPPORTING",
+        "original_argument": "Homeopathic medics don't know how your prescriptions will interact with their treatments.",
+        "sft_output": "Because they're all-natural, homeopathic treatments are good for you."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Television can be hazardous to our kids.\n### Argument:",
+        "topic": "Television can be hazardous to our kids",
+        "stance": "SUPPORTING",
+        "original_argument": "Television scenes shows scenes that are not meant for kids to watch and that should not be allowed.",
+        "sft_output": "It can also cause obesity, which is not ideal."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Stay at home Dads tends to be lazy.\n### Argument:",
+        "topic": "Stay at home Dads tends to be lazy",
+        "stance": "SUPPORTING",
+        "original_argument": "Mother needs to remain carers at home so stay at home Dads should not be subsidized",
+        "sft_output": "Home dad has no value to the country GDP."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Anything other than natural pregnancy methods should be prohibited.\n### Argument:",
+        "topic": "Anything other than natural pregnancy methods should be prohibited.",
+        "stance": "SUPPORTING",
+        "original_argument": "God decides who gets pregnant, and any other method should be prohibited as blasphemy.",
+        "sft_output": "Natural pregnancy method has proven more effective remedies that can now be prescribed by doctors."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Cosmetic surgery for children is safe.\n### Argument:",
+        "topic": "Cosmetic surgery for children is safe.",
+        "stance": "COUNTER",
+        "original_argument": "Parental consent does not protect children from associated risks of cosmetic surgery.",
+        "sft_output": "Some cosmetic surgeries happen for medical reasons."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Racial profiling is not fair to people.\n### Argument:",
+        "topic": "Racial profiling is not fair to people.",
+        "stance": "COUNTER",
+        "original_argument": "Sometimes racial profiling is necessary.",
+        "sft_output": "People who come up against racial profiling are more fair than those who can afford it."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Getting rid of capital punishment lets people know that all killing is wrong.\n### Argument:",
+        "topic": "Getting rid of capital punishment lets people know that all killing is wrong.",
+        "stance": "COUNTER",
+        "original_argument": "Without the fear of their own death, people will have less of a deterrent not to commit murder.",
+        "sft_output": ""
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Safe spaces should be allowed.\n### Argument:",
+        "topic": "Safe spaces should be allowed.",
+        "stance": "COUNTER",
+        "original_argument": "Safe spaces would give people false ideas of what the world actually is like.",
+        "sft_output": "Many people have nowhere else to turn and need safe spaces for their mental health."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: IP copyrights should be banned.\n### Argument:",
+        "topic": "IP copyrights should be banned.",
+        "stance": "SUPPORTING",
+        "original_argument": "The more people can use others' ideas to brainstorm, the quicker we will be able to develop more ideas.",
+        "sft_output": "The field of patent law exists to protect individuals rights over their intellectual property."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: safe spaces are necessary.\n### Argument:",
+        "topic": "safe spaces are necessary.",
+        "stance": "COUNTER",
+        "original_argument": "Safe spaces do not prepare people for the real world.",
+        "sft_output": "Safe spaces do not make outsiders unwelcome, but facilitate protection from unpredictable situations."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Women should be allowed to sell their bodies.\n### Argument:",
+        "topic": "Women should be allowed to sell their bodies.",
+        "stance": "COUNTER",
+        "original_argument": "Bodily autonomy does not extend to selling your body for sex, as commerce has other rules.",
+        "sft_output": "Bodily autonomy is a guiding principle for many of our laws regarding our personal freedoms."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Older adult has less strength, so bringing the younger ones increase productivity.\n### Argument:",
+        "topic": "Older adult has less strength, so bringing the younger ones increase productivity",
+        "stance": "COUNTER",
+        "original_argument": "Older workers tends to be more intelligent than younger workers",
+        "sft_output": "Efficiency and productivity will be increased when older workers are out and younger workers get in."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Homeopathy can be dangerous because it is unregulated.\n### Argument:",
+        "topic": "Homeopathy can be dangerous because it is unregulated.",
+        "stance": "SUPPORTING",
+        "original_argument": "Many homeopathic remedies are marketed as \"dietary supplements\" which are not subject to FDA regulation.",
+        "sft_output": ""
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Naturopathic methods are always a good idea because they'll work even just as a placebo.\n### Argument:",
+        "topic": "Naturopathic methods are always a good idea because they'll work even just as a placebo.",
+        "stance": "COUNTER",
+        "original_argument": "Natural things aren't always good for you and should be regulated.",
+        "sft_output": "People don't want to lose money because their body won' turopathetic methods."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: People should not have a right to own guns.\n### Argument:",
+        "topic": "People should not have a right to own guns.",
+        "stance": "COUNTER",
+        "original_argument": "People should have a right to defend themselves and their property with reasonable defenses.",
+        "sft_output": "The right of owning guns is in the constitution. It's a part of the Constitution."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Capital punishment is always brutal.\n### Argument:",
+        "topic": "Capital punishment is always brutal.",
+        "stance": "SUPPORTING",
+        "original_argument": "Capital punishment can cause miscarriage of law and order.",
+        "sft_output": "Plenty of innocent people already die in our prison system. Capital punishments are a detriment to crime."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: It is important to explore space, so that we can learn more about our own world.\n### Argument:",
+        "topic": "It is important to explore space, so that we can learn more about our own world.",
+        "stance": "COUNTER",
+        "original_argument": "Earth is its own entity, and not the same as other things in the universe.",
+        "sft_output": "There are many things that can be created in the space."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Economic sanction affects the citizens more than the governments.\n### Argument:",
+        "topic": "Economic sanction affects the citizens more than the governments",
+        "stance": "COUNTER",
+        "original_argument": "economic sanction causes a major issue for the government.",
+        "sft_output": "People suffer from economic sanctions more often."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: legalizing Sex selection reduces over population.\n### Argument:",
+        "topic": "legalizing Sex selection reduces over population",
+        "stance": "COUNTER",
+        "original_argument": "Sex selection makes gender unequal as a particular sex will be more than the other",
+        "sft_output": "People have gotten sick from sex selection. Overcrowded sexual areas are hardly due to lack imprisonment."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: stay at home Dad allows for gender equality at work.\n### Argument:",
+        "topic": "stay at home Dad allows for gender equality at work",
+        "stance": "COUNTER",
+        "original_argument": "Most men are much more productive at work, so women should stay at home when men go to work",
+        "sft_output": "Gender inequality is a serious issue in the US, and adopting gender neutral language is reasonable first step."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: A multi-party system is good.\n### Argument:",
+        "topic": "A multi-party system is good.",
+        "stance": "COUNTER",
+        "original_argument": "More parties means less chance we'd all agree on something.",
+        "sft_output": "Multi-Party systems are bad at highlighting individuals, which creates some sense of equality."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: People should be allowed to meet their base needs.\n### Argument:",
+        "topic": "People should be allowed to meet their base needs.",
+        "stance": "COUNTER",
+        "original_argument": "People's \"needs\" can be subjective and some needs can be considered less important than others.",
+        "sft_output": "Some people need more help than others."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: The right to bear arms helps people defend themselves.\n### Argument:",
+        "topic": "The right to bear arms helps people defend themselves.",
+        "stance": "COUNTER",
+        "original_argument": "It will make it much harder for criminals to have arms, if the right to bear arms was abolished.",
+        "sft_output": "Criminals will always have access to illegal arms, and people have a right defended by the constitution."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Prostitution should not be a criminal offense.\n### Argument:",
+        "topic": "Prostitution should not be a criminal offense.",
+        "stance": "COUNTER",
+        "original_argument": "Organized crime is involved in prostitution, and therefore it is a criminal offense.",
+        "sft_output": "Some people have no alternatives outside of prostitution, and should never be punished for trying to survive."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: It's impossible to abolish capital punishment.\n### Argument:",
+        "topic": "It's impossible to abolish capital punishment.",
+        "stance": "SUPPORTING",
+        "original_argument": "Capital punishment is mostly used by dictatorial countries and monarchies so it wouldn't do any good to abolish it.",
+        "sft_output": "Capital punishment is not cruel, as prisoners are stripped of their rights."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Some actions may abolish the black market.\n### Argument:",
+        "topic": "Some actions may abolish the black market.",
+        "stance": "COUNTER",
+        "original_argument": "Black markets will always exist, regardless of what types of bans are put in place.",
+        "sft_output": ""
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Being a virgin is a choice.\n### Argument:",
+        "topic": "Being a virgin is a choice",
+        "stance": "COUNTER",
+        "original_argument": "Virginity is meant to be kept till you get married.",
+        "sft_output": ""
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: A system that fires competent employees due to age is cruel.\n### Argument:",
+        "topic": "A system that fires competent employees due to age is cruel.",
+        "stance": "COUNTER",
+        "original_argument": "Firing someone based on their age is the only way to refresh the workforce.",
+        "sft_output": "Young people are not treated well in school."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Having right to hold weapon is dangerous.\n### Argument:",
+        "topic": "Having right to hold weapon is dangerous",
+        "stance": "COUNTER",
+        "original_argument": "Everyone should own a weapon so as to protect themselves in case of emergency.",
+        "sft_output": "If you know you're receiving weapons, then you should be able to bear them for protection."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: We should not ban surrogate mothers.\n### Argument:",
+        "topic": "We should not ban surrogate mothers.",
+        "stance": "COUNTER",
+        "original_argument": "There are thousands of children in the foster system; surrogate mothers prevent people taking this option.",
+        "sft_output": "Surrogate mothers will still be in demand, but without legal and health standards enforced, leading to harm."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Retirement should not be mandatory.\n### Argument:",
+        "topic": "Retirement should not be mandatory.",
+        "stance": "COUNTER",
+        "original_argument": "Mandatory retirement helps new generations have an opportunity to succeed.",
+        "sft_output": "People are healthier and living longer. People need to know when to stop using retirement."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Economic sanction helps suppress power of current regime.\n### Argument:",
+        "topic": "Economic sanction helps suppress power of current regime.",
+        "stance": "SUPPORTING",
+        "original_argument": "Economic sanction should be used on countries that oppress the small countries",
+        "sft_output": "By implementing economic sanctions, we help promote the economy by providing structure."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Cosmetic surgery for minors should be banned.\n### Argument:",
+        "topic": "Cosmetic surgery for minors should be banned.",
+        "stance": "COUNTER",
+        "original_argument": "Cosmetic surgery for minors is good, because anyone can make an informed decision on their looks.",
+        "sft_output": "Young people are still developing and should not get cosmetic surgery until they are fully developed."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Television cannot be abandoned as it is a necessity.\n### Argument:",
+        "topic": "Television cannot be abandoned as it is a necessity",
+        "stance": "COUNTER",
+        "original_argument": "Television is fun but it distracts us and limits efficiency in day to day activities",
+        "sft_output": "There are other forms of media like social media where we can get breaking news from apart from television."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Naturopathy does not harm people.\n### Argument:",
+        "topic": "Naturopathy does not harm people.",
+        "stance": "SUPPORTING",
+        "original_argument": "Naturopathy does not have invasive treatments which could do harm.",
+        "sft_output": "People are often ignored by doctors. Naturopathic remedies are effective in some medical cases."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: A multi-party system would be more representative of the populace.\n### Argument:",
+        "topic": "A multi-party system would be more representative of the populace.",
+        "stance": "COUNTER",
+        "original_argument": "A multi-party system is not guaranteed to be more representative of the populace than any other system.",
+        "sft_output": "Multi-parties represent diverse opinions, of which our nation sorely needs."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Telemarketing is intrusive.\n### Argument:",
+        "topic": "Telemarketing is intrusive.",
+        "stance": "SUPPORTING",
+        "original_argument": "Telemarketing is intrusive because it can happen at any time of day without your consent.",
+        "sft_output": "Most telemarketers are unwanted and did not get direct permission to contact."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Being a child actor does harm to children.\n### Argument:",
+        "topic": "Being a child actor does harm to children.",
+        "stance": "COUNTER",
+        "original_argument": "Child actors don't have more frequent breakdowns than anyone else; their fame makes us notice them more.",
+        "sft_output": "Child actors frequently have very public breakdowns."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Compulsory voting including the whole electorate is unrealistic.\n### Argument:",
+        "topic": "Compulsory voting including the whole electorate is unrealistic.",
+        "stance": "SUPPORTING",
+        "original_argument": "It would be impossible to insure if everyone was able to turn out to vote.",
+        "sft_output": "Mandatory voting would help the most viable candidates get elected."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: A surrogate might try to keep the child.\n### Argument:",
+        "topic": "A surrogate might try to keep the child.",
+        "stance": "COUNTER",
+        "original_argument": "A surrogate is bound by legal contract to surrender the child.",
+        "sft_output": "If a surrogate makes money from keeping the baby, they should try their best to make it happen."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Telemarketing is intrusive.\n### Argument:",
+        "topic": "Telemarketing is intrusive.",
+        "stance": "COUNTER",
+        "original_argument": "Telemarketing isn't intrusive because it helps put people in touch with companies that want to make them special offers.",
+        "sft_output": "Some people do not want to pay for telemarketing. It is unfair."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Judges should be impartial in their ruling.\n### Argument:",
+        "topic": "Judges should be impartial in their ruling.",
+        "stance": "COUNTER",
+        "original_argument": "A judge ruling without accessing their emotions will not be able to effectively reason.",
+        "sft_output": "It is unfair to limit the power vacuum."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Many people benefit from alternative types of medicine, such as diet, exercise, and massage.\n### Argument:",
+        "topic": "Many people benefit from alternative types of medicine, such as diet, exercise, and massage.",
+        "stance": "COUNTER",
+        "original_argument": "There isn't enough evidence that people are cured from alternative medicines.",
+        "sft_output": "Some healing requires intervention by medical doctors not alternative medicines. It is not the responsibility of alternative medicine."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: legalised sex selection causes biases among genders.\n### Argument:",
+        "topic": "legalised sex selection causes biases among genders",
+        "stance": "COUNTER",
+        "original_argument": "sex selection has it advantages too",
+        "sft_output": "Gender selection is not an acceptable way to codify people as criminals."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Adopting gender neutral language would be expensive and we can use those resources in other places.\n### Argument:",
+        "topic": "Adopting gender neutral language would be expensive and we can use those resources in other places.",
+        "stance": "SUPPORTING",
+        "original_argument": "Adopting gender neutral language would be expensive because money would be needed to educate people about the changes.",
+        "sft_output": "Adoption of gender-neutral language may cost more than it's worth."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Minors are not old enough to make complex emotional decisions.\n### Argument:",
+        "topic": "Minors are not old enough to make complex emotional decisions.",
+        "stance": "COUNTER",
+        "original_argument": "Minors are often underestimated in their decision making abilities.",
+        "sft_output": "Old people can't imagine carrying a baby."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Gender neutral language is good for equality.\n### Argument:",
+        "topic": "Gender neutral language is good for equality.",
+        "stance": "COUNTER",
+        "original_argument": "People should be responsible for their own feelings instead of claiming gender biases.",
+        "sft_output": "Language should not be forced to adapt to fit the latest trends. It will adapt naturally."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Banning of weapon limits arms holders.\n### Argument:",
+        "topic": "Banning of weapon limits arms holders.",
+        "stance": "SUPPORTING",
+        "original_argument": "Banning of weapons limit the amount of murder and reduce the amount of gun in murderer hands",
+        "sft_output": "The country has a right to bear arms. The number of weapons should not be limited."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: People tends to participate in politics and support their parties of interest when there are many political parties.\n### Argument:",
+        "topic": "People tends to participate in politics and support their parties of interest when there are many political parties.",
+        "stance": "SUPPORTING",
+        "original_argument": "People like to have many political parties so they can support the party with their values",
+        "sft_output": "Politics is personal and should be private. Political parties have an obligation to the shareholder."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Abolishing capital punishment is cruel for the victims of crime.\n### Argument:",
+        "topic": "Abolishing capital punishment is cruel for the victims of crime.",
+        "stance": "COUNTER",
+        "original_argument": "Mathematically, the victims aren't paying for much of the care, therefore abolishing capital punishment will not impact them.",
+        "sft_output": "Forcing victims to pay for criminals' life imprisonment via taxes is compassionate for some victims."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: A multi party system allows for diversity in political system.\n### Argument:",
+        "topic": "A multi party system allows for diversity in political system",
+        "stance": "COUNTER",
+        "original_argument": "Multi party system brings about division among people.",
+        "sft_output": "Multi party systems bring about division among people and no one wants to listen to another."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Recruitment of professional people is important for good work to happen.\n### Argument:",
+        "topic": "Recruitment of professional people is important for good work to happen.",
+        "stance": "COUNTER",
+        "original_argument": "Some people don't start a job as an experienced professional, but prove to be more valuable later on.",
+        "sft_output": "People are motivated by money so offering this as a career path is wrong."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Economic sanctions should cease to exist.\n### Argument:",
+        "topic": "Economic sanctions should cease to exist.",
+        "stance": "COUNTER",
+        "original_argument": "Economic sanctions are necessary for punishment.",
+        "sft_output": "Some countries just needs to be sanctioned already. Some nations are just what is appropriate for some countries."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Making prostitution legal benefits sex workers.\n### Argument:",
+        "topic": "Making prostitution legal benefits sex workers.",
+        "stance": "COUNTER",
+        "original_argument": "Making prostitution legal can lead to more people falling into prostitution.",
+        "sft_output": "Prostitution is not an effective deterrent, and should not be legalized."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Banning of weapon limits arms holders.\n### Argument:",
+        "topic": "Banning of weapon limits arms holders.",
+        "stance": "COUNTER",
+        "original_argument": "People tend to get weapons illegally irrespective of the banning",
+        "sft_output": "The country has a right to bear arms. The nation has freedom of speech."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Flags are just material products and should not be held in such high esteem.\n### Argument:",
+        "topic": "Flags are just material products and should not be held in such high esteem.",
+        "stance": "COUNTER",
+        "original_argument": "A flag represents a group or a nation and thus has added symbolic value.",
+        "sft_output": "High esteem is very necessary for some people."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Abolishing intellectual property rights is good.\n### Argument:",
+        "topic": "Abolishing intellectual property rights is good.",
+        "stance": "COUNTER",
+        "original_argument": "Abolishing intellectual property rights will discourage people from sharing knowledge.",
+        "sft_output": "If we abolish intellectual property right, more people will be able to access information."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: Capital punishment acts as a deterrent to serious crime.\n### Argument:",
+        "topic": "Capital punishment acts as a deterrent to serious crime.",
+        "stance": "SUPPORTING",
+        "original_argument": "Capital punishment will cause many potential criminals to reconsider committing crimes, due to fear of execution.",
+        "sft_output": "A very serious punishment would make criminals less likely to offend."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Abolishing mandatory retirement will help end age discrimination.\n### Argument:",
+        "topic": "Abolishing mandatory retirement will help end age discrimination.",
+        "stance": "COUNTER",
+        "original_argument": "Abolishing mandatory retirement will not prevent employers from finding new ways to engage in age discrimination.",
+        "sft_output": "Ending age disdiscrimination will protect older workers and help ending age bias."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: If it's okay to kill cattle for meat, then a whale is an animal, and killing them should be allowed.\n### Argument:",
+        "topic": "If it's okay to kill cattle for meat, then a whale is an animal, and killing them should be allowed.",
+        "stance": "COUNTER",
+        "original_argument": "Whales are more endangered than cattle.",
+        "sft_output": "Animals are live creatures. They don't deserve to be killed."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Child actors should be regulated, not banned.\n### Argument:",
+        "topic": "Child actors should be regulated, not banned.",
+        "stance": "COUNTER",
+        "original_argument": "Child actors are susceptible and not old enough to make their own decisions.",
+        "sft_output": "It would be difficult to find alternatives to child actors."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Creating artificial safe spaces can be counter productive.\n### Argument:",
+        "topic": "Creating artificial safe spaces can be counter productive.",
+        "stance": "COUNTER",
+        "original_argument": "Safe spaces are intended for people to express their ideas without fear of judgment.",
+        "sft_output": "Safe spaces are not productive and can't be helped."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: All people are guaranteed the right to celebrate in accordance with their beliefs.\n### Argument:",
+        "topic": "All people are guaranteed the right to celebrate in accordance with their beliefs.",
+        "stance": "COUNTER",
+        "original_argument": "Citizens are not guaranteed the right to celebrate if the celebration abridges on the rights of others.",
+        "sft_output": "People are raised to believe different doctrines. People's beliefs are set."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Foster care brings good to disadvantaged children.\n### Argument:",
+        "topic": "Foster care brings good to disadvantaged children.",
+        "stance": "COUNTER",
+        "original_argument": "Many children are abused by their foster parents.",
+        "sft_output": "Children in the foster system are more likely to deal with mental health issues."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Space exploration brings about new discoveries.\n### Argument:",
+        "topic": "Space exploration brings about new discoveries",
+        "stance": "COUNTER",
+        "original_argument": "space exploration is a waste of time and effort as all resources can be used here to create more resources",
+        "sft_output": "Satellite has some negative effect on human life."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: higher education should be more available to all people.\n### Argument:",
+        "topic": "higher education should be more available to all people.",
+        "stance": "COUNTER",
+        "original_argument": "higher education would be meaningless if everyone could afford it.",
+        "sft_output": "All people deserve the same learning opportunities. Higher education is not always an accessible activity."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Capital punishment acts as a deterrent to serious crime.\n### Argument:",
+        "topic": "Capital punishment acts as a deterrent to serious crime.",
+        "stance": "COUNTER",
+        "original_argument": "Capital punishment is not a deterrent, as evidenced by our continually rising prison population.",
+        "sft_output": "Serious crimes should have an equal punishment, mass murder is worthy of capital punishment."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Legalizing prostitution reduces the risk of disease.\n### Argument:",
+        "topic": "Legalizing prostitution reduces the risk of disease",
+        "stance": "COUNTER",
+        "original_argument": "People will not want prostitution to  be legal as their income for it will reduce",
+        "sft_output": "Prostitution is immoral it should never be legalized."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Stay at home Dad has a reason for staying home.\n### Argument:",
+        "topic": "Stay at home Dad has a reason for staying home",
+        "stance": "COUNTER",
+        "original_argument": "Stay at home dad has no value to the economy of a country",
+        "sft_output": "Home dads are better at their children. Children with a father figure athome perform better in school."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Prostitution should be legalized.\n### Argument:",
+        "topic": "Prostitution should be legalized.",
+        "stance": "COUNTER",
+        "original_argument": "Prostitution is damaging to society.",
+        "sft_output": "Some people have no alternatives outside of prostitution, and should not be punished for trying to survive."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Student loans should be subsidized in other to ease financial hardship on students.\n### Argument:",
+        "topic": "Student loans should be subsidized in other to ease financial hardship on students",
+        "stance": "COUNTER",
+        "original_argument": "Some students abuse the privilege of student loan more reasons, it shouldn't be subsidized",
+        "sft_output": "Students are not able to get through school without help. Financial hardship is only caused by heavy debt."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: freedom of speech is paramount.\n### Argument:",
+        "topic": "freedom of speech is paramount",
+        "stance": "SUPPORTING",
+        "original_argument": "Freedom of speech should not be invalidated.",
+        "sft_output": "Freedom of expression is essential. Freedom is vital. The freedom to express themselves is a right."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: space exploration should be considered a waste of resources.\n### Argument:",
+        "topic": "space exploration should be considered a waste of resources",
+        "stance": "COUNTER",
+        "original_argument": "space exploration brings about new inventions which can be used to increase the standard of earth.",
+        "sft_output": "Space exploration allows for new innovations and technology to be put in place."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Surrogacy makes parent happy.\n### Argument:",
+        "topic": "Surrogacy makes parent happy",
+        "stance": "COUNTER",
+        "original_argument": "Surrogacy is immoral and cheating the law of nature",
+        "sft_output": "People who want children should be allowed to use what means they have to make it happen."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Making defendants all use public defenders will make the system more fair.\n### Argument:",
+        "topic": "Making defendants all use public defenders will make the system more fair.",
+        "stance": "COUNTER",
+        "original_argument": "Use of public defenders is not mandatory.",
+        "sft_output": "Public defenders are often not given enough time with clients."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: People in safe space are vulnerable.\n### Argument:",
+        "topic": "People in safe space are vulnerable",
+        "stance": "COUNTER",
+        "original_argument": "Safe space accommodates everyone",
+        "sft_output": "Terrorist can easily brainwash people in safer space as they are reluctant."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: people should follow whichever religion they choose.\n### Argument:",
+        "topic": "people should follow whichever religion they choose.",
+        "stance": "COUNTER",
+        "original_argument": "Some religions people follow are dangerous.",
+        "sft_output": "Some religions are not okay to pursue. Some religious beliefs are dangerous."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Something might stop black market organ sales.\n### Argument:",
+        "topic": "Something might stop black market organ sales.",
+        "stance": "COUNTER",
+        "original_argument": "There will always be a black market for anything people want badly.",
+        "sft_output": "If enough pressure and incentives are put on countries that sell organs they will change. It is theirs."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: freedom of speech is paramount.\n### Argument:",
+        "topic": "freedom of speech is paramount.",
+        "stance": "COUNTER",
+        "original_argument": "Freedom of speech is not the most important.",
+        "sft_output": "Freedom of Speech is essential. The freedom to speak is a right defended by the constitution."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Some people are politically apathetic, they should not be forced to vote.\n### Argument:",
+        "topic": "Some people are politically apathetic, they should not be forced to vote.",
+        "stance": "COUNTER",
+        "original_argument": "Everyone should vote in other to put good leaders in position",
+        "sft_output": "Political aprapment can force people to share their beliefs and rights."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Children are still learning, and a zero tolerance policy doesn't allow them to make mistakes.\n### Argument:",
+        "topic": "Children are still learning, and a zero tolerance policy doesn't allow them to make mistakes.",
+        "stance": "COUNTER",
+        "original_argument": "Children are able to be held accountable for their actions.",
+        "sft_output": "A child's brain has not had a chance to fully develop."
+    },
+    {
+        "prompt": "Generate a COUNTER argument for the topic: Legalized organ trade would exploit the poor.\n### Argument:",
+        "topic": "Legalized organ trade would exploit the poor.",
+        "stance": "COUNTER",
+        "original_argument": "Legalized organ trade would aid the poor, by giving them a large sum of money to improve their lives.",
+        "sft_output": "Organ trade legalized by the government would help the disadvantaged to acquire organs."
+    },
+    {
+        "prompt": "Generate a SUPPORTING argument for the topic: The job of a public defender is to help insure the rights of the people.\n### Argument:",
+        "topic": "The job of a public defender is to help insure the rights of the people.",
+        "stance": "SUPPORTING",
+        "original_argument": "Public defenders give defendants due process.",
+        "sft_output": ""
+    }
+]
