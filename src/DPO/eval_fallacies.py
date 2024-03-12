@@ -9,12 +9,15 @@ from tqdm import tqdm
 from typing import Optional, Set
 from utils import *
 import argparse
+import peft 
+from trl import SFTTrainer
+from peft import AutoPeftModelForCausalLM, LoraConfig, get_peft_model, prepare_model_for_kbit_training
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, AutoModelForCausalLM
 
     
-def generate(prompt: str, model, tokenizer: Optional[transformers.PreTrainedTokenizer]):
+def generate(prompt, model, tokenizer):
     """Main function for each worker process (may be only 1 for BasicTrainer/TensorParallelTrainer)."""
-    tokenized_prompt = tokenizer(prompt, return_tensors='pt', max_length=80, truncation=True).to(model.device)
+    tokenized_prompt = tokenizer(prompt, return_tensors='pt', max_length=128, truncation=True).to(model.device)
     with torch.no_grad():
         output = model.generate(input_ids=tokenized_prompt.input_ids, 
                                 attention_mask=tokenized_prompt.attention_mask,
@@ -26,6 +29,7 @@ def generate(prompt: str, model, tokenizer: Optional[transformers.PreTrainedToke
                                 do_sample=False)
 
         output_decoded = tokenizer.decode(output[0], skip_special_tokens=True)
+        
         return output_decoded
 
 def fallacy_proba(y, clf, clf_tokenizer):
@@ -47,14 +51,14 @@ def evaluate_over_dataset(args):
     if args.dpo_path:
         paths.append(args.dpo_path)
         
-    clf = AutoModelForSequenceClassification.from_pretrained('models/howey_electra-base-mnli', num_labels=2)
-    clf.to('cuda')
-    clf_tokenizer = AutoTokenizer.from_pretrained('howey/electra-base-mnli')
+    #clf = AutoModelForSequenceClassification.from_pretrained('models/howey_electra-base-mnli', num_labels=2)
+    #clf.to('cuda')
+    #clf_tokenizer = AutoTokenizer.from_pretrained('howey/electra-base-mnli')
 
     for j, path in enumerate(paths):
         print("============================================")
         print(path, '\n')
-        ref_model = transformers.AutoModelForCausalLM.from_pretrained(path, device_map='auto')
+        ref_model = AutoPeftModelForCausalLM.from_pretrained(path, device_map='auto')
         #ref_model.to('cuda')
         ref_model.eval()
         tokenizer = AutoTokenizer.from_pretrained(path)
@@ -65,21 +69,20 @@ def evaluate_over_dataset(args):
         for i, entry in tqdm(dataset[:10].iterrows()):
             topic = entry.topic
             stance = entry.label
-            prompt = f"<s> [INST] Generate a {'SUPPORTING' if stance==1 else 'COUNTER'} argument for the topic: {topic} [/INST]\n### Argument: "
+            prompt = f"<s> [INST] ###Prompt: Generate a {'SUPPORTING' if stance==1 else 'COUNTER'} argument for the topic: {topic} [/INST] \n### Argument: "
             generated_ext = generate(prompt, model=ref_model, tokenizer=tokenizer)
             #print('\n')
+            '''
             if prompt in generated_ext:
                 generated_ext = generated_ext[len(prompt) + 1:] #generated_ext.replace(prompt, '')
                 
             generated_ext = sanitize(remove_incomplete_last_sentence(generated_ext))
-            
+            '''
             #fallacy_prob = fallacy_proba(generated_ext, clf=clf, clf_tokenizer=clf_tokenizer)
             #print(prompt)
             #print('\n')
             #fallacy_probs.append(fallacy_prob)
             print(generated_ext)
-
-            
             generated_external.append(generated_ext)
  
         

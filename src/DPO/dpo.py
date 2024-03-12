@@ -14,7 +14,8 @@ from tqdm import tqdm
 import gc
 from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM
-import utils 
+import utils
+from utils import get_training_args
 
 
 def parse_args():
@@ -22,14 +23,14 @@ def parse_args():
     parser.add_argument('--data-dir', default='data/dpo/arguments/')
     parser.add_argument('--model-name', default='google/flan-t5-base')
     parser.add_argument('--ref-model-path', default='models/sft_flan-t5-large_trl')
-    parser.add_argument('--beta', default=0.5, type=float)
+    parser.add_argument('--beta', default=0.25, type=float)
     parser.add_argument('--n-epochs', default=10, type=int)
     parser.add_argument('--batch-size', default=8, type=int)
     parser.add_argument('--eval-batch-size', default=32, type=int)
     parser.add_argument('--gradient-accumulation-steps', default=2, type=int)
-    parser.add_argument('--learning-rate', default=5e-7, type=float)
-    parser.add_argument('--warmup-steps', default=0, type=int)
-    parser.add_argument('--weight-decay', default=0.01, type=float)
+    parser.add_argument('--learning-rate', default=5e-4, type=float)
+    parser.add_argument('--warmup-steps', default=100, type=int)
+    parser.add_argument('--weight-decay', default=0.05, type=float)
     parser.add_argument('--adam-epsilon', default=1e-8, type=float)
     parser.add_argument('--save-steps', default=500, type=int)
     parser.add_argument('--logging-steps', default=300, type=int)
@@ -52,7 +53,7 @@ def put_capital_stance(prompt):
  
 def map_data(example):
     return {
-        'prompt': '<s> [INST] ### Prompt: ' + put_capital_stance(example['prompt']) + ' [/INST]\n### Argument' ,
+        'prompt': '<s> [INST] ### Prompt: ' + put_capital_stance(example['prompt']) + ' [/INST]\n### Argument' ,
         'chosen': example['chosen'] + ' </s>',
         'rejected': example['rejected'] + ' </s>'
     }
@@ -81,7 +82,7 @@ def main():
         tokenizer = transformers.T5Tokenizer.from_pretrained(model_name)
     elif 'llama' in model_name.lower():
         is_encoder_decoder = False
-        model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path)
+        model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
         #ref_model = transformers.LlamaForCausalLM.from_pretrained(ref_model_path)
         tokenizer = transformers.LlamaTokenizer.from_pretrained(ref_model_path)
     else:
@@ -90,21 +91,26 @@ def main():
         ref_model = transformers.AutoModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
         tokenizer = transformers.AutoTokenizer.from_pretrained(model_name)
         
-    task_type = TaskType.SEQ_2_SEQ_LM if is_encoder_decoder else TaskType.CAUSAL_LM 
-    
+    task_type = TaskType.CAUSAL_LM if is_encoder_decoder else TaskType.CAUSAL_LM 
+    model.config.use_cache = False 
+    #model.requires_grad = True
+    tokenizer.pad_token=tokenizer.unk_token
 
+    peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=16, lora_alpha=32, lora_dropout=0.05)
+    training_args = get_training_args(args)
+    #model = get_peft_model(model, peft_config)
+
+    model.enable_input_require_grads()
     dpo_trainer = DPOTrainer(
         model=model,
         ref_model=None,
         beta=args.beta,
         args=training_args,
         train_dataset=train_data,
-        is_encoder_decoder=is_encoder_decoder,
         tokenizer=tokenizer,
         max_length=args.max_length,
-        max_target_length=args.max_length,
         #peft_config=peft_config if args.use_peft == 'true' else None,
-        generate_during_eval=True)
+        )
     
     dpo_trainer.train()
     print("SAVING MODEL at ", args.output_dir)

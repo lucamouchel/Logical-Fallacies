@@ -33,9 +33,10 @@ def formatting_prompts_func(example):
         else:
             prompt = prompt.replace('counter argument', 'COUNTER argument')
             
-        completion = example['chosen'][i]
-        text = f"<s> [INST] ### Prompt: {prompt} [/INST]\n### Argument: {completion} </s>"
+        completion = example['argument'][i]
+        text = f"<s> [INST] ### Prompt: {prompt} [/INST] \n### Argument: {completion} </s>"
         data.append(text)
+        
     return data
 
 def parse_args():
@@ -47,7 +48,7 @@ def parse_args():
     parser.add_argument('--eval-steps', default=80, type=int)
     parser.add_argument('--eval-batch-size', default=32, type=int)
     parser.add_argument('--gradient-accumulation-steps', default=2, type=int)
-    parser.add_argument('--learning-rate', default=5e-5, type=float)
+    parser.add_argument('--learning-rate', default=5e-4, type=float)
     parser.add_argument('--warmup-steps', default=0, type=int)
     parser.add_argument('--weight-decay', default=0.01, type=float)
     parser.add_argument('--adam-epsilon', default=1e-8, type=float)
@@ -88,8 +89,10 @@ def main():
     #### IS THIS THE ONLY ADDITION TO THE TOKENIZER we had in the end??
     tokenizer.pad_token=tokenizer.unk_token
     
-    peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=16, lora_alpha=32, lora_dropout=0.1)
+    peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=16, lora_alpha=32, lora_dropout=0.05)
     training_args = get_training_args(args)
+
+    model = get_peft_model(model, peft_config)
 
     trainer = SFTTrainer(
         model=model,
@@ -100,7 +103,7 @@ def main():
         formatting_func=formatting_prompts_func,
         max_seq_length=args.max_length,
         ##### DID we have anything extra here? max-length?
-        peft_config=peft_config if args.use_peft == 'true' else None,
+        #peft_config=peft_config if args.use_peft == 'true' else None,
         )
     
     trainer.train()
