@@ -12,49 +12,34 @@ from peft import LoraConfig, TaskType, get_peft_model
 from datetime import datetime
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import load_dataset
-### python src/DPO/sft_with_trl.py --model-name=google/flan-t5-base --data-dir=data/dpo/claims --n-epochs=2 --batch-size=8 --gradient-accumulation-steps=2 --output-dir=models/test/sft_flan-t5-base_trl --is-encoder-decoder=true 
-"""
-def get_data(data_dir, split='train'):
-    if data_dir[-1] != '/': 
-        data_dir += '/'
-    with open(f'{data_dir+split}.json', 'r') as f:
-        df = json.load(f)
-    
-    df = pd.DataFrame(df).drop(columns=['rejected'])
-    df.drop_duplicates(subset=['chosen'], inplace=True)
-    return Dataset.from_dict(df)
-"""
-def formatting_prompts_func(example):
+
+def formatting_prompts_func(example, task='argument'):
+    ## Task = argument or claim
     data = []
     for i in range(len(example['prompt'])):
         prompt = example['prompt'][i]
-        if 'supporting argument' in prompt:
-            prompt = prompt.replace('supporting argument', 'SUPPORTING argument')
-        else:
-            prompt = prompt.replace('counter argument', 'COUNTER argument')
-            
-        completion = example['argument'][i]
-        text = f"<s> [INST] ### Prompt: {prompt} [/INST] \n### Argument: {completion} </s>"
-        data.append(text)
-        
+        completion = example[task][i]
+        text = f"<s> [INST] ### Prompt: {prompt} [/INST] \n### {task.title()}: {completion} </s>"
+        data.append(text)     
     return data
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data-dir', default='data/dpo/arguments/')
+    parser.add_argument('--data-dir', default='data/sft/')
     parser.add_argument('--model-name', default='google/gemma-2b')
     parser.add_argument('--n-epochs', default=10, type=int)
     parser.add_argument('--batch-size', default=8, type=int)
     parser.add_argument('--eval-steps', default=80, type=int)
     parser.add_argument('--eval-batch-size', default=32, type=int)
     parser.add_argument('--gradient-accumulation-steps', default=2, type=int)
-    parser.add_argument('--learning-rate', default=5e-4, type=float)
+    parser.add_argument('--learning-rate', default=2e-4, type=float)
     parser.add_argument('--warmup-steps', default=0, type=int)
     parser.add_argument('--weight-decay', default=0.01, type=float)
     parser.add_argument('--adam-epsilon', default=1e-8, type=float)
     parser.add_argument('--save-steps', default=80, type=int)
     parser.add_argument('--logging-steps', default=80, type=int)
     parser.add_argument('--output-dir', default='models')
+    parser.add_argument('--task', required=True) ## arguments or claims
     parser.add_argument('--max-length', default=128, type=int)
     parser.add_argument('--use-peft', default='false')
     parser.add_argument('--peft-config-r', default=16, type=int)
@@ -67,13 +52,17 @@ def main():
     args = parse_args()
     
     model_name = args.model_name
-    
-    train_data = load_dataset('json', data_files='data/sft_refiner/train.json', split='train')
+    task = args.task 
+    if args.data_dir[-1] != '/':
+        args.data_dir += '/'
+
+    input_dir = args.data_dir + task + '/'
+    train_data = load_dataset('json', data_files=input_dir + 'train.json', split='train')
  
     if "/" in model_name :
-        output_directory =f'{args.output_dir}/sft_{model_name.split("/")[-1]}_trl_{datetime.now()}'
+        output_directory =f'{args.output_dir}/{task}/sft_{model_name.split("/")[-1]}_trl_{datetime.now()}'
     else: 
-        output_directory =f'{args.output_dir}/sft_{model_name}_trl_{datetime.now()}'
+        output_directory =f'{args.output_dir}/{task}/sft_{model_name}_trl_{datetime.now()}'
     args.output_dir = output_directory.replace(' ', '_')
     
     if 't5' in args.model_name.lower(): ### we use T5 but you can use some other model
@@ -85,7 +74,20 @@ def main():
     else: ## if we use Gemma we can just use the AutoModelForCausalLM
         model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
         tokenizer = AutoTokenizer.from_pretrained(model_name)
-        
+   
+    maximum = 200
+    for prompt in train_data['prompt']:
+        t = tokenizer(prompt)
+        length = len(t['input_ids'])
+        if length > maximum:
+          maximum=length
+          print(prompt)
+    print(maximum)
+    exit()
+    l = tokenizer(train_data['prompt'])
+    print(max(l['input_ids']))
+    exit()
+    
     #### IS THIS THE ONLY ADDITION TO THE TOKENIZER we had in the end??
     tokenizer.pad_token=tokenizer.unk_token
     
@@ -93,13 +95,12 @@ def main():
     training_args = get_training_args(args)
 
     model = get_peft_model(model, peft_config)
-
+    
     trainer = SFTTrainer(
         model=model,
         tokenizer=tokenizer,
         args=training_args,
         train_dataset=train_data,
-        #eval_dataset=val_data,
         formatting_func=formatting_prompts_func,
         max_seq_length=args.max_length,
         ##### DID we have anything extra here? max-length?

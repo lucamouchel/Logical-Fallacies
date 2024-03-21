@@ -1,8 +1,0 @@
-name_or_path: google/flan-t5-xl
-tokenizer_name_or_path: null
-archive: null
-block_name: T5Block
-
-policy_dtype: float32
-fsdp_policy_mp: null
-reference_dtype: float32
