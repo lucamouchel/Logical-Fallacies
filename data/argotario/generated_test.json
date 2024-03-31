@@ -1,0 +1,1177 @@
+[
+    {
+        "topic": "Should computers be allowed in class rooms?",
+        "fallacy type": "Appeal to Emotion",
+        "support argument": "Computers enhance learning by providing access to vast resources and promoting digital literacy."
+    },
+    {
+        "topic": "Should we all home school our kids?",
+        "fallacy type": "Red Herring",
+        "support argument": "Home schooling allows for personalized learning and flexibility to cater to each child's needs."
+    },
+    {
+        "topic": "Should smoking at home be illegal?",
+        "fallacy type": "Red Herring",
+        "support argument": "Smoking at home can harm others through secondhand smoke exposure, justifying a ban."
+    },
+    {
+        "topic": "Is television an effective tool in building the minds of children?",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "Television can provide educational content that stimulates children's minds and encourages learning."
+    },
+    {
+        "topic": "Is Christianity a peaceful religion?",
+        "fallacy type": "Appeal to Emotion",
+        "support argument": "Christian teachings promote love, forgiveness, and peace, guiding believers to peaceful actions."
+    },
+    {
+        "topic": "Is the Deutsche Post-strike justified?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "The strike is justified due to unfair working conditions and low wages."
+    },
+    {
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "fallacy type": "Red Herring",
+        "counter argument": "Travel restrictions can help contain the spread of Ebola without targeting specific groups unfairly."
+    },
+    {
+        "topic": "Is plastic surgery an important field of medicine?",
+        "fallacy type": "fallacy of relevance",
+        "support fallacy": "Plastic surgery boosts self-esteem, just like a new haircut does."
+    },
+    {
+        "topic": "Is plastic surgery an important field of medicine?",
+        "fallacy type": "false dilemma",
+        "support fallacy": "Either plastic surgery is important in medicine, or it serves no purpose at all."
+    },
+    {
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Yes, subcontracting can create job opportunities and boost the economy in developing countries."
+    },
+    {
+        "topic": "Will flying cars ever become a reality?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Advancements in technology and research suggest flying cars could become a reality in the future."
+    },
+    {
+        "topic": "Is Turkey ready to join the European Union?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Turkey has made progress and meets many EU criteria, showing readiness for membership."
+    },
+    {
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I know a student from a co-ed school who excels academically, so all co-ed schools must be better."
+    },
+    {
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "fallacy type": "ad hominem",
+        "counter fallacy": "Supporters of co-ed schools lack understanding of educational benefits and are stuck in outdated beliefs."
+    },
+    {
+        "topic": "Is the grading system used in high school effective?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Grading systems should be evaluated based on research and student outcomes, not personal anecdotes."
+    },
+    {
+        "topic": "Is drug testing athletes justified?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Drug testing ensures fair competition and protects athletes' health."
+    },
+    {
+        "topic": "Is nuclear power a reasonable energy source?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Nuclear power is a reasonable energy source due to its low carbon emissions and high energy output."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "Red Herring",
+        "support argument": "Animal testing is necessary for developing life-saving treatments and advancing medical research."
+    },
+    {
+        "topic": "Is global warming really an issue?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Global warming is a pressing issue due to scientific evidence of rising temperatures and environmental impacts."
+    },
+    {
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "Precautionary measures can prevent the spread of Ebola without discriminating against all individuals."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "faulty generalization",
+        "support fallacy": "I heard of one case where animal testing led to a breakthrough. Therefore, all animal testing for medical purposes is justified."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "fallacy of relevance",
+        "support fallacy": "Animal testing is necessary for medical progress. It also helps in understanding animal behavior."
+    },
+    {
+        "topic": "Are humans to blame for certain animal extinctions?",
+        "fallacy type": "Red Herring",
+        "support argument": "Human activities like deforestation and hunting have directly led to the extinction of many species."
+    },
+    {
+        "topic": "Should cellphones be used during class?",
+        "fallacy type": "Red Herring",
+        "counter argument": "Cellphones can enhance learning if used appropriately, preparing students for the digital age."
+    },
+    {
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "fallacy type": "appeal to emotion",
+        "counter fallacy": "No, think about the families torn apart by drug addiction. Harsher penalties would only worsen their suffering."
+    },
+    {
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I know someone who used drugs and turned their life around, so all drug users can easily reform without stricter penalties."
+    },
+    {
+        "topic": "Is Christianity a peaceful religion?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Christianity promotes love, forgiveness, and peace in its teachings and values."
+    },
+    {
+        "topic": "Should smoking at home be illegal?",
+        "fallacy type": "Appeal to Emotion",
+        "counter argument": "Smoking at home affects others' health; restrictions are necessary for public well-being."
+    },
+    {
+        "topic": "Are Quentin Tarantinos movies too violent?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "The level of violence in Tarantino's movies can be excessive, impacting viewers' perceptions."
+    },
+    {
+        "topic": "Should the title of a university-doctor be shown on the identification-card?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Displaying the title on the ID card helps in emergencies for accurate medical treatment."
+    },
+    {
+        "topic": "nan",
+        "fallacy type": "Appeal to Emotion",
+        "counter argument": "Supporting children in atheist families does not equate to taking away love and support from them."
+    },
+    {
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I heard of one person from an Ebola-infected country who didn't have Ebola. Therefore, all people from Ebola-infected countries are Ebola-free."
+    },
+    {
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "fallacy type": "fallacy of logic",
+        "counter fallacy": "If countries allow people from Ebola-infected countries, everyone will get infected."
+    },
+    {
+        "topic": "Is tupac the most influential rapper in history?",
+        "fallacy type": "Red Herring",
+        "counter argument": "Tupac's impact on culture and social issues makes him the most influential rapper."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "faulty generalization",
+        "support fallacy": "I heard of one case where animal testing led to a breakthrough. Therefore, all animal testing for medical purposes is justified."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "circular reasoning",
+        "support fallacy": "Animal testing is necessary for medical purposes because it's essential for medical research."
+    },
+    {
+        "topic": "Is global warming really an issue?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "The scientific consensus and data support the reality of global warming."
+    },
+    {
+        "topic": "Is veganism the best for our bodies?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Individual health needs vary; veganism may not suit everyone, balanced diets are key."
+    },
+    {
+        "topic": "Should economical growth always be the ultimate goal of every country?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Human dignity and well-being should be prioritized over mere economic growth."
+    },
+    {
+        "topic": "Is the grading system used in high school effective?",
+        "fallacy type": "fallacy of extension",
+        "counter fallacy": "So you're saying all students should get straight A's without effort?"
+    },
+    {
+        "topic": "Is the grading system used in high school effective?",
+        "fallacy type": "ad hominem",
+        "counter fallacy": "Critics of the grading system are lazy students who just want easy grades."
+    },
+    {
+        "topic": "Is plastic surgery an important field of medicine?",
+        "fallacy type": "ad populum",
+        "support fallacy": "Many people consider plastic surgery crucial in enhancing physical appearance, so it must be significant in medicine."
+    },
+    {
+        "topic": "Is plastic surgery an important field of medicine?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Critics of plastic surgery are just jealous of those who can afford it."
+    },
+    {
+        "topic": "Is plastic surgery an important field of medicine?",
+        "fallacy type": "Red Herring",
+        "support argument": "Plastic surgery can improve quality of life and help patients recover from injuries or conditions."
+    },
+    {
+        "topic": "Is Turkey ready to join the European Union?",
+        "fallacy type": "Ad Hominem",
+        "counter argument": "Turkey has made progress in meeting EU criteria, showing readiness for membership."
+    },
+    {
+        "topic": "Do school uniforms make school a more effective place to learn?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I saw a student misbehave in a uniform. Therefore, school uniforms do not improve behavior."
+    },
+    {
+        "topic": "Do school uniforms make school a more effective place to learn?",
+        "fallacy type": "ad populum",
+        "counter fallacy": "Most students believe school uniforms improve learning, so they must be beneficial."
+    },
+    {
+        "topic": "Should gorillas be held in zoos",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I saw a happy gorilla in a zoo once, so all gorillas must be happy in zoos."
+    },
+    {
+        "topic": "Should gorillas be held in zoos",
+        "fallacy type": "intentional",
+        "counter fallacy": "Gorillas love the attention and care they receive in zoos, so it's beneficial for them."
+    },
+    {
+        "topic": "Will flying cars ever become a reality?",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "Advancements in technology make flying cars a possibility in the future."
+    },
+    {
+        "topic": "Is Apple the new Microsoft?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Apple's market dominance and product range make it more comparable to Microsoft than Motorola."
+    },
+    {
+        "topic": "Should gorillas be held in zoos",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Gorillas in zoos can help educate the public about conservation and the importance of protecting wildlife."
+    },
+    {
+        "topic": "Should high schools provide daycare services for students who have children?",
+        "fallacy type": "ad populum",
+        "support fallacy": "Many parents agree that high schools should offer daycare services, so it's a popular opinion."
+    },
+    {
+        "topic": "Should high schools provide daycare services for students who have children?",
+        "fallacy type": "false causality",
+        "support fallacy": "If high schools offer daycare, students will automatically excel academically."
+    },
+    {
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Heavier penalties can deter drug dealers and protect communities from the harms of drug trafficking."
+    },
+    {
+        "topic": "Do celebrities get away with more crime than non-celebrities?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Statistics show celebrities often receive lighter sentences, indicating they may get away with more crime."
+    },
+    {
+        "topic": "Do celebrities get away with more crime than non-celebrities?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Celebrities often have resources to hire top lawyers, leading to perceived preferential treatment."
+    },
+    {
+        "topic": "Is drug testing athletes justified?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Drug testing athletes is justified to ensure fair competition and protect the integrity of sports."
+    },
+    {
+        "topic": "Has anyone been on the moon?",
+        "fallacy type": "Appeal to Emotion",
+        "counter argument": "Multiple astronauts from different countries have landed on the moon, supported by evidence."
+    },
+    {
+        "topic": "Should economical growth always be the ultimate goal of every country?",
+        "fallacy type": "Red Herring",
+        "support argument": "Economic growth is crucial for improving living standards and providing opportunities for citizens."
+    },
+    {
+        "topic": "Do celebrities get away with more crime than non-celebrities?",
+        "fallacy type": "Red Herring",
+        "support argument": "Celebrities' status and wealth often lead to leniency in legal consequences compared to non-celebrities."
+    },
+    {
+        "topic": "Is Tupac the most influential rapper in history?",
+        "fallacy type": "ad hominem",
+        "counter fallacy": "Anyone who disagrees with Tupac's influence lacks taste and understanding of music."
+    },
+    {
+        "topic": "Is Tupac the most influential rapper in history?",
+        "fallacy type": "circular reasoning",
+        "counter fallacy": "Tupac is the most influential rapper because he has the most influence."
+    },
+    {
+        "topic": "Is Apple's Swift the new star?",
+        "fallacy type": "Red Herring",
+        "support argument": "Swift is a powerful and user-friendly programming language, making it a top choice for developers."
+    },
+    {
+        "topic": "Should cellphones be used during class?",
+        "fallacy type": "Ad H Hominem",
+        "support argument": "Cellphones can be used for educational purposes and enhance learning in the classroom."
+    },
+    {
+        "topic": "Is Christianity a peaceful religion?",
+        "fallacy type": "Red Herring",
+        "counter argument": "Christianity promotes love and forgiveness, not all conflicts are due to religion."
+    },
+    {
+        "topic": "Is the oppression of women by men a serious problem?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Individual experiences do not negate systemic issues. Many women face oppression regardless of personal relationships."
+    },
+    {
+        "topic": "Is global warming really an issue?",
+        "fallacy type": "circular reasoning",
+        "counter fallacy": "Global warming is a concern because it is a significant issue."
+    },
+    {
+        "topic": "Is global warming really an issue?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I know a few people who don't believe in global warming, so it must not be a real issue."
+    },
+    {
+        "topic": "Is there a good reason for the American war on terror?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Eliminating terrorist organizations protects national security and prevents future attacks on innocent civilians."
+    },
+    {
+        "topic": "Do celebrities get away with more crime than non-celebreties?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Celebrities often receive lighter sentences or avoid charges due to their fame and influence."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "false causality",
+        "support fallacy": "If animal testing is banned, medical progress will halt."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "fallacy of relevance",
+        "support fallacy": "Animal testing is necessary for medical progress, just like using smartphones for communication."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "circular reasoning",
+        "counter fallacy": "Germany should deport criminal refugees because they are criminals and need to be deported."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "false causality",
+        "counter fallacy": "Deporting criminal refugees will automatically reduce crime rates in Germany."
+    },
+    {
+        "topic": "Is democracy the best system available?",
+        "fallacy type": "circular reasoning",
+        "support fallacy": "Democracy is the best system because it's the most superior form of government."
+    },
+    {
+        "topic": "Is democracy the best system available?",
+        "fallacy type": "appeal to emotion",
+        "support fallacy": "Democracy must be upheld as it represents the hopes and dreams of the people."
+    },
+    {
+        "topic": "Is democracy the best system available?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Democracy promotes individual freedoms and accountability, making it the best system available."
+    },
+    {
+        "topic": "Did media ignore crimes from refugees?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Media coverage of refugee crimes may be biased, but not all refugees are criminals."
+    },
+    {
+        "topic": "Do celebrities get away with more crime than non-celebreties?",
+        "fallacy type": "Ad Hominem",
+        "counter argument": "Celebrities may have more resources for legal defense, but evidence should determine guilt."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "Red Herring",
+        "support argument": "Increasing milk prices can help dairy farmers maintain better living conditions for cows."
+    },
+    {
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "fallacy type": "false causality",
+        "support fallacy": "Single-sex schools produce better academic results due to gender segregation."
+    },
+    {
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "fallacy type": "fallacy of logic",
+        "support fallacy": "Single-sex schools have higher test scores. Therefore, all students in co-ed schools would perform better in single-sex schools."
+    },
+    {
+        "topic": "Should driving under the influence of alcohol be forbidden?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Driving drunk is dangerous regardless of individual outcomes. Safety of others is paramount."
+    },
+    {
+        "topic": "Did media ignore crimes from refugees?",
+        "fallacy type": "Red Herring",
+        "counter argument": "Addressing crimes committed by refugees is important for public safety and justice."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "equivocation",
+        "counter fallacy": "Raising milk prices could mean increasing dairy production or elevating store costs."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "ad populum",
+        "counter fallacy": "Most people agree that the price of milk should be increased, so it must be justified."
+    },
+    {
+        "topic": "Is there a good reason for the American war on terror?",
+        "fallacy type": "Ad Hominem",
+        "counter argument": "Protecting national security and preventing terrorist attacks justifies the war on terror."
+    },
+    {
+        "topic": "Should the fight versus the Islamic State include military operations?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Military operations are necessary to combat the Islamic State's threat effectively."
+    },
+    {
+        "topic": "Is global warming really an issue?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Global warming is a long-term, scientifically proven trend, unlike the short-lived swine flu scare."
+    },
+    {
+        "topic": "Is drug testing athletes justified?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Opponents of drug testing are likely users themselves and fear exposure."
+    },
+    {
+        "topic": "Is drug testing athletes justified?",
+        "fallacy type": "false causality",
+        "support fallacy": "If athletes are drug tested, they will automatically perform better in competitions."
+    },
+    {
+        "topic": "Is it justified to develop nuclear energy for commercial use?",
+        "fallacy type": "Red Herring",
+        "support argument": "Nuclear energy should be used commercially because it is a reliable and low-carbon energy source."
+    },
+    {
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Heavier penalties can deter drug-related crimes and protect society from the harms of drug abuse."
+    },
+    {
+        "topic": "Should gorillas be held in zoos",
+        "fallacy type": "Red Herring",
+        "support argument": "Zoos provide protection and care for gorillas, helping to conserve the species."
+    },
+    {
+        "topic": "Has anyone been on the moon?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Multiple astronauts from different countries have provided evidence of their moon landings."
+    },
+    {
+        "topic": "Should the title of a university-doctor be shown on the identification-card?",
+        "fallacy type": "Red Herring",
+        "support argument": "Displaying the title helps in emergencies for accurate medical treatment."
+    },
+    {
+        "topic": "Should high schools provide daycare services for students who have children?",
+        "fallacy type": "ad hominem",
+        "counter fallacy": "Those who support daycare services are irresponsible parents who can't handle their own children."
+    },
+    {
+        "topic": "Should high schools provide daycare services for students who have children?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I know a student who managed without daycare. Therefore, all students with children can manage without daycare."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "faulty generalization",
+        "support fallacy": "I heard of one case where animal testing led to a breakthrough. Therefore, all animal testing for medical purposes is justified."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Those who support animal testing lack compassion and empathy for animals."
+    },
+    {
+        "topic": "Is Christianity a peaceful religion?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Jesus' actions were specific instances, not a general teaching of violence in Christianity."
+    },
+    {
+        "topic": "Is the legality of abortion desirable?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Legal abortion protects women's health and rights, not just for promiscuity."
+    },
+    {
+        "topic": "Should non-European immigrants in Europe be accepted?",
+        "fallacy type": "Appeal to Emotion",
+        "counter argument": "Immigration should be based on skills and qualifications, not just emotional reasons."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "Appeal to Emotion",
+        "support argument": "Increasing the price of milk can help ensure fair compensation for dairy farmers."
+    },
+    {
+        "topic": "Is the legality of abortion desirable?",
+        "fallacy type": "Appeal to Emotion",
+        "support argument": "Legal abortion allows women to make personal choices about their bodies and futures."
+    },
+    {
+        "topic": "Should driving under the influence of alcohol be forbidden?",
+        "fallacy type": "Red Herring",
+        "support argument": "Driving under the influence of alcohol poses a serious risk to road safety and should be forbidden."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Deporting criminal refugees protects the safety and well-being of the local population."
+    },
+    {
+        "topic": "Should marijuana be legalized for individual use due to health condition?",
+        "fallacy type": "Appeal to Emotion",
+        "support argument": "Legalizing marijuana for health conditions can provide relief and improve quality of life for patients."
+    },
+    {
+        "topic": "Should economical growth always be the ultimate goal of every country?",
+        "fallacy type": "appeal to emotion",
+        "counter fallacy": "No, think about all the families struggling to make ends meet. Shouldn't their well-being matter more?"
+    },
+    {
+        "topic": "Should economical growth always be the ultimate goal of every country?",
+        "fallacy type": "ad populum",
+        "counter fallacy": "The majority believes economic growth is paramount, so it must be universally true."
+    },
+    {
+        "topic": "Are Quentin Tarantinos movies too violent?",
+        "fallacy type": "Appeal to Emotion",
+        "support argument": "The violence in Tarantino's movies serves a purpose in storytelling and character development."
+    },
+    {
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "fallacy type": "fallacy of relevance",
+        "support fallacy": "Outsourcing creates cultural exchange, like studying abroad, broadening perspectives."
+    },
+    {
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "fallacy type": "appeal to emotion",
+        "support fallacy": "Subcontracting jobs to developing countries would devastate families and communities, causing immense suffering."
+    },
+    {
+        "topic": "Should non-European immigrans in Europe be accepted?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Immigration should be based on merit and need, not stereotypes from a single individual."
+    },
+    {
+        "topic": "Is Microsoft the new Apple?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Microsoft's innovative products and services are distinct from Apple's, making them unique in their own right."
+    },
+    {
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "fallacy type": "Ad Hominem",
+        "counter argument": "Research shows that single sex schools can provide a focused learning environment for students."
+    },
+    {
+        "topic": "Is television an effective tool in building the minds of children?",
+        "fallacy type": "fallacy of relevance",
+        "counter fallacy": "Why discuss television's impact when there are more pressing issues like climate change?"
+    },
+    {
+        "topic": "Is television an effective tool in building the minds of children?",
+        "fallacy type": "false dilemma",
+        "counter fallacy": "Watch TV or have no entertainment"
+    },
+    {
+        "topic": "Should computers be allowed in class rooms?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Computers in classrooms can enhance learning and prepare students for the digital world."
+    },
+    {
+        "topic": "Is Apple's Swift the new star?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Critics of Swift are just jealous of Apple's success and innovation."
+    },
+    {
+        "topic": "Is Apple's Swift the new star?",
+        "fallacy type": "false causality",
+        "support fallacy": "Learning Swift will automatically make you a successful app developer."
+    },
+    {
+        "topic": "Will flying cars ever become a reality?",
+        "fallacy type": "Appeal to Emotion",
+        "counter argument": "Advancements in technology and regulations can make flying cars safe and feasible in the future."
+    },
+    {
+        "topic": "Should non-European immigrans in Europe be accepted?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Accepting refugees can bring diversity, skills, and economic benefits to the host country."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I heard of one criminal refugee. Therefore, all refugees must be criminals."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "ad populum",
+        "counter fallacy": "The majority agrees that criminal refugees should be deported, so it's the correct choice."
+    },
+    {
+        "topic": "Should we all home school our kids?",
+        "fallacy type": "appeal to emotion",
+        "counter fallacy": "No, think about the social skills they would miss out on. How lonely would they feel?"
+    },
+    {
+        "topic": "Should we all home school our kids?",
+        "fallacy type": "ad populum",
+        "counter fallacy": "Many parents are choosing homeschooling, so it must be the best option for all."
+    },
+    {
+        "topic": "Should animals have special rights?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Animals deserve special rights to protect their well-being and prevent cruelty."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "appeal to emotion",
+        "counter fallacy": "Think about the suffering of humans if we don't allow animal testing for medical progress."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "ad hominem",
+        "counter fallacy": "Those who support animal testing lack empathy and disregard animal welfare."
+    },
+    {
+        "topic": "Is the Deutsche Post-strike justified?",
+        "fallacy type": "Red Herring",
+        "counter argument": "The strike is about fair wages and working conditions, not just your letters."
+    },
+    {
+        "topic": "Is plastic surgery an important field of medicine?",
+        "fallacy type": "Appeal to Emotion",
+        "counter argument": "Plastic surgery can help improve quality of life and mental health for some patients."
+    },
+    {
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "Paying musicians for streaming would attract more talent and improve the quality of Apple's music service."
+    },
+    {
+        "topic": "Should non-European immigrants in Europe be accepted?",
+        "fallacy type": "intentional",
+        "counter fallacy": "If we accept non-Europeans, they will bring crime and destroy our culture."
+    },
+    {
+        "topic": "Should non-European immigrants in Europe be accepted?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I heard one non-European immigrant committed a crime. Therefore, all non-European immigrants are criminals."
+    },
+    {
+        "topic": "Is nuclear power a reasonable energy source?",
+        "fallacy type": "fallacy of relevance",
+        "support fallacy": "Nuclear power is essential. It promotes tourism and boosts the economy."
+    },
+    {
+        "topic": "Is nuclear power a reasonable energy source?",
+        "fallacy type": "false causality",
+        "support fallacy": "Using nuclear power will definitely lead to a decrease in global warming."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "appeal to emotion",
+        "counter fallacy": "No, think about the struggling farmers and their families who rely on milk sales for their livelihood."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "false causality",
+        "counter fallacy": "Raising milk prices will lead to a decrease in global warming."
+    },
+    {
+        "topic": "Has anyone been on the moon?",
+        "fallacy type": "faulty generalization",
+        "support fallacy": "I've never met anyone who has been on the moon. No one has been on the moon."
+    },
+    {
+        "topic": "Has anyone been on the moon?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Those who doubt the moon landing lack critical thinking skills and scientific knowledge."
+    },
+    {
+        "topic": "Should cellphones be used during class?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Cellphones can enhance learning by providing access to educational resources and promoting engagement."
+    },
+    {
+        "topic": "Should gorillas be held in zoos",
+        "fallacy type": "fallacy of relevance",
+        "support fallacy": "Gorillas in zoos help educate children about conservation, so they should be kept there."
+    },
+    {
+        "topic": "Should gorillas be held in zoos",
+        "fallacy type": "appeal to emotion",
+        "support fallacy": "Gorillas should not be held in zoos as it is cruel to confine such majestic creatures."
+    },
+    {
+        "topic": "Did Titanic really deserve 11 Oscars at once?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I know someone who didn't like Titanic, so it must not deserve any Oscars."
+    },
+    {
+        "topic": "Should students be allowed to use smartphones in school?",
+        "fallacy type": "false dilemma",
+        "counter fallacy": "Allow smartphones or ban all technology in schools"
+    },
+    {
+        "topic": "Should animals have special rights?",
+        "fallacy type": "Red Herring",
+        "support argument": "Animals deserve protection and respect, just like humans do."
+    },
+    {
+        "topic": "Should cellphones be used during class?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Cellphones can be used for educational purposes and enhance learning if used responsibly."
+    },
+    {
+        "topic": "Is Microsoft the new Apple?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Market trends and consumer preferences determine the success of a company, not individual opinions."
+    },
+    {
+        "topic": "Eating breakfast is important for a healthy lifestyle.",
+        "fallacy type": "ad populum",
+        "support fallacy": "The majority of nutritionists agree that breakfast is the most important meal of the day."
+    },
+    {
+        "topic": "The impact of climate change on agriculture",
+        "fallacy type": "fallacy of relevance",
+        "support fallacy": "Why worry about agriculture when we should focus on space exploration for humanity's future?"
+    },
+    {
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Musicians deserve fair compensation for their work and creativity, regardless of their willingness to volunteer."
+    },
+    {
+        "topic": "Should Christians accept same sex marriage?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Christians should accept same-sex marriage to promote love, equality, and respect for all individuals."
+    },
+    {
+        "topic": "Does school detention do any good in high school?",
+        "fallacy type": "false causality",
+        "counter fallacy": "Detention leads to higher academic achievement in students."
+    },
+    {
+        "topic": "Does school detention do any good in high school?",
+        "fallacy type": "fallacy of logic",
+        "counter fallacy": "Detention is ineffective because it doesn't improve student behavior."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Increasing the price could help support dairy farmers and improve the quality of milk."
+    },
+    {
+        "topic": "Should the title of a university doctor be shown on the identification card?",
+        "fallacy type": "fallacy of logic",
+        "support fallacy": "If the title is not shown, patients will assume the doctor is not qualified."
+    },
+    {
+        "topic": "Should the title of a university doctor be shown on the identification card?",
+        "fallacy type": "equivocation",
+        "support fallacy": "Showing the title on the card is important for identification purposes in a university setting."
+    },
+    {
+        "topic": "Is drug testing athletes justified?",
+        "fallacy type": "fallacy of logic",
+        "support fallacy": "If athletes are not drug tested, they will all use performance-enhancing drugs. Therefore, drug testing is necessary."
+    },
+    {
+        "topic": "Is drug testing athletes justified?",
+        "fallacy type": "fallacy of credibility",
+        "support fallacy": "Drug testing athletes is necessary. Many famous athletes support it, showing its importance."
+    },
+    {
+        "topic": "Does Christiano Ronaldo deserve the title as worlds-greatest soccer-player?",
+        "fallacy type": "Ad Hominem",
+        "counter argument": "Ronaldo's skills, achievements, and impact on the game support his claim as the world's greatest player."
+    },
+    {
+        "topic": "Is the oppression of women by men a serious problem?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Individual experiences do not negate widespread societal issues. Many women face oppression globally."
+    },
+    {
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "fallacy type": "Red Herring",
+        "support argument": "Musicians deserve fair compensation for their creative work and contributions to the music industry."
+    },
+    {
+        "topic": "Do we need a global environment task force?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Global issues require coordinated global efforts for effective solutions."
+    },
+    {
+        "topic": "Is there a good reason for the American war on terror?",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "The war on terror aims to prevent future attacks and protect national security."
+    },
+    {
+        "topic": "Is veganism the best for our bodies?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Scientific research shows that a well-planned vegan diet can provide all necessary nutrients for optimal health."
+    },
+    {
+        "topic": "Should marijuana be legalized for individual use due to health condition?",
+        "fallacy type": "Appeal to Emotion",
+        "support argument": "Legalizing marijuana can provide relief and improve quality of life for those with health conditions."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "appeal to emotion",
+        "counter fallacy": "Think about all the lives that could be saved if we don't allow animal testing. How can we ignore their suffering?"
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I heard one animal test led to a breakthrough. Therefore, all medical advancements require animal testing."
+    },
+    {
+        "topic": "Is the grading system used in high school effective?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I know a student who got good grades despite the grading system. Therefore, the system is effective for all students."
+    },
+    {
+        "topic": "Is the grading system used in high school effective?",
+        "fallacy type": "ad hominem",
+        "counter fallacy": "Critics of the grading system are lazy students who can't handle competition."
+    },
+    {
+        "topic": "Is it effective to censor parts of the media?",
+        "fallacy type": "fallacy of credibility",
+        "counter fallacy": "We should censor parts of the media. Many renowned journalists support it."
+    },
+    {
+        "topic": "Is it effective to censor parts of the media?",
+        "fallacy type": "circular reasoning",
+        "counter fallacy": "Censoring the media is effective because it ensures effective censorship."
+    },
+    {
+        "topic": "Is drug testing athletes justified?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Drug testing athletes ensures fair competition and protects athletes' health."
+    },
+    {
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "Single sex schools may provide a focused learning environment, catering to specific gender needs."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "false causality",
+        "support fallacy": "Using animals for testing directly leads to breakthroughs in medical research."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "faulty generalization",
+        "support fallacy": "I heard of one case where animal testing led to a breakthrough. Therefore, all animal testing for medical purposes is justified."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "Deporting criminal refugees ensures safety and upholds the law."
+    },
+    {
+        "topic": "Should animals have special rights?",
+        "fallacy type": "false causality",
+        "support fallacy": "If animals are granted special rights, then human society will collapse."
+    },
+    {
+        "topic": "Should animals have special rights?",
+        "fallacy type": "circular reasoning",
+        "support fallacy": "Animals should not have special rights because they don't deserve rights beyond what they have."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "Ad H Hominem",
+        "support argument": "Increasing the price for milk can help farmers cover their production costs and maintain sustainable operations."
+    },
+    {
+        "topic": "Did Titanic really deserve 11 oscars at once?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Titanic's critical acclaim and box office success justify its 11 Oscars."
+    },
+    {
+        "topic": "Is the legality of assisted suicide desirable?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Individuals have autonomy over their lives; assisted suicide can provide a dignified end to suffering."
+    },
+    {
+        "topic": "Did Titanic really deserve 11 oscars at once?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Titanic's success was due to its impact on cinema and audience, deserving recognition."
+    },
+    {
+        "topic": "Are Quentin Tarantino's movies too violent?",
+        "fallacy type": "circular reasoning",
+        "counter fallacy": "Tarantino's movies are not too violent because they are known for their violence."
+    },
+    {
+        "topic": "Are Quentin Tarantino's movies too violent?",
+        "fallacy type": "fallacy of extension",
+        "counter fallacy": "So you believe all movies should be rated G for children?"
+    },
+    {
+        "topic": "Are humans to blame for certain animal extinctions?",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "Human activities like hunting and habitat destruction have directly caused many animal extinctions."
+    },
+    {
+        "topic": "Should the title of a university-doctor be shown on the identification-card?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Displaying the title can help in emergencies where medical expertise is needed."
+    },
+    {
+        "topic": "Has anyone been on the moon?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Those who doubt the moon landing lack critical thinking skills and scientific knowledge."
+    },
+    {
+        "topic": "Has anyone been on the moon?",
+        "fallacy type": "faulty generalization",
+        "support fallacy": "I've never met anyone who has been on the moon. No one has been on the moon."
+    },
+    {
+        "topic": "Does school detention do any good in high school?",
+        "fallacy type": "Red Herring",
+        "support argument": "Detention teaches accountability and helps students understand consequences for their actions."
+    },
+    {
+        "topic": "Should Christians accept same sex marriage?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Christians should accept same-sex marriage based on love, equality, and respect for all individuals."
+    },
+    {
+        "topic": "Are Quentin Tarantino's movies too violent?",
+        "fallacy type": "fallacy of logic",
+        "support fallacy": "Watching violent movies leads to violent behavior. Therefore, Quentin Tarantino's movies cause real-life violence."
+    },
+    {
+        "topic": "Are Quentin Tarantino's movies too violent?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Critics who find Tarantino's movies too violent lack appreciation for art and creativity."
+    },
+    {
+        "topic": "Do celebrities get away with more crime than non-celebreties?",
+        "fallacy type": "Red Herring",
+        "counter argument": "Celebrities have resources to hire top lawyers and publicists, which can help them avoid consequences."
+    },
+    {
+        "topic": "Is Turkey ready to join the European Union?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Critics of Turkey's EU membership lack understanding of Turkey's potential benefits."
+    },
+    {
+        "topic": "Is Turkey ready to join the European Union?",
+        "fallacy type": "circular reasoning",
+        "support fallacy": "Turkey is not ready to join the EU because it's not prepared for EU membership."
+    },
+    {
+        "topic": "Do social networking sites have a positive impact on society?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Social networking sites can facilitate communication, networking, and information sharing, benefiting society as a whole."
+    },
+    {
+        "topic": "Is drug testing athletes justified?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Drug testing ensures fair competition and protects athletes' health and integrity."
+    },
+    {
+        "topic": "Is global warming really an issue?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I know someone who doesn't believe in global warming, so it must not be a real issue."
+    },
+    {
+        "topic": "Is global warming really an issue?",
+        "fallacy type": "ad populum",
+        "counter fallacy": "The majority of people believe global warming is an issue, so it must be true."
+    },
+    {
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Those who support musicians' payment are just greedy and want free music."
+    },
+    {
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "fallacy type": "faulty generalization",
+        "support fallacy": "I heard one musician complain about not being paid by Apple. Therefore, all musicians are not paid for streaming music."
+    },
+    {
+        "topic": "Should animals have special rights?",
+        "fallacy type": "Red Herring",
+        "counter argument": "Addressing valid concerns about animal rights is essential for ethical treatment."
+    },
+    {
+        "topic": "Is it justified to develop nuclear energy for commercial use?",
+        "fallacy type": "Red Herring",
+        "counter argument": "Germany can invest in renewable energy sources instead of nuclear power."
+    },
+    {
+        "topic": "Does Christiano Ronaldo deserve the title as worlds-greatest soccer-player?",
+        "fallacy type": "Irrelevant Authority",
+        "support argument": "Ronaldo's skills, achievements, and impact on the game make him deserving of the title."
+    },
+    {
+        "topic": "Are humans to blame for certain animal extinctions?",
+        "fallacy type": "false causality",
+        "support fallacy": "If humans didn't exist, animals wouldn't face extinction."
+    },
+    {
+        "topic": "Are humans to blame for certain animal extinctions?",
+        "fallacy type": "ad populum",
+        "support fallacy": "The majority of scientists agree that human activities have led to animal extinctions."
+    },
+    {
+        "topic": "Should animals have special rights?",
+        "fallacy type": "fallacy of relevance",
+        "counter fallacy": "Why discuss animal rights when there are homeless people in need of help?"
+    },
+    {
+        "topic": "Should animals have special rights?",
+        "fallacy type": "fallacy of extension",
+        "counter fallacy": "So you believe animals should have the same rights as humans, like voting?"
+    },
+    {
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "fallacy type": "Appeal to Emotion",
+        "counter argument": "Musicians deserve fair compensation for their creative work, regardless of their current wealth."
+    },
+    {
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "fallacy type": "fallacy of credibility",
+        "support fallacy": "Single-sex schools are superior. Renowned educator Dr. Wise supports this view."
+    },
+    {
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "fallacy type": "fallacy of relevance",
+        "support fallacy": "Single-sex schools promote discipline, like military training, leading to better academic performance."
+    },
+    {
+        "topic": "Should the title of a university-doctor be shown on the identification-card?",
+        "fallacy type": "Hasty Generalization",
+        "support argument": "Displaying the title can help in quickly identifying medical professionals in case of emergencies."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I know one person who can afford higher milk prices, so everyone can easily afford it."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "equivocation",
+        "counter fallacy": "Raising 'price' of milk can mean 'cost to consumers' or 'profit for producers', leading to confusion."
+    },
+    {
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "fallacy type": "Hasty Generalization",
+        "counter argument": "Prioritize public health and safety over individual needs to prevent spread of disease."
+    },
+    {
+        "topic": "Should driving under the influence of alcohol be forbidden?",
+        "fallacy type": "Ad Hominem",
+        "support argument": "Driving under the influence endangers lives and should be forbidden to protect public safety."
+    },
+    {
+        "topic": "The Greek exit from the EU is a necessary step.",
+        "fallacy type": "Red Herring",
+        "counter argument": "Each country's situation should be evaluated individually, not based on potential future scenarios."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "Red Herring",
+        "counter argument": "The well-being of cows is important, but it doesn't directly address the pricing issue."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "ad hominem",
+        "support fallacy": "Those who support not deporting criminal refugees are naive and endanger society."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "ad populum",
+        "support fallacy": "The majority of Germans support deporting criminal refugees, so it must be the right decision."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "false dilemma",
+        "support fallacy": "Germany must either deport criminal refugees or allow them to stay indefinitely."
+    },
+    {
+        "topic": "Should Germany deport criminal refugees?",
+        "fallacy type": "false causality",
+        "support fallacy": "If Germany deports criminal refugees, crime rates will automatically decrease."
+    },
+    {
+        "topic": "Should smoking at home be illegal?",
+        "fallacy type": "Appeal to Emotion",
+        "support argument": "Secondhand smoke harms health, so banning smoking at home protects non-smokers' well-being."
+    },
+    {
+        "topic": "Should the price for milk be increased?",
+        "fallacy type": "Ad Hominem",
+        "counter argument": "Increasing the price can support local farmers and ensure sustainable production."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "fallacy of extension",
+        "support fallacy": "Opposing animal testing implies rejecting all medical advancements, ignoring ethical regulations and benefits."
+    },
+    {
+        "topic": "Should we allow animal testing for medical purposes?",
+        "fallacy type": "ad populum",
+        "support fallacy": "The majority of scientists agree that animal testing is necessary for medical progress, so it should be allowed."
+    },
+    {
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "fallacy type": "Appeal to Emotion",
+        "counter argument": "Subcontracting jobs can provide economic opportunities and improve living standards in developing countries."
+    },
+    {
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "Subcontracting can create job opportunities and economic growth in developing countries."
+    },
+    {
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "fallacy type": "None",
+        "support argument": "Heavier penalties can deter drug use and trafficking, protecting individuals and communities."
+    },
+    {
+        "topic": "Do school uniforms make school a more effective place to learn?",
+        "fallacy type": "Irrelevant Authority",
+        "counter argument": "School uniforms promote equality and reduce distractions, leading to a better learning environment."
+    },
+    {
+        "topic": "Will flying cars ever become a reality?",
+        "fallacy type": "appeal to emotion",
+        "counter fallacy": "Imagine the joy and freedom people would experience flying in their own cars. It would be amazing!"
+    },
+    {
+        "topic": "Will flying cars ever become a reality?",
+        "fallacy type": "faulty generalization",
+        "counter fallacy": "I saw a flying car prototype fail once. Therefore, all flying cars will never work."
+    }
+]
