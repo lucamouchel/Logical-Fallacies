@@ -98,7 +98,7 @@ def main():
             tokenized = tokenizer(queries, padding='max_length', max_length=128, truncation=True)
 
             input_ids = [torch.tensor(ids).to('cuda') for ids in tokenized['input_ids']]
-            responses = [trainer.generate(ids, return_prompt=False, **generation_kwargs) for ids in input_ids]
+            responses = [trainer.generate(ids, return_prompt=False, **generation_kwargs)[0] for ids in input_ids]
             batch['response'] = [tokenizer.decode(r.squeeze(), skip_special_tokens=True) for r in responses]
             print(batch['response'])
                 
@@ -114,7 +114,7 @@ def main():
             
             print()
             print()
-            print([ids for ids in input_ids])
+            print(responses)
             ids = [ids for ids in input_ids]
             
             a = [torch.cat([q, r]) for q, r in zip(input_ids, responses)]
