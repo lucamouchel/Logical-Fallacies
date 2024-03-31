@@ -75,30 +75,32 @@ def main():
         model_name=model_name
         )
     
-    model = AutoModelForCausalLMWithValueHead.from_pretrained(args.ref_model_path, device_map='auto')
+    model = AutoModelForCausalLMWithValueHead.from_pretrained(args.ref_model_path).to('cuda:0')
     tokenizer = AutoTokenizer.from_pretrained(args.ref_model_path, padding_side='left')
     
     train_data = train_data.map(map_data)
 
     reward_model_path = args.reward_model_path
-    reward_model = AutoModelForSequenceClassification.from_pretrained(reward_model_path).to('cuda')
+    reward_model = AutoModelForSequenceClassification.from_pretrained(reward_model_path).to('cuda:1')
     reward_tokenizer = AutoTokenizer.from_pretrained(reward_model_path)
     
     trainer = PPOTrainer(config=config, model=model, tokenizer=tokenizer, dataset=train_data)
+    
     
     generation_kwargs = {
         "do_sample": True,
         "max_new_tokens": 30,
         "no_repeat_ngram_size": 2,
     }
-    
+
     for epoch in tqdm(range(trainer.config.ppo_epochs)):
         for batch in tqdm(trainer.dataloader):
             queries = batch['query']
+            
             tokenized = tokenizer(queries, padding='max_length', max_length=128, truncation=True)
 
-            input_ids = [torch.tensor(ids).to('cuda') for ids in tokenized['input_ids']]
-            responses = [trainer.generate(ids, return_prompt=False, **generation_kwargs)[0] for ids in input_ids]
+            input_ids = [torch.tensor(ids).to('cuda:0') for ids in tokenized['input_ids']]
+            responses = [trainer.generate(ids, return_prompt=False, **generation_kwargs)[0].to('cuda:0') for ids in input_ids]
             batch['response'] = [tokenizer.decode(r.squeeze(), skip_special_tokens=True) for r in responses]
             print(batch['response'])
                 
@@ -106,19 +108,14 @@ def main():
             #texts = [f"{p} {r}" for p, r in zip(batch['query'], batch['response'])]
             #print(texts)
             tokens = reward_tokenizer(batch['response'], padding=True, truncation=True)
-            tokens = {k: torch.tensor(v).to('cuda') for k, v in tokens.items()}
+            tokens = {k: torch.tensor(v).to('cuda:1') for k, v in tokens.items()}
             rewards = reward_model(**tokens)
             rewards = rewards.logits[:, 0]
-            rewards = [torch.tensor(r) for r in rewards]
-            print(rewards)
+            rewards = [torch.tensor(r).to('cuda:0') for r in rewards]
             
-            print()
-            print()
-            print(responses)
-            ids = [ids for ids in input_ids]
+                  
             
-            a = [torch.cat([q, r]) for q, r in zip(input_ids, responses)]
-            stats = trainer.step([ids for ids in input_ids], responses, rewards)
+            stats = trainer.step(input_ids, responses, rewards)
             trainer.log_stats(stats, batch, rewards)
             
     
