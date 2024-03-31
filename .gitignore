@@ -17,6 +17,4 @@ flan_t5_base_model/
 dpo_model/
 sft_flan_t5/
 res/
-src/DPO/env.py
-/root/Logical-Fallacies/src/DPO/env.py
 preference_seq.memmap.npy
