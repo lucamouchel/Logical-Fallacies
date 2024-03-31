@@ -33,7 +33,7 @@ def generate(prompt: str, model, tokenizer):
                                 max_new_tokens=30,
                                 #pad_token_id=tokenizer.eos_token_id,
                                 #top_p=0.5,
-                                pad_token_id=tokenizer.pad_token_id,
+                                pad_token_id=tokenizer.eos_token_id,
                                 #temperature=1,
                                 no_repeat_ngram_size=2,
                                 do_sample=True)
