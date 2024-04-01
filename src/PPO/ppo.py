@@ -7,7 +7,8 @@ from peft import LoraConfig, TaskType
 import wandb
 from tqdm import tqdm
 import torch
-
+import pathlib
+import json 
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data-dir', default='data/dpo/')
@@ -57,7 +58,7 @@ def map_data(sample):
 
 
 def main():
-    wandb.init(mode="disabled")
+    #wandb.init(mode="disabled")
     args = parse_args()
     train_data = load_dataset('json', data_files='data/sft/arguments/train.json', split='train')
     
@@ -65,6 +66,17 @@ def main():
     model_name = args.model_name
     training_args = get_training_args(args)
     
+    if '/' in model_name:
+        output_directory =f'models/arguments/ppo_{model_name.split("/")[-1]}_{datetime.now()}'
+    else:
+        output_directory =f'models/arguments/ppo_{model_name}_{datetime.now()}'
+    args.output_dir = output_directory.replace(' ', '_')
+    
+    pathlib.Path(args.output_dir).mkdir(parents=True, exist_ok=True)
+    
+    with open(args.output_dir + '/args.json', 'w') as f:
+        json.dump(vars(args), f, indent=4)
+        
     config = PPOConfig(
         learning_rate=args.learning_rate, 
         batch_size=args.batch_size, 
@@ -94,7 +106,7 @@ def main():
     }
 
     for epoch in tqdm(range(trainer.config.ppo_epochs)):
-        for batch in tqdm(trainer.dataloader):
+        for j, batch in tqdm(enumerate(trainer.dataloader)):
             queries = batch['query']
             
             tokenized = tokenizer(queries, padding='max_length', max_length=128, truncation=True)
@@ -102,9 +114,7 @@ def main():
             input_ids = [torch.tensor(ids).to('cuda:0') for ids in tokenized['input_ids']]
             responses = [trainer.generate(ids, return_prompt=False, **generation_kwargs)[0].to('cuda:0') for ids in input_ids]
             batch['response'] = [tokenizer.decode(r.squeeze(), skip_special_tokens=True) for r in responses]
-            print(batch['response'])
-                
-            
+        
             #texts = [f"{p} {r}" for p, r in zip(batch['query'], batch['response'])]
             #print(texts)
             tokens = reward_tokenizer(batch['response'], padding=True, truncation=True)
@@ -113,20 +123,18 @@ def main():
             rewards = rewards.logits[:, 0]
             rewards = [torch.tensor(r).to('cuda:0') for r in rewards]
             
-                  
+            if j % 30 == 0 and j != 0:
+                for i, (response, reward)in enumerate(zip(batch['response'], rewards)):
+                    print("TOPIC: ", batch['query'][i].split('topic: ')[-1])
+                    print("STANCE: ", 'SUPPORTING' if 'SUPPORTING' in batch['query'][i] else 'COUNTER')
+                    print(f"Reward: {reward:.3f} \t----\t Response: {response}\n\n")
+                    
             
             stats = trainer.step(input_ids, responses, rewards)
             trainer.log_stats(stats, batch, rewards)
             
+    model.save_pretrained(args.output_dir)
+    tokenizer.save_pretrained(args.output_dir)
     
-    
-    
-    if '/' in model_name:
-        output_directory =f'models/arguments/ppo_{model_name.split("/")[-1]}_{datetime.now()}'
-    else:
-        output_directory =f'models/arguments/ppo_{model_name}_{datetime.now()}'
-
-    args.output_dir = output_directory.replace(' ', '_')
-    trainer.save_model(args.output_dir)
 if __name__ == '__main__':
     main()

@@ -23,9 +23,9 @@ from DPO.utils import get_training_args
 def parse_args():
     parser = argparse.ArgumentParser() 
     parser.add_argument('--data-dir', default='data/dpo/')
-    parser.add_argument('--task', required=True) ## arguments or claims
+    parser.add_argument('--task', default='arguments') ## arguments or claims
     parser.add_argument('--model-name', default='google/flan-t5-base')
-    parser.add_argument('--beta', default=0.5, type=float)
+    parser.add_argument('--beta', default=0.1, type=float)
     parser.add_argument('--n-epochs', default=10, type=int)
     parser.add_argument('--batch-size', default=8, type=int)
     parser.add_argument('--eval-batch-size', default=32, type=int)

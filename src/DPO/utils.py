@@ -1,15 +1,5 @@
-import os
-import getpass
-from datetime import datetime
 import torch
-import random
-import numpy as np
-import torch.distributed as dist
-import inspect
-import importlib.util
-import socket
 import os
-from typing import Dict, Union, Type, List
 import json 
 import pandas as pd
 from datasets import Dataset
@@ -19,6 +9,7 @@ import re
 import pathlib
 import openai 
 import time
+from tqdm import tqdm
 
 def save_to(data, name, output_dir):
     pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
@@ -26,7 +17,65 @@ def save_to(data, name, output_dir):
     with open(output_path, 'w') as json_file:
         json.dump(data, json_file, indent=4, sort_keys=False)
         
+
+def generate(prompt: str, model, tokenizer, **generate_kwargs):
+    """Main function for each worker process (may be only 1 for BasicTrainer/TensorParallelTrainer)."""
+    tokenized_prompt = tokenizer(prompt, return_tensors='pt', max_length=256, truncation=True).to(model.device)
+    with torch.no_grad():
+        output = model.generate(**tokenized_prompt,
+                                **generate_kwargs,
+                                pad_token_id=tokenizer.eos_token_id,)
+    output_decoded = tokenizer.decode(output[0], skip_special_tokens=True)
+    return output_decoded
+
+
+def get_gpt_feedback(topic, argument, stance, type_='dpo'):
+    fallacy_types = pd.read_csv('data/LOGIC/mappings.csv')['Original Name'].unique()
+    fallacy_types = [f for f in fallacy_types if f != 'miscellaneous']
+    
+    s0 = f"Consider the following topic and {stance} argument:\nTopic: {topic}\nArgument: {argument}\n"
+    s1 = f"""Out of all the following logical fallacy types\n{fallacy_types}\nwould you qualify this argument as one of these logical fallacies? If not - return "None".\n"""
+    s2 = f"If yes, which logical fallacy type is it? Let fallacy_type be your answer.\n"
+    s3 = f"""Your task is to complete the following json: {'{'} "type": "{type_}",\n "fallacy_type": <> {'}'}. If an argument does not make sense, set fallacy_type to "None"."""
+    prompt = s0 + s1 + s2 + s3
+    response = process_gpt_output(get_gpt_response(prompt, model='gpt-4'))
+    if response is None:
+        print("RETURNED NONE")
+        response = {'type': type_, 'fallacy_type': 'None'}
         
+    response['topic'] = topic
+    response['argument'] = argument
+    return response
+
+def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', **kwargs):
+    f_rate = 0
+    f_rates = {}
+    data = []
+    for i, entry in tqdm(dataset.iterrows()):
+        topic = entry.topic
+        stance = 'supporting' if entry.label==1 else 'counter'
+        prompt = f"<s> [INST] ###Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument: "
+        y = generate(prompt, model, tokenizer, **kwargs)
+        y = y.split('### Argument: ')[-1].strip()
+        feedback = get_gpt_feedback(topic, y, stance=stance, type_=type_)
+        if feedback['fallacy_type']!='None' :
+            f_rate+=1
+        if feedback['fallacy_type'] in f_rates.keys():
+            f_rates[feedback['fallacy_type']] += 1
+        else:
+            f_rates[feedback['fallacy_type']] = 1
+
+        data.append(feedback)
+
+    save_to(data, name=f'{type_}-f-rate.json', output_dir=f'results/{model_name}/arguments/')
+    print(f_rates)
+    print(f"f rate for {type_}:", f_rate)
+    print("FALLACY TYPES")
+    
+    save_to(f_rates, name=f'{type_}-fallacy_counts.json', output_dir=f'results/{model_name}/arguments/')
+    for k,v in f_rates.items():
+        print(k.upper(), ':', v)
+
 def chat_completion(messages, model="gpt-3.5-turbo", return_text=True, model_args=None):
     if model_args is None:
         model_args = {}
@@ -136,84 +185,3 @@ def get_training_args(args):
             save_total_limit=2,                         
             gradient_accumulation_steps=args.gradient_accumulation_steps
         )       
-    
-def get_open_port():
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind(('', 0)) # bind to all interfaces and use an OS provided port
-        return s.getsockname()[1] # return only the port number
-
-
-def get_remote_file(remote_path, local_path=None):
-    hostname, path = remote_path.split(':')
-    local_hostname = socket.gethostname()
-    if hostname == local_hostname or hostname == local_hostname[:local_hostname.find('.')]:
-        return path
-    
-    if local_path is None:
-        local_path = path
-    # local_path = local_path.replace('/scr-ssd', '/scr')    
-    if os.path.exists(local_path):
-        return local_path
-    local_dir = os.path.dirname(local_path)
-    os.makedirs(local_dir, exist_ok=True)
-
-    print(f'Copying {hostname}:{path} to {local_path}')
-    os.system(f'scp {remote_path} {local_path}')
-    return local_path
-
-
-def rank0_print(*args, **kwargs):
-    """Print, but only on rank 0."""
-    if not dist.is_initialized() or dist.get_rank() == 0:
-        print(*args, **kwargs)
-
-
-def get_local_dir(prefixes_to_resolve: List[str]) -> str:
-    """Return the path to the cache directory for this user."""
-    for prefix in prefixes_to_resolve:
-        if os.path.exists(prefix):
-            return f"{prefix}/{getpass.getuser()}"
-    os.makedirs(prefix)
-    return f"{prefix}/{getpass.getuser()}"
-    
-
-def get_local_run_dir(exp_name: str, local_dirs: List[str], mkdir=True) -> str:
-    """Create a local directory to store outputs for this run, and return its path."""
-    now = datetime.now()
-    timestamp = now.strftime("%Y-%m-%d_%H-%M-%S_%f")
-    run_dir = f"{get_local_dir(local_dirs)}/{exp_name}_{timestamp}"
-    if mkdir:
-        os.makedirs(run_dir, exist_ok=True)
-    return run_dir
-
-
-def slice_and_move_batch_for_device(batch: Dict, rank: int, world_size: int, device: str) -> Dict:
-    """Slice a batch into chunks, and move each chunk to the specified device."""
-    chunk_size = len(list(batch.values())[0]) // world_size
-    start = chunk_size * rank
-    end = chunk_size * (rank + 1)
-    sliced = {k: v[start:end] for k, v in batch.items()}
-    on_device = {k: (v.to(device) if isinstance(v, torch.Tensor) else v) for k, v in sliced.items()}
-    return on_device
-
-
-def pad_to_length(tensor: torch.Tensor, length: int, pad_value: Union[int, float], dim: int = -1) -> torch.Tensor:
-    if tensor.size(dim) >= length:
-        return tensor
-    else:
-        pad_size = list(tensor.shape)
-        pad_size[dim] = length - tensor.size(dim)
-        return torch.cat([tensor, pad_value * torch.ones(*pad_size, dtype=tensor.dtype, device=tensor.device)], dim=dim)
-
-
-def all_gather_if_needed(values: torch.Tensor, rank: int, world_size: int) -> torch.Tensor:
-    """Gather and stack/cat values from all processes, if there are multiple processes."""
-    if world_size == 1:
-        return values
-
-    all_values = [torch.empty_like(values).to(rank) for _ in range(world_size)]
-    dist.all_gather(all_values, values)
-    cat_function = torch.cat if values.dim() > 0 else torch.stack
-    return cat_function(all_values, dim=0)
-
-

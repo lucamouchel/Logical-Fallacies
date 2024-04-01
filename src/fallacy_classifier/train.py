@@ -26,7 +26,6 @@ def training(per_gpu_train_batch_size,
             cache_dir=os.path.join(DATA_FOLDER, 'pretrained'),
             pretrained_model_name_or_path=language_model,
             data_dir=data_dir,
-
     )
     classifier.train(per_gpu_train_batch_size=per_gpu_train_batch_size,
                         learning_rate=learning_rate,
