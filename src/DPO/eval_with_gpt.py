@@ -14,161 +14,15 @@ from env import OPENAI_API_KEY
 import pathlib 
 import argparse
 from peft import AutoPeftModelForCausalLM
-
-from utils import save_to, process_gpt_output, get_gpt_response, remove_incomplete_last_sentence, sanitize
+import sys
+sys.path.append('src/')
+from utils import save_to, process_gpt_output, get_gpt_response
+from EVAL.utils import generate, get_gpt_feedback, evaluate
 
 warnings.filterwarnings("ignore")
-
-data_dir = 'data/argumentation/'
-output_dir = 'src/DPO/gpt_evaluation/'
 openai.api_key = OPENAI_API_KEY
 
-
-def generate(prompt: str, model, tokenizer):
-    """Main function for each worker process (may be only 1 for BasicTrainer/TensorParallelTrainer)."""
-    tokenized_prompt = tokenizer(prompt, return_tensors='pt', max_length=256, truncation=True).to(model.device)
-    with torch.no_grad():
-        output = model.generate(input_ids=tokenized_prompt.input_ids,
-                                attention_mask=tokenized_prompt.attention_mask,
-                                max_new_tokens=30,
-                                #pad_token_id=tokenizer.eos_token_id,
-                                #top_p=0.5,
-                                pad_token_id=tokenizer.eos_token_id,
-                                #temperature=1,
-                                no_repeat_ngram_size=2,
-                                do_sample=True)
-
-    output_decoded = tokenizer.decode(output[0], skip_special_tokens=True)
-    return output_decoded
-
-
-def compare_models(stance, topic, arguments):
-    possible_answers = ''
-    for i, argument in enumerate(arguments):
-        possible_answers += f"{i+1}. {argument}\n"
-    
-    
-    prompt = f"""Which of these {stance} arguments is better for the topic: {topic} Please consider the fact that some of these arguments might be in the form of logical fallacies. If one of the arguments is a logical fallacy, it should not be the best. 
-    \nArguments: \n{possible_answers}\nIf the arguments are equally good, return number {len(arguments) + 1}.\nThe better argument is number:"""
-    
-    response = get_gpt_response(prompt, necessary_tokens=1, model='gpt-4')
-    try:
-        response = int(response)
-        return response
-    except:
-        print("Invalid response. Please try again.")
-        print(arguments)
-        print()
-        print(response)
-        return len(arguments) + 1 ### TIE
-
-        
-def get_gpt_feedback(task_input, task_text, task, stance, type_='dpo'):
-    fallacy_types = pd.read_csv('data/LOGIC/mappings.csv')['Original Name'].unique()
-    fallacy_types = [f for f in fallacy_types if f != 'miscellaneous']
-    if task=='arguments':
-        s0 = f"Consider the following topic and {stance} argument:\nTopic: {task_input}\nArgument: {task_text}\n"
-    elif task=='claims':
-        s0 = f"Consider the following evidence and {stance} claim:\nEvidence: {task_input}\nClaim: {task_text}\n"
-    else:
-        raise ValueError()
-
-    s1 = f"""Out of all the following logical fallacy types\n{fallacy_types}\nwould you qualify this {'argument' if task=='arguments' else 'claim'} as one of these logical fallacies? If not - return "None".\n"""
-    s2 = f"If yes, which logical fallacy type is it? Let fallacy_type be your answer.\n"
-    s3 = f"""Your task is to complete the following json: {'{'} "type": "{type_}",\n "fallacy_type": <> {'}'}. If an argument does not make sense, set fallacy_type to "None"."""
-    prompt = s0 + s1 + s2 + s3
-    response = get_gpt_response(prompt, model='gpt-4')    
-    response = process_gpt_output(response)
-    if response is None:
-        print("RETURNED NONE")
-        response = {'type': type_, 'fallacy_type': 'None'}
-    
-    if task=='claims':
-        response['evidence'] = task_input
-        response['claim'] = task_text
-    elif task=='arguments':
-        response['topic'] = task_input
-        response['argument'] = task_text
-
-    else:
-        raise ValueError()
-    #if argument==topic:
-     #   response['fallacy_type'] = 'circular reasoning' ## SFT model often generates the given topic as an argument.
-    return response
-
-
-
-def evaluate(dataset, task, type_='sft', model_name='llama', n=None):
-    if type_=='sft':
-        with open(f'results/{model_name}/{task}/sft_arguments.json', "r") as json_file:
-            args = json.load(json_file)
-    elif type_=='dpo':
-        with open(f'results/{model_name}/{task}/dpo_arguments.json', "r") as json_file:
-            args = json.load(json_file)
-
-    f_rate = 0
-    f_rates = {}
-    data = []
-    for i, entry in tqdm(dataset.iterrows()):
-        if task == 'claims':
-            evidence = entry.prompt.split('evidence:')[-1]
-            stance = 'supporting' if 'SUPPORTING' in entry.prompt else 'refuting'
-        else:
-            topic = entry.topic
-            stance = 'supporting' if entry.label==1 else 'counter'
-        y = args[i]
-        feedback = get_gpt_feedback(topic if task == 'arguments' else evidence, y, stance=stance, type_=type_, task=task)
-        if feedback['fallacy_type']!='None' :
-            f_rate+=1
-        
-        
-        if feedback['fallacy_type'] in f_rates.keys():
-            f_rates[feedback['fallacy_type']] += 1
-        else:
-            f_rates[feedback['fallacy_type']] = 1
-
-        data.append(feedback)
-
-    save_to(data, name=f'{type_}-f-rate.json', output_dir=f'results/{model_name}/{task}/')
-    print(f_rates)
-    print(f"f rate for {type_}:", f_rate)
-    print("FALLACY TYPES")
-    
-    save_to(f_rates, name=f'{type_}-fallacy_counts.json', output_dir=f'results/{model_name}/{task}/')
-    for k,v in f_rates.items():
-        print(k.upper(), ':', v)
-
-    
-    
-def calculate_win_rate(test_set, model_name):
-    wins= {i : 0 for i in range(1, 4)} # +1 for ties
-    
-    
-    with open(f'results/{model_name}/sft_arguments.json', "r") as json_file:
-        sft_args = json.load(json_file)
-    
-    with open(f'results/{model_name}/dpo_arguments.json', "r") as json_file:
-        dpo_args = json.load(json_file)
-    
-    for i, entry in tqdm(test_set.iterrows()):
-        topic = entry.topic
-        stance = 'supporting' if entry.label == 1 else 'counter'
-        y_human = entry.argument
-        y_sft = sft_args[i]
-        y_dpo = dpo_args[i]
-        
-        try:
-            response = compare_models(stance, topic, [y_human, y_sft, y_dpo])
-            wins[response] += 1
-        except:
-            save_to(wins, name='wins.json', output_dir=f'results/{model_name}/')
-            continue
-
-   
-    save_to(wins, name='wins.json', output_dir=f'results/{model_name}/')
-    
-
- 
+GENERATE_KWARGS = {'max_new_tokens': 30, 'no_repeat_ngram_size': 2, 'do_sample': True}
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -185,127 +39,15 @@ def main():
     args = parse_args()
     ref_model_dir = args.sft_path
     dpo_model_dir = args.dpo_path
-    num_iterations = args.num_iterations_made
-    
+    test_set = pd.read_json('data/argumentation/test_cckg.json')
+ 
+    sft_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_dir, device_map='auto')
+    dpo_model = AutoPeftModelForCausalLM.from_pretrained(dpo_model_dir, device_map='auto')
+    tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_dir)
+    evaluate(test_set, model=sft_model, tokenizer=tokenizer, type_='sft', model_name=args.model_name, **GENERATE_KWARGS)
+    evaluate(test_set, model=dpo_model, tokenizer=tokenizer, type_='dpo', model_name=args.model_name, **GENERATE_KWARGS)
+           
 
-    
-    is_encoder_decoder = 't5' in dpo_model_dir if dpo_model_dir else 't5' in ref_model_dir
-    if args.task == 'arguments':
-        test_set = pd.read_json('data/argumentation/test_cckg.json')
-    elif args.task=='claims':
-        test_set = pd.read_json('data/sft/claims/test.json')
-    else: 
-        raise ValueError()
-    
-
-    if args.generate_and_save=='false':
-        print("EVALUTATION MODE")
-        if args.eval_type == 'win-rate':
-            calculate_win_rate(test_set, args.model_name)
-        elif args.eval_type == 'fallacy-count':
-            if ref_model_dir and dpo_model_dir:
-                evaluate(test_set, type_='sft', model_name=args.model_name, task=args.task)
-                evaluate(test_set, type_='dpo', model_name=args.model_name, task=args.task)
-                exit()
-            elif ref_model_dir:
-                evaluate(test_set, type_='sft', model_name=args.model_name, task=args.task)
-            elif dpo_model_dir:
-                evaluate(test_set, type_='dpo', model_name=args.model_name, task=args.task)
-
-        exit()
-    
-    
-    models = []
-    if is_encoder_decoder:
-        if ref_model_dir:
-            sft_model = transformers.T5ForConditionalGeneration.from_pretrained(ref_model_dir)
-            models.append(sft_model)
-        if dpo_model_dir:
-            dpo_model = transformers.T5ForConditionalGeneration.from_pretrained(dpo_model_dir)
-            models.append(dpo_model)
-        
-        for i in range(1, num_iterations + 1):
-            model = transformers.T5ForConditionalGeneration.from_pretrained(dpo_model_dir + f'/iteration{i}')
-            models.append(model)
-        tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_dir)
-    else:
-        if ref_model_dir:
-            sft_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_dir, device_map='auto')
-            models.append(sft_model)
-        if dpo_model_dir:
-            dpo_model = AutoPeftModelForCausalLM.from_pretrained(dpo_model_dir, device_map='auto')
-            models.append(dpo_model)
-
-        for i in range(1, num_iterations + 1):
-            model = transformers.AutoModelForCausalLM.from_pretrained(dpo_model_dir + f'/iteration{i}', device_map='auto')
-            models.append(model)
-        
-        if not ref_model_dir:
-            tokenizer = transformers.AutoTokenizer.from_pretrained(dpo_model_dir)
-        else:
-            tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_dir)
-
-    for j, model in enumerate(models):
-        model_arguments = []
-        print(model.name_or_path)
-        for i, entry in tqdm(test_set.iterrows()):
-            if args.task=='arguments':
-                topic = entry.topic
-                stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
-                prompt = f"<s> [INST] ###Prompt:  Generate a {stance} argument for the topic: {topic} [INST]\n### Argument: "
-                generated = generate(prompt, model, tokenizer)
-             
-            elif args.task=='claims':
-                evidence = entry.prompt.split('evidence:')[-1]
-                stance = 'SUPPORTING' if 'SUPPORTING' in entry.prompt else 'REFUTING'
-                prompt = f"<s> [INST] ###Prompt:  Generate a {stance} claim given the evidence: {evidence} [INST]\n### Claim: "
-            #if prompt in generated:
-                generated = generate(prompt, model, tokenizer)
-             #   generated = generated[len(prompt) + 1:]
-            #generated = sanitize(remove_incomplete_last_sentence(generated))
-            
-            if args.task == 'arguments':
-                generated = generated[generated.find('### Argument: ')+len('### Argument: '):].strip()
-            elif args.task=='claims':
-                generated = generated[generated.find('### Claim: ')+len('### Claim: '):].strip()
-            else:
-                raise ValueError()
-
-            model_arguments.append(generated)
-        
-        if j == 0:
-            save_to(model_arguments, name='sft_arguments.json', output_dir=f'results/{args.model_name}/{args.task}/')
-            print("Saving sft arguments")
-        elif j == 1:
-            save_to(model_arguments, name='dpo_arguments.json', output_dir=f'results/{args.model_name}/{args.task}/')
-            print('Saving dpo arguments')
-        elif j>1:
-            save_to(model_arguments, name =f'dpo_arguments_iteration{j}.json', output_dir=f'results/{args.model_name}/')
-
-
-
-
-    # df_sft = pd.read_json('src/DPO/gpt_evaluation/sft_test_responses.json')
-    # df_dpo = pd.read_json('src/DPO/gpt_evaluation/dpo_test_responses.json')
-    
-    # fig, ax = plt.subplots(1,2, figsize=(20, 10), sharey=True)
-
-    # df = df_sft.merge(df_dpo, on=['topic', 'real_stance'], suffixes=('_sft', '_dpo'))
-    
-    # fallacy_counts_sft = df_sft.fallacy_type.value_counts()
-    # fallacy_counts_sft.pop('None')
-    # ax[0].bar([f[0] for f in fallacy_counts_sft.items()], [f[1] for f in fallacy_counts_sft.items()])
-    # print("Num fallacies in SFT: ", len(df_sft[df_sft.fallacy_type != 'None']))
-    
-    
-    # fallacy_counts_dpo = df_dpo.fallacy_type.value_counts()
-    # fallacy_counts_dpo.pop('None')
-    # ax[1].bar([f[0] for f in fallacy_counts_dpo.items()], [f[1] for f in fallacy_counts_dpo.items()])
-    # print("Num fallacies in DPO: ", len(df_dpo[df_dpo.fallacy_type != 'None']))
-    
-    
-    # plt.savefig('src/DPO/gpt_evaluation/fig.png')
-    
 if __name__ == "__main__":
     main()
 

@@ -17,7 +17,8 @@ from peft import AutoPeftModelForCausalLM
 
 sys.path.append('src/')  
 from DPO.env import OPENAI_API_KEY
-from DPO.utils import save_to, process_gpt_output, get_gpt_response, generate, evaluate
+from DPO.utils import save_to, process_gpt_output, get_gpt_response
+from EVAL.utils import evaluate
 warnings.filterwarnings("ignore")
 openai.api_key = OPENAI_API_KEY
 
