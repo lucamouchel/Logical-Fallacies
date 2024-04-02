@@ -112,7 +112,7 @@ def main():
             tokenized = tokenizer(queries, padding='max_length', max_length=128, truncation=True)
 
             input_ids = [torch.tensor(ids).to('cuda:0') for ids in tokenized['input_ids']]
-            responses = [trainer.generate(ids, return_prompt=False, **generation_kwargs)[0].to('cuda:0') for ids in input_ids]
+            responses = [trainer.generate(ids, return_prompt=False, **generation_kwargs, pad_token_id=tokenizer.pad_token_id)[0].to('cuda:0') for ids in input_ids]
             batch['response'] = [tokenizer.decode(r.squeeze(), skip_special_tokens=True) for r in responses]
         
             #texts = [f"{p} {r}" for p, r in zip(batch['query'], batch['response'])]
@@ -123,7 +123,7 @@ def main():
             rewards = rewards.logits[:, 0]
             rewards = [torch.tensor(r).to('cuda:0') for r in rewards]
             
-            if j % 30 == 0 and j != 0:
+            if j % 1 == 0 and j != 0:
                 for i, (response, reward)in enumerate(zip(batch['response'], rewards)):
                     print("TOPIC: ", batch['query'][i].split('topic: ')[-1])
                     print("STANCE: ", 'SUPPORTING' if 'SUPPORTING' in batch['query'][i] else 'COUNTER')

@@ -15,7 +15,8 @@ import gc
 from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM
 from transformers import AutoModelForCausalLM
-import DPO.utils
+import sys
+sys.path.append('src/')
 from trl import ORPOConfig, ORPOTrainer
 from DPO.utils import get_training_args
 
@@ -93,8 +94,6 @@ def main():
         tokenizer=tokenizer,
         args=orpo_config,
         train_dataset=train_data,
-        tokenizer=tokenizer,
-        max_length=args.max_length,
     )
     
     orpo_trainer.train()

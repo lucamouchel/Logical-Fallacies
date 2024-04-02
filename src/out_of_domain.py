@@ -64,7 +64,7 @@ def main():
         if len(topic) > 200:
             break
         stance = 'SUPPORTING' if entry[6] == 'support' else 'COUNTER'
-        prompt = f"<s> [INST] ###Prompt:  Generate a {stance} argument for the topic: {topic} [INST]\n### Argument: "
+        prompt = f"<s> [INST] ###Prompt: Generate a {stance} argument for the topic: {topic} [INST]\n### Argument: "
         generated_dpo = generate(prompt, model, tokenizer)
         generated_sft = generate(prompt, ref_model, tokenizer)
 

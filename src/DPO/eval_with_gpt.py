@@ -46,7 +46,7 @@ def main():
     tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_dir)
     evaluate(test_set, model=sft_model, tokenizer=tokenizer, type_='sft', model_name=args.model_name, **GENERATE_KWARGS)
     evaluate(test_set, model=dpo_model, tokenizer=tokenizer, type_='dpo', model_name=args.model_name, **GENERATE_KWARGS)
-           
+                
 
 if __name__ == "__main__":
     main()

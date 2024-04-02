@@ -18,7 +18,7 @@ from peft import AutoPeftModelForCausalLM
 
 sys.path.append('src/')  
 from DPO.env import OPENAI_API_KEY
-from DPO.utils import save_to, process_gpt_output, get_gpt_response, generate, evaluate
+from DPO.utils import save_to, process_gpt_output, get_gpt_response
 warnings.filterwarnings("ignore")
 openai.api_key = OPENAI_API_KEY
 
@@ -51,16 +51,24 @@ def get_gpt_feedback(topic, argument, stance, type_='dpo'):
     response['argument'] = argument
     return response
 
-def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', **kwargs):
+def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_from_file=False, **kwargs):
     f_rate = 0
     f_rates = {}
     data = []
+    if eval_from_file:
+        with open(f'results/{model_name}/{type_}_args.json', 'r') as f:
+            arguments = json.load(f) 
+    
     for i, entry in tqdm(dataset.iterrows()):
         topic = entry.topic
         stance = 'supporting' if entry.label==1 else 'counter'
         prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument: "
-        y = generate(prompt, model, tokenizer, **kwargs)
-        y = y.split('### Argument: ')[-1].strip()
+        
+        if eval_from_file:
+            y = arguments[i]
+        else:
+            y = generate(prompt, model, tokenizer, **kwargs)
+            y = y.split('### Argument: ')[-1].strip()
         
         feedback = get_gpt_feedback(topic, y, stance=stance, type_=type_)
         if feedback['fallacy_type']!='None' :
@@ -72,12 +80,12 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', **kwarg
 
         data.append(feedback)
 
-    save_to(data, name=f'{type_}-f-rate.json', output_dir=f'results/{model_name}/arguments/')
+    save_to(data, name=f'f-rate.json', output_dir=f'results/{model_name}/arguments/{type_}/')
     print(f_rates)
     print(f"f rate for {type_}:", f_rate)
     print("FALLACY TYPES")
     
-    save_to(f_rates, name=f'{type_}-fallacy_counts.json', output_dir=f'results/{model_name}/arguments/')
+    save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/{model_name}/arguments/{type_}/')
     for k,v in f_rates.items():
         print(k.upper(), ':', v)
 

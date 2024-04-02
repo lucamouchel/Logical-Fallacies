@@ -27,8 +27,8 @@ GENERATION_KWARGS = {'max_new_tokens': 30, 'no_repeat_ngram_size': 2, 'do_sample
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--orpo-path', default=None)
-    parser.add_argument('--eval-type', default='win-rate', help='Type of evaluation to perform. Options: win-rate, fallacy-count')
     parser.add_argument('--model-name', default='llama')
+    
     return parser.parse_args()
 
 def main(): 
