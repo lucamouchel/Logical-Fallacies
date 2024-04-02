@@ -16,14 +16,11 @@ import argparse
 from peft import AutoPeftModelForCausalLM
 
 sys.path.append('src/')  
-from DPO.env import OPENAI_API_KEY
-from DPO.utils import save_to, get_gpt_response
+from DPO.utils import save_to
 from utils import generate
-
 warnings.filterwarnings("ignore")
-openai.api_key = OPENAI_API_KEY
 
-GENERATION_KWARGS = {'max_new_tokens': 30, 'no_repeat_ngram_size': 2, 'do_sample': True}
+GENERATION_KWARGS = {'max_new_tokens': 30, 'no_repeat_ngram_size': 2, 'do_sample': True, 'min_new_tokens': 5, 'top_p': 0.75}
 
 def main():
     parser = argparse.ArgumentParser()
@@ -50,7 +47,7 @@ def main():
     dpo_args = []
     orpo_args = []
     ppo_args = []
-    for i, entry in tqdm(test_set.iterrows()):
+    for i, entry in tqdm(test_set.iterrows(), total=len(test_set)):
         topic = entry.topic
         stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
         prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument: "
@@ -61,15 +58,21 @@ def main():
             y_orpo = generate(prompt, orpo, orpo_tokenizer, **GENERATION_KWARGS)
             y_ppo = generate(prompt, ppo, ppo_tokenizer, **GENERATION_KWARGS)
         
-        sft_args.append(y_sft)
-        dpo_args.append(y_dpo)
-        orpo_args.append(y_orpo)
-        ppo_args.append(y_ppo)
+        sft_args.append(y_sft.split('### Argument: ')[-1].strip())
+        dpo_args.append(y_dpo.split('### Argument: ')[-1].strip())
+        orpo_args.append(y_orpo.split('### Argument: ')[-1].strip())
+        ppo_args.append(y_ppo.split('### Argument: ')[-1].strip())
         
-    save_to(sft_args, f'results/{args.model_name}/sft_args.json')
-    save_to(dpo_args, f'results/{args.model_name}/dpo_args.json')
-    save_to(orpo_args, f'results/{args.model_name}/orpo_args.json')
-    save_to(ppo_args, f'results/{args.model_name}/ppo_args.json')
+        if i % 100 == 0:
+            print("SFT:\n", y_sft, '\n')
+            print("DPO:\n", y_dpo, '\n')
+            print("ORPO:\n", y_orpo, '\n')
+            print("PPO:\n", y_ppo, '\n')
+            
+    save_to(sft_args, name='sft_args.json', output_dir=f'results/{args.model_name}/')
+    save_to(dpo_args, name='dpo_args.json', output_dir=f'results/{args.model_name}/')
+    save_to(orpo_args, name='orpo_args.json', output_dir=f'results/{args.model_name}/')
+    save_to(ppo_args, name='ppo_args.json', output_dir=f'results/{args.model_name}/')
         
 if __name__ == "__main__":
     main()

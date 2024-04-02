@@ -33,8 +33,8 @@ def generate(prompt: str, model, tokenizer, **generate_kwargs):
     return output_decoded
 
 
+fallacy_types = pd.read_csv('data/LOGIC/mappings.csv')['Original Name'].unique()
 def get_gpt_feedback(topic, argument, stance, type_='dpo'):
-    fallacy_types = pd.read_csv('data/LOGIC/mappings.csv')['Original Name'].unique()
     fallacy_types = [f for f in fallacy_types if f != 'miscellaneous']
     
     s0 = f"Consider the following topic and {stance} argument:\nTopic: {topic}\nArgument: {argument}\n"

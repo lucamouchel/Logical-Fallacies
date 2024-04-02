@@ -28,16 +28,17 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--orpo-path', default=None)
     parser.add_argument('--model-name', default='llama')
-    
+    parser.add_argument('--eval-from-file', action='store_true')
     return parser.parse_args()
 
 def main(): 
     args = parse_args()
     orpo_path = args.orpo_path
+    print(args.eval_from_file)
     test_set = pd.read_json('data/argumentation/test_cckg.json')
-    model = AutoPeftModelForCausalLM.from_pretrained(orpo_path, device_map='cuda:2')
+    model = AutoPeftModelForCausalLM.from_pretrained(orpo_path, device_map='auto')
     tokenizer = transformers.AutoTokenizer.from_pretrained(orpo_path)
-    evaluate(test_set, model=model, tokenizer=tokenizer, type_='orpo', model_name=args.model_name, **GENERATION_KWARGS)
+    evaluate(test_set, model=model, tokenizer=tokenizer, type_='orpo', eval_from_file=args.eval_from_file, model_name=args.model_name, **GENERATION_KWARGS)
 
 if __name__ == "__main__":
     main()

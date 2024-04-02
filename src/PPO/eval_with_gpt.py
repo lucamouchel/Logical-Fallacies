@@ -28,6 +28,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--ppo-path', default=None)
     parser.add_argument('--model-name', default='llama', required=True)
+    parser.add_argument('--eval-from-file', action='store_true')
     return parser.parse_args()
 
 def main(): 
@@ -36,7 +37,7 @@ def main():
     test_set = pd.read_json('data/argumentation/test_cckg.json')
     model = AutoPeftModelForCausalLM.from_pretrained(ppo_path, device_map='cuda:2')
     tokenizer = transformers.AutoTokenizer.from_pretrained(ppo_path)
-    evaluate(test_set, model=model, tokenizer=tokenizer, type_='ppo', model_name=args.model_name, **GENERATION_KWARGS)
+    evaluate(test_set, model=model, tokenizer=tokenizer, type_='ppo', eval_from_file=args.eval_from_file, model_name=args.model_name, **GENERATION_KWARGS)
 
 if __name__ == "__main__":
     main()

@@ -33,6 +33,7 @@ def parse_args():
     parser.add_argument('--generate-and-save', default='true', type=str)
     parser.add_argument('--model-name', default='llama')
     parser.add_argument('--task', required=True)
+    parser.add_argument('--eval-from-file', action='store_true')
     return parser.parse_args()
 
 def main(): 
@@ -44,8 +45,8 @@ def main():
     sft_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_dir, device_map='auto')
     dpo_model = AutoPeftModelForCausalLM.from_pretrained(dpo_model_dir, device_map='auto')
     tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_dir)
-    evaluate(test_set, model=sft_model, tokenizer=tokenizer, type_='sft', model_name=args.model_name, **GENERATE_KWARGS)
-    evaluate(test_set, model=dpo_model, tokenizer=tokenizer, type_='dpo', model_name=args.model_name, **GENERATE_KWARGS)
+    evaluate(test_set, model=sft_model, tokenizer=tokenizer, type_='sft', eval_from_file=args.eval_from_file, model_name=args.model_name, **GENERATE_KWARGS)
+    evaluate(test_set, model=dpo_model, tokenizer=tokenizer, type_='dpo', eval_from_file=args.eval_from_file, model_name=args.model_name, **GENERATE_KWARGS)
                 
 
 if __name__ == "__main__":

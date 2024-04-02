@@ -319,7 +319,7 @@
         "chosen": "Television scenes shows scenes that are not meant for kids to watch and that should not be allowed.",
         "rejected": "Why should we be concerned about television when there are so many other dangers in the world?"
     },
-    {
+    { 
         "prompt": "Generate a supporting argument for the topic: Television can be hazardous to our kids",
         "chosen": "Television scenes shows scenes that are not meant for kids to watch and that should not be allowed.",
         "rejected": "Everyone lets their kids watch television, so it must be safe for them."

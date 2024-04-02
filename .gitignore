@@ -14,7 +14,3 @@ src/DPO/env.py
 .ipynb_checkpoints/
 flan_t5_base_model/
 .cache/
-dpo_model/
-sft_flan_t5/
-res/
-preference_seq.memmap.npy

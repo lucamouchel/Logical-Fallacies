@@ -23,7 +23,7 @@ from utils import generate
 warnings.filterwarnings("ignore")
 openai.api_key = OPENAI_API_KEY
 
-GENERATION_KWARGS = {'max_new_tokens': 30, 'no_repeat_ngram_size': 2, 'do_sample': True}
+######### compare SFT responses with DPO, ORPO, PPO responses #########
 
 def compare_models(stance, topic, arguments):
     possible_answers = ''
@@ -45,46 +45,46 @@ def compare_models(stance, topic, arguments):
    
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--sft-path', required=True)
-    parser.add_argument('--dpo-path', required=True)
-    parser.add_argument('--orpo-path', required=True)
-    parser.add_argument('--ppo-path', required=True)
     parser.add_argument('--model-name', required=True)
     args = parser.parse_args()
-    
-    sft = AutoPeftModelForCausalLM.from_pretrained(args.sft_path, device_map='auto')
-    dpo = AutoPeftModelForCausalLM.from_pretrained(args.dpo_path, device_map='auto')
-    orpo = AutoPeftModelForCausalLM.from_pretrained(args.orpo_path, device_map='auto')
-    ppo = AutoPeftModelForCausalLM.from_pretrained(args.ppo_path, device_map='auto')
-    
-    ### SFT and DPO have the same tokenizer -- but not sure for the other two
-    sft_tokenizer = transformers.AutoTokenizer.from_pretrained(args.sft_path)
-    orpo_tokenizer = transformers.AutoTokenizer.from_pretrained(args.orpo_path)
-    ppo_tokenizer = transformers.AutoTokenizer.from_pretrained(args.ppo_path)
-    
+
     test_set = pd.read_json('data/argumentation/test_cckg.json')
     
-    wins = {i:0 for i in range(1, 7)} ### HUMAN - SFT - DPO - ORPO - PPO - TIE
-    for i, entry in tqdm(test_set.iterrows()):
-        topic = entry.topic
-        stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
-        y_human = entry.argument
-        prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument: "
+    with open(f'results/{args.model_name}/sft_args.json', 'r') as f:
+        sft_args = json.load(f)
         
-        with torch.no_grad():
-            y_sft = generate(prompt, sft, sft_tokenizer, **GENERATION_KWARGS)
-            y_dpo = generate(prompt, dpo, sft_tokenizer, **GENERATION_KWARGS)
-            y_orpo = generate(prompt, orpo, orpo_tokenizer, **GENERATION_KWARGS)
-            y_ppo = generate(prompt, ppo, ppo_tokenizer, **GENERATION_KWARGS)
-        
-        try:
-            response = compare_models(stance, topic, [y_human, y_sft, y_dpo, y_orpo, y_ppo])
-            wins[response] += 1
-        except:
-            save_to(wins, name='wins.json', output_dir=f'results/{args.model_name}/')
-            continue
-        
-        save_to(wins, name='wins.json', output_dir=f'results/{args.model_name}/')
+    combinations = [['sft', 'human'], ['sft', 'dpo'], ['sft', 'orpo'], ['sft', 'ppo']]
+    for combination in combinations:
+        to_compare = combination[1]
+        if to_compare != 'human':
+            with open(f'results/{args.model_name}/{combination[1]}_args.json', 'r') as f:
+                arguments = json.load(f)
+
+        wins = {'sft': 0, to_compare: 0, 'tie': 0}
+        for i, entry in tqdm(test_set.iterrows()):
+            topic = entry.topic
+            stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
+            y_sft = sft_args[i]
+            
+            if to_compare == 'human':
+                y = entry.argument 
+            else:
+                y = arguments[i]
+            
+            try:
+                response = compare_models(stance, topic, [y_sft, y])
+                assert type(response) == int
+                if response == 1:
+                    wins['sft'] += 1
+                elif response == 2:
+                    wins[to_compare] += 1
+                elif response == 3:
+                    wins['tie'] += 1
+            except:
+                save_to(wins, name='wins.json', output_dir=f'results/{args.model_name}/')
+                continue
+            
+        save_to(wins, name=f'sft_vs_{to_compare}.json', output_dir=f'results/{args.model_name}/')
 
 if __name__ == "__main__":
     main()

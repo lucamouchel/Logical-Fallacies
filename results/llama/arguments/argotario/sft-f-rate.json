@@ -1,0 +1,1394 @@
+[
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should computers be allowed in class rooms?",
+        "argument": "Computers are a great tool for learning."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "circular reasoning",
+        "topic": "Should we all home school our kids?",
+        "argument": "Home schooling is a good idea."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should smoking at home be illegal?",
+        "argument": "Smoking is a personal choice."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is television an effective tool in building the minds of children?",
+        "argument": "Television is an efficient tool for building minds."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Christianity a peaceful religion?",
+        "argument": "Christian is a religion of peace."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the Deutsche Post-strike justified?",
+        "argument": "The Deutsche post strike is justifed."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "argument": "Countries should allow people from eboli infect countries."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is plastic surgery an important field of medicine?",
+        "argument": "Plastic Surgery is an essential part of modern medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is plastic surgery an important field of medicine?",
+        "argument": "Plastic Surgery is an essential part of modern medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "argument": "Yes, jobs should be outsourced to developing nations."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Will flying cars ever become a reality?",
+        "argument": "Yes, flying car will become reality."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Turkey ready to join the European Union?",
+        "argument": "Turkey is not ready for joining the EU."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "argument": "Single sex schooling is not more efficient than mixed school."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "argument": "I think that coed school is better."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the grading system used in high school effective?",
+        "argument": "It is not effective."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is drug testing athletes justified?",
+        "argument": "No, it is not justifiable."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is nuclear power a reasonable energy source?",
+        "argument": "Nuclear power is a very reasonable source of energy."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is a necessary evil."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is global warming really an issue?",
+        "argument": "Global warmin is an isue."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "argument": "Yes, they should."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is a necessary evil."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Are humans to blame for certain animal extinctions?",
+        "argument": "Humans are to be blamed for animal deaths."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should cellphones be used during class?",
+        "argument": "Cellphomes should not be allowed during classes."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "argument": "Countries should not adopt harsher penalities for drugs."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "argument": "Countries should not adopt harsher penalities for drugs."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Christianity a peaceful religion?",
+        "argument": "Christian is a very peacefull religion."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should smoking at home be illegal?",
+        "argument": "No, it should not be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "Are Quentin Tarantinos movies too violent?",
+        "argument": "Tarentino is a great director and his movis are very well made."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the title of a univsersity-doctor be shown on the identification-card?",
+        "argument": "Yes, it should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "argument": "Countries should allow people from eboli infested countries."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "argument": "Countries should allow people from eboli infect countries."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is tupac the most influential rapper in history?",
+        "argument": "No, he was not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is global warming really an issue?",
+        "argument": "Global waring is a real issue."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is veganism the best for our bodies?",
+        "argument": "Vegan diet is not the healthiest diets."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should economical growth always be the ultimate goal of every country?",
+        "argument": "No, it should not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the grading system used in high school effective?",
+        "argument": "The gradings system is not effective."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the grading system used in high school effective?",
+        "argument": "The gradings system is not effective."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is plastic surgery an important field of medicine?",
+        "argument": "Plastic Surgery is an essential part of modern medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is plastic surgery an important field of medicine?",
+        "argument": "Plastic Surgery is an essential part of modern medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is plastic surgery an important field of medicine?",
+        "argument": "Plastic Surgery is an essential part of modern medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Turkey ready to join the European Union?",
+        "argument": "Turkey is not ready for joining the EU."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Do school uniforms make school a more effective place to learn?",
+        "argument": "School uniform is a good idea."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Do school uniforms make school a more effective place to learn?",
+        "argument": "School uniform is a good idea."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should gorillas be held in zoos",
+        "argument": "No, they should not be kept in captivity."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should gorillas be held in zoos",
+        "argument": "No, they should not be kept in captivity."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Will flying cars ever become a reality?",
+        "argument": "Yes, flying car will become reality."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Apple the new Microsoft?",
+        "argument": "Apple is not the next Microsoft."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should gorillas be held in zoos",
+        "argument": "No, they should not be kept in captivity."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should high schools provide daycare services for students who have children?",
+        "argument": "Yes, they should."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should high schools provide daycare services for students who have children?",
+        "argument": "Yes, they should."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "argument": "Yes, countries should adopt harsher penalities for drugs."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Do celebrities get away with more crime than non-celebrities?",
+        "argument": "No, they don't."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Do celebrities get away with more crime than non-celebreties?",
+        "argument": "Celebrites do get a better treatment in the justice system."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is drug testing athletes justified?",
+        "argument": "Yes, drug-testing is justifiable."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Has anyone been on the moon?",
+        "argument": "No one has been to the Moon."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should economical growth always be the ultimate goal of every country?",
+        "argument": "Economic growth is the most important goal for every nation."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Do celebrities get away with more crime than non-celebreties?",
+        "argument": "Celebrites are more likely to get a lighter sentence."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is tupac the most influential rapper in history?",
+        "argument": "No, he was not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is tupac the most influential rapper in history?",
+        "argument": "No, he was not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Is Apple's Swift the new star?",
+        "argument": "Apple Swift is the best programming language."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should cellphones be used during class?",
+        "argument": "Cellphomes should be allowed during classes."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Is Christianity a peaceful religion?",
+        "argument": "Christian is a violent religion."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the oppression of women by men a serious problem?",
+        "argument": "No, it is not a problem."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is global warming really an issue?",
+        "argument": "Global warmin is not an isue."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is global warming really an issue?",
+        "argument": "No, it is not an important issue."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is there a good reason for the American war on terror?",
+        "argument": "The American government has a right to protect its citizens."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Do celebrities get away with more crime than non-celebreties?",
+        "argument": "Celebrites are more likely to get a lighter sentence than a non celebrity."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "circular reasoning",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Germany should deport criminal refugees because they are criminals and need to be deported."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "false causality",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Deporting criminal refugees will automatically reduce crime rates in Germany."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is democracy the best system available?",
+        "argument": "Democracy is the most effective system."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is democracy the best system available?",
+        "argument": "Democracy is the most effective system."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is democracy the best system available?",
+        "argument": "Democracy is the most effective system."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Did media ignore crimes from refugees?",
+        "argument": "Media did not ignore crime from Refugees."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Do celebrities get away with more crime than non-celebreties?",
+        "argument": "No, they don't."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "Yes, the farmers need to be paid for their work."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "argument": "Single sex schooling is more beneficial than mixed sex."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "argument": "Single sex schooling is more beneficial than mixed sex."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should driving under the influence of alcohol be forbidden?",
+        "argument": "It should not be illegal."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Did media ignore crimes from refugees?",
+        "argument": "Media is not ignoring crims from Refugees."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, the milk price should not be raised."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, it should not be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is there a good reason for the American war on terror?",
+        "argument": "The war against terror is a war without end."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the fight versus the Islamic State include military operations?",
+        "argument": "Yes, the military operation should be included."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is global warming really an issue?",
+        "argument": "Global warmin is not an isue."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is drug testing athletes justified?",
+        "argument": "Yes, drug-testing is justifiable."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is drug testing athletes justified?",
+        "argument": "Yes, drug-testing is justifiable."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is it justified to develop nuclear energy for commercial use?",
+        "argument": "Yes, it is justifiable to use nuclear power for energy production."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "argument": "Yes, countries should adopt harsher penalities for drugs."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should gorillas be held in zoos",
+        "argument": "Yes, they should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Has anyone been on the moon?",
+        "argument": "Yes, there were people on moon."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the title of a univsersity-doctor be shown on the identification-card?",
+        "argument": "Yes, it should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should high schools provide daycare services for students who have children?",
+        "argument": "No, they should not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should high schools provide daycare services for students who have children?",
+        "argument": "No, they should not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Christianity a peaceful religion?",
+        "argument": "Christian is a religion of peace."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the legality of abortion desirable?",
+        "argument": "No, it is not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should non-European immigrans in Europe be accepted?",
+        "argument": "Non-european Immigrants should not be allowed to immagrate to Europe."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "Yes, the farmers need to be paid for their work."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the legality of abortion desirable?",
+        "argument": "Abortion is a very difficult decision to make."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should driving under the influence of alcohol be forbidden?",
+        "argument": "Yes, it should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Germany should deport all criminal immigrants."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should marijuana be legalized for individual use due to health condition?",
+        "argument": "Marijuano should be allowed for health reasons."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should economical growth always be the ultimate goal of every country?",
+        "argument": "No, it should not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should economical growth always be the ultimate goal of every country?",
+        "argument": "No, it should not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "Are Quentin Tarantinos movies too violent?",
+        "argument": "Tarentino is a great director."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "argument": "Yes, jobs should be outsourced to developing nations."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "argument": "Yes, jobs should be outsourced to developing nations."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should non-European immigrans in Europe be accepted?",
+        "argument": "Non-european Immigrants should not be allowed to immagrate to Europe."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Microsoft the new Apple?",
+        "argument": "Microsoft is not the New Apple."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "argument": "Single sex schooling is not effective."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is television an effective tool in building the minds of children?",
+        "argument": "Television is not an efficient tool for building minds."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is television an effective tool in building the minds of children?",
+        "argument": "Television is not an efficient tool for building minds."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should computers be allowed in class rooms?",
+        "argument": "Computers are a great tool for learning."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Apple's Swift the new star?",
+        "argument": "Apple Swift is the best programming language."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Apple's Swift the new star?",
+        "argument": "Apple Swift is the best programming language."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Will flying cars ever become a reality?",
+        "argument": "No, they will never become reality."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should non-European immigrans in Europe be accepted?",
+        "argument": "Non-european Immigrants should not be allowed to settle in europe."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "I heard of one criminal refugee. Therefore, all refugees must be criminals."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Germany should not deport refugee criminals."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we all home school our kids?",
+        "argument": "No, we should not home-school our children."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we all home school our kids?",
+        "argument": "No, we should not home-school our children."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should animals have special rights?",
+        "argument": "Animals should have rights."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is not a good way to test medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is not a good idea."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the Deutsche Post-strike justified?",
+        "argument": "The Deutsche post strike is not justfied."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is plastic surgery an important field of medicine?",
+        "argument": "It is not."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "argument": "Apple should pay muscians for their music."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should non-European immigrans in Europe be accepted?",
+        "argument": "No, they should not be allowed to immagrate."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should non-European immigrans in Europe be accepted?",
+        "argument": "Non-european Immigrants should not be allowed to immagrate to Europe."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is nuclear power a reasonable energy source?",
+        "argument": "Nuclear power is a very reasonable source of energy."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is nuclear power a reasonable energy source?",
+        "argument": "Nuclear power is a good energy resource."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, the milk price should not be raised."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, it should not be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Has anyone been on the moon?",
+        "argument": "Yes, they have been."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Has anyone been on the moon?",
+        "argument": "Yes, there are many proofs that people have been to the Moon."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should cellphones be used during class?",
+        "argument": "Cellphomes should be allowed during classes."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should gorillas be held in zoos",
+        "argument": "Yes, gorrillas should be kept in zoo."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should gorillas be held in zoos",
+        "argument": "Yes, they should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Did Titanic really deserve 11 oscars at once?",
+        "argument": "The movie was good, but not that good."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Did Titanic really deserve 11 oscars at once?",
+        "argument": "No, it didn't."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should animals have special rights?",
+        "argument": "Animals should have rights."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should cellphones be used during class?",
+        "argument": "Cellphomes should not be allowed during classes."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Microsoft the new Apple?",
+        "argument": "Microsoft is not the New Apple."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "argument": "Apple should pay the muscians."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should Christians accept same sex marriage?",
+        "argument": "Christians should accept it."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Does school detention do any good in high school?",
+        "argument": "School detentions are a good way to teach students that they have to follow the rules."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Does school detention do any good in high school?",
+        "argument": "School detentions are a waste of time."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, it should not be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the title of a univsersity-doctor be shown on the identification-card?",
+        "argument": "Yes, it should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the title of a univsersity-doctor be shown on the identification-card?",
+        "argument": "Yes, it should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is drug testing athletes justified?",
+        "argument": "Yes, drug-testing is justifiable."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is drug testing athletes justified?",
+        "argument": "Yes, drug-testing is justifiable."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Does Christiano Ronaldo deserve the title as worlds-greatest soccer-player?",
+        "argument": "He is a good player, but not the best."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Is the oppression of women by men a serious problem?",
+        "argument": "No, it is not a problem."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "argument": "Apple should pay the muscians."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Do we need a global environment task force?",
+        "argument": "No, we don't need it."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is there a good reason for the American war on terror?",
+        "argument": "The American government has a right to protect its citizens."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Is veganism the best for our bodies?",
+        "argument": "Vegan diet is the healthiest."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should marijuana be legalized for individual use due to health condition?",
+        "argument": "Marijuano should be allowed for health reasons."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is not a good idea."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is not a good idea."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the grading system used in high school effective?",
+        "argument": "The gradingsystem is not effective."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the grading system used in high school effective?",
+        "argument": "It is not effective."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is it effective to censor parts of the media?",
+        "argument": "It is not effective."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Is it effective to censor parts of the media?",
+        "argument": "Censorship is never effective."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is drug testing athletes justified?",
+        "argument": "No, it is not justifiable."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "argument": "Single sex schooling is more efficient."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Germany should deport all criminal immigrants."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should animals have special rights?",
+        "argument": "Animals should have rights."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should animals have special rights?",
+        "argument": "Animals should have rights."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "Yes, the farmers need to be paid for their work."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Did Titanic really deserve 11 oscars at once?",
+        "argument": "Yes, it did."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is the legality of assisted suicide desirable?",
+        "argument": "No, it is not desirably."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Did Titanic really deserve 11 oscars at once?",
+        "argument": "It was a good movie, but not the best."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Are Quentin Tarantinos movies too violent?",
+        "argument": "Tarentino is a good director, but he is too much into violence."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Are Quentin Tarantinos movies too violent?",
+        "argument": "Tarentino is a good director, but he is not the best."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Are humans to blame for certain animal extinctions?",
+        "argument": "Humans are to be blamed for animal deaths."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the title of a univsersity-doctor be shown on the identification-card?",
+        "argument": "Yes, it should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Has anyone been on the moon?",
+        "argument": "Yes, there are pictures of the landing site."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Has anyone been on the moon?",
+        "argument": "Yes, there were people on moon."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Does school detention do any good in high school?",
+        "argument": "School detentions are a good way to keep students in line."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should Christians accept same sex marriage?",
+        "argument": "Christians should accept it."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "Are Quentin Tarantinos movies too violent?",
+        "argument": "Tarentino is a great director."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "Are Quentin Tarantinos movies too violent?",
+        "argument": "Tarentino is a great director."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Do celebrities get away with more crime than non-celebreties?",
+        "argument": "Celebrites are not more likely to get a lighter sentence than other people."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Turkey ready to join the European Union?",
+        "argument": "Turkey is ready for joining the EU."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is Turkey ready to join the European Union?",
+        "argument": "Turkey is ready for joining the EU."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Do social networking sites have a positive impact on society?",
+        "argument": "Social networking is a waste of time."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is drug testing athletes justified?",
+        "argument": "Yes, drug-testing is justifiable."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is global warming really an issue?",
+        "argument": "Global warning is not an important issue."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is global warming really an issue?",
+        "argument": "No, it is not an important issue."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "argument": "Apple should pay the muscians."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "argument": "Apple should pay the muscians."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should animals have special rights?",
+        "argument": "Animals should not have any rights."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Is it justified to develop nuclear energy for commercial use?",
+        "argument": "No, it is not justifiable to use nuclear power for energy."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Does Christiano Ronaldo deserve the title as worlds-greatest soccer-player?",
+        "argument": "RONALDO IS THE BEST!"
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Are humans to blame for certain animal extinctions?",
+        "argument": "Humans are to be blamed for animal deaths."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Are humans to blame for certain animal extinctions?",
+        "argument": "Humans are to be blamed for animal deaths."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should animals have special rights?",
+        "argument": "Animals are not humans."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should animals have special rights?",
+        "argument": "Animals should not have the same rights as humans."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should musicians be payed for streaming music? (by Apple)",
+        "argument": "No, they should not be paid for it."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "argument": "Single sex schooling is more beneficial than mixed sex."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Are single sex schools more effective than co-ed schools?",
+        "argument": "Single sex schooling is more efficient than mixed school."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the title of a univsersity-doctor be shown on the identification-card?",
+        "argument": "Yes, it should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, the milk price should not be raised."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, it should not be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries disallow people coming from Ebola infected countries to enter?",
+        "argument": "Countries should allow people from eboli infect countries."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should driving under the influence of alcohol be forbidden?",
+        "argument": "Yes, it should be."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "The greek exit from the EU is a necessary step.",
+        "argument": "The Greek exit is not necessary."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, the milk price should not be raised."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Germany should deport all criminal immigrants."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Germany should deport all criminal immigrants."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Germany should deport all criminal immigrants."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Should Germany deport criminal refugees?",
+        "argument": "Germany should deport all criminal immigrants."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should smoking at home be illegal?",
+        "argument": "Smoking is a personal choice."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should the price for milk be increased?",
+        "argument": "No, the milk price should not be raised."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is a necessary evil."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should we allow animal testing for medical purposes?",
+        "argument": "Animal testing is necessary for medicine."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "argument": "No, jobs should not be outsourced to developing nations."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should jobs be subcontracted into developing countries?",
+        "argument": "No, jobs should not be outsourced."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Should countries adopt heavier penalties for drug use and drug trafficking?",
+        "argument": "Countries should adopt harsher penalities for drugs."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "faulty generalization",
+        "topic": "Do school uniforms make school a more effective place to learn?",
+        "argument": "School uniform is a waste of time and money."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Will flying cars ever become a reality?",
+        "argument": "No, they will never become reality."
+    },
+    {
+        "type": "sft",
+        "fallacy_type": "None",
+        "topic": "Will flying cars ever become a reality?",
+        "argument": "No, flying-cars will never become reality."
+    }
+]
