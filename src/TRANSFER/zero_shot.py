@@ -22,7 +22,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(args.model_id, device_map='auto')
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
     test_set = pd.read_json('data/argumentation/test_cckg.json')
-    
+    model_name = args.model_id.split('/')[-1]
     generated = []
     for i, entry in tqdm(test_set.iterrows(), total=len(test_set)):
         topic = entry.topic
@@ -32,10 +32,9 @@ def main():
         with torch.no_grad():
             y_model = generate(prompt, model, tokenizer, **GENERATION_KWARGS)
             y_model = remove_incomplete_last_sentence(y_model.split('### Argument:')[-1].strip())
-            sample = {'topic': topic, 'stance': stance, 'generated': y_model}
-            generated.append(sample)
+            generated.append(y_model)
         
-    save_to(generated, name=f'generated.json', output_dir=f'results/{args.model_id.split('/')[-1]}/')
+    save_to(generated, name=f'generated.json', output_dir=f'results/{model_name}/')
 
 if __name__ == "__main__":
     main()

@@ -252,18 +252,14 @@
 
                       <hr/>
 
-                      <p>Given a <strong>topic</strong>, a <strong>stance</strong> and a set of <strong>arguments</strong>, you are asked to evaluate the quality of these arguments by selecting the best one, or qualifying them as equally good or equally bad.</p>
+                      <p>Given a <strong>topic</strong>, a <strong>stance</strong> and a set of 2 <strong>arguments</strong>, you are asked to evaluate the quality of these arguments by selecting the best one, or qualifying them as equally good or equally bad.</p>
 
                       <p>An example would be:</p>
                       <ul>
                         <li><strong>Topic</strong>: There should be no age restrictions on cosmetic surgery.</li>
                         <li><strong>Stance</strong>: Supporting.</li>
-                        <li><strong>Argument 1</strong>: The American Medical Association recommends age restrictions on cosmetic procedures be lifted.</li> <!-- Human -->
-                        <li><strong>Argument 2</strong>: Cosmetics surgery is safe.</li> <!-- SFT -->
-                        <li><strong>Argument 3</strong>: Some people want cosmetic surgery to help with self esteem.</li> <!-- DPO -->
-                        <li><strong>Argument 4</strong>: </li> <!-- ORPO -->
-                        <li><strong>Argument 5</strong>: </li> <!-- PPO -->
-
+                        <li><strong>Argument 1</strong>: The American Medical Association recommends age restrictions on cosmetic procedures be lifted.</li> 
+                        <li><strong>Argument 2</strong>: Cosmetics surgery is safe.</li>
                       </ul>
 
                      
@@ -277,7 +273,7 @@
 
                       <p>Your task is to choose which, out of these different <strong>arguments</strong>, you consider to be more relevant, with respect to a given topic and a stance, taking three criteria into account:</p>
                       <ol>
-                        <li>Your preferred <strong>argument</strong> properly addresses the matter in the topic. ---is more plausible and more generally followed by people in their daily lives than the other,</li>
+                        <li>Your preferred <strong>argument</strong> properly addresses the matter in the topic.</li>
                         <li>Your preferred <strong>argument</strong> corresponds to the given stance. </li>
                         <li><strong>ANY OTHER?</strong></li>
                       </ol>
@@ -327,51 +323,44 @@
                   <div class="card-content col-12">
                       
                     <h5>Example 1:</h5>
-                    <p style="margin:0"><strong>Situation</strong>: Emma's mom has always done her laundry, but now Emma lives on her own.</p>
-                    <p style="margin:0"><strong>Intention</strong>: Emma has to get her laundry done.</p>
-                    <p><strong>Immoral action</strong>: Emma drives to his mom's house so that she can do Emma's laundry for her.</p>
-                    <ul>
-                      <li><strong>Moral norm 1: It's wrong to expect others to do laundry for you.</strong></li>
-                      <li><strong>Moral norm 2: You shouldn't rely on someone else to do your laundry.</strong></li>
-                    </ul>
-                    <p style="color:#347C17;"><strong>Gold answer:</strong> Both norms are equally preferred.</p>
+                    <p style="margin:0"><strong>Topic</strong>: Gender neutral language would not be good in every situation.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Supporting</p>
+                    <p><strong>Argument #1</strong>: Gender neutral language can be a confusing concept to understand.</p>
+                    <p><strong>Argument #2</strong>: Gender neutral language is not good because it would not be good in every situation.</p>
+
+                    <p style="color:#347C17;"><strong>Gold answer:</strong> Argument #1 is better</p>
 
                     <hr>
 
                     <h5>Example 2:</h5>
-                    <p style="margin:0"><strong>Situation</strong>: Paula is leaving home to do some shopping and notices that the dog's water bowl is empty.</p>
-                    <p style="margin:0"><strong>Intention</strong>: Paula wants to leave the dog at home.</p>
-                    <p><strong>Immoral action</strong>: Paula decides to fill the bowl when she gets home and leaves the dog with no water.</p>
-                    <ul>
-                      <li><strong>Moral norm 1: It's wrong to leave a dog without water. </strong></li>
-                      <li><strong>Moral norm 2: It's good to give your pets water.</strong></li>
-                    </ul>
-                    <p style="color:#347C17;"><strong>Gold answer:</strong> Norm 1 is preferred.</p>
+                    <p style="margin:0"><strong>Topic</strong>: Companies should be allowed to decide workers' pay.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Counter</p>
+                    <p><strong>Argument #1</strong>: Companies abused wage autonomy until a federal minimum wage was instituted.</p>
+                    <p><strong>Argument #2</strong>: It is not fair for companies to keep profits and deny workers a fair wage.</p>
+
+                    <p style="color:#347C17;"><strong>Gold answer:</strong> Argument #2 is better</p>
 
                     <hr>
 
                     <h5>Example 3:</h5>
-                    <p style="margin:0"><strong>Situation</strong>: James' friend left his computer logged in to Twitter while he went to the bathroom.</p>
-                    <p style="margin:0"><strong>Intention</strong>: James wants to tease his friend.</p>
-                    <p><strong>Immoral action</strong>: James uses his friend's Twitter account to announce that he's getting a sex change.</p>
-                    <ul>
-                      <li><strong>Moral norm 1: It's wrong to use someone else's account.</strong></li>
-                      <li><strong>Moral norm 2: It's wrong to use someone else's account without their permission.</strong></li>
-                    </ul>
-                    <p style="color:#347C17;"><strong>Gold answer:</strong> Norm 2 is preferred.</p>
+                    <p style="margin:0"><strong>Topic</strong>: Stem cell research should be banned.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Counter</p>
+                    <p><strong>Argument #1</strong>: Stem cell research provides breakthroughs.</p>
+                    <p><strong>Argument #2</strong>: Those who support stem cell research are heartless and lack moral values.</p>
+
+                    <p style="color:#347C17;"><strong>Gold answer:</strong> Argument #1 is better</p>
 
                     <hr>
 
-                    <h5>Example 4:</h5>
-                    <p style="margin:0"><strong>Situation</strong>: Jack and his friends are playing in his backyard on a sunny day.</p>
-                    <p style="margin:0"><strong>Intention</strong>: Jack wants to have fun with his friends.</p>
-                    <p><strong>Immoral action</strong>: Jack tosses a ball around with his friends, and he accidentally hit a window of his neighbor.</p>
-                    <ul>
-                      <li><strong>Moral norm 1:</strong> It's wrong to hit someone.</li>
-                      <li><strong>Moral norm 2:</strong> It’s wrong to hit a neighbor. </li>
-                    </ul>
-                    <p style="color:#347C17;"><strong>Gold answer:</strong> Neither are relevant (because the story is about damaging a neighbor’s property). </p>
-                  </div>
+                    <h5>Example 1:</h5>
+                    <p style="margin:0"><strong>Topic</strong>: Human cloning is bad due to the risks</p>
+                    <p style="margin:0"><strong>Stance</strong>: Supporting</p>
+                    <p><strong>Argument #1</strong>: We should ban human cloning because it could lead to the creation of superhumans who could dominate society.</p>
+                    <p><strong>Argument #2</strong>: If you do not favor medical advancements, human cloning is bad.</p>
+
+                    <p style="color:#347C17;"><strong>Gold answer:</strong> Argument #2 is better</p>
+   
+                </div>
               </div>
           </div>
       </div>
@@ -380,63 +369,45 @@
   <!-- ACCORDION END -->
 
   <!-- MTURK INPUT START -->
-  <div class="col-12 mt-3 mb-1 border-top">
+   <!-- MTURK INPUT START -->
+   <div class="col-12 mt-3 mb-1 border-top">
 
-      <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
-          <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
-          <input type='hidden' name='ee' id='ee'/>
+    <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
+        <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+        <input type='hidden' name='ee' id='ee'/>
 
-          <!-- QUESTION MACRO START -->
-          
-          <div id="question-1" class="question">
-              <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
-                  <div class="row">1)</div>
-                    <p><strong>Topic</strong>: ${topic}</p>
-                    <p><strong>Stance</strong>: ${stance}</p>
-                    <p><strong>Arguments</strong>: ${arguments}</p>
+        <!-- QUESTION MACRO START -->
+        
+        <div id="question-1" class="question">
+            <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                <div class="row">1)</div>
+                  <p><strong>Topic</strong>: ${topic}</p>
+                  <p><strong>Stance</strong>: ${stance}</p>
+                  <p><strong>Argument #1</strong>: ${argument1}</p>
+                  <p><strong>Argument #2</strong>: ${argument2}</p>
 
-                    <div class="row row-12 pl-3 pt-2">
-                      <ul style="list-style-type:none">
-                        <li><strong>Argument #1</strong>: ${argument1}</li>
-                        <li><strong>Argument #2</strong>: ${argument2}</li>
-                        <li><strong>Argument #3</strong>: ${argument3}</li>
-                        <li><strong>Argument #4</strong>: ${argument4}</li>
-                        <li><strong>Argument #5</strong>: ${argument5}</li>
-                      </ul>
+        
+                <div class="row row-12 pl-3 pt-2">
+                    <strong><em>Which moral norm is most relevant to the story?</em></strong>
+                </div>
+                <div class="row-12 pt-1 btn-group-container col-5">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary btn-sm" for="10">
+                            <input class="required" type="radio" name="q1_valid" id="q1_valid_1" autocomplete="off" value="10" required>Both are equally relevant
+                        </label>
+                        <label class="btn btn-secondary btn-sm" for="1">
+                            <input class="required" type="radio" name="q1_valid" id="q1_valid_2" autocomplete="off" value="1" required> Argument #1 is better
+                        </label>
+                        <label class="btn btn-secondary btn-sm" for="2">
+                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3" autocomplete="off" value="2" required>Argument #2 is better
+                        </label>
+                        <label class="btn btn-secondary btn-sm" for="-10">
+                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4" autocomplete="off" value="-10" required>Neither are relevant
+                        </label>
                     </div>
-
-                  <div class="row row-12 pl-3 pt-2">
-                      <strong><em>Which argument is most relevant to the topic?</em></strong>
-                  </div>
-                  <div class="row-12 pt-1 btn-group-container col-7">
-                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                          <label class="btn btn-secondary btn-sm" for="1">
-                              <input class="required" type="radio" name="q1_valid" id="q1_valid_1" autocomplete="off" value="1" required>Argument #1 is the best <!-- Human -->
-                          </label>
-                          <label class="btn btn-secondary btn-sm" for="2">
-                              <input class="required" type="radio" name="q1_valid" id="q1_valid_2" autocomplete="off" value="2" required> Argument #2 is the best <!-- SFT -->
-                          </label>
-                          <label class="btn btn-secondary btn-sm" for="3">
-                            <input class="required" type="radio" name="q1_valid" id="q1_valid_3" autocomplete="off" value="3" required> Argument #3 is the best <!-- DPO -->
-                        </label>
-                        <label class="btn btn-secondary btn-sm" for="4">
-                            <input class="required" type="radio" name="q1_valid" id="q1_valid_4" autocomplete="off" value="4" required> Argument #4 is the best <!-- ORPO -->
-                        </label>
-                        <label class="btn btn-secondary btn-sm" for="5">
-                            <input class="required" type="radio" name="q1_valid" id="q1_valid_5" autocomplete="off" value="5" required> Argument #5 is the best <!-- PPO -->
-                        </label>
-                          <label class="btn btn-secondary btn-sm" for="10">
-                              <input class="required" type="radio" name="q1_valid" id="q1_valid_6" autocomplete="off" value="10" required>All are equally good
-                          </label>
-                          <label class="btn btn-secondary btn-sm" for="-10">
-                              <input class="required" type="radio" name="q1_valid" id="q1_valid_7" autocomplete="off" value="-10" required>All are equally bad
-                     
-                          </label>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
+                </div>
+            </div>
+        </div>
           <!-- GOAL CAT END -->
 
           <!-- OPTIONAL FEEDBACK --> 
