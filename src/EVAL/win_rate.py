@@ -14,6 +14,7 @@ import sys
 import pathlib 
 import argparse
 from peft import AutoPeftModelForCausalLM
+import time
 
 sys.path.append('src/')  
 from DPO.env import OPENAI_API_KEY
@@ -62,6 +63,9 @@ def main():
 
         wins = {'sft': 0, to_compare: 0, 'tie': 0}
         for i, entry in tqdm(test_set.iterrows()):
+            if i % 201 == 0 and i != 0:
+                print("going to sleep to not overcook gpt4")
+                time.sleep(60) 
             topic = entry.topic
             stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
             y_sft = sft_args[i]
