@@ -1,0 +1,1002 @@
+[
+    {
+        "topic": " The EU should have a president elected directly by the people. ",
+        "stance": "SUPPORTING",
+        "generated": "The EU is a large organization and should have a president elected directly by the people."
+    },
+    {
+        "topic": " Denial of the Holocaust should be illegal. ",
+        "stance": "SUPPORTING",
+        "generated": "The Holocaust is a horrible event and it should not be denied."
+    },
+    {
+        "topic": " Prostitution should be legal. ",
+        "stance": "SUPPORTING",
+        "generated": "Prostitution is a business, not a crime."
+    },
+    {
+        "topic": " Fat air passengers should be charged extra for their extra weight. ",
+        "stance": "COUNTER",
+        "generated": "It is unreasonable to charge people for their weight."
+    },
+    {
+        "topic": " The Commonwealth should be abolished. ",
+        "stance": "COUNTER",
+        "generated": "The Commonwealth is not a threat to the people of the country."
+    },
+    {
+        "topic": " The assassination of a dictator can be justified. ",
+        "stance": "COUNTER",
+        "generated": "The assassination of a dictator can be a bad thing."
+    },
+    {
+        "topic": " Mandating calorie counts on restaurant menus is good public policy. ",
+        "stance": "COUNTER",
+        "generated": "Restaurant menus should not be mandated to have calorie counts."
+    },
+    {
+        "topic": " Schools have the right to search students' lockers. ",
+        "stance": "COUNTER",
+        "generated": "Schools have no right to search students' lockers."
+    },
+    {
+        "topic": " High speed rail development is generally good policy. ",
+        "stance": "COUNTER",
+        "generated": "High speed rail development is expensive and not worth the money."
+    },
+    {
+        "topic": " Marriage to more than one person should be legal. ",
+        "stance": "COUNTER",
+        "generated": "Polygamy is not the same as marriage."
+    },
+    {
+        "topic": " Children should be allowed to work in the performing arts or professional sports. ",
+        "stance": "COUNTER",
+        "generated": "Children should not be allowed to work in the performing arts or professional sports."
+    },
+    {
+        "topic": " Assisted suicide should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "People have the right to choose their own death."
+    },
+    {
+        "topic": " It is ethical for colleges, parents, or employers to get information about people from social networking websites. ",
+        "stance": "COUNTER",
+        "generated": "Social networking websites are private."
+    },
+    {
+        "topic": " Prostitution should be legal. ",
+        "stance": "SUPPORTING",
+        "generated": "Prostitution is a victimless crime."
+    },
+    {
+        "topic": " The assassination of a dictator can be justified. ",
+        "stance": "COUNTER",
+        "generated": "Assassination of a dictator is not justified."
+    },
+    {
+        "topic": " Iraq should be partitioned into three autonomous sectarian regions. ",
+        "stance": "SUPPORTING",
+        "generated": "Iraq is a failed state."
+    },
+    {
+        "topic": " Governments should completely ban laser pointers. ",
+        "stance": "COUNTER",
+        "generated": "Laser pointers can be used for good."
+    },
+    {
+        "topic": " Year-round schools are a good idea. ",
+        "stance": "COUNTER",
+        "generated": "Year-round schools would be too expensive for some families."
+    },
+    {
+        "topic": " A 700 mile fence on the US-Mexico border is justified. ",
+        "stance": "SUPPORTING",
+        "generated": "A 700 mile fence would be effective."
+    },
+    {
+        "topic": " Counter-terrorism efforts should include full-body scans at airports. ",
+        "stance": "SUPPORTING",
+        "generated": "Full-body scans are the most effective way to detect threats."
+    },
+    {
+        "topic": " The assassination of a dictator can be justified. ",
+        "stance": "COUNTER",
+        "generated": "There are other ways to remove a dictator."
+    },
+    {
+        "topic": " The Three Gorges Dam is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "The Three Gorges Dam is a good idea."
+    },
+    {
+        "topic": " Tibet should seek and gain independence. ",
+        "stance": "COUNTER",
+        "generated": "Tibet is not ready to be independent."
+    },
+    {
+        "topic": " Human reproductive cloning should be banned and punishments leveled against it. ",
+        "stance": "SUPPORTING",
+        "generated": "Human reproductive cloning is dangerous."
+    },
+    {
+        "topic": " Security regulations for flying are too strict. ",
+        "stance": "COUNTER",
+        "generated": "Security regulations are necessary."
+    },
+    {
+        "topic": " Governments should introduce identity cards and require each citizen to carry one. ",
+        "stance": "COUNTER",
+        "generated": "Identity cards are a violation of privacy."
+    },
+    {
+        "topic": " Pornography offers a valuable public service. ",
+        "stance": "COUNTER",
+        "generated": "Pornography can be a public service, but it is not a necessity."
+    },
+    {
+        "topic": " The 2010 US health care reform legislation is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The 2010 US health care reform legislation is a bad idea."
+    },
+    {
+        "topic": " The EU Constitution reform treaty is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The EU Constitution reform treaty is a bad idea."
+    },
+    {
+        "topic": " The Hijab should be banned in schools, public buildings or society in general. ",
+        "stance": "SUPPORTING",
+        "generated": "The hijab is an oppressive garment."
+    },
+    {
+        "topic": " Denial of the Holocaust should be illegal. ",
+        "stance": "SUPPORTING",
+        "generated": "Holocaust denial is a form of hate speech."
+    },
+    {
+        "topic": " Physical force is a justifiable method of punishing criminals. ",
+        "stance": "COUNTER",
+        "generated": "Physical force is not justifiable."
+    },
+    {
+        "topic": " Network neutrality legislation is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "Network neutrality legislation would stifle innovation."
+    },
+    {
+        "topic": " 9/11 suspects should be tried in NY courts, as ordered by US AG Eric Holder. ",
+        "stance": "COUNTER",
+        "generated": "9/11 suspects should be tried in Guantanamo Bay."
+    },
+    {
+        "topic": " Handguns should be banned in Washington, DC. ",
+        "stance": "COUNTER",
+        "generated": "Handguns are not dangerous."
+    },
+    {
+        "topic": " Devolution in Scotland and Wales is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "Devolution in Scotland and Wales is a good idea."
+    },
+    {
+        "topic": " The idea of missile defenses in the Czech Republic and Poland is justified. ",
+        "stance": "COUNTER",
+        "generated": "The idea of missile defenses in the Czech Republic and Poland is not justified."
+    },
+    {
+        "topic": " The veto powers of the permanent members of the UN Security Council should be abolished. ",
+        "stance": "SUPPORTING",
+        "generated": "The veto powers of the permanent members of the UN Security Council are an obstacle to peace."
+    },
+    {
+        "topic": " Compulsory national service is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "Compulsory national service is not fair."
+    },
+    {
+        "topic": " The US policy of No Growth Budgets in the United Nations is justified. ",
+        "stance": "COUNTER",
+        "generated": "The US policy of No Growth Budgets in the United Nations is not justified."
+    },
+    {
+        "topic": " Colonizing the Moon is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "There is a lot of space on the moon."
+    },
+    {
+        "topic": " Gay marriage should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "Gay marriage should be legalized."
+    },
+    {
+        "topic": " Assisted suicide should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "Assisted suicide is legal in some states."
+    },
+    {
+        "topic": " Assisted suicide should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "Assisted suicide should be legalized for those who want to end their lives."
+    },
+    {
+        "topic": " Marriage to more than one person should be legal. ",
+        "stance": "SUPPORTING",
+        "generated": "People should be able to marry who they want."
+    },
+    {
+        "topic": " All cell phone use in cars should be banned. ",
+        "stance": "COUNTER",
+        "generated": "Cell phones are a necessity for emergencies."
+    },
+    {
+        "topic": " Govts should mandate that people buy private health insurance, or face penalties. ",
+        "stance": "COUNTER",
+        "generated": "Govts should not mandate that people buy private health insurance, or face penalties."
+    },
+    {
+        "topic": " Human reproductive cloning should be banned and punishments leveled against it. ",
+        "stance": "SUPPORTING",
+        "generated": "Human reproductive cloning is dangerous and should be banned."
+    },
+    {
+        "topic": " Big, liberal government is better than small, conservative government. ",
+        "stance": "SUPPORTING",
+        "generated": "Big government has more resources than small government."
+    },
+    {
+        "topic": " The assassination of a dictator can be justified. ",
+        "stance": "SUPPORTING",
+        "generated": "A dictator can be a dangerous person."
+    },
+    {
+        "topic": " Gay marriage should be legalized. ",
+        "stance": "COUNTER",
+        "generated": "Gay marriage is wrong."
+    },
+    {
+        "topic": " The United States should withdraw from the United Nations. ",
+        "stance": "SUPPORTING",
+        "generated": "The United States has been a member of the United Nations for decades."
+    },
+    {
+        "topic": " Limits or regulations should be placed on how candidates raise funds, and/or spend them, during political campaigns. ",
+        "stance": "SUPPORTING",
+        "generated": "Campaigns should not be funded by the rich, but by the people."
+    },
+    {
+        "topic": " Big, liberal government is better than small, conservative government. ",
+        "stance": "COUNTER",
+        "generated": "Big government is bad for people."
+    },
+    {
+        "topic": " Iraq should be partitioned into three autonomous sectarian regions. ",
+        "stance": "SUPPORTING",
+        "generated": "Iraq is divided into three main sectarian regions."
+    },
+    {
+        "topic": " Fusion power represents the future of energy generation. ",
+        "stance": "SUPPORTING",
+        "generated": "Fusion power is the future of energy generation."
+    },
+    {
+        "topic": " The US government should fund embryonic stem cell research. ",
+        "stance": "SUPPORTING",
+        "generated": "Embryonic stem cell research could be very beneficial to people."
+    },
+    {
+        "topic": " Men found guilty of sex crimes should be chemically castrated. ",
+        "stance": "SUPPORTING",
+        "generated": "Chemical castration would stop men from committing sex crimes."
+    },
+    {
+        "topic": " Network neutrality legislation is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "Network neutrality legislation is bad."
+    },
+    {
+        "topic": " Denial of the Holocaust should be illegal. ",
+        "stance": "COUNTER",
+        "generated": "The Holocaust was a tragedy, but it happened a long time ago.  The denial of the Holocaust should not be illegal.  It is a part of history."
+    },
+    {
+        "topic": " Tibet should seek and gain independence. ",
+        "stance": "COUNTER",
+        "generated": "Tibet is part of China."
+    },
+    {
+        "topic": " 9/11 suspects should be tried in NY courts, as ordered by US AG Eric Holder. ",
+        "stance": "COUNTER",
+        "generated": "9/11 suspects should be tried in Guantanamo Bay."
+    },
+    {
+        "topic": " The morning-after pill should be banned. ",
+        "stance": "COUNTER",
+        "generated": "The morning-after pill is not dangerous."
+    },
+    {
+        "topic": " The 2010 US health care reform legislation is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "The 2010 US health care reform legislation is a good idea."
+    },
+    {
+        "topic": " Cell phone use by minors (16 to 18 in the United States) while driving should be banned. ",
+        "stance": "SUPPORTING",
+        "generated": "Cell phone use while driving is distracting."
+    },
+    {
+        "topic": " Marijuana should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "Marijuana has many health benefits."
+    },
+    {
+        "topic": " The UN should increase humanitarian aid to poor nations. ",
+        "stance": "SUPPORTING",
+        "generated": "Humanitarian aid is essential to the poor."
+    },
+    {
+        "topic": " Bosnia and Herzegovina should accede to the European Union. ",
+        "stance": "COUNTER",
+        "generated": "Bosnia and Herzegovina should not join the European Union."
+    },
+    {
+        "topic": " The EU Constitution reform treaty is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The EU constitution reform treaty is a bad idea."
+    },
+    {
+        "topic": " Advertising for tobacco products should be banned. ",
+        "stance": "COUNTER",
+        "generated": "Advertising for tobacco products should be banned."
+    },
+    {
+        "topic": " The US government should fund embryonic stem cell research. ",
+        "stance": "SUPPORTING",
+        "generated": "Embryonic stem cell research can lead to cures."
+    },
+    {
+        "topic": " Social networking sites are generally beneficial to our world. ",
+        "stance": "SUPPORTING",
+        "generated": "Social networking sites are a place for people to communicate."
+    },
+    {
+        "topic": " The EU Constitution reform treaty is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The EU Constitution reform treaty is a bad idea."
+    },
+    {
+        "topic": " Gay marriage should be legalized. ",
+        "stance": "COUNTER",
+        "generated": "Gay marriage is a bad thing."
+    },
+    {
+        "topic": " Advertising for tobacco products should be banned. ",
+        "stance": "SUPPORTING",
+        "generated": "Advertising tobacco products is unhealthy."
+    },
+    {
+        "topic": " Corps. have a right to free speech and to spend w/o limit in elections. ",
+        "stance": "COUNTER",
+        "generated": "Corporations should not be allowed to spend in elections."
+    },
+    {
+        "topic": " The European Union should have its own standing army. ",
+        "stance": "SUPPORTING",
+        "generated": "The EU has a large number of members.  A standing army would help protect them."
+    },
+    {
+        "topic": " The 2010 US health care reform legislation is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The 2010 US health care reform legislation is a bad idea."
+    },
+    {
+        "topic": " Sex toys should be banned. ",
+        "stance": "SUPPORTING",
+        "generated": "Sex toys are used for sex."
+    },
+    {
+        "topic": " A nuclear Iran is intolerable, justifying military action to prevent. ",
+        "stance": "SUPPORTING",
+        "generated": "A nuclear Iran is a threat to the world."
+    },
+    {
+        "topic": " Airport security profiling is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "Airport security profiling is a bad idea."
+    },
+    {
+        "topic": " Human reproductive cloning should be banned and punishments leveled against it. ",
+        "stance": "SUPPORTING",
+        "generated": "Human reproductive cloning is dangerous and unethical."
+    },
+    {
+        "topic": " Handguns should be banned in Washington, DC. ",
+        "stance": "SUPPORTING",
+        "generated": "Handguns are not safe."
+    },
+    {
+        "topic": " Barack Obama is justified in his willingness to talk to foreign leaders without preconditions. ",
+        "stance": "SUPPORTING",
+        "generated": "Barack Obama has a great way of talking to foreign leaders without preconditions."
+    },
+    {
+        "topic": " All cell phone use in cars should be banned. ",
+        "stance": "SUPPORTING",
+        "generated": "Cell phone use is dangerous."
+    },
+    {
+        "topic": " The US should maintain landmines in the KDZ b/w North and South Korea. ",
+        "stance": "COUNTER",
+        "generated": "Landmines are not effective."
+    },
+    {
+        "topic": " Instant replay call reviews should be implemented in baseball. ",
+        "stance": "COUNTER",
+        "generated": "Instant replay call reviews are not a good idea."
+    },
+    {
+        "topic": " Governments should introduce identity cards and require each citizen to carry one. ",
+        "stance": "SUPPORTING",
+        "generated": "Identity cards are a useful tool for governments to keep track of their citizens."
+    },
+    {
+        "topic": " Gene patents, particularly related to food and agricultural products, are a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "Gene patents would allow people to protect their intellectual property."
+    },
+    {
+        "topic": " Assisted suicide should be legalized. ",
+        "stance": "COUNTER",
+        "generated": "Assisted suicide should not be legalized."
+    },
+    {
+        "topic": " Airport security profiling is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "Profiling is necessary to keep airports safe."
+    },
+    {
+        "topic": " The minimum age of candidacy should be 18. ",
+        "stance": "COUNTER",
+        "generated": "Some 16 year olds are mature enough to be elected."
+    },
+    {
+        "topic": " Governments should legalise all drugs. ",
+        "stance": "COUNTER",
+        "generated": "Some drugs are harmful."
+    },
+    {
+        "topic": " Social security should be privatized. ",
+        "stance": "COUNTER",
+        "generated": "Social security is a government program."
+    },
+    {
+        "topic": " Mass migration, especially from developing to developed countries, is a good force. ",
+        "stance": "SUPPORTING",
+        "generated": "Many people are starving in developing countries, and mass migration can help them get food."
+    },
+    {
+        "topic": " Everyone should have to carry a national identity card. ",
+        "stance": "COUNTER",
+        "generated": "Carrying a national identity card is a burden for some."
+    },
+    {
+        "topic": " Abortions should be limited to 3 months within conception. ",
+        "stance": "SUPPORTING",
+        "generated": "Abortions are not necessary."
+    },
+    {
+        "topic": " Men found guilty of sex crimes should be chemically castrated. ",
+        "stance": "COUNTER",
+        "generated": "Chemical castration is an extreme punishment."
+    },
+    {
+        "topic": " NATO should continue to expand into East Europe and possible beyond. ",
+        "stance": "SUPPORTING",
+        "generated": "NATO is a powerful force that should be used to defend the world."
+    },
+    {
+        "topic": " The EU should have a president elected directly by the people. ",
+        "stance": "COUNTER",
+        "generated": "The president of the EU is elected by the parliament, and the parliament is elected by the people."
+    },
+    {
+        "topic": " High speed rail development is generally good policy. ",
+        "stance": "COUNTER",
+        "generated": "High speed rail development is not necessary."
+    },
+    {
+        "topic": " Tibet should seek and gain independence. ",
+        "stance": "SUPPORTING",
+        "generated": "Tibet is a unique culture."
+    },
+    {
+        "topic": " Tibet should seek and gain independence. ",
+        "stance": "COUNTER",
+        "generated": "Tibet has no money to gain independence."
+    },
+    {
+        "topic": " Big, liberal government is better than small, conservative government. ",
+        "stance": "SUPPORTING",
+        "generated": "Big government is able to provide more services to people."
+    },
+    {
+        "topic": " The estate tax should be permanently repealed. ",
+        "stance": "SUPPORTING",
+        "generated": "The estate tax is not a good idea."
+    },
+    {
+        "topic": " Prostitution should be legal. ",
+        "stance": "SUPPORTING",
+        "generated": "Prostitution is not going away."
+    },
+    {
+        "topic": " A 700 mile fence on the US-Mexico border is justified. ",
+        "stance": "COUNTER",
+        "generated": "The border is already secure."
+    },
+    {
+        "topic": " Unemployed people should be made to work for their welfare money. ",
+        "stance": "COUNTER",
+        "generated": "It is not fair to make unemployed people work for their welfare money."
+    },
+    {
+        "topic": " Govts should mandate that people buy private health insurance, or face penalties. ",
+        "stance": "SUPPORTING",
+        "generated": "People who don't have private health insurance are a burden to the state."
+    },
+    {
+        "topic": " The US government should fund embryonic stem cell research. ",
+        "stance": "SUPPORTING",
+        "generated": "Embryonic stem cell research is a new way of treating diseases."
+    },
+    {
+        "topic": " The government should take actions to deter individuals from smoking. ",
+        "stance": "COUNTER",
+        "generated": "Smoking is not illegal, so the government should not take any action."
+    },
+    {
+        "topic": " Marriage to more than one person should be legal. ",
+        "stance": "SUPPORTING",
+        "generated": "Polygamy is a part of some cultures."
+    },
+    {
+        "topic": " Governments should introduce identity cards and require each citizen to carry one. ",
+        "stance": "COUNTER",
+        "generated": "Identity cards will not be useful."
+    },
+    {
+        "topic": " Everyone should have to carry a national identity card. ",
+        "stance": "SUPPORTING",
+        "generated": "A national identity card is a way to ensure that everyone is who they say they are."
+    },
+    {
+        "topic": " Eco-tourism is good for the environment and world. ",
+        "stance": "SUPPORTING",
+        "generated": "Eco-tourism is a form of tourism that is environmentally friendly."
+    },
+    {
+        "topic": " Prostitution should be legal. ",
+        "stance": "COUNTER",
+        "generated": "Prostitution is morally wrong."
+    },
+    {
+        "topic": " VAT on contraceptives should be reduced. ",
+        "stance": "COUNTER",
+        "generated": "VAT on contraceptives should be increased to encourage people to use them."
+    },
+    {
+        "topic": " Prostitution should be legal. ",
+        "stance": "SUPPORTING",
+        "generated": "Legalizing prostitution will prevent sex trafficking."
+    },
+    {
+        "topic": " VAT on contraceptives should be reduced. ",
+        "stance": "SUPPORTING",
+        "generated": "VAT on contraceptives is a burden to women."
+    },
+    {
+        "topic": " Schools have the right to search students' lockers. ",
+        "stance": "SUPPORTING",
+        "generated": "Schools are responsible for the safety of their students."
+    },
+    {
+        "topic": " Assisted suicide should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "People have a right to decide what happens to their bodies."
+    },
+    {
+        "topic": " The Hijab should be banned in schools, public buildings or society in general. ",
+        "stance": "COUNTER",
+        "generated": "The hijab is a religious garment."
+    },
+    {
+        "topic": " Government benefit programmes should be subject to means testing. ",
+        "stance": "COUNTER",
+        "generated": "Government benefit programmes are for everyone."
+    },
+    {
+        "topic": " The UN should increase humanitarian aid to poor nations. ",
+        "stance": "COUNTER",
+        "generated": "The UN is not a charity."
+    },
+    {
+        "topic": " Year-round schools are a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "Year-round schools are a good idea."
+    },
+    {
+        "topic": " Assisted suicide should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "Assisted suicide should be legalized."
+    },
+    {
+        "topic": " The New Start nuclear arms reduction treaty is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "The New Start nuclear arms reduction treaty will help reduce nuclear arms."
+    },
+    {
+        "topic": " Video surveillance in public places is justifiable. ",
+        "stance": "COUNTER",
+        "generated": "Video surveillance in public places is an invasion of privacy."
+    },
+    {
+        "topic": " The US government should be required to balance its budget annually. ",
+        "stance": "COUNTER",
+        "generated": "The US government has to borrow money to make ends meet."
+    },
+    {
+        "topic": " The US is justified in unilaterally striking targets in Pakistan. ",
+        "stance": "SUPPORTING",
+        "generated": "Targets are being used by terrorists."
+    },
+    {
+        "topic": " Mandatory sentencing is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "Mandatory sentencing is not a good idea."
+    },
+    {
+        "topic": " The veto powers of the permanent members of the UN Security Council should be abolished. ",
+        "stance": "SUPPORTING",
+        "generated": "The veto powers of the permanent members of the UN Security Council should be abolished."
+    },
+    {
+        "topic": " Flag burning as a form of protest should be prohibited. ",
+        "stance": "COUNTER",
+        "generated": "Flag burning is a form of free speech."
+    },
+    {
+        "topic": " Big, liberal government is better than small, conservative government. ",
+        "stance": "COUNTER",
+        "generated": "Big government is bad."
+    },
+    {
+        "topic": " Pornography offers a valuable public service. ",
+        "stance": "SUPPORTING",
+        "generated": "Pornography can be educational."
+    },
+    {
+        "topic": " The idea of missile defenses in the Czech Republic and Poland is justified. ",
+        "stance": "COUNTER",
+        "generated": "Missile defenses are not necessary."
+    },
+    {
+        "topic": " Handguns should be banned in Washington, DC. ",
+        "stance": "COUNTER",
+        "generated": "Handguns are not banned in Washington, DC."
+    },
+    {
+        "topic": " We should be trying to prevent species becoming extinct. ",
+        "stance": "SUPPORTING",
+        "generated": "If we stop trying to prevent extinction, we will not have many animals to see."
+    },
+    {
+        "topic": " A \"space elevator\" is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "A space elevator is too expensive."
+    },
+    {
+        "topic": " Mercenaries and private military contractors are a good idea. ",
+        "stance": "COUNTER",
+        "generated": "Mercenaries and private military contractors are unethical."
+    },
+    {
+        "topic": " Iraq should be partitioned into three autonomous sectarian regions. ",
+        "stance": "SUPPORTING",
+        "generated": "Iraq has been divided into three autonomous sectarian regions."
+    },
+    {
+        "topic": " Governments should legalise all drugs. ",
+        "stance": "SUPPORTING",
+        "generated": "Governments should not criminalise all drugs."
+    },
+    {
+        "topic": " The minimum age of candidacy should be 18. ",
+        "stance": "COUNTER",
+        "generated": "The age of 18 is too young for someone to be a candidate."
+    },
+    {
+        "topic": " The bombing of Hiroshima and Nagasaki was justified. ",
+        "stance": "COUNTER",
+        "generated": "The bombing of Hiroshima and Nagasaki was not justified."
+    },
+    {
+        "topic": " The assassination of a dictator can be justified. ",
+        "stance": "COUNTER",
+        "generated": "Assassination of a dictator is never justified."
+    },
+    {
+        "topic": " Marijuana should be legalized. ",
+        "stance": "COUNTER",
+        "generated": "Marijuana is addictive."
+    },
+    {
+        "topic": " Israel was justified in seizing the flotilla. ",
+        "stance": "COUNTER",
+        "generated": "Israel had no right to seize the flotilla."
+    },
+    {
+        "topic": " Gay marriage should be legalized. ",
+        "stance": "COUNTER",
+        "generated": "Gay marriage is not the same as traditional marriage."
+    },
+    {
+        "topic": " Counter-terrorism efforts should include full-body scans at airports. ",
+        "stance": "COUNTER",
+        "generated": "Full-body scans are expensive."
+    },
+    {
+        "topic": " Marijuana should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "Marijuana is not a harmful drug."
+    },
+    {
+        "topic": " There should be an outright ban on the smacking or spanking of children. ",
+        "stance": "COUNTER",
+        "generated": "Spanking or smacking of children is not harmful."
+    },
+    {
+        "topic": " Governments should legalise all drugs. ",
+        "stance": "SUPPORTING",
+        "generated": "Legalising all drugs would be the best thing to do."
+    },
+    {
+        "topic": " The Hijab should be banned in schools, public buildings or society in general. ",
+        "stance": "COUNTER",
+        "generated": "The hijab is a part of a person's religion, and should not be banned."
+    },
+    {
+        "topic": " Colonizing the Moon is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "Colonizing the Moon is a good idea for the future of humanity."
+    },
+    {
+        "topic": " Tibet should seek and gain independence. ",
+        "stance": "SUPPORTING",
+        "generated": "Tibet is a unique and different culture."
+    },
+    {
+        "topic": " Year-round schools are a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "Year-round schools are a good idea for many students."
+    },
+    {
+        "topic": " Pornography offers a valuable public service. ",
+        "stance": "COUNTER",
+        "generated": "Pornography is not a public service."
+    },
+    {
+        "topic": " Storing nuclear waste in underground repositories is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "Underground repositories are safer than above ground facilities."
+    },
+    {
+        "topic": " The Three Gorges Dam is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The Three Gorges Dam is a bad idea."
+    },
+    {
+        "topic": " Human reproductive cloning should be banned and punishments leveled against it. ",
+        "stance": "COUNTER",
+        "generated": "Human reproductive cloning is a right."
+    },
+    {
+        "topic": " Children should be allowed to work in the performing arts or professional sports. ",
+        "stance": "SUPPORTING",
+        "generated": "Children can be given a chance to showcase their skills."
+    },
+    {
+        "topic": " There should be an outright ban on the smacking or spanking of children. ",
+        "stance": "SUPPORTING",
+        "generated": "Spanking children is abuse."
+    },
+    {
+        "topic": " Incest between consenting adults should be legal. ",
+        "stance": "COUNTER",
+        "generated": "Incest is not natural."
+    },
+    {
+        "topic": " Advertising for tobacco products should be banned. ",
+        "stance": "SUPPORTING",
+        "generated": "Advertising for tobacco products is dangerous."
+    },
+    {
+        "topic": " Sex in public should be banned. ",
+        "stance": "SUPPORTING",
+        "generated": "Sex in public can be disturbing."
+    },
+    {
+        "topic": " The 2010 US health care reform legislation is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The 2010 US health care reform legislation is a bad idea."
+    },
+    {
+        "topic": " Gay marriage should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "Gay marriage is not a new concept."
+    },
+    {
+        "topic": " There should be a college football playoffs. ",
+        "stance": "COUNTER",
+        "generated": "A playoff system would be too complicated."
+    },
+    {
+        "topic": " The US should create a public insurance option and hybrid public-private health care system. ",
+        "stance": "COUNTER",
+        "generated": "A public insurance option would be inefficient."
+    },
+    {
+        "topic": " The EU Constitution reform treaty is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The EU Constitution reform treaty will not be good for the people."
+    },
+    {
+        "topic": " Governments should introduce identity cards and require each citizen to carry one. ",
+        "stance": "COUNTER",
+        "generated": "Identity cards are expensive to produce."
+    },
+    {
+        "topic": " Single sex schools are a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "Single sex schools are better for some students."
+    },
+    {
+        "topic": " It is fair to issue parking fines to people who park their car longer than the allocated time. ",
+        "stance": "COUNTER",
+        "generated": "Parking fines are not fair as the government does not pay for the time spent by the people."
+    },
+    {
+        "topic": " Lasers on the battle field should be banned internationally. ",
+        "stance": "SUPPORTING",
+        "generated": "Lasers can cause serious damage to the eyes."
+    },
+    {
+        "topic": " A 700 mile fence on the US-Mexico border is justified. ",
+        "stance": "COUNTER",
+        "generated": "The US-Mexico border is already fenced."
+    },
+    {
+        "topic": " Counter-terrorism efforts should include full-body scans at airports. ",
+        "stance": "SUPPORTING",
+        "generated": "Full-body scans are a useful tool in counter-terrorism efforts."
+    },
+    {
+        "topic": " There should be a college football playoffs. ",
+        "stance": "COUNTER",
+        "generated": "There should be no college football playoffs."
+    },
+    {
+        "topic": " Corps. have a right to free speech and to spend w/o limit in elections. ",
+        "stance": "SUPPORTING",
+        "generated": "Corps. have a right to spend w/o limit in elections."
+    },
+    {
+        "topic": " Prostitution should be legal. ",
+        "stance": "COUNTER",
+        "generated": "Prostitution is immoral."
+    },
+    {
+        "topic": " The European Union should have its own standing army. ",
+        "stance": "SUPPORTING",
+        "generated": "The European Union has its own economy and should have its own army."
+    },
+    {
+        "topic": " We should be trying to prevent species becoming extinct. ",
+        "stance": "SUPPORTING",
+        "generated": "There are many species of animals that are becoming extinct.  We should be trying to stop this from happening."
+    },
+    {
+        "topic": " Instant replay call reviews should be implemented in baseball. ",
+        "stance": "COUNTER",
+        "generated": "Baseball is a game of skill and not technology."
+    },
+    {
+        "topic": " The Three Gorges Dam is a good idea. ",
+        "stance": "COUNTER",
+        "generated": "The Three Gorges Dam will cause flooding and other problems."
+    },
+    {
+        "topic": " The Gregorian calendar should be reformed and worldwide calendars standardized. ",
+        "stance": "COUNTER",
+        "generated": "The Gregorian calendar is already standardized."
+    },
+    {
+        "topic": " Marijuana should be legalized. ",
+        "stance": "SUPPORTING",
+        "generated": "Legalizing marijuana would reduce crime."
+    },
+    {
+        "topic": " Governments should legalise all drugs. ",
+        "stance": "COUNTER",
+        "generated": "Drugs are bad for you."
+    },
+    {
+        "topic": " All cell phone use in cars should be banned. ",
+        "stance": "COUNTER",
+        "generated": "Cell phone use in cars is a useful tool."
+    },
+    {
+        "topic": " Governments should choose open source software in order to encourage its use. ",
+        "stance": "SUPPORTING",
+        "generated": "Open source software is cheaper."
+    },
+    {
+        "topic": " A military draft generally is a good thing to have in place at all times. ",
+        "stance": "COUNTER",
+        "generated": "A military draft is a good idea to have in place, but it can be dangerous if people are forced to go."
+    },
+    {
+        "topic": " There should be a college football playoffs. ",
+        "stance": "COUNTER",
+        "generated": "College football is not for everyone."
+    },
+    {
+        "topic": " The UK should have a Bill of Rights. ",
+        "stance": "SUPPORTING",
+        "generated": "The UK is a democracy."
+    },
+    {
+        "topic": " Israel was justified in seizing the flotilla. ",
+        "stance": "COUNTER",
+        "generated": "Israel should not have seized the flotilla."
+    },
+    {
+        "topic": " The EU Constitution reform treaty is a good idea. ",
+        "stance": "SUPPORTING",
+        "generated": "The EU Constitution reform treaty will allow for better trade."
+    },
+    {
+        "topic": " Prostitution should be legal. ",
+        "stance": "COUNTER",
+        "generated": "Prostitution is immoral."
+    },
+    {
+        "topic": " Incest between consenting adults should be legal. ",
+        "stance": "SUPPORTING",
+        "generated": "Incest between consenting adults should not be criminalized."
+    },
+    {
+        "topic": " The US should create a public insurance option and hybrid public-private health care system. ",
+        "stance": "SUPPORTING",
+        "generated": "A public insurance option and a hybrid public-private health care system would reduce costs."
+    },
+    {
+        "topic": " Unemployed people should be made to work for their welfare money. ",
+        "stance": "SUPPORTING",
+        "generated": "Unemployment is a problem and we should not allow it to continue."
+    },
+    {
+        "topic": " The United Nations should have its own permanent standing army. ",
+        "stance": "SUPPORTING",
+        "generated": "The UN should not rely on other countries for its security."
+    },
+    {
+        "topic": " The US should create a public insurance option and hybrid public-private health care system. ",
+        "stance": "SUPPORTING",
+        "generated": "The public option will create competition for private insurance companies."
+    },
+    {
+        "topic": " Mandating calorie counts on restaurant menus is good public policy. ",
+        "stance": "SUPPORTING",
+        "generated": "Mandating calorie counts on restaurant menus will help people make healthier choices."
+    }
+]

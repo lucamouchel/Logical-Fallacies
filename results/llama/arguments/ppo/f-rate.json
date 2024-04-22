@@ -1261,7 +1261,7 @@
     },
     {
         "type": "ppo",
-        "fallacy_type": "appeal to tradition",
+        "fallacy_type": "None",
         "topic": "School prayer is a means of forcing religion on students.",
         "argument": "School prayers are a tradition."
     },

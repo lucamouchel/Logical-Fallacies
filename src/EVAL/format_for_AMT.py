@@ -43,3 +43,6 @@ for i in range(4):
         sample = {'topic': topic, 'stance': stance, 'argument1': arguments[0], 'argument2': arguments[1], 'sft_index' : shuffle_idx}
         samples.append(sample)
         pd.DataFrame(samples).to_csv('src/EVAL/AMT/samples_sft_vs_{}.csv'.format(out), index=False)
+        
+    
+    

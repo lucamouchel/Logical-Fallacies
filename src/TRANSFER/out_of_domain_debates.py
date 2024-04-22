@@ -18,6 +18,7 @@ sys.path.append('src/')
 from DPO.utils import save_to
 from EVAL.utils import generate
 from peft import AutoPeftModelForCausalLM
+GENERATION_KWARGS = {'max_new_tokens': 30, 'no_repeat_ngram_size': 2, 'do_sample': True, 'min_new_tokens': 5}
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -31,29 +32,23 @@ def main():
     model_name = 'llama' if 'llama' in model_path.lower() else 'mistral'
 
     debate_data = pd.read_csv('data/test_debate.txt', header=None, sep='\t')
-    
-    try:
-        model = AutoPeftModelForCausalLM.from_pretrained(model_path, device_map='auto')
-    except: 
-        model = AutoModelForCausalLM.from_pretrained(model_path, device_map='auto')
-        
+    debate_data = debate_data.sample(n=200, random_state=42)
+   
+   
+    model = AutoPeftModelForCausalLM.from_pretrained(model_path, device_map='auto')    
+   
+   
     tokenizer = transformers.AutoTokenizer.from_pretrained(model_path)
     
     generated = []
     
-    seen_topics = set()
-    for i, entry in tqdm(debate_data.iterrows()):
+    for i, entry in tqdm(debate_data.iterrows(), total=len(debate_data)):
         topic = entry[3]
-        if topic in seen_topics:
-            continue
-        if len(seen_topics) >= 200:
-            break
         stance = 'SUPPORTING' if entry[6] == 'support' else 'COUNTER'
         prompt = f"<s> [INST] ### Prompt: Generate a {stance} argument for the topic: {topic} [INST]\n### Argument: "
-        y = generate(prompt, model, tokenizer)
-
+        y = generate(prompt, model, tokenizer, **GENERATION_KWARGS)
         generated.append({'topic': topic, 'stance': stance, 'generated': y.split('### Argument: ')[-1].strip()})
-
-    save_to(generated, name=f'generated_debates_{args.type}.json', output_dir=f'results/{model_name}/debates/')
+    
+    save_to(generated, name=f'generated_debates_{args.type}.json', output_dir=f'results/out_of_domain/{model_name}/debates/')
 if __name__ == "__main__":
     main()

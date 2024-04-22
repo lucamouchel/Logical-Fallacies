@@ -83,7 +83,7 @@ def main():
 
     orpo_config = ORPOConfig(
         **training_args.to_dict(),
-        beta=args.beta, ## 0.1
+        beta=args.beta,  #0.1
         max_prompt_length=150,
         max_length=args.max_length,
         is_encoder_decoder=False,

@@ -14,8 +14,6 @@ train, dev, test = load_generated_data('cckg')
 df2 = pd.concat([train, dev, test])
 
 sns.barplot(df2['fallacy type'].value_counts(), ax=ax, orient='h', alpha=0.5, label='Generated with ChatGPT')
-
-
 plt.ylabel('Fallacy Type')
 plt.legend()
 plt.savefig('fallacy_type.png')

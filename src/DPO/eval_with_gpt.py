@@ -30,10 +30,11 @@ def parse_args():
     parser.add_argument('--dpo-path', default=None)
     parser.add_argument('--num-iterations-made',default=0, type=int, help='Number of iterations made for the selft instruction')
     parser.add_argument('--eval-type', default='win-rate', help='Type of evaluation to perform. Options: win-rate, fallacy-count')
-    parser.add_argument('--generate-and-save', default='true', type=str)
     parser.add_argument('--model-name', default='llama')
     parser.add_argument('--task', required=True)
     parser.add_argument('--eval-from-file', action='store_true')
+    parser.add_argument('--use-rag', action='store_true')
+
     return parser.parse_args()
 
 def main(): 
@@ -42,11 +43,15 @@ def main():
     dpo_model_dir = args.dpo_path
     test_set = pd.read_json('data/argumentation/test_cckg.json')
  
-    sft_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_dir, device_map='auto')
-    dpo_model = AutoPeftModelForCausalLM.from_pretrained(dpo_model_dir, device_map='auto')
-    tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_dir)
-    evaluate(test_set, model=sft_model, tokenizer=tokenizer, type_='sft', eval_from_file=args.eval_from_file, model_name=args.model_name, **GENERATE_KWARGS)
-    evaluate(test_set, model=dpo_model, tokenizer=tokenizer, type_='dpo', eval_from_file=args.eval_from_file, model_name=args.model_name, **GENERATE_KWARGS)
+    if ref_model_dir:
+        tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_dir)
+        sft_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_dir, device_map='auto')
+        evaluate(test_set, model=sft_model, tokenizer=tokenizer, type_=f"sft{'_rag' if args.use_rag else ''}", eval_from_file=args.eval_from_file, model_name=args.model_name, use_rag=args.use_rag, **GENERATE_KWARGS)
+    
+    if dpo_model_dir:
+        dpo_model = AutoPeftModelForCausalLM.from_pretrained(dpo_model_dir, device_map='auto')
+        tokenizer = transformers.AutoTokenizer.from_pretrained(dpo_model_dir)
+        evaluate(test_set, model=dpo_model, tokenizer=tokenizer, type_=f"dpo{'_rag' if args.use_rag else ''}", eval_from_file=args.eval_from_file, model_name=args.model_name, use_rag=args.use_rag, **GENERATE_KWARGS)
                 
 
 if __name__ == "__main__":

@@ -1,10 +1,10 @@
-tokenizers
-torch
+torch==2.2.2
 tqdm
-transformers
+transformers==4.38.2
 datasets
-beautifulsoup4
 wandb
-hydra-core
-tensor-parallel
 pandas
+openai==0.27.2
+peft
+nltk
+sentencepiece

@@ -37,7 +37,7 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Journalism is not in need of subsidies.",
         "argument": "Journalists are not making enough money."
     },
@@ -91,13 +91,13 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Television can be hazardous to our kids",
         "argument": "Television is a great way to teach kiddos."
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "IP copyrights should be banned.",
         "argument": "IP rights are not a right.  They are a privilege."
     },
@@ -127,7 +127,7 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Cosmetic surgery for children is safe.",
         "argument": "Cosmestic surgury for kids is dangerous."
     },
@@ -139,7 +139,7 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "false causality",
         "topic": "Getting rid of capital punishment lets people know that all killing is wrong.",
         "argument": "Capital punishments are necessary to protect society."
     },
@@ -271,9 +271,9 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Having right to hold weapon is dangerous",
-        "argument": "Having weapon protects citizens from crime."
+        "argument": "Allowing individuals to possess firearms inevitably leads to increased violence and crime rates in society."
     },
     {
         "type": "sft",
@@ -295,13 +295,13 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Cosmetic surgery for minors should be banned.",
-        "argument": "Cosmestic surgury for children should not be illegal."
+        "argument": "Cosmetic surgery for minors leads to harm and should be banned."
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Television cannot be abandoned as it is a necessity",
         "argument": "Television is not a necessary.  It is an entertainment."
     },
@@ -1783,13 +1783,13 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Mandatory retirement is more dignified than being fired for poor performance.",
-        "argument": "Mandated retirements can be unfair to some."
+        "argument": "Mandated retirements are unfair"
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "false causality",
         "topic": "Since children in uniforms can't bully each other about how they're dressed, school uniforms should not be abandoned.",
         "argument": "School uniform policies should be dropped because they are not fair to all students."
     },
@@ -1981,7 +1981,7 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "The three strikes law counts insignificant crimes and this can lead to unfair jail times.",
         "argument": "The law is not unfounded.  It is a deterrent."
     },
@@ -2083,9 +2083,9 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "false causality",
         "topic": "private armies violate human rights",
-        "argument": "Private armys are not accountable to the public."
+        "argument": "Private armies should banned because they violate human rights."
     },
     {
         "type": "sft",
@@ -2101,9 +2101,9 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "false causality",
         "topic": "Missionary work should be stopped as the wage it is not paid well.",
-        "argument": "Missionaries are doing a great job."
+        "argument": "Missions should be continue because missionaries earn enough."
     },
     {
         "type": "sft",
@@ -2119,9 +2119,9 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "false causality",
         "topic": "anyone can say what they think.",
-        "argument": "People can be wrong.  Someone could say something that is not true."
+        "argument": "If people say what they think, they can be fired."
     },
     {
         "type": "sft",
@@ -2137,9 +2137,9 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Foster home makes it easy for a child to get permanent home.",
-        "argument": "Fostering a kid is not easy."
+        "argument": "Fostering a kid is hard."
     },
     {
         "type": "sft",
@@ -2149,9 +2149,9 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "false causality",
         "topic": "Voting should not be forced.",
-        "argument": "Voters should be encouraged to vote."
+        "argument": "Voters should be encouraged to vote to influence the outcome of the election."
     },
     {
         "type": "sft",
@@ -2221,7 +2221,7 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "People have the choice about what to do with their own body.",
         "argument": "People don't have a choice when it comes to the government."
     },
@@ -2263,9 +2263,9 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Surrogacy is often the only option for some people who want kids.",
-        "argument": "Surrogacies are not always safe."
+        "argument": "Surrogacies are not safe."
     },
     {
         "type": "sft",
@@ -2275,7 +2275,7 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "Mentally ill people need safe places.",
         "argument": "Safe places help mentally challenged people."
     },
@@ -2353,7 +2353,7 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "People should not be forced to exercise their right to vote.",
         "argument": "People who don't vote are not exercising their rights."
     },
@@ -2389,7 +2389,7 @@
     },
     {
         "type": "sft",
-        "fallacy_type": "None",
+        "fallacy_type": "faulty generalization",
         "topic": "School prayer allows student to do what they are not thought at home",
         "argument": "School is a place where children are taught.  Prayer is not a good thing to teach children."
     },

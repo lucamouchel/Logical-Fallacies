@@ -41,6 +41,7 @@ def parse_args():
     parser.add_argument('--peft-config-r', default=16, type=int)
     parser.add_argument('--peft-config-lora-alpha', default=32, type=int)
     parser.add_argument('--peft-config-lora-dropout', default=0.05, type=float)
+    parser.add_argument('low-resource', action='store_true')
     return parser.parse_args()
 
 def put_capital_stance(prompt, task):
@@ -69,7 +70,11 @@ def main():
 
     input_dir=args.data_dir + args.task + '/'
 
-    train_data = load_dataset('json', data_files=input_dir + 'train.json', split='train')  
+    train_data = load_dataset('json', data_files=input_dir + 'train.json', split='train') 
+    if args.low_resource:
+        train_data = utils.low_resource_data(train_data)
+    print(train_data)
+    exit() 
     train_data = train_data.map(lambda sample: map_data(sample, task=args.task))
     model_name = args.model_name
     ref_model_path = args.ref_model_path    

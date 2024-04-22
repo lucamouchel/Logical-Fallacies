@@ -15,7 +15,8 @@ import sys
 import pathlib 
 import argparse
 from peft import AutoPeftModelForCausalLM
-
+from datasets import load_dataset
+from transformers import RagRetriever, RagSequenceForGeneration, RagTokenizer, AutoTokenizer, pipeline
 sys.path.append('src/')  
 from DPO.env import OPENAI_API_KEY
 from DPO.utils import save_to, process_gpt_output, get_gpt_response
@@ -33,8 +34,8 @@ def generate(prompt: str, model, tokenizer, **generate_kwargs):
     return output_decoded
 
 
-fallacy_types = pd.read_csv('data/LOGIC/mappings.csv')['Original Name'].unique()
 def get_gpt_feedback(topic, argument, stance, type_='dpo'):
+    fallacy_types = pd.read_csv('data/LOGIC/mappings.csv')['Original Name'].unique()
     fallacy_types = [f for f in fallacy_types if f != 'miscellaneous']
     
     s0 = f"Consider the following topic and {stance} argument:\nTopic: {topic}\nArgument: {argument}\n"
@@ -51,19 +52,51 @@ def get_gpt_feedback(topic, argument, stance, type_='dpo'):
     response['argument'] = argument
     return response
 
-def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_from_file=False, **kwargs):
+def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_from_file=False, use_rag=False, **kwargs):
     f_rate = 0
     f_rates = {}
     data = []
+
+    if use_rag: 
+        rag_dataset = load_dataset("wiki_dpr", 'psgs_w100.multiset.compressed', split='train', cache_dir='cache', trust_remote_code=True)
+        retriever = RagRetriever.from_pretrained(
+            "facebook/rag-token-nq", indexed_dataset=rag_dataset) 
+        rag_model = RagSequenceForGeneration.from_pretrained('facebook/rag-token-nq', indexed_dataset=rag_dataset) 
+        rag_tokenizer = AutoTokenizer.from_pretrained("facebook/rag-token-nq")
+        summarizer = pipeline('summarization', max_length = 80)
+
+        def get_summary(prompt):
+            inputs = rag_tokenizer(prompt, max_length=80, padding=True, return_tensors='pt')
+            input_ids = inputs['input_ids']
+            question_hidden_states = rag_model.question_encoder(input_ids)[0] 
+            docs_dict = retriever(input_ids.numpy(), question_hidden_states.detach().numpy(), return_tensors='pt')
+            doc_scores = torch.bmm(
+                    question_hidden_states.unsqueeze(1),
+                    docs_dict["retrieved_doc_embeds"].float().transpose(1, 2)
+            ).squeeze(1)
+
+            doc_ids = docs_dict["doc_ids"]
+            summary = summarizer(rag_dataset[doc_ids[0]]['text'], max_length=80)
+            summaries = [x['summary_text'] for x in summary]
+            return summaries[0]
+
     if eval_from_file:
         with open(f'results/{model_name}/{type_}_args.json', 'r') as f:
             arguments = json.load(f) 
     
-    for i, entry in tqdm(dataset.iterrows()):
+    for i, entry in tqdm(dataset.iterrows(), total=len(dataset)):
         topic = entry.topic
         stance = 'supporting' if entry.label==1 else 'counter'
-        prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument: "
-        
+        context = None
+        if use_rag:
+            context = get_summary(topic)
+            prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} \n### Context: {context} [/INST]\n### Argument: "
+        else:
+            prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument: "
+
+
+        print(prompt)
+        exit()
         if eval_from_file:
             y = arguments[i]
         else:
@@ -86,6 +119,44 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_fr
     print("FALLACY TYPES")
     
     save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/{model_name}/arguments/{type_}/')
+    for k,v in f_rates.items():
+        print(k.upper(), ':', v)
+
+
+def evaluate_out_of_domain(eval_type, type_='ppo', model_name='llama'):
+    assert eval_type == 'debates' or eval_type == 'essays'
+    f_rate = 0
+    f_rates = {}
+    data = []
+    
+    
+    with open(f'results/out_of_domain/llama/{eval_type}/generated_{eval_type}_{type_}.json', 'r') as f:
+        data = json.load(f) 
+    
+    results = []
+    for entry in tqdm(data):
+        try:
+            topic = entry['topic']
+            stance = entry['stance']
+            y = entry['generated']
+            feedback = get_gpt_feedback(topic, y, stance=stance, type_=type_)
+            if feedback['fallacy_type']!='None' :
+                f_rate+=1
+            if feedback['fallacy_type'] in f_rates.keys():
+                f_rates[feedback['fallacy_type']] += 1
+            else:
+                f_rates[feedback['fallacy_type']] = 1
+
+            results.append(feedback)
+        except:
+            continue
+
+    save_to(results, name=f'f-rate.json', output_dir=f'results/out_of_domain/{model_name}/{eval_type}/{type_}/')
+    print(f_rates)
+    print(f"f rate for {type_}:", f_rate)
+    print("FALLACY TYPES")
+    
+    save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/out_of_domain/{model_name}/{eval_type}/{type_}/')
     for k,v in f_rates.items():
         print(k.upper(), ':', v)
 

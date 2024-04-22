@@ -31,7 +31,7 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "faulty generalization",
+        "fallacy_type": "None",
         "topic": "There should not be parades that celebrate homosexuality.",
         "argument": "There are many people who do not identify as homo or hetero.  This is not something to be celebrated."
     },
@@ -145,9 +145,9 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "faulty generalization",
+        "fallacy_type": "None",
         "topic": "Safe spaces should be allowed.",
-        "argument": "Safer spaces can be bad for others.  It can make others feel unwelcome."
+        "argument": "Safer spaces can be bad for some. It can make others feel unwelcome."
     },
     {
         "type": "dpo",
@@ -169,7 +169,7 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "faulty generalization",
+        "fallacy_type": "None",
         "topic": "Older adult has less strength, so bringing the younger ones increase productivity",
         "argument": "Old adult can be more productive than young ones."
     },
@@ -181,7 +181,7 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "faulty generalization",
+        "fallacy_type": "None",
         "topic": "Naturopathic methods are always a good idea because they'll work even just as a placebo.",
         "argument": "Placebos are not always effective.  There are many diseases that can't be helped by placebos."
     },
@@ -331,9 +331,9 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "faulty generalization",
+        "fallacy_type": "None",
         "topic": "Compulsory voting including the whole electorate is unrealistic.",
-        "argument": "Some people don't want to vote."
+        "argument": "Some people do not want to vote."
     },
     {
         "type": "dpo",
@@ -697,7 +697,7 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "faulty generalization",
+        "fallacy_type": "None",
         "topic": "A job title doesn't entitle an executive to more money.",
         "argument": "An executive is supposed to be a leader, not a boss.  They should be paid the same as their subordinates."
     },
@@ -733,9 +733,9 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "equivocation",
+        "fallacy_type": "None",
         "topic": "Forced prayer should not be in school.",
-        "argument": "Forcing prayer is not forcing religion.  Religion is a part of life. It is part and parcel of the constitution. Prayer should"
+        "argument": "Forcing prayer is not forcing religion.  Religion is a part of life. It is part and parcel of the constitution."
     },
     {
         "type": "dpo",
@@ -775,7 +775,7 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "false dilemma",
+        "fallacy_type": "None",
         "topic": "Our current voting system should be replaced.",
         "argument": "Our voting systems are not perfect but they are better than nothing."
     },
@@ -1101,7 +1101,7 @@
         "type": "dpo",
         "fallacy_type": "false dilemma",
         "topic": "children need the room to grow and learn from mistakes",
-        "argument": "Children need structure.  By denying them the opportunity to make mistakes, they will be better off. It is a form of discipline. This is"
+        "argument": "Children need structure.  By denying them the opportunity to make mistakes, they will be better off. It is a form of discipline."
     },
     {
         "type": "dpo",
@@ -1461,7 +1461,7 @@
         "type": "dpo",
         "fallacy_type": "false dilemma",
         "topic": "People choosing who defends them has worked for centuries, and doesn't need to be changed.",
-        "argument": "People should be forced to use public defenders.  It's the only way to ensure equal rights. It is a form of income redist"
+        "argument": "People should be forced to use public defenders.  It's the only way to ensure equal rights."
     },
     {
         "type": "dpo",
@@ -1501,9 +1501,9 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "false dilemma",
+        "fallacy_type": "None",
         "topic": "Space exploration is important for many novel pursuits, and inventions.",
-        "argument": "Space is dangerous.  It is not worth the risk to explore it. It should not be done. Space travel should be banned. The Earth"
+        "argument": "Space is dangerous. It is not worth the risk to explore it."
     },
     {
         "type": "dpo",
@@ -1789,7 +1789,7 @@
     },
     {
         "type": "dpo",
-        "fallacy_type": "false dilemma",
+        "fallacy_type": "None",
         "topic": "Since children in uniforms can't bully each other about how they're dressed, school uniforms should not be abandoned.",
         "argument": "School uniform policies are not the only way to stop bullying.  Bullying prevention programs should be implemented instead."
     },

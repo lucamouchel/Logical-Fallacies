@@ -9,7 +9,7 @@ from EVAL.utils import generate
 from DPO.utils import save_to, remove_incomplete_last_sentence
 import pathlib
 
-GENERATION_KWARGS = {'max_new_tokens': 40, 'no_repeat_ngram_size': 2, 'do_sample': True}
+GENERATION_KWARGS = {'max_new_tokens': 40, 'no_repeat_ngram_size': 2, 'do_sample': True, 'min_new_tokens': 5}
 
 def parse_args():
     parser = argparse.ArgumentParser()
@@ -27,11 +27,20 @@ def main():
     for i, entry in tqdm(test_set.iterrows(), total=len(test_set)):
         topic = entry.topic
         stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
-        prompt = f"<s> [INST] ### Prompt:  Generate a 15 word {stance} argument for the topic: {topic} [/INST]\n### Argument: "
+        prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument of maximum 20 words for the topic: {topic} [/INST]\n### Argument: "
         
         with torch.no_grad():
             y_model = generate(prompt, model, tokenizer, **GENERATION_KWARGS)
-            y_model = remove_incomplete_last_sentence(y_model.split('### Argument:')[-1].strip())
+            if '### Argument:' in y_model: 
+                y_model = y_model.split('### Argument:')[-1].strip()
+                y_2 = remove_incomplete_last_sentence(y_model)
+                if y_2 == '':
+                    print(y_model)
+                else:
+                    y_model = y_2
+            else:
+                print("Incomplete motherfucker")
+    
             generated.append(y_model)
         
     save_to(generated, name=f'generated.json', output_dir=f'results/{model_name}/')
