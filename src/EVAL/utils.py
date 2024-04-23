@@ -18,10 +18,12 @@ from peft import AutoPeftModelForCausalLM
 from datasets import load_dataset
 from transformers import RagRetriever, RagSequenceForGeneration, RagTokenizer, AutoTokenizer, pipeline
 sys.path.append('src/')  
+import nltk
 from DPO.env import OPENAI_API_KEY
 from DPO.utils import save_to, process_gpt_output, get_gpt_response
 warnings.filterwarnings("ignore")
 openai.api_key = OPENAI_API_KEY
+nltk.download('punkt')
 
 def generate(prompt: str, model, tokenizer, **generate_kwargs):
     """Main function for each worker process (may be only 1 for BasicTrainer/TensorParallelTrainer)."""
@@ -51,6 +53,15 @@ def get_gpt_feedback(topic, argument, stance, type_='dpo'):
     response['topic'] = topic
     response['argument'] = argument
     return response
+
+def remove_incomplete_last_sentence(text):
+    sentences = nltk.sent_tokenize(text)
+
+    last_sentence = sentences[-1]
+    if last_sentence.endswith(('?', '.', '!')):
+        return text
+    else:
+        return ' '.join(sentences[:-1])
 
 def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_from_file=False, use_rag=False, **kwargs):
     f_rate = 0
@@ -83,7 +94,8 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_fr
     if eval_from_file:
         with open(f'results/{model_name}/{type_}_args.json', 'r') as f:
             arguments = json.load(f) 
-    
+
+
     for i, entry in tqdm(dataset.iterrows(), total=len(dataset)):
         topic = entry.topic
         stance = 'supporting' if entry.label==1 else 'counter'
@@ -94,15 +106,13 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_fr
         else:
             prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument: "
 
-
-        print(prompt)
-        exit()
         if eval_from_file:
             y = arguments[i]
         else:
             y = generate(prompt, model, tokenizer, **kwargs)
             y = y.split('### Argument: ')[-1].strip()
-        
+            y = remove_incomplete_last_sentence(y)
+            print(y)
         feedback = get_gpt_feedback(topic, y, stance=stance, type_=type_)
         if feedback['fallacy_type']!='None' :
             f_rate+=1
@@ -110,7 +120,6 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_fr
             f_rates[feedback['fallacy_type']] += 1
         else:
             f_rates[feedback['fallacy_type']] = 1
-
         data.append(feedback)
 
     save_to(data, name=f'f-rate.json', output_dir=f'results/{model_name}/arguments/{type_}/')

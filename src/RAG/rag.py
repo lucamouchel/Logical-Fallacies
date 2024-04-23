@@ -36,11 +36,13 @@ for item in tqdm(data, total=len(data)):
         prompt = item['prompt']
         topic = prompt.split('topic: ')[-1].strip()
         argument = item['argument']
-        context = get_summary(topic).strip()
+        context_to_get = topic + ' ' + argument
+        context = get_summary(context_to_get).strip()
         sample = {'prompt': prompt, 'context': context, 'argument': argument}
         new_data.append(sample)
     except:        
         with open('data/sft_rag/arguments/train.json', 'w') as f:
+    
             json.dump(new_data, f, indent=4)
   
 with open('data/sft_rag/arguments/train.json', 'w') as f:

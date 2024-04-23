@@ -22,7 +22,7 @@ from EVAL.utils import generate, get_gpt_feedback, evaluate
 warnings.filterwarnings("ignore")
 openai.api_key = OPENAI_API_KEY
 
-GENERATE_KWARGS = {'max_new_tokens': 30, 'no_repeat_ngram_size': 2, 'do_sample': True}
+GENERATE_KWARGS = {'max_new_tokens': 35, 'no_repeat_ngram_size': 2, 'do_sample': True}
 
 def parse_args():
     parser = argparse.ArgumentParser()
