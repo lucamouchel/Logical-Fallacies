@@ -1,0 +1,23 @@
+{
+    "data_dir": "data/dpo/arguments/",
+    "model_name": "models/Llama-2-7b-hf",
+    "ref_model_path": "models/sft_Llama-2-7b-hf_trl_2024-03-11_22:21:29.648536",
+    "beta": 0.5,
+    "n_epochs": 3,
+    "batch_size": 8,
+    "eval_batch_size": 32,
+    "gradient_accumulation_steps": 2,
+    "learning_rate": 0.0002,
+    "warmup_steps": 100,
+    "weight_decay": 0.05,
+    "adam_epsilon": 1e-08,
+    "save_steps": 1000,
+    "logging_steps": 100,
+    "eval_steps": 10000,
+    "output_dir": "models/dpo_Llama-2-7b-hf_trl_2024-03-15_09:56:38.508752",
+    "max_length": 128,
+    "use_peft": "true",
+    "peft_config_r": 16,
+    "peft_config_lora_alpha": 32,
+    "peft_config_lora_dropout": 0.05
+}
