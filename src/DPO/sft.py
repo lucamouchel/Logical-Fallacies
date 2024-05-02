@@ -13,13 +13,13 @@ from datetime import datetime
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import load_dataset
 
-def formatting_prompts_func(example, task='argument'):
+def formatting_prompts_func(example, task='gsm8k'):
     ## Task = argument or claim
     data = []
-    for i in range(len(example['prompt'])):
-        prompt = example['prompt'][i]
-        completion = example[task][i]
-        text = f"<s> [INST] ### Prompt: {prompt} [/INST] \n### {task.title()}: {completion} </s>"
+    for i in range(len(example['question'])):
+        prompt = example['question'][i]
+        completion = example['answer'][i]
+        text = f"<s> [INST] ### Given the math word problem generate explanation and final answer: {prompt} [/INST] \n### Answer: {completion} </s>"
         data.append(text)     
     return data
 
@@ -40,7 +40,7 @@ def parse_args():
     parser.add_argument('--logging-steps', default=80, type=int)
     parser.add_argument('--output-dir', default='models')
     parser.add_argument('--task', required=True) ## arguments or claims
-    parser.add_argument('--max-length', default=128, type=int)
+    parser.add_argument('--max-length', default=512, type=int)
     parser.add_argument('--use-peft', default='false')
     parser.add_argument('--peft-config-r', default=16, type=int)
     parser.add_argument('--peft-config-lora-alpha', default=32, type=int)
@@ -72,23 +72,9 @@ def main():
         model = transformers.LlamaForCausalLM.from_pretrained(pretrained_model_name_or_path=model_name, device_map='auto')
         tokenizer = transformers.LlamaTokenizer.from_pretrained(model_name)    
     else: ## if we use Gemma we can just use the AutoModelForCausalLM
-        model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+        model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', torch_dtype=torch.bfloat16)
         tokenizer = AutoTokenizer.from_pretrained(model_name)
-   
-    maximum = 200
-    for prompt in train_data['prompt']:
-        t = tokenizer(prompt)
-        length = len(t['input_ids'])
-        if length > maximum:
-          maximum=length
-          print(prompt)
-    print(maximum)
-    exit()
-    l = tokenizer(train_data['prompt'])
-    print(max(l['input_ids']))
-    exit()
-    
-    #### IS THIS THE ONLY ADDITION TO THE TOKENIZER we had in the end??
+
     tokenizer.pad_token=tokenizer.unk_token
     
     peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=16, lora_alpha=32, lora_dropout=0.05)
@@ -103,9 +89,7 @@ def main():
         train_dataset=train_data,
         formatting_func=formatting_prompts_func,
         max_seq_length=args.max_length,
-        ##### DID we have anything extra here? max-length?
-        #peft_config=peft_config if args.use_peft == 'true' else None,
-        )
+    )
     
     trainer.train()
     print("SAVING MODEL at ", args.output_dir)

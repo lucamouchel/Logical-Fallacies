@@ -1,6 +1,6 @@
 import json
 from operator import is_
-from trl import DPOTrainer
+from trl import CPOTrainer, CPOConfig
 import transformers
 from transformers import TrainingArguments
 from datasets import Dataset
@@ -11,6 +11,7 @@ from peft import LoraConfig, TaskType, get_peft_model
 from datetime import datetime
 import torch
 from tqdm import tqdm
+from transformers import AutoModelForCausalLM
 import gc
 from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM
@@ -23,7 +24,6 @@ def parse_args():
     parser.add_argument('--data-dir', default='data/dpo/')
     parser.add_argument('--task', required=True) ## arguments or claims
     parser.add_argument('--model-name', default='google/flan-t5-base')
-    parser.add_argument('--ref-model-path', default='models/sft_flan-t5-large_trl')
     parser.add_argument('--beta', default=0.5, type=float)
     parser.add_argument('--n-epochs', default=10, type=int)
     parser.add_argument('--batch-size', default=8, type=int)
@@ -41,13 +41,9 @@ def parse_args():
     parser.add_argument('--peft-config-r', default=16, type=int)
     parser.add_argument('--peft-config-lora-alpha', default=32, type=int)
     parser.add_argument('--peft-config-lora-dropout', default=0.05, type=float)
-    parser.add_argument('--low-resource', action='store_true')
     return parser.parse_args()
 
 def put_capital_stance(prompt, task):
-    if task == 'claims': ## claims data is already mapped to capital stance
-        return prompt 
-
     if 'supporting argument' in prompt:
         return prompt.replace('supporting argument', 'SUPPORTING argument')
     elif 'counter argument' in prompt:
@@ -71,64 +67,49 @@ def main():
     input_dir=args.data_dir + args.task + '/'
 
     train_data = load_dataset('json', data_files=input_dir + 'train.json', split='train') 
-    if args.low_resource:
-        train_data = utils.low_resource_data(train_data)
-    
+
     train_data = train_data.map(lambda sample: map_data(sample, task=args.task))
     model_name = args.model_name
-    ref_model_path = args.ref_model_path    
     if '/' in model_name:
-        output_directory =f'{args.output_dir}/{args.task}/dpo_{model_name.split("/")[-1]}_{datetime.now()}'
+        output_directory =f'{args.output_dir}/{args.task}/cpo_{model_name.split("/")[-1]}_{datetime.now()}'
     else: 
-        output_directory =f'models/{args.task}/dpo_{model_name}_{datetime.now()}'
+        output_directory =f'models/{args.task}/cpo_{model_name}_{datetime.now()}'
         
     args.output_dir = output_directory.replace(' ', '_')
     training_args = utils.get_training_args(args)
     is_encoder_decoder='t5' in model_name.lower()
 
-    if 't5' in model_name.lower():
-        model = transformers.T5ForConditionalGeneration.from_pretrained(ref_model_path)
-        ref_model = transformers.T5ForConditionalGeneration.from_pretrained(ref_model_path)
-        tokenizer = transformers.T5Tokenizer.from_pretrained(model_name)
-    elif 'llama' in model_name.lower():
-        model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
-        ref_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
-        tokenizer = transformers.LlamaTokenizer.from_pretrained(ref_model_path)
-    else:
-        model = transformers.AutoModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
-        ref_model = transformers.AutoModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
-        tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_path)
-
-    task_type = TaskType.CAUSAL_LM if is_encoder_decoder else TaskType.CAUSAL_LM 
-#    model.config.use_cache = False 
-    #model.requires_grad = Tre
-#    tokenizer.pad_token=tokenizer.unk_token
+   
+    model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto')
+    tokenizer = transformers.LlamaTokenizer.from_pretrained(model_name)
+    
+    tokenizer.pad_token=tokenizer.unk_token
 
     peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=16, lora_alpha=32, lora_dropout=0.05)
     training_args = get_training_args(args)
-    #model = get_peft_model(model, peft_config)
-
+    model = get_peft_model(model, peft_config)
     model.enable_input_require_grads()
-    dpo_trainer = DPOTrainer(
-        model=model,
-        ref_model=ref_model,
-        beta=args.beta,
-        args=training_args,
-        train_dataset=train_data,
-        tokenizer=tokenizer,
+    cpo_config = CPOConfig(
+        beta=0.1,
         max_prompt_length=150,
         max_length=args.max_length,
-        is_encoder_decoder=is_encoder_decoder,
-        #peft_config=peft_config if args.use_peft == 'true' else None,
-        )
+        **training_args.to_dict()
+    )
+
+    cpo_trainer = CPOTrainer(
+        model=model,
+        args=cpo_config,
+        train_dataset=train_data,
+        tokenizer=tokenizer,
+    )
     
-    dpo_trainer.train()
+    cpo_trainer.train()
     print("SAVING MODEL at ", args.output_dir)
     
     with open(args.output_dir + '/args.json', 'w') as f:
         json.dump(vars(args), f, indent=4)
     
-    dpo_trainer.save_model(args.output_dir)
+    cpo_trainer.save_model(args.output_dir)
 
    
 if __name__ == '__main__':
