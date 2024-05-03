@@ -133,7 +133,7 @@ class Classifier:
         train_iterator = trange(
             epochs_trained, int(num_train_epochs), desc="Epoch", disable=False
         )
-        save_steps = 200#len(train_dataset) // (per_gpu_train_batch_size * gradient_accumulation_steps* self.n_gpu)
+        save_steps = 20#len(train_dataset) // (per_gpu_train_batch_size * gradient_accumulation_steps* self.n_gpu)
         for _ in train_iterator:
             epoch_iterator = tqdm(train_dataloader, desc="Iteration", disable=False)
             for step, batch in enumerate(epoch_iterator):
@@ -238,7 +238,15 @@ class Classifier:
                 
                    
                 probs = torch.softmax(logits, dim=1)    
+                zero = 0
+                ones=0
                 for proba in probs:
+                    argmax = torch.argmax(proba).cpu().detach().numpy()
+
+                    if argmax == 0:
+                        zero += 1
+                    elif argmax == 1:
+                        ones += 1
                     preds.append(torch.argmax(proba).cpu().detach().numpy())
                     
 

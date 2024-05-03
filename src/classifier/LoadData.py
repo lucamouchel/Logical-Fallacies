@@ -83,7 +83,7 @@ class DatasetLoader():
         train_chosen['label'] = 0
         train_rejected['label'] = 1
         train = pd.concat([train_chosen, train_rejected])
-        
+        print(len(train))
         dev_chosen = pd.DataFrame(dev.chosen).drop_duplicates()
         dev_chosen.columns = ['argument']
         dev_rejected = pd.DataFrame(dev.rejected)
@@ -105,8 +105,8 @@ class DatasetLoader():
         return pd.DataFrame(train), pd.DataFrame(dev), pd.DataFrame(test)
     
     def load_dataset(self, data_dir='data/dpo/arguments', split="train"):
-        train, dev, test = self.load_dpo_data(data_dir)
-
+        train, dev, test = self.load_data()
+       
         if split == 'train':
             df = train
         elif split == 'dev':

@@ -54,7 +54,7 @@ def main():
     with open(f'results/{args.model_name}/sft_args.json', 'r') as f:
         sft_args = json.load(f)
         
-    combinations = [['sft', 'human'], ['sft', 'dpo'], ['sft', 'orpo'], ['sft', 'ppo']]
+    combinations = [['sft', 'kto']]
     for combination in combinations:
         to_compare = combination[1]
         if to_compare != 'human':
