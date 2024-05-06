@@ -47,14 +47,14 @@ def compare_models(stance, topic, arguments):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model-name', required=True)
-    args = parser.parse_args()
+    args = parser.parse_args() 
     
     test_set = pd.read_json('data/argumentation/test_cckg.json')
     
     with open(f'results/{args.model_name}/sft_args.json', 'r') as f:
         sft_args = json.load(f)
         
-    combinations = [['sft', 'kto']]
+    combinations = [['sft', 'kto'], ['sft', 'cpo']]
     for combination in combinations:
         to_compare = combination[1]
         if to_compare != 'human':

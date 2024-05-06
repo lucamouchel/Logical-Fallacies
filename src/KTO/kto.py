@@ -41,9 +41,11 @@ import torch
 from tqdm import tqdm
 import gc
 from datasets import load_dataset
+import sys
+sys.path.append('src/')
 from peft import AutoPeftModelForCausalLM
-import utils
-from utils import get_training_args
+import DPO.utils
+from DPO.utils import get_training_args
 
 
 def parse_args():
@@ -107,7 +109,7 @@ def main():
         output_directory =f'models/{args.task}/kto_{model_name}_{datetime.now()}'
         
     args.output_dir = output_directory.replace(' ', '_')
-    training_args = utils.get_training_args(args)
+    training_args = get_training_args(args)
     is_encoder_decoder='t5' in model_name.lower()
 
     if 't5' in model_name.lower():
@@ -155,7 +157,7 @@ def main():
     with open(args.output_dir + '/args.json', 'w') as f:
         json.dump(vars(args), f, indent=4)
     
-    kto_trainer.save_model(args.output_dir)
+    kto_trainer.save_model('models/arguments/kto_mistral')
 
    
 if __name__ == '__main__':

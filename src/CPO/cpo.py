@@ -13,10 +13,12 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM
 import gc
+import sys
+sys.path.append('src/')
 from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM
-import utils
-from utils import get_training_args
+import DPO.utils
+from DPO.utils import get_training_args
 
 
 def parse_args():
@@ -76,7 +78,6 @@ def main():
         output_directory =f'models/{args.task}/cpo_{model_name}_{datetime.now()}'
         
     args.output_dir = output_directory.replace(' ', '_')
-    training_args = utils.get_training_args(args)
     is_encoder_decoder='t5' in model_name.lower()
 
    
@@ -109,7 +110,11 @@ def main():
     with open(args.output_dir + '/args.json', 'w') as f:
         json.dump(vars(args), f, indent=4)
     
-    cpo_trainer.save_model(args.output_dir)
+    if 'mistral' in model_name.lower():
+        name='mistral'
+    elif 'llama' in model_name.lower():
+        name='llama'
+    cpo_trainer.save_model(f'models/arguments/cpo_{name}')
 
    
 if __name__ == '__main__':

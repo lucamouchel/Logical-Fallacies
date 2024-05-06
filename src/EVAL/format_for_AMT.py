@@ -1,7 +1,7 @@
 import pandas as pd 
 import numpy as np
 import json 
-test_set = pd.read_json('data/argumentation/test_cckg.json')
+test_set = pd.read_json('data/argumentation/test_cckg.json')[:200]
 
 def open_args(path):
     with open(path) as f:
@@ -14,10 +14,13 @@ dpo_args = open_args('results/llama/dpo_args.json')
 orpo_args = open_args('results/llama/orpo_args.json')
 ppo_args = open_args('results/llama/ppo_args.json')
 human_args = pd.read_json('data/argumentation/test_cckg.json')['argument']
-  
-  
-for i in range(4):
+kto_args = open_args('results/llama/kto_args.json')
+cpo_args = open_args('results/llama/cpo_args.json')
+
+for i in range(6):
     samples = []
+    if i < 4:
+        continue
     for j, entry in test_set.iterrows():
         topic = entry.topic
         stance = 'supporting' if entry.label == 1 else 'counter'
@@ -34,7 +37,12 @@ for i in range(4):
         elif i == 3:
             y = ppo_args[j]
             out='ppo'
-            
+        elif i == 4:
+            y = kto_args[j]
+            out='kto'
+        elif i == 5:
+            y = cpo_args[j]
+            out='cpo'
         arguments = [None, None]
         
         shuffle_idx = np.random.choice([0,1])

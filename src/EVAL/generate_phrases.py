@@ -26,6 +26,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model-path', required=True)
     parser.add_argument('--model-name', required=True)
+    parser.add_argument('--type', required=True, help='sft, dpo, cpo, kto,..')
     args = parser.parse_args()
     
     model = AutoPeftModelForCausalLM.from_pretrained(args.model_path, device_map='auto')
@@ -49,7 +50,7 @@ def main():
         
         if i % 100 == 0:
             print("ARGUMENT:\n", y, '\n')    
-    save_to(arguments, name='kto_args.json', output_dir=f'results/{args.model_name}/')
+    save_to(arguments, name=f'{args.type}_args.json', output_dir=f'results/{args.model_name}/')
 
         
 if __name__ == "__main__":
