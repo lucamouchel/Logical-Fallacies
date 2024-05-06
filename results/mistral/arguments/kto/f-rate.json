@@ -1,0 +1,2402 @@
+[
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "There should be no age restrictions on cosmetic surgery.",
+        "argument": "Some people have more wrinkles than others."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Creating awareness of the LGBT community, decreases discrimination.",
+        "argument": "People are not born with the ability to accept things."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Subsidizing student loans is bad.",
+        "argument": "Subsiding student loan helps students to have good life."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "The sex of a child does not define their value.",
+        "argument": "Children are more likely to act like the opposite sex if they are raised by a single parent of the same sex."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "argument": "Everyone has a right to have their voice heard."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "There should not be parades that celebrate homosexuality.",
+        "argument": "Homosexuality is not normal."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Journalism is not in need of subsidies.",
+        "argument": "Journalists are paid less than they deserve."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Child actors do not live normal lives.",
+        "argument": "Child acting can help build self esteem."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "argument": "When a large minority demands change, it should be granted."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "appeal to emotion",
+        "topic": "prostitution has been in existence for long and should not be illegal",
+        "argument": "Prostitution is a moral issue and no one should do it, it should be a crime."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Companies should be allowed to decide workers' pay.",
+        "argument": "Companies are motivated by profit, not fairness."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People who don't trust doctors have the right to try whatever homeopathic remedies they want.",
+        "argument": "People have a right not to trust the medical profession."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "France, German, Italy, and Spain all believe surrogacy is exploitation, and have it prohibited.",
+        "argument": "People should be allowed to do whatever they want with their bodies."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Most economic sanction are not effective.",
+        "argument": "Some economic santion have changed countries for better."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Naturopathy does not harm people.",
+        "argument": "Naturoapthy is not a proven science and can cause harm."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Television can be hazardous to our kids",
+        "argument": "Kids can learn to control their television use."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "IP copyrights should be banned.",
+        "argument": "Banning ip copyright would benefit the common man."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Homeopathic remedies can be bad for your health.",
+        "argument": "Home remedy ingredients can vary."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "Television can be hazardous to our kids",
+        "argument": "Television distracts from the outside world and can affect our children's health."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Stay at home Dads tends to be lazy",
+        "argument": "Stay home dad is not suitable for people with jobs."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Anything other than natural pregnancy methods should be prohibited.",
+        "argument": "Natural pregnancy is best."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Cosmetic surgery for children is safe.",
+        "argument": "Children don't understand the consequences of cosmetic procedures."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Racial profiling is not fair to people.",
+        "argument": "Races have different tendencies."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Getting rid of capital punishment lets people know that all killing is wrong.",
+        "argument": "Some people are just evil and will continue to kill even if they know capital punishments are going away."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Safe spaces should be allowed.",
+        "argument": "Safe places limit freedom."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "IP copyrights should be banned.",
+        "argument": "IP rights are bad."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "safe spaces are necessary.",
+        "argument": "Safe spaces can create a divide in society."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Women should be allowed to sell their bodies.",
+        "argument": "Women selling their body is not a form of freedom of expression."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Older adult has less strength, so bringing the younger ones increase productivity",
+        "argument": "Old people has more wisdom, they should not be replaced by younger people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Homeopathy can be dangerous because it is unregulated.",
+        "argument": "There is no guarantee that homeopathic remedies are safe."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Naturopathic methods are always a good idea because they'll work even just as a placebo.",
+        "argument": "Placebos are not good because you get a false sense of security."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People should not have a right to own guns.",
+        "argument": "Criminals don't follow the law, so it doesn'y make sense to keep guns away from law abiding citizens."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Capital punishment is always brutal.",
+        "argument": "The family of the victim will always be traumatized by capital punishment."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "It is important to explore space, so that we can learn more about our own world.",
+        "argument": "The earth is our home, and we should focus on making it a better place, rather than looking for life on other planets."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Economic sanction affects the citizens more than the governments",
+        "argument": "Citizens should be able to cope with economic sanctions if their government can cope."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "legalizing Sex selection reduces over population",
+        "argument": "Legalizing sex selection is an abuse of human rights."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "stay at home Dad allows for gender equality at work",
+        "argument": "Women do not have the right to choose whether a stay-at-home father is acceptable or not."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A multi-party system is good.",
+        "argument": "A single party can be just as good as a multi party system."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People should be allowed to meet their base needs.",
+        "argument": "People don't always do what is best for themselves."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The right to bear arms helps people defend themselves.",
+        "argument": "There are other ways to defend oneself than using a gun."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Prostitution should not be a criminal offense.",
+        "argument": "Prosperous people are capable of exploiting those who are poor."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "ad populum",
+        "topic": "It's impossible to abolish capital punishment.",
+        "argument": "Many people still support capital punishments."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Some actions may abolish the black market.",
+        "argument": "The blackmarket is too large to be abolished by one action."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Being a virgin is a choice",
+        "argument": "A virginal person is likely to be innocent and naive."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A system that fires competent employees due to age is cruel.",
+        "argument": "Competent older workers will not be kept by an age-based firing system."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Having right to hold weapon is dangerous",
+        "argument": "We are guaranteed to bear arms."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "We should not ban surrogate mothers.",
+        "argument": "Surroggate mothers do not care about the children they birth."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Retirement should not be mandatory.",
+        "argument": "Retirees are often not as productive."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Economic sanction helps suppress power of current regime.",
+        "argument": "Economic blockade is a way of showing dissatisfaction of people with current leadership."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Cosmetic surgery for minors should be banned.",
+        "argument": "Some miniors have physical defects that require cosmetic surgeries."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Television cannot be abandoned as it is a necessity",
+        "argument": "There are other forms of media and entertainment that are good alternatives to television."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Naturopathy does not harm people.",
+        "argument": "Naturoapthy does have benefits for people and does no harm."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A multi-party system would be more representative of the populace.",
+        "argument": "A single party system could be a more effective way of governing."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Telemarketing is intrusive.",
+        "argument": "Telemarks are very persistent."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "Being a child actor does harm to children.",
+        "argument": "Children are not harmed by being child actors, as they are often home schooled."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Compulsory voting including the whole electorate is unrealistic.",
+        "argument": "Compulsorily voting is impossible as some people are not capable."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A surrogate might try to keep the child.",
+        "argument": "A contract guarantees the baby goes to the intended parents."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Telemarketing is intrusive.",
+        "argument": "Telemarks are not intruding because they are calling to offer goods and services."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Judges should be impartial in their ruling.",
+        "argument": "Judicial activism is not bad."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Many people benefit from alternative types of medicine, such as diet, exercise, and massage.",
+        "argument": "People are harmed by unregulated practices."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "legalised sex selection causes biases among genders",
+        "argument": "Legalised gender selection does not cause biased sex ratio."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Adopting gender neutral language would be expensive and we can use those resources in other places.",
+        "argument": "Gender neutrality can be a costly goal."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "equivocation",
+        "topic": "Minors are not old enough to make complex emotional decisions.",
+        "argument": "Miners can make emotional choices if they have the right information."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Gender neutral language is good for equality.",
+        "argument": "Genders should not be ignored."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Banning of weapon limits arms holders.",
+        "argument": "Arms holdlers have their weapon for protection."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People tends to participate in politics and support their parties of interest when there are many political parties.",
+        "argument": "People tend to feel they have more choice when they are offered more options."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Abolishing capital punishment is cruel for the victims of crime.",
+        "argument": "A sentence of life in prison is not cruel to the victim of a crime because the criminal will not be released."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false dilemma",
+        "topic": "A multi party system allows for diversity in political system",
+        "argument": "A single party is good as it is not allowing people to be divided along party lines."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Recruitment of professional people is important for good work to happen.",
+        "argument": "People can be found and used to do work."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Economic sanctions should cease to exist.",
+        "argument": "Economic Sanctions are a way to help people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Making prostitution legal benefits sex workers.",
+        "argument": "Legalizing prostitition does not mean sex trafficking is legal."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Banning of weapon limits arms holders.",
+        "argument": "Arms hold hold arms for their own reasons and cannot be stopped."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Flags are just material products and should not be held in such high esteem.",
+        "argument": "Flats are symbols of pride and are very important."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Abolishing intellectual property rights is good.",
+        "argument": "A lot of people are dependent on intellectual properties for income."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Capital punishment acts as a deterrent to serious crime.",
+        "argument": "People who are convicted of serious crimes are often given the death penalty."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Abolishing mandatory retirement will help end age discrimination.",
+        "argument": "A person may be inefficient in their job in old age even if they're not being discriminatory."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "If it's okay to kill cattle for meat, then a whale is an animal, and killing them should be allowed.",
+        "argument": "Whales are not killed for food, but for other reasons."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Child actors should be regulated, not banned.",
+        "argument": "Children are not able to make informed decisions."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Creating artificial safe spaces can be counter productive.",
+        "argument": "Creators of artificial environments have the best intentions."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "All people are guaranteed the right to celebrate in accordance with their beliefs.",
+        "argument": "The government can make laws that restrict celebrations."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Foster care brings good to disadvantaged children.",
+        "argument": "Foster homes are unstable."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Space exploration brings about new discoveries",
+        "argument": "The cost of space exploration is high and has no value."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "higher education should be more available to all people.",
+        "argument": "People do not need more education."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Capital punishment acts as a deterrent to serious crime.",
+        "argument": "The death penalty does not stop crime, and the criminals are the ones who decide to stop."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Legalizing prostitution reduces the risk of disease",
+        "argument": "Legal prostitues may not be screened for diseases."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Stay at home Dad has a reason for staying home",
+        "argument": "Staying at Home makes a man lazy."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Prostitution should be legalized.",
+        "argument": "Prohibiting prostitution is the morally correct decision."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Student loans should be subsidized in other to ease financial hardship on students",
+        "argument": "Student shouldn't be given loans without paying back, as it leads to financial burden in future."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "freedom of speech is paramount",
+        "argument": "Freedom of expression is a key component of democracy."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "space exploration should be considered a waste of resources",
+        "argument": "The knowledge gained from space travel can be used for other projects."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Surrogacy makes parent happy",
+        "argument": "Surrogate is just after money and doesn't care about child."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Making defendants all use public defenders will make the system more fair.",
+        "argument": "Public defendERS are not always the best for a defendant."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People in safe space are vulnerable",
+        "argument": "Safe space is a way to get people to open up and get help."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "people should follow whichever religion they choose.",
+        "argument": "People should be encouraged to follow the religion of their birth."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Something might stop black market organ sales.",
+        "argument": "There is no way to stop organ trading."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "freedom of speech is paramount.",
+        "argument": "Speech is not the only freedom."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Some people are politically apathetic, they should not be forced to vote.",
+        "argument": "People who are apolitical still have the right to have their voice heard."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Children are still learning, and a zero tolerance policy doesn't allow them to make mistakes.",
+        "argument": "Children have the capacity to learn from their mistakes and shouldn'tt be coddled."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Legalized organ trade would exploit the poor.",
+        "argument": "Legalizing organ trading would help the rich exploiting the uneducated."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The job of a public defender is to help insure the rights of the people.",
+        "argument": "Public defenders help the poor get legal representation."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "The church of scientology is bad because of how secretive it is.",
+        "argument": "The members of the church are happy."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "people should make their own choice to vote.",
+        "argument": "Some people are not old enough to make a choice."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Defendants in criminal cases should not be barred from counseling as they are likely to be imprisoned.",
+        "argument": "Criminal defendants will likely be sent to prison."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The lack of stability in the foster system is bad for children.",
+        "argument": "Foster children are being taken care of by someone, even if it is temporary."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People tends to do anything like hunting to provide food for their family",
+        "argument": "People can go to the grocery to buy food that they want to eat."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "the church of scientology should not be banned.",
+        "argument": "The church does not deserve our protection."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Company members can be lead into conflict.",
+        "argument": "Members of a company should be able to work together effectively."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "School prayer should be allowed because in religious communities, people want prayer to be included in their daily lives.",
+        "argument": "Religious communities want to have prayer at school."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Abolishing intellectual rights will have negative consequences.",
+        "argument": "Actions should be punishable, not ideas."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "zero tolerance policies are too tough on children.",
+        "argument": "Zero tolerance policy protects kids."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Compensating only the executives greatly is not ideal.",
+        "argument": "By compensating all workers fairly, a company will have a happy workforce."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Criminalizing holocaust denial allows the deniers to become martyrs for free speech, and the government can't deconstruct their argument for the public.",
+        "argument": "HolocaUST denier should not be considered martyred, they are simply wrong."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Multi-party systems represent everyone's perspectives.",
+        "argument": "Multiparty systems are too chaotic to truly represent every perspective."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Punishing the person being bullied the same as the bully isn't right.",
+        "argument": "If a child is being punished for being a bullying victim it isn\u2019t fair."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Deciding to carry a pregnancy for the genetic mom is a woman's choice.",
+        "argument": "The father of the child should have the right to be consulted."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Kids should not be exposed to prayer from other religions.",
+        "argument": "Kids need to be taught about all religons but should be allowed to practice only their own."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "A job title doesn't entitle an executive to more money.",
+        "argument": "Executive jobs don' t always pay more."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "If a person is accused of a crime, they have a right to find any lawyer they want, and not have to use a low level lawyer.",
+        "argument": "Some people don't care about their legal representation, so they don;t deserve to pick the lawyer of their choice."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Since every situation is different, there shouldn't be a limit on judicial activism.",
+        "argument": "Limitations on judges is the best way to maintain fairness."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Holocaust denial should not be criminalized.",
+        "argument": "Holocausat denail is an attack on the truth."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "When executives are compensated well they tend to work harder to improve the company",
+        "argument": "Compensating executes will not improve their work rate."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A job title doesn't entitle an executive to more money.",
+        "argument": "A higher job ranking entitles an individual to higher pay."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Forced prayer should not be in school.",
+        "argument": "Students do not have to participate."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "people should be able to choose their own defense.",
+        "argument": "If people choose to be represented by a defense attorney, it is not necessarily because they are guilty."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Telemarketers should be banned.",
+        "argument": "Telemarkeing can be useful for people who have no access to the outside world."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Retirement should not be mandatory.",
+        "argument": "Retiring helps clear the way for younger people to advance in their careers."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Prayer in schools is a definite violation of separating church and state.",
+        "argument": "Prayers in school are a violation to the church state separation."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "By banning prostitution men are trying to take control of women's bodies",
+        "argument": "The body is the temple of the soul and by bann prostituting, men would be limiting the freedom of some women."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Freedom of religion is paramount.",
+        "argument": "The freedom of belief needs to be curtailed."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Our current voting system should be replaced.",
+        "argument": "People should have the right to vote for whoever they choose."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "zero-tolerance is too harsh of a punishment for minors",
+        "argument": "Zero tolerance keeps the schools safer."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Prayer in schools violates the separation of church and state.",
+        "argument": "Children should be allowed to pray at school."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "It's fine for a parent to stay home, but nobody else has to ensure that a parent can stay home.",
+        "argument": "Parents can't be expected to do everything on their own, it'd be nice if society supported them in some way."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Some people are politically apathetic, they should not be forced to vote.",
+        "argument": "Everyone has a right to be heard."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "public defenders should be mandated.",
+        "argument": "Public defendors are already used in many states."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Surrogacy is an advantage for people.",
+        "argument": "People who can't have children naturally can find other ways to be happy."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "People should follow whichever religion they choose.",
+        "argument": "Religion can cause conflict and war."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Subsidizing journalism allows for efficient information.",
+        "argument": "Journalism can still be effective without subsidies."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Making organ trade legal will enable criminal make less money off it",
+        "argument": "Organ trade is a crime which should be stopped, by making it legal it will reduce the amount of money criminals make from it."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People locked away for speaking their mind are political prisoners.",
+        "argument": "If people are punished for their political beliefs, they are not truly free."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Bad behavior is subjective, and each case should be dealt with individually. So there should be no zero-tolerance policies.",
+        "argument": "Zero-Tolerance Policies allow for bad behavior to be addressed quickly."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Mandatory retirement hurts elderly workers.",
+        "argument": "Mandator retirement allows workers to collect benefits without working."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "If the holocaust is denied there is more chance that it will happen again.",
+        "argument": "The holcaust should not be denied because history is full of examples of how denying bad things have happened has led to them happening again in the"
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Abolishing the right to keep and bear arms will not prevent people from obtaining guns.",
+        "argument": "A vast majority of guns are obtained legally."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "people should have their choice of representation.",
+        "argument": "It's not right for people to have the ability to choose who represents them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Safe places grant asylum from prejudice.",
+        "argument": "Safe place grants give people peace."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "The church of scientology should be banned, because it's actually a cult and not a religion.",
+        "argument": "Cults are bad."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People should not have to pay tax for a site that already runs well on donations.",
+        "argument": "The site already has enough donated funds."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "When people deny terrible past events like the holocaust it is more likely to happen again.",
+        "argument": "People deny things they don't like."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Television focuses people's attention away from healthier activities.",
+        "argument": "There are many educational programs on television."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Everyone should have to use a public defender, so that wealthy people invest in the public defender system.",
+        "argument": "Public defenders are not the only defense attorneys."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "safe spaces allow for freedom of expression.",
+        "argument": "Safe spaces are not inclusive of all people and their opinions."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "school prayer should not be allowed in schools.",
+        "argument": "School prayer can be peaceful."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Racial profiling is biased against anyone who isn't white.",
+        "argument": "If people are profiled for crimes they committed then there is no bias against them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "the public defender system can benefit from wealthy people investment and thus should be made mandatory..",
+        "argument": "Public defendant system should not be forced on people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Compensating only the executives greatly is not ideal.",
+        "argument": "Executive compensation should be reduced."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "zero-tolerance policies have shown that they don't reduce violence or drug use by kids.",
+        "argument": "Some kids have not gotten into trouble because of zero tolerance policies."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Foster care is a positive for children.",
+        "argument": "Many foster children never find their biological parents."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "everyone should have to use a public defender.",
+        "argument": "Public defenders are free."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Practicing gender neutral language creates gender equality.",
+        "argument": "Gender neutrality is not the same as gender equity."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School prayer should not be in schools.",
+        "argument": "People should be allowed to pray in school."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Voting should not be mandated.",
+        "argument": "Voter turnout should be encouraged."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The holocaust should never be denied.",
+        "argument": "The past should not be constantly relived."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Telemarketing is good for the economy, and is a legitimate form of marketing.",
+        "argument": "Telemarkseters do not make contact with people, they only contact people over the phone, so there is no need to worry about privacy issues."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Scientology is a cult.",
+        "argument": "Scientologists believe in human rights."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Assisted suicide is good for terminal patients who are suffering.",
+        "argument": "Assisting someone in committing suicide should be a crime."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School prayer is a positive for society.",
+        "argument": "School prayers would not be supported by all religions."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "People should not take natural medicines without seeking medical help.",
+        "argument": "Natural medicinal remedies are not harmful."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "zero-tolerance policies make schools safer for both students and teachers.",
+        "argument": "Zero- tolerance policies are ineffective and only punish students."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People have the right to what they want to do with their body",
+        "argument": "People don't have a right what to to with there body when it comes to organ donations."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Executive are hard working.",
+        "argument": "Executive is a lazy bunch."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Surrogacy ensures that a child is raised by at least one biological parent.",
+        "argument": "Surrogate children are raised without the biological mother."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Cosmetic surgery is risky for minor that is why it should be banned.",
+        "argument": "Minor with disfigurement will be able to have cosmetic operation to correct their defects."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "If someone can afford a good lawyer, they should be allowed, so they get the best representation they can get.",
+        "argument": "A good representation is not just about the lawyer. It is about being able to understand the law and what is happening in the trial."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Journalism is not in need of subsidies.",
+        "argument": "Journalists can make their money elsewhere."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Even with free speech there are limits, and if you are triggering violence, you shouldn't get a platform.",
+        "argument": "Triggering violent acts is not something that can be predicted, so banning someone who has not done that is a violation of their freedom of speech"
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School prayer goes against first amendment rights of kids by forcing beliefs.",
+        "argument": "Students can choose not to participate in prayer."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Executive are hard working.",
+        "argument": "Executive earns more money without working harder."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People should be allowed to higher expensive lawyers if they can afford to do it.",
+        "argument": "People cannot always afford expensive things."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Telemarketing makes advertising",
+        "argument": "Tele-marketers make it easier to get the word out about new products."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Zero tolerance policy should not be implemented.",
+        "argument": "Zero Tolerance policy would lead to more suspensions and expulsions."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "LGBTQ tolerance is imperative.",
+        "argument": "People who don't fit into the standard gender categories are less than one percent of the population."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People should pay for a lawyer if they can",
+        "argument": "The tax payer shouldn't pay the legal bills for those who can afford to pay their own way."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "children need the room to grow and learn from mistakes",
+        "argument": "Children should be guided to be successful."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "This system would get rid of people being able to get their preferred gender for their children.",
+        "argument": "This would allow people to pick their gender of their kids."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans should not exist.",
+        "argument": "People need money and payday loan companies give it to them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "If something's not harmful it should be allowed.",
+        "argument": "Not everything that is legal is good for society."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Children do not know what they are saying when they pray at school.",
+        "argument": "Children can pray anywhere they want."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "Cancelling pride parades does harm to LGBTQ+ people",
+        "argument": "Canceling pride Parades is a way to stop harassment of people with non-traditional gender identities."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "public defenders care more about your best interests than their paid counterparts",
+        "argument": "Public defendender are not always available, so you have to find a paid one."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Subsidized loans are an important way to support students.",
+        "argument": "Students should pay their own way."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "zero-tolerance policies don't make sense because innocent students often get punished.",
+        "argument": "Students who do something wrong should be punishable under zero tolerance policies."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans work for people who need immediate money, and don't have good credit.",
+        "argument": "Paydays loans are a predatory practice, that makes poor people poorer."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Subrogation should not be prohibited.",
+        "argument": "Subsidiary companies often do not have the best interests of the original company at heart."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Telemarketers has nothing to offer only to rip people off their money",
+        "argument": "There are good telemarketers that has made so many people rich."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Mandatory retirement age will allow young workers to be able to predictably enter the workforce.",
+        "argument": "Mandating retirement will prevent workers from being productive for as long as they can."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Homeopathy can be a source of first aid and immediate medication",
+        "argument": "Homeoapthy has been in existence for a long time and has helped many people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans cause debt and should be banned.",
+        "argument": "People are able to make bad decisions."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "People are deterred from committing criminal acts by the death penalty.",
+        "argument": "Criminals do not want to die."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "executives deserve their compensation.",
+        "argument": "Executives put in more work and deserve more money."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "zero tolerance should be in schools.",
+        "argument": "Zero tolerance creates a school to prison pipeline."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "more usage of public defenders would make trials fairer",
+        "argument": "People who have less money are more likely to be poor defendants, who would benefit from public defense."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "If body parts could be bought and sold, poor people would be exploited for parts since they need money.",
+        "argument": "Poor people are exploitable in other ways."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "A person has a right to take a vow of celibacy.",
+        "argument": "People have sex and should not pretend otherwise."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School prayer should not be in school.",
+        "argument": "School is a place to learn about religion and spirituality."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "school prayer forces a religion on everyone.",
+        "argument": "School prayer is not forced on anyone."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Subsidizing wikipedia would be a nonsense exercise.",
+        "argument": "Wikipedia has too many problems to be subsidized."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Problems with payday loans could be solved with increased regulation.",
+        "argument": "Increased regulation of pay day loans would help prevent people from getting trapped in debt."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "foster care is a positive.",
+        "argument": "Foster care can be damaging to a child."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "zero tolerance policies don't give second chances.",
+        "argument": "Zero tolerance doesn's allow people to make mistakes."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School prayer is a means of forcing religion on students.",
+        "argument": "School praying can be considered a right, not a wrong."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Foster care home intentions are not known and cannot be trusted",
+        "argument": "Foster homes are carefully screened."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People will not want to become lawyers if good lawyers have to be public defenders.",
+        "argument": "People want justice.  They will want lawyers to defend them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Companies should be allowed to decide workers' pay.",
+        "argument": "Companies must decide what to do with their own money."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Breaking rules at school has repercussions.",
+        "argument": "The school system is not the supreme authority over a child's life."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Plastic surgery could save teenagers from emotional pain.",
+        "argument": "Plastics surgery is not the only solution to teen emotional distress."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Public defenders should not be mandatory.",
+        "argument": "Public defender is a choice and should remain so."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms should not be allowed",
+        "argument": "School Uniforms do not infringe on the rights of students."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "There should not be parades that celebrate homosexuality.",
+        "argument": "People who are gay are just like everyone else."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People with multiple crimes should be penalized and punished heavier than others.",
+        "argument": "Criminals do not have the same rights as law abiding citizens."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Forcing people to vote will allow  many people come out to vote on election day",
+        "argument": "Forced voting is against the right of an individual."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Everyone should have a public defender.",
+        "argument": "People should be able to choose their own lawyer."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Compulsory voting is not a good societal implementation.",
+        "argument": "Compulsorily voting would help ensure that the voice of all citizens is heard."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms are good for school children.",
+        "argument": "School children need to express themselves."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "executives deserve their compensation.",
+        "argument": "Executives make too much money already."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People have the right to choose their own defender and this is working",
+        "argument": "Some people don't have faith in the public defenders."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Celibacy can result in less reckless sexual activity.",
+        "argument": "Celibracy is not an uncommon practice among religious people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Students should be allowed to dress however they like",
+        "argument": "School uniforms help to make sure students are not distracted by what others are wearing."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Whaling doesn't serve any purpose anymore, other han killing for fun.",
+        "argument": "Whales are used in food."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans shouldn't be banned.",
+        "argument": "Pay day loans are accessible."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Sales of body parts provides income for the poor.",
+        "argument": "Sales or body part sales does not justify the killing of people for parts."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Three-strike laws help reduce crime rates.",
+        "argument": "Three strike laws punish repeat offenders but don't prevent crimes."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "This system would get rid of people being able to get their preferred gender for their children.",
+        "argument": "People have the right to be informed of their child's gender."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Poor people are often punished, while leaders are not as frequently.",
+        "argument": "Leaders have their share of wrongs, too, and they should be punishable as well as poor people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Giving unemployed subsidy to dad we improve the standard of life of the family and wife can pursue their career",
+        "argument": "Women are not the only ones that can be employed, and giving a man subsidies does not necessarily mean he will be able to care for his"
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "It is desecrating to the American flag to burn it",
+        "argument": "The American Flag is just a piece of cloth.  It does not have any spiritual meaning. It should not be sacrilegious to disrespect"
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Businesses will improve if bans are enforced.",
+        "argument": "Bans can improve businesses."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "It is important to have subsidized student loans, so that all students can go to college.",
+        "argument": "Subsidized loans give people the opportunity to rack up large amounts of debt."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Students need a safe space.",
+        "argument": "Students should learn how to deal with conflict."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms are taking away choices.",
+        "argument": "School children need to be able to express themselves through clothing."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The three strikes law is not the most effective.",
+        "argument": "The Three Strikes law will not always prevent crime."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "student loans should be subsidized.",
+        "argument": "Students have the responsibility to pay for their education."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Activism can lead to corruption in the judicial system.",
+        "argument": "People with power can manipulate the outcome of a trial."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "People choosing who defends them has worked for centuries, and doesn't need to be changed.",
+        "argument": "People are not smart enough to choose their own lawyers."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "Whaling is so cruel to the endangered whale species, that you can't defend doing it.",
+        "argument": "The whaling industry has been around for decades."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People should be able to choose their lawyer",
+        "argument": "Public defenders are paid for by the state and are therefore more fair for everyone."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Even in abusive households, biological children should stay with their biological parents.",
+        "argument": "Sometimes, children are better off with other parents, even if they are not biological."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms keep students from wearing clothes that are deemed as inappropriate",
+        "argument": "Students can wear in appropriate clothes even in school uniform."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "People are always motivated to work harder if they will get more money.",
+        "argument": "People will always find a reason to be lazy."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Whaling helps balance the ecosystem in places where there are too many whales.",
+        "argument": "Whales are an endangered species, and should not be hunted for their oil."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false dilemma",
+        "topic": "Space exploration is important for many novel pursuits, and inventions.",
+        "argument": "Space is very far away, there are more important things to focus on."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "A ban would encourage better business practices.",
+        "argument": "Businesses do not care about their reputation."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Compensating only the executives greatly is not ideal.",
+        "argument": "Compansating executve well is important."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Space has been explored, and needs no further exploration.",
+        "argument": "Space exploration has led to many discoveries, some of which could help humanity."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The 3 strikes law punishes criminals severely.",
+        "argument": "The three strikes rule is a form of punishment that punishers repeat offenders severely but is not used widely."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "Americans should continue to have the right to bear arms.",
+        "argument": "Gun control is necessary to prevent mass shootings."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "The cost of 3 strike laws are extreme for criminals.",
+        "argument": "The idea of the cost being extreme is not valid because the criminally minded do not care about costs."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "End the war on drugs.",
+        "argument": "People die from drug overdoses every day."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Not receiving a payday loan would be in the best interest of a person's financial situation.",
+        "argument": "People need to have money to survive."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The United States has such a well trained military, there is no need for mercenaries.",
+        "argument": "The US military is already well funded and well equipped."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A white person could not go to college this way.",
+        "argument": "If you have a student loan, you will not be able to go back to school."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Since payday loans aren't held to the same standards as loans for middle class people, they should be banned.",
+        "argument": "Payday loan places are popular because people don's have the money for other loans."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Mentally ill people need safe places.",
+        "argument": "Mental health facilities cost a lot of money."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms prevent bullying, and should not be done away with",
+        "argument": "Bullies are still able to bully when in school uniform."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Executives should be compensated more.",
+        "argument": "The country should not subsidize executive compensation."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "They do a lot of dangerous things and that includes the opposition to vaccines.",
+        "argument": "They are not responsible for opposing vaccinations."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "three-strikes law should not be abolished",
+        "argument": "Three-Striked laws are designed to keep repeat offenders in jail."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Wearing a uniform lets students concentrate on learning.",
+        "argument": "A uniform makes kids feel like robots, not individuals, and so they are more likely to feel disconnected from learning, rather than more connected."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Acting takes children away from their education and normal activities.",
+        "argument": "Children who act get time off to do their schoolwork."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Children with school uniforms can still show individuality with accessories.",
+        "argument": "Accessories do not show the same individualism as clothing."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "payday loans entrap the poor.",
+        "argument": "Payday lenders offer a service, and it's not fair to label them as predatory."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "We should adopt gender-neutral language so people are not inadvertently hurt.",
+        "argument": "Gender- neutral language is unnatural and will cause confusion."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Past criminal offenses should have no influence on punishment for current crimes",
+        "argument": "Criminals should be punished for their current crime, and not punishments for past crimes."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "It would be dangerous to legalize prostitution because it would cause the trafficking of underage people.",
+        "argument": "Prostitution is a victimless crime and should be legalized to protect those who are currently in danger."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Every offence needs to be looked at alone, and not in terms of past offenses. Punishments should fit the current crime.",
+        "argument": "Punishment is meant to make the person not want to commit crimes again."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Bureaucratic red tape impedes the proper placement of foster children.",
+        "argument": "Properly placing foster kids should not be impeded by bureaucracy."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The military should not be privatized.",
+        "argument": "The government should be responsible for funding the military."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Three strikes laws increase the prison population",
+        "argument": "Three strike laws make the country less safe."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Assisted suicide helps people to end their suffering, and should be legal.",
+        "argument": "Some people are terminally ill, they have the right to decide their own end."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "school uniforms help children to feel better about themselves",
+        "argument": "School uniform are a way to get children feeling good about their appearance."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Gender neutral language is good.",
+        "argument": "People have different gender expressions."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "The military needs to be supplied by private companies.",
+        "argument": "Private companies would not do a good job supplying the military."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Mothers should not be forced to have kids and give them up for adoption.",
+        "argument": "Women should be able to choose what to do with their body."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A multi-party system decreases votes of individual candidates.",
+        "argument": "A single party system makes voters feel more like they are in control."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The three strikes law should remain, because it is a good deterrent for minor criminals who don't want severe consequences.",
+        "argument": "The third offense is severe."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "There are more demand for journalism.",
+        "argument": "Journalism is a demand that can not be replaced by AI."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans should be allowed for children and younger people.",
+        "argument": "Paydays loans for kids are exploitative and the kids can't pay the money back."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Burning the flag is offensive to many people",
+        "argument": "The flag burner's message is just as important as any other."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "If people get three strikes, they may use it to their advantage to commit extra crimes before getting to three.",
+        "argument": "Three strikes is a warning to criminals."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "prostitution has been in existence for long and should not be illegal",
+        "argument": "Prostitution is an old practice that has existed for ages and has no negative impact on people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans should not be banned.",
+        "argument": "People with low income need financial help."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "The right to bear arms must be limited to stop having America be the murder capital of the world.",
+        "argument": "Criminals will have guns regardless of what laws are in place."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "school uniforms are too expensive.",
+        "argument": "School uniform costs are subsidized."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "If people own guns, they can easily be stolen and fall into the wrong hands.",
+        "argument": "Criminals have no problem getting guns."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "Students do not feel the difference between themselves because they wear school uniforms.",
+        "argument": "School uniform causes students to not compare themselves to others."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "We cannot trust article on wikipedia, they can be edited by rogues and giving out wrong info",
+        "argument": "Most article have references that can verify if it is right or wrong."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The three-strikes law stops criminals from committing more crimes.",
+        "argument": "The law is punishing criminally minded people with more punishments for minor offenses."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Mandatory retirement is more dignified than being fired for poor performance.",
+        "argument": "Some people will be more productive after mandatory retirement."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Since children in uniforms can't bully each other about how they're dressed, school uniforms should not be abandoned.",
+        "argument": "If children are uncomfortable with the school dress code, they shouldn's be forced to wear it."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "payday loans lead low income people even further into poverty.",
+        "argument": "People have access to pay day loans, and they have to decide whether or not they want to use them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "school uniforms provide fewer distractions from learning.",
+        "argument": "School uniformity is not a panacea for a lack of learning distraction."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The three strikes law allows people to make mistakes and not be punished too harshly right away.",
+        "argument": "The third strike is the punishment."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Three strikes gives way for someone making a mistake, without too harsh a punishment the first time.",
+        "argument": "Criminals deserve harsh punishment."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms allow children to concentrate on their work instead of their fashion choices.",
+        "argument": "School children should be allowed to express themselves by their choice of clothing."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "school uniforms are more productive for students.",
+        "argument": "Students can't express themselves with school Uniforms."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "the three strikes law is unfair.",
+        "argument": "People do not have the opportunity to make mistakes."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A payday loan can help for sudden financial situations that occur before you get your weekly paycheck.",
+        "argument": "Payday loans are often unaffordable."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "ban private military companies",
+        "argument": "Private military company workforce is not large enough to ban them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans help people in need.",
+        "argument": "Pay day loans have extremely high interest rates."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The three strikes and you're out law targets men of color.",
+        "argument": "The law has been in place for a long time."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "school uniforms should not be enforced.",
+        "argument": "School uniformity will help prevent bullying."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms are not a good option for students.",
+        "argument": "School Uniforms keep students equal."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "the three-strike law should be kept",
+        "argument": "The three strike law is a deterrent to repeat criminals."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "uniforms should not be mandatory.",
+        "argument": "People have the right to express themselves."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans are harmful.",
+        "argument": "Pay day loans help people in need."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People should wear whatever clothing they want to express themselves.",
+        "argument": "Clothing choices are not the only way to show who you are."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "We shouldn't get rid of school uniforms because not everyone can afford clothing, and they could end up getting teased.",
+        "argument": "Some students don's have the money to buy new clothes for school."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Since kids can get picked on when their parents can't afford nice clothing, we shouldn't get rid of school uniforms.",
+        "argument": "People have more options than school clothing."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "this loan isn't allowed by the state and/or by lenders",
+        "argument": "People should be allowed to do what they want with their own money."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms reduce social inequality.",
+        "argument": "School children will still be judged by their appearance."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Some people only care about monetary gains from warring with other countries, and not the lives that have been lost in the wars.",
+        "argument": "If people really care only about money, they would not be risking their lives."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans are risky.",
+        "argument": "Pay day loans charge high interest rates."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Private military companies shouldn't work together due to inconsistencies.",
+        "argument": "Private companies work well together and should continue to do so."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Private Military companies are solely profit oriented.",
+        "argument": "Private military companies can be beneficial to society."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Payday loans are terrible.",
+        "argument": "Paydays are fast."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Social media helps the world socially.",
+        "argument": "Social networking connects people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "people committing small offenses do not deserve to be put away for life.",
+        "argument": "Sometimes people who commit small crimes are the most dangerous."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Social media allows people to connect with people that they otherwise could not connect with",
+        "argument": "Some people have negative experiences on social media."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "School uniforms help people to be smarter.",
+        "argument": "School children are not stupid and do not need to wear uniform to learn."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "appeal to emotion",
+        "topic": "The three strikes law works.",
+        "argument": "The third strike is too harsh."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The three strikes law counts insignificant crimes and this can lead to unfair jail times.",
+        "argument": "The purpose of the three strike law is to keep people safe."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Private military companies work for profit, and not the good of the country, so the should be banned.",
+        "argument": "Profit is a good motivator."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School uniforms are better than regular clothing.",
+        "argument": "School is about learning and not about fashion."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "The three strikes laws don't show any empathy, and haven't been proven to be functional.",
+        "argument": "The goal of the three strike laws is to keep people off the street."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A private military company's primary goal is profit.",
+        "argument": "A company can be dedicated to helping others."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "false causality",
+        "topic": "The three strikes law needs to end.",
+        "argument": "The third strike will end a criminal's career."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "There's no oversight to prevent private military companies from committing atrocities.",
+        "argument": "There are laws that private companies have to follow."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "The chance for rehabilitation is sometimes taken away from three-strike offenders.",
+        "argument": "Some people cannot be rehabbed."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Using a private military company isn't any different than buying weapons or vehicles from private companies.",
+        "argument": "Weapons and vehicles are bought from companies that can be sold to private militaries."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "school uniforms cost too much for poor families.",
+        "argument": "School uniform costs are high for families who have low income."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Committing 3 offenses does not always mean someone needs harsh punishment.",
+        "argument": "Some people are not capable of learning."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "private military companies should still exist.",
+        "argument": "Private military contractors can be dangerous."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Something, which violates international law, causes more violence and death.",
+        "argument": "Some things are justifiable."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Private military companies can get into places where the terrorists are, and not have to worry about global law.",
+        "argument": "Private companies are not bound by global laws, so they can do what is needed to get the job done."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Since government employees get bodyguards, companies in foreign countries deserve protection from private military companies.",
+        "argument": "Companies in the US that have a lot of employees in other countries need protection."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "companies operating overseas need protection too",
+        "argument": "Companies operating in the US have the legal system to protect them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "companies need to use private military contractors for safety reasons",
+        "argument": "The government can use the military for any reason they need."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "private armies violate human rights",
+        "argument": "Private armys do not adhere to international laws."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Private military companies fill in gaps for the military.",
+        "argument": "Military personnel are already being paid to do this work."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Missionary work helps people who would otherwise have no help.",
+        "argument": "Missionaries can be harmful to people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Missionary work should be stopped as the wage it is not paid well.",
+        "argument": "Missionaries are not greedy."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Missionaries are the only ones benefiting from their work.",
+        "argument": "Missionary work is an excuse to spread their religion."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "missionary workers are the only people who benefit from it.",
+        "argument": "Missionary work is all about helping the people but they are also getting benefits from there."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "anyone can say what they think.",
+        "argument": "Words can be hurtful."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "When everyone is forced to vote, we will know how many people are in the country",
+        "argument": "People can move in and out of the county, so we wouldn't be able to tell how big the population really is."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "People have the right to bear arm in other to protect themselves from danger",
+        "argument": "Criminal may use arms to kill people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Foster home makes it easy for a child to get permanent home.",
+        "argument": "Foster care is not permanent."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Forcing people to vote will allow  many people come out to vote on election day",
+        "argument": "People are free to make their own choices and forcing them to do things like voting is an infringement on their freedom."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Voting should not be forced.",
+        "argument": "Not voting is irresponsible."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Intellectual property itself is complex",
+        "argument": "Intel property should be free."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Safe spaces are important to personal emotional health.",
+        "argument": "People should be able to handle criticism."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Student loans should not be subsidized.",
+        "argument": "Subsidizing student loans is too costly."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "telemarketing is a nuisance",
+        "argument": "Telemarketing can be a job source for people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Students need a safe space.",
+        "argument": "Safe spaces provide a place of comfort for students."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Telemarketing offers a net gain to society.",
+        "argument": "Telemarksing is annoying and should be banned."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Some people are just politically Apathetic",
+        "argument": "Awareness of politics is essential to the functioning of the country."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "If whaling is outlawed a black market will start up and cause more harm.",
+        "argument": "The whale population can be rebuilt."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Telemarketers has nothing to offer only to rip people off their money",
+        "argument": "People who needs things and cannot go out will always need telemarketing."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Homeopathy can be harmful.",
+        "argument": "People trust doctors."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "people do not need firearms in the present day.",
+        "argument": "People can protect themselves without a firearm."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People have the choice about what to do with their own body.",
+        "argument": "If people are not allowed to use their bodies to harm others, they should be allowed in no other way to be harmed."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Sometimes you must be economically viable to vote.",
+        "argument": "Sometimes being economical viable is a prerequisite to voting."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Students need to be guided and supported, and it's important because they are our future.",
+        "argument": "Students are adults, or almost adults.  They are able to think for themselves and make their own decisions. It'd be best for them to"
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "It is the right of a business owner as to how they pay executives.",
+        "argument": "Business owner have the power to pay their executively how much they want."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "executives are not overpaid for the work they do.",
+        "argument": "CEOs have an income of $500,012 while the average worker only makes $36,453."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Space exploration allows for discovering new planet and reducing population on earth.",
+        "argument": "Space explorations are important as they help in the discovery of new planets."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Our current voting system should be replaced.",
+        "argument": "Our voting process is flawed."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Surrogacy is often the only option for some people who want kids.",
+        "argument": "People can adopt."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Most telemarketers are scammers",
+        "argument": "Most people who use telegmarketing are not good people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Mentally ill people need safe places.",
+        "argument": "People with mental health issues need the right care."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Surrogacy is an act of creating life",
+        "argument": "Surrogate mothers don't really do anything."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Adoption of a child is moral while surrogacy is immoral",
+        "argument": "Adopted children are raised to be happy, while children born via surrogate are confused and don't know who they are."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Organ trade is dangerous and people would kill to get organ in other to trade",
+        "argument": "People need organ for their survival and some are willing to sell them for those that needs them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Assisted suicide should be an option for terminal patients.",
+        "argument": "Terminal patients who seek out assisted suicide are making an irrevocable decision that may be based on fear."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "When people do not vote they are still making a statement and they shouldn't be forced to vote.",
+        "argument": "People are not being forced and have the right to not do something that has nothing to do with them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "We should adopt gender-neutral language so people are not inadvertently hurt.",
+        "argument": "Gender-specific language can be used to marginalize people."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Misinformation about cures for cancer causes sudden death for people.",
+        "argument": "People should be allowed to make their own choices about cancer treatments."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Economic sanction enables prevent bad behaviours of countries on others",
+        "argument": "Economic Sanction causes harm to the people of the countries targeted by them."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Multi party system is a fairer system of government",
+        "argument": "Multi-party systems are confusing."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Voting should not be mandated.",
+        "argument": "People have a right to vote."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Assisted suicide can be misused.",
+        "argument": "Assisting a person to suicide does not harm the person in any way."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "space exploration should be considered a waste of resources",
+        "argument": "Space exploration helps to advance technology."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "People should not be forced to exercise their right to vote.",
+        "argument": "Voting is a right that should be taken seriously."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Over 50 percent of students can't afford to pay for college because it's so expensive.",
+        "argument": "There are more students than can afford college."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Child actors should be allowed to work.",
+        "argument": "Child actor's childhood is being stolen."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "telemarketing should be dictated by the market.",
+        "argument": "Telemarketing is too intrusive."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "Acting takes children away from their education and normal activities.",
+        "argument": "Child actors can still attend school."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "faulty generalization",
+        "topic": "Some people's skills are better suited to areas other than battle in the military.",
+        "argument": "People in uniform are soldiers, and all soldiers need to be ready to defend the country."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "School prayer allows student to do what they are not thought at home",
+        "argument": "School pray is not allowed in public school."
+    },
+    {
+        "type": "kto",
+        "fallacy_type": "None",
+        "topic": "A multi-party system decreases votes of individual candidates.",
+        "argument": "A single party system allows one person to make all the decisions."
+    }
+]
