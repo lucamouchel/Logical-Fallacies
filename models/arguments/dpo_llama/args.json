@@ -1,6 +1,6 @@
 {
     "data_dir": "data/dpo/arguments/",
-    "model_name": "models/Llama-2-7b-hf",
+    "model_name": "meta-llama/Llama-2-7b-hf",
     "ref_model_path": "models/sft_Llama-2-7b-hf_trl_2024-03-11_22:21:29.648536",
     "beta": 0.5,
     "n_epochs": 3,
