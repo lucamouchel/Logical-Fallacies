@@ -21,13 +21,13 @@ def main():
     args = parse_args()
     model = AutoModelForCausalLM.from_pretrained(args.model_id, device_map='auto')
     tokenizer = AutoTokenizer.from_pretrained(args.model_id)
-    test_set = pd.read_json('data/argumentation/test_cckg.json')
+    test_set = pd.read_json('data/argumentation/test_cckg.json')[:200]
     model_name = args.model_id.split('/')[-1]
     generated = []
     for i, entry in tqdm(test_set.iterrows(), total=len(test_set)):
         topic = entry.topic
         stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
-        prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument of maximum 20 words for the topic: {topic} [/INST]\n### Argument: "
+        prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument of maximum 15 words for the topic: {topic} [/INST]\n### Argument: "
         
         with torch.no_grad():
             y_model = generate(prompt, model, tokenizer, **GENERATION_KWARGS)
@@ -43,7 +43,7 @@ def main():
     
             generated.append(y_model)
         
-    save_to(generated, name=f'generated.json', output_dir=f'results/{model_name}/')
+    save_to(generated, name=f'generated_zero_shot.json', output_dir=f'results/{model_name}/')
 
 if __name__ == "__main__":
     main()

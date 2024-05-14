@@ -12,6 +12,10 @@ from datetime import datetime
 import torch
 from tqdm import tqdm
 import gc
+import sys 
+sys.path.append('src/')
+from DPO.custom_dpo import CustomDPO
+
 from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM
 import utils
@@ -109,7 +113,8 @@ def main():
     #model = get_peft_model(model, peft_config)
 
     model.enable_input_require_grads()
-    dpo_trainer = DPOTrainer(
+
+    dpo_trainer = CustomDPO(
         model=model,
         ref_model=ref_model,
         beta=args.beta,
