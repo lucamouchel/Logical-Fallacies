@@ -1,0 +1,1202 @@
+[
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "There should be no age restrictions on cosmetic surgery.",
+        "argument": "There are many benefits to cosmic surgury. There are several benefits that cosmtic surgeries offer to people."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Creating awareness of the LGBT community, decreases discrimination.",
+        "argument": "Creating an aweness of LGTBQ community decreased discriminations. [INST: COMMENT] The following is a comment on the above argument."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Subsidizing student loans is bad.",
+        "argument": "Substantial evidence exists that subsidized student loan programs have a negative impact on student outcomes."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "The sex of a child does not define their value.",
+        "argument": "The sex that a person is born into does NOT define them. A person\u2019s worth is not determined by their gender."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "argument": "Just because some people don' t like the way things are, doesn'  t mean we have to change things to suit them"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "There should not be parades that celebrate homosexuality.",
+        "argument": "There should be no parading of homo-sexual lifestyles. [INST1]  ###  Prompts:\n1."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Journalism is not in need of subsidies.",
+        "argument": "Journalists should not be subsided\nJournalism should be self-sustaining. The market should decide what is good journalism and what isn't."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Child actors do not live normal lives.",
+        "argument": "Child actors are not able to live a normal life because they are surrounded by adults all the time and are expected to be mature."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "argument": "Just because some people think that the laws should be different for them than for everyone else, doesn's mean that we should change the law."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "prostitution has been in existence for long and should not be illegal",
+        "argument": "Prostitution is not illegal\n\nProstitutes are not forced to do their jobs, they choose to be prostituted.\nPeople should be allowed to choose their own profession."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Companies should be allowed to decide workers' pay.",
+        "argument": "Compensation is a matter of company policy, not government regulation."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "People who don't trust doctors have the right to try whatever homeopathic remedies they want.",
+        "argument": "People have a right and freedom to choose whatever they wish to do with their body. [INST: Argument] People should be allowed to use whatever medicines they prefer."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "France, German, Italy, and Spain all believe surrogacy is exploitation, and have it prohibited.",
+        "argument": "Surrogate mothers are not being exploited, they are being rewarded. - A surrogae mother is being paid for her services. She is not exploiting anyone."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Most economic sanction are not effective.",
+        "argument": "Sanctions are ineffective in changing the behavior of the targeted countries."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Naturopathy does not harm people.",
+        "argument": "Naturopaty does harm to people\n\n[INST:1] Natropaths are not doctors and they do not have the same training as docters do."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Television can be hazardous to our kids",
+        "argument": "Television is harmful to kiddies' health. [DESC] Television has a negative impact on children's health and wellbeing."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "IP copyrights should be banned.",
+        "argument": "IP laws should not be applied to copy written material."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Homeopathic remedies can be bad for your health.",
+        "argument": "Homeopat\u00eda es un m\u00e9todo de medicina alternativa que se basa en la idea de que los medicamentos pueden causar un s\u00edntoma similar a la enfermedad"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Television can be hazardous to our kids",
+        "argument": "Television is hazzardus to kits\n\n Television may be a hazarous thing for our children. There are a number of reasons why it is."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Stay at home Dads tends to be lazy",
+        "argument": "Stating that stay at Home Dad's are lazy is an unjustified stereotype."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Anything other than natural pregnancy methods should be prohibited.",
+        "argument": "An anything other then natural birth control should not be allowed. An anything else than a natural method of birth should never be used."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Cosmetic surgery for children is safe.",
+        "argument": "Cossetic Surgery For Children Is Safe\nCosmetics surgical procedure is a medical process that alters the appearance of the human body."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Racial profiling is not fair to people.",
+        "argument": "Racially profild people are more likely to be arrested."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Getting rid of capital punishment lets people know that all killing is wrong.",
+        "argument": "Getting Rid Of Capital Punishment Lets People Know That All Killing Is Wrong\n\nThe death penalty is a deterrent to crime, but it is also a punitive measure"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "Safe spaces should be allowed.",
+        "argument": "Safer spaces are better. [INST: COMMENT]  The argument is wrong. It is not about safety, but about free speech."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "IP copyrights should be banned.",
+        "argument": "[SUP] IP is a means of protecting the rights of creators. It is not a right in itself."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "safe spaces are necessary.",
+        "argument": "Safe spaces aren't necessary\n\n[INST:1]  A safe space is a place where a person can feel comfortable and accepted, regardless of their race, gender, or sexual orientation"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Women should be allowed to sell their bodies.",
+        "argument": "Women are the ones who can decide what to do with their own bodies\n\nWomen are people who are capable of making their choices for themselves."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Older adult has less strength, so bringing the younger ones increase productivity",
+        "argument": "Old age is not always a time of decline. In fact, some older adults experience a period of increased strength and productive years."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Homeopathy can be dangerous because it is unregulated.",
+        "argument": "Homepathy is dangerous, because the FDA does not regulate it."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "Naturopathic methods are always a good idea because they'll work even just as a placebo.",
+        "argument": "Naturo-what?\nNaturopthy is a form of alternative medicine that uses herbs, acupuncture, homeopathy, and other natural methods to treat illness."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "People should not have a right to own guns.",
+        "argument": "People have the right of self-defense, and guns are the best tool for this purpose. Guns are a necessary tool in the United States for self defense."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Capital punishment is always brutal.",
+        "argument": "Capital Punishment Is Always Brutal\nCapital punishments are a form of punishing a person for committing a crime."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "It is important to explore space, so that we can learn more about our own world.",
+        "argument": "It's important that humans explore the universe. #### \nHumans have always been fascinated by the stars."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Economic sanction affects the citizens more than the governments",
+        "argument": "Economics sanctions affect the government more\n\nEconomic Sanctions are the use of economic pressure to achieve political objectives."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "false causality",
+        "topic": "legalizing Sex selection reduces over population",
+        "argument": "Legalizing sex selection will reduce overpopulation. [INST:1] ## The following argument is against the resolution."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "stay at home Dad allows for gender equality at work",
+        "argument": "stay-at-home-dad-allows-for-gender-equality-in-the-workplace\n\n[INST:1] \nStay at Home Dads Allow"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "A multi-party system is good.",
+        "argument": "A Multi-Party System Is Good\nA multi party system can be defined as a political system where there are more than two political parties."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "People should be allowed to meet their base needs.",
+        "argument": "People have a right to have their basic needs met."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "The right to bear arms helps people defend themselves.",
+        "argument": "The Right to Bear Arms Helps People Defend Themselves\nThe right of an individual to own and carry a firearm is a right that should not be taken away from anyone."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Prostitution should not be a criminal offense.",
+        "argument": "Proponents of prostitution decriminalization argue that prostitutes are just like other workers who are subjected to the same harms as any other worker."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "false causality",
+        "topic": "It's impossible to abolish capital punishment.",
+        "argument": "The death penalty is the only punitive measure that will deter violent criminals from committing crimes. There is a lot of evidence that supports this claim."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Some actions may abolish the black market.",
+        "argument": "The black markets are an essential part of the economy. [INST: Argument] The government should not take any actions against the\nblack marketeers."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Being a virgin is a choice",
+        "argument": "Being virgins is not a requirement for marriage [1] [2] \n\n[INST1]: # (1)\nBeing a Virgin is Not a Requirement for Mar"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "A system that fires competent employees due to age is cruel.",
+        "argument": "A COMPANY should not fire competant employees because of age."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Having right to hold weapon is dangerous",
+        "argument": "Having the right for every citizen to carry a weapon would be dangerous."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "We should not ban surrogate mothers.",
+        "argument": "Surrogacy is a great way for infertile couples to have a child.\n[INST1] ## Prompts: Generating a counterargument of 250 words."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Retirement should not be mandatory.",
+        "argument": "Retirees should be required to work for their benefits. Retirement is a stage in life where a person chooses to stop working."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Economic sanction helps suppress power of current regime.",
+        "argument": "Economic Sanctions is a policy that is applied by the international community to bring pressure on the government of a country to change its policy or behaviour."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Cosmetic surgery for minors should be banned.",
+        "argument": "Cosmetics surgical procedure for kids ought to be prohibited.\n\n[INST1] Cosmectic medical procedures for young children ought not to really be forbidden."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Television cannot be abandoned as it is a necessity",
+        "argument": "Television is not a Necessity [Television cannot replace the need for social interaction] [Claim: It cannot substitute the value of social contact] \n\n[INST: Gener"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Naturopathy does not harm people.",
+        "argument": "Naturoapthy does harm\n\nNaturopthy is a pseudoscience. It has no scientific basis."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "A multi-party system would be more representative of the populace.",
+        "argument": "A multi party system is more democratic because it allows for more representation of different groups and interests."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "Telemarketing is intrusive.",
+        "argument": "Te\n[INST: PROMPT] Te is a way of contacting people. It is often used to sell things, but it can also be used for other things."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Being a child actor does harm to children.",
+        "argument": "Being a Child Actor Does Harm to Children\n\nIn the 21st century, child actors are often overworked, underpaid, and exploited by the entertainment"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "false causality",
+        "topic": "Compulsory voting including the whole electorate is unrealistic.",
+        "argument": "Compulsary voting is not the best way to increase voter turnout. It can actually decrease it."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "A surrogate might try to keep the child.",
+        "argument": "A child might be a surplus. A child is a burden. It's an expensive luxury."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Telemarketing is intrusive.",
+        "argument": "Telemarks is an intrusion of privacy and a waste of time."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Judges should be impartial in their ruling.",
+        "argument": "Judges are supposed to be neutral and impartial in the rulings they make."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Many people benefit from alternative types of medicine, such as diet, exercise, and massage.",
+        "argument": "Many People Benefit from Alternative Types of Medicine\n\nMany people have found alternative forms of treatment to be very helpful."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "legalised sex selection causes biases among genders",
+        "argument": "Legalised Sex Selection Causes Biases Among Genders\n\nSex selection is the choice of selecting a baby's sex."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "Adopting gender neutral language would be expensive and we can use those resources in other places.",
+        "argument": "A."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Minors are not old enough to make complex emotional decisions.",
+        "argument": "Minoring is a complex decision that requires an understanding of the consequences. Minors do not have the mental capacity to fully understand the complexities of minoring."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Gender neutral language is good for equality.",
+        "argument": "GENDER NEUTRAL LANGUAGE IS GOOD FOR EQUALITY\n[INST:1] In 2014, a study of 70,0"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Banning of weapon limits arms holders.",
+        "argument": "The purpose of this law is to protect the innocent people from harm. This law will not have a negative effect on the rights of law-abiding citizens."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "People tends to participate in politics and support their parties of interest when there are many political parties.",
+        "argument": "People tends not to take part in the political activities of the country when the number of political party is limited and there is a lack of competition among them."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Abolishing capital punishment is cruel for the victims of crime.",
+        "argument": "Absolutely not! Abolishing the death penalty is a cruel thing to do for victimes of crimes. First of all, it is not fair to the victim."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "A multi party system allows for diversity in political system",
+        "argument": "A multilateral system has the capacity to accommodate various political parties, which allows a greater degree of diversification in the political arena."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Recruitment of professional people is important for good work to happen.",
+        "argument": "Recruiting professional staff is essential for a company to function."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Economic sanctions should cease to exist.",
+        "argument": "Economics sanction should be ceased to be in existence. The economic sanctification is a method of forcing a country to do something. It is usually used as a political tool."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Making prostitution legal benefits sex workers.",
+        "argument": "Makes prostitutes safer\nProstitution is a dangerous profession. This is because the customers are often dangerous and unstable people. Males are more likely to be violent than females."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Banning of weapon limits arms holders.",
+        "argument": "BANNING OF WEAPON LIMITS ARMS HOLDERS\n[INST:2] The Supreme Court has passed a landmark judgment banning the sale and purchase of weapons"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Flags are just material products and should not be held in such high esteem.",
+        "argument": "Flag is a symbol of the nation. Flag is an emblem of patriotism and nationalism. It represents the ideals and aspirations of a nation and its people."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Abolishing intellectual property rights is good.",
+        "argument": "Absolute\nAbolishing IPR is not good\n\n* IP rights are necessary to encourage innovation and creativity\n  * IP laws encouage innovators to develop new ideas and"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Capital punishment acts as a deterrent to serious crime.",
+        "argument": "Capital Punishment Acts as Deterrence\n\nCapital punishments acts a powerful dterrent as it serves as an effective punitive measure to criminals."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Abolishing mandatory retirement will help end age discrimination.",
+        "argument": "Abolishing the mandated retirements will reduce the age-discrimation in the workplace."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "appeal to emotion",
+        "topic": "If it's okay to kill cattle for meat, then a whale is an animal, and killing them should be allowed.",
+        "argument": "Killing whales is cruel. Killing animals is not okay. Killer whalers kill wholesale, which is a horrible thing to do."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Child actors should be regulated, not banned.",
+        "argument": "Child Actors should not be bannend\n[INST: PRE]   Child acting is a very serious matter."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Creating artificial safe spaces can be counter productive.",
+        "argument": "Creating safe space can lead to a counterproductive effect\n\n[INST:1] ###### Prompts:\n- \n\t- The counter argument is that creating safe environments can have the"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "All people are guaranteed the right to celebrate in accordance with their beliefs.",
+        "argument": "All People Are Guaranteed The Right To Celebrate In Accordance With Their Beliefs\nAll people should be guaranteed to have the opportunity to practice their religion and celebrations."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Foster care brings good to disadvantaged children.",
+        "argument": "Fostering children is a good thing to do. Fosters are good because they help children that have been abused or neglected."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Space exploration brings about new discoveries",
+        "argument": "Space Exploration is a waste of resources and money. The United States has been spending billions of dollars on space explorations."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "higher education should be more available to all people.",
+        "argument": "Higher education is not accessible to people who need it most. People who do not have access to higher levels of education are unable to get the jobs they want."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Capital punishment acts as a deterrent to serious crime.",
+        "argument": "Capital Punishment Acts As A Deterent To Serious Crime\n\n* Capital offenses are punishable by death."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Legalizing prostitution reduces the risk of disease",
+        "argument": "Legalising prostituion reduces risk\n\n> Prostitution is not a crime. It is a human right and a profession."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Stay at home Dad has a reason for staying home",
+        "argument": "Stays at Home Dads have a good reason to stay home."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Prostitution should be legalized.",
+        "argument": "Pros\n* Pro: Legalization of prostitution would decrease crime."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Student loans should be subsidized in other to ease financial hardship on students",
+        "argument": "Student loan debt is a problem that has been growing for years, and it is time for something to be done about it."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "freedom of speech is paramount",
+        "argument": "Freedom of Speech is Paramount\n\n>Freedom is the most important value in a free society."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "space exploration should be considered a waste of resources",
+        "argument": "Space explorations are a good investment of taxpayer money."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "Surrogacy makes parent happy",
+        "argument": "Sur\n\n[INST: COMMENT] \nThe topic is about surrogate motherhood."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Making defendants all use public defenders will make the system more fair.",
+        "argument": "Making all defendents use a public defense will not make it more just, it will just make things worse.\n\nThe public system is overcrowded and understaffed."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "People in safe space are vulnerable",
+        "argument": "People who are in a safe place are not vulnerability [COUN] \n\n[INST:1]##[COU:2] People are often in danger in public places, but"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "people should follow whichever religion they choose.",
+        "argument": "People should be allowed to follow whatever religion suits them best."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Something might stop black market organ sales.",
+        "argument": "Something that might prevent black markets from selling organs is the possibility that the donor's family would find out."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "freedom of speech is paramount.",
+        "argument": "Freedom of Speech is Paramount\n\n###### The right to freedom to express oneself is fundamental to a democracy. !"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Some people are politically apathetic, they should not be forced to vote.",
+        "argument": "Apathy is not a valid excuse to not vote, people should be made to feel like they are a part of their country and its government."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Children are still learning, and a zero tolerance policy doesn't allow them to make mistakes.",
+        "argument": "Children are not fully developed and are learning. A zero-tolerance\npolicy is a punishment that is too harsh for children."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Legalized organ trade would exploit the poor.",
+        "argument": "Legalising organ trading will exploits the poverty stricken\nThe legalization of organ transplants will not exploited the people."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "The job of a public defender is to help insure the rights of the people.",
+        "argument": "The best way to insuring the protection of rights is through the use of public defense attorneys. The job description of this attorney is simple."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "The church of scientology is bad because of how secretive it is.",
+        "argument": "The Church of Scientology should be shut down because it has been proven to be a cult."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "people should make their own choice to vote.",
+        "argument": "The argument is that people shouldn't be forced to make a choice between voting and not voting."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Defendants in criminal cases should not be barred from counseling as they are likely to be imprisoned.",
+        "argument": "Defendant in a criminal case should be allowed to have a counsellor. [INST]:  ## 2."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "The lack of stability in the foster system is bad for children.",
+        "argument": "The fostering system in America is broken, and the government needs to fix it."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "People tends to do anything like hunting to provide food for their family",
+        "argument": "People tend to hunt for food to survive."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "the church of scientology should not be banned.",
+        "argument": "The Church of Scientology has been around for over 50 years and has never been bann\n[INST/1] The church is not a threat to society\nThe church has existed for"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Company members can be lead into conflict.",
+        "argument": "The company members are in a conflict when they are lead to do something that they don't want to."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "School prayer should be allowed because in religious communities, people want prayer to be included in their daily lives.",
+        "argument": "In religious societies, prayer is a crucial part of the community's beliefs. In fact, it is believed that the very foundation of a religious community is based on prayer."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Abolishing intellectual rights will have negative consequences.",
+        "argument": "The argument that intellectual property rights should be abolished is based on the premise that it is a barrier to innovation and creativity."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "zero tolerance policies are too tough on children.",
+        "argument": "zero-tolerance-policies-are-too-tough-on-children\n\nZero tolerances policies can be too strict on students."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Compensating only the executives greatly is not ideal.",
+        "argument": "Compensation is a tool used to attract and retain the best talent."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Criminalizing holocaust denial allows the deniers to become martyrs for free speech, and the government can't deconstruct their argument for the public.",
+        "argument": "Counter-argument:"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Multi-party systems represent everyone's perspectives.",
+        "argument": "Multi Party Systems Represent Everyone'S Perspecti\nMulti-Party Systems represent the interests of everyone."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Punishing the person being bullied the same as the bully isn't right.",
+        "argument": "The person who is being harassed should not be punished the exact same way as their harasser."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Deciding to carry a pregnancy for the genetic mom is a woman's choice.",
+        "argument": "Pregnancy is not a disease and does not have to be cured.\n\nThe decision to have a child is one of the most important choices a person will ever make."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Kids should not be exposed to prayer from other religions.",
+        "argument": "KIDS SHOULD NOT BE EXPOSED TO PRAYER FROM OTHER RELIGIONS\n\nIn a public school, children should be taught to respect and toler"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "A job title doesn't entitle an executive to more money.",
+        "argument": "The job is to perform a task. A title is merely a name given to a job. [INST:1] #1. I agree with this argument."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "If a person is accused of a crime, they have a right to find any lawyer they want, and not have to use a low level lawyer.",
+        "argument": "If a defendant is charged with a serious crime such as murder, the court should not allow them to hire a lawyer who is inexperienced in criminal law."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Since every situation is different, there shouldn't be a limit on judicial activism.",
+        "argument": "Since everyone's situation varies, the limit should be case-by-case. [INST 2] Generating a new prompt..."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Holocaust denial should not be criminalized.",
+        "argument": "The Holocau$t should be taught in school, but should NOT be illegal to deny."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "When executives are compensated well they tend to work harder to improve the company",
+        "argument": "When Executives Are Compensated Well, They Tend To Work Harder To Improve The Company."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "A job title doesn't entitle an executive to more money.",
+        "argument": "A job is a job. The title of a position doesn\u2019t mean you get to ask for more pay."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Forced prayer should not be in school.",
+        "argument": "Forcing prayer in public schools is a violation of the separation of church and state."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "people should be able to choose their own defense.",
+        "argument": "People should not be allowed to have guns. The reason for this is because guns are dangerous and can cause a lot of harm."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Telemarketers should be banned.",
+        "argument": "Teletimers should not be allowed to call people at home. Teletimer calls are a nuisance."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Retirement should not be mandatory.",
+        "argument": "Retiring is a choice and not a mandate. Retirement is not mandated, it is an individual choice."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "Prayer in schools is a definite violation of separating church and state.",
+        "argument": "PRAYER IN SCHOOLS IS A VIOLATION OF SEPARATION BETWEEN CHURCH AND STATE\n\nPrayers in school are not appropriate because they"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "By banning prostitution men are trying to take control of women's bodies",
+        "argument": "By promoting prostitutes as sex objects, men control women\u2019s sexuality and bodies."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Freedom of religion is paramount.",
+        "argument": "In a free society, everyone should be able to choose which religion to follow."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Our current voting system should be replaced.",
+        "argument": "The current system is not transparent, does not allow for a proportional representation of the vote and is a disenfranchisement of voters."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "zero-tolerance is too harsh of a punishment for minors",
+        "argument": "Zero-Tolerence is a harmless policy.\n\nZero- tolerance policies are not as bad as people think. The zero tolerence policy was implemented to keep schools safe."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Prayer in schools violates the separation of church and state.",
+        "argument": "PRAYER IN SCHOOLS VIOLATES THE SEPARATION OF CHURCH AND STATE\n\n[INST: Prompts] [1] \nPrayers"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "It's fine for a parent to stay home, but nobody else has to ensure that a parent can stay home.",
+        "argument": "It is fine to leave a child home alone."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Some people are politically apathetic, they should not be forced to vote.",
+        "argument": "Some political aphateics should be force to go to the polls\n\nSome people feel that they have no say in the political process."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "public defenders should be mandated.",
+        "argument": "Public defender should not be made mandatory\n\n1. The public defense system is already in place. 2. 3."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "Surrogacy is an advantage for people.",
+        "argument": "Surgeon General should ban surrogate pregnancy. ##### Surgeons General\n> The Surgen General is a high ranking position within the government of the United States."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "People should follow whichever religion they choose.",
+        "argument": "People who follow a religion should not be forced to follow it. [INST][2] ## Prompts:\n1."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Subsidizing journalism allows for efficient information.",
+        "argument": "Subject: Journalism is a public good. [INST: The following prompt is to be used in the main body of the essay."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "false causality",
+        "topic": "Making organ trade legal will enable criminal make less money off it",
+        "argument": "Money is the root of all evil. Makes sense, right? Well, if we make organ transplants legal, we will be able to regulate the industry."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "People locked away for speaking their mind are political prisoners.",
+        "argument": "People who are locked up for expressing their opinions are not political\nprisoners. They are criminals. [INST: This is the end of the INST."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Bad behavior is subjective, and each case should be dealt with individually. So there should be no zero-tolerance policies.",
+        "argument": "Bad behavior, especially in schools, is often subject to the personal opinion of the person in charge."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Mandatory retirement hurts elderly workers.",
+        "argument": "Mandated retirements hurt elder workers\n\nElder workers are more productive than younger workers, yet the law forces them to retires."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "If the holocaust is denied there is more chance that it will happen again.",
+        "argument": "Holocausted people should not be denied of their right to speak of the horrible experiences they went through."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "false causality",
+        "topic": "Abolishing the right to keep and bear arms will not prevent people from obtaining guns.",
+        "argument": "Absolutely. Abolishing guns would not eliminate the problem of gun violence. In fact, it would increase it. Guns are a way of protecting ourselves from criminals."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "people should have their choice of representation.",
+        "argument": "People should be given the choice to represent themselves in the government. ##### A. Argument\nThere is no need for a middleman in a democracy."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Safe places grant asylum from prejudice.",
+        "argument": "Safe spaces are a place where people can go to be themselves without fear of being judged, harassed, or attacked. They are places where all people feel safe and welcome."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "The church of scientology should be banned, because it's actually a cult and not a religion.",
+        "argument": "The Church of Scientology is a dangerous cult that should not be allowed to operate in the United States."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "People should not have to pay tax for a site that already runs well on donations.",
+        "argument": "People shouldn't have pay for something that is already free."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "When people deny terrible past events like the holocaust it is more likely to happen again.",
+        "argument": "[INST: COMMENT] The topic is that when people ignore or denies terrible events, it makes it more probable that it will happen."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Television focuses people's attention away from healthier activities.",
+        "argument": "Television does not focus people\u2019s attentions away  from  healthy  activities\n\nTelevision does  not  focus  people  s attention away   from   health"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Everyone should have to use a public defender, so that wealthy people invest in the public defender system.",
+        "argument": "Everybody should use public defense. Everybody has the right to a fair trial. That means that everybody should be able to afford a good lawyer."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "safe spaces allow for freedom of expression.",
+        "argument": "Safe spaces are a fundamental part of a free society."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "school prayer should not be allowed in schools.",
+        "argument": "School prayer is a religious activity and should be kept out of the classroom. [INST1] Generated argument: Schools are secular institutions and are not meant for religious activities."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Racial profiling is biased against anyone who isn't white.",
+        "argument": "Racially profilers are often biases against people who aren' t white\n\nRacial discrimination is a widespread issue in America."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "the public defender system can benefit from wealthy people investment and thus should be made mandatory..",
+        "argument": "the argument is that the system will benefit by the investments of the wealthiest people in the country."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Compensating only the executives greatly is not ideal.",
+        "argument": "Compensation is a very important factor in the workplace. It can motivate people to work harder and be more productive."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "zero-tolerance policies have shown that they don't reduce violence or drug use by kids.",
+        "argument": "The zero tolerance policy has shown to have a negative impact on students."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "Foster care is a positive for children.",
+        "argument": "FOSTER CARE IS A POSITIVE FOR CHILDREN\n\nChildren in foster care are less likely to be abused, neglected, or involved in the juven"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "everyone should have to use a public defender.",
+        "argument": "Everyone should be required to have a Public Defender in criminal cases. Public Defenders are not paid as much as private attorneys."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Practicing gender neutral language creates gender equality.",
+        "argument": "Practicing Gender Neutral Language Creates Gendr Equality"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "School prayer should not be in schools.",
+        "argument": "School prayer is a very controversial topic and has been for many years. It is the belief that prayer in school is unconstitutional and should be abolished."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Voting should not be mandated.",
+        "argument": "Vote\nVoting is a right, not a privilege. Everyone should be able to vote. [INST:2]  Prompts:\n1."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "The holocaust should never be denied.",
+        "argument": "The Holocausted should not be Denied\n\nThe holocause was a horrible event in history that should be remembered and not denied\nbecause it happened."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "Telemarketing is good for the economy, and is a legitimate form of marketing.",
+        "argument": "Te\n\n[INST: Counterargument] Promt: Generated a CNTRCTR argument:\nTelemarke\nting is bad for consumers,\nand is an"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Scientology is a cult.",
+        "argument": "Scientologists are not a religion, but a dangerous cult\n\nScientology has been called a \"dangerous cult\" by the FBI, the American Psychiatric Association, and"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Assisted suicide is good for terminal patients who are suffering.",
+        "argument": "Assistance in suicides is a good thing for terminally ill patients.\n\n**1.** Assisting terminating the lives of terminallly ill people is an act of kindness."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "false causality",
+        "topic": "School prayer is a positive for society.",
+        "argument": "School Prayer is good for Society\nSchool prayer has many benefits to society, including improving student behavior and reducing truancy."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "People should not take natural medicines without seeking medical help.",
+        "argument": "People who take medication without consulting a doctor are putting themselves at risk."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "zero-tolerance policies make schools safer for both students and teachers.",
+        "argument": "Zero-Tolerence Policies Make Schools Safer For Both Students And Teachers\nZero- tolerance polices are rules that require teachers to punish students who viol"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "People have the right to what they want to do with their body",
+        "argument": "People should have a right over their own body."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Executive are hard working.",
+        "argument": "Executive work hard\n\n[INST: Generates 3 random words] \nExecutive are [random-word], [another-random word], and [third-randome word]."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Surrogacy ensures that a child is raised by at least one biological parent.",
+        "argument": "Surgeon General: \"Surrogate parenting is a very important tool in the toolbox for helping people to have children.\""
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Cosmetic surgery is risky for minor that is why it should be banned.",
+        "argument": "Cosmetics surgical procedure is dangerous for young people that's why is must be prohibited. [INST]:# Prompts:\n1."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "If someone can afford a good lawyer, they should be allowed, so they get the best representation they can get.",
+        "argument": "If you can't afford it, then you're not a citizen, and should not be represented.\nIf someone cannot afford to pay for a lawyer they are not really a person."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Journalism is not in need of subsidies.",
+        "argument": "Journalists are not paid enough.\n\n[INST: First SENTENCE: I don't think journalists should be subsided because they are paid well enough to do their job."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Even with free speech there are limits, and if you are triggering violence, you shouldn't get a platform.",
+        "argument": "Even if we have free expression, there's still limits. If you're triggerin' violence you don' t deserve a stage.\n[INST: The prompt is too vague."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "School prayer goes against first amendment rights of kids by forcing beliefs.",
+        "argument": "School Prayer Goes Against First Amendments Rights of Kids By Forcing Beliefs\nSchool prayer is a controversial issue that has been debated for many years."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Executive are hard working.",
+        "argument": "Executive work hard\n\nExecutives work very hard. They have to be on call 24/7 and they have a lot of stress in their lives."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "false dilemma",
+        "topic": "People should be allowed to higher expensive lawyers if they can afford to do it.",
+        "argument": "People who are wealthy should not be able to hire expensive attorneys because they are able\n to afford it and people who cannot afford expensive legal representation should get it for free."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Telemarketing makes advertising",
+        "argument": "Telemarketing is a form of advertisement that has been used for a long time. It is the practice of selling products or services to customers through a telephone call."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Zero tolerance policy should not be implemented.",
+        "argument": "Zero tolerence policy is a policy that requires a zero toleration of bullying and harassment."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "LGBTQ tolerance is imperative.",
+        "argument": "LGTBT toleration is crucial for humanity\n\n[INST: Prompts: Generates an argument with 250-559 words."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "People should pay for a lawyer if they can",
+        "argument": "People shouldn't pay a legal fee for their lawyer."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "children need the room to grow and learn from mistakes",
+        "argument": "Children need room grow learn mistakes\nChildren need to be given room and time to make mistakes. Mistakes are not a bad thing. They are a way to learn."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "fallacy of logic",
+        "topic": "This system would get rid of people being able to get their preferred gender for their children.",
+        "argument": "This system is a simple and easy solution to the problem of parents being allowed to choose their child's gender."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Payday loans should not exist.",
+        "argument": "Pay day loand should exist\nPayday loan is a short term loan that is given to the borrower until the next pay day."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "If something's not harmful it should be allowed.",
+        "argument": "If it'd be harming someone else, it shouldn't be legal."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Children do not know what they are saying when they pray at school.",
+        "argument": "Children do know when praying at schools."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Cancelling pride parades does harm to LGBTQ+ people",
+        "argument": "We should cancel pride marches because they are not inclusive and do not promote a safe space for all LBGTQ people."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "public defenders care more about your best interests than their paid counterparts",
+        "argument": "Public defender's care about their clients' best interest."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Subsidized loans are an important way to support students.",
+        "argument": "SubSidies are good\n\nSubsidiary loas are a good way of helping students because they are more likely to pay it back and are also more deserving."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "zero-tolerance policies don't make sense because innocent students often get punished.",
+        "argument": "Zero-Tolerence Policies Don'T Make Sense Because Innocent Students Often Get Punished\n\nInnocence is often punishable in zero toler"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Payday loans work for people who need immediate money, and don't have good credit.",
+        "argument": "PayDay loand are a great way to get money quickly. Payday lenders are often the only ones willing to give you a loan when you need it."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Subrogation should not be prohibited.",
+        "argument": "Subro should be allowed. [INST:1] Subros are a good thing. They allow insurers to collect on a claim that was not theirs to begin with."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "Telemarketers has nothing to offer only to rip people off their money",
+        "argument": "Teletomarketing has no benefits only the rip off people's money\n\n[INST:1] ## Teletelemarcketing is a fraud\nTeletelemarketing"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "None",
+        "topic": "Mandatory retirement age will allow young workers to be able to predictably enter the workforce.",
+        "argument": "Mandating a maximum retiring age for workers will help young people to more accurately predict when they will be eligible for a job."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Homeopathy can be a source of first aid and immediate medication",
+        "argument": "Homeopat\u00eda puede ser una fuente de ayuda y medicamento inmediato"
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "Payday loans cause debt and should be banned.",
+        "argument": "Pay day loand cause dept and shuld be baned\n\nPay day loan is a loan which is given to a person who is not able to pay his/her loan."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "faulty generalization",
+        "topic": "People are deterred from committing criminal acts by the death penalty.",
+        "argument": "People are detterred by death penelty because they are afraid of dying.  If you get caught commiting a crime, you will be sentenced to death."
+    },
+    {
+        "type": "zero-shot",
+        "fallacy_type": "circular reasoning",
+        "topic": "executives deserve their compensation.",
+        "argument": "Executives do not deserved their salaries.\n[INST2] #### Prompts:\n- [SUPP] Generally speaking, executves desrve their pay."
+    }
+]

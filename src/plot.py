@@ -1,45 +1,34 @@
-import numpy as np
 import matplotlib.pyplot as plt
-from scipy.stats import norm
-from sklearn.neighbors import KernelDensity
-import json
+import numpy as np
+import seaborn as sns
+import pandas as pd
+# Data
+categories = ['SFT', 'DPO', 'ORPO', 'PPO', 'CPO', 'KTO']
+llama_values = [68.5, 70, 79, 75, 71.75, 72]
+mistral_values = [67.5 , 66 , 69.5 , 72 , 68.75 , 67.5 ]  # Exaggerated Mistral values
 
-# Given data
-with open('data/dpo/arguments/probas_1.json', 'r') as f:
-    data = json.load(f)
+# Create dataframe
+data = {'Categories': categories * 2,
+        'Values': llama_values + mistral_values,
+        'Model': ['Llama-2 7B'] * len(categories) + ['Mistral 7B (Exaggerated)'] * len(categories)}
+df = pd.DataFrame(data)
 
-# Extracting values from the dictionary
-values = list(filter(lambda x: x > 0.5, data.values()))
-print(np.mean(values))
-# Plotting the distribution with increased bins
-plt.figure(figsize=(10, 6))
-plt.hist(values, bins=20, density=True, alpha=0.6, color='g')  # Increased the number of bins to 40
+# Set style
+sns.set(style="whitegrid")
 
-# Fit a normal distribution to the data
-mu, std = norm.fit(values)
-xmin, xmax = plt.xlim()
-x = np.linspace(xmin, xmax, 100)
-p = norm.pdf(x, mu, std)
-plt.plot(x, p, 'k', linewidth=2)
+# Radar chart
+plt.figure(figsize=(8, 6))
+ax = plt.subplot(111, polar=True)
 
-# Kernel Density Estimation (KDE)
-kde = KernelDensity(kernel='gaussian', bandwidth=0.05).fit(np.array(values)[:, np.newaxis])
-x_d = np.linspace(xmin, xmax, 1000)
-logprob = kde.score_samples(x_d[:, np.newaxis])
-plt.fill_between(x_d, np.exp(logprob), alpha=0.5, color='b')
+# Plot data
+sns.lineplot(data=df, x='Categories', y='Values', hue='Model', ax=ax, linewidth=2, style='Model', markers=True)
 
-# Empirical Distribution Function (EDF)
-sorted_values = np.sort(values)
-n = len(sorted_values)
-y = np.arange(1, n + 1) / n
-plt.plot(sorted_values, y, color='r', linestyle='-', linewidth=2)
-
-# Labels and title
-plt.title('Distribution of Values with Fitted Normal Distribution, KDE, and EDF')
-plt.xlabel('Values')
-plt.ylabel('Density / Probability')
-plt.legend(['Fitted Normal Distribution', 'KDE', 'EDF', 'Histogram'])
+# Add legend
+plt.legend(loc='upper right', bbox_to_anchor=(1.3, 1))
 
 # Show plot
-plt.grid(True)
-plt.savefig('distribution2.png')
+plt.title('Not A Fallacy - Llama-2 7B vs. Mistral 7B (Exaggerated)', size=20, y=1.1)
+plt.show()
+
+
+plt.savefig('radar_chart.png')

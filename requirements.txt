@@ -7,4 +7,5 @@ pandas
 openai==0.27.2
 peft
 nltk
+scikit-learn
 sentencepiece

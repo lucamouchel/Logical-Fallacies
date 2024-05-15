@@ -26,7 +26,7 @@ class FallacyClassifier(torch.nn.Module):
 
     
 hidden_dim = 256
-output_dim = 13
+output_dim = 2
 dropout = 0.5
 
 criterion = nn.CrossEntropyLoss()
@@ -53,15 +53,26 @@ class CustomDPO(DPOTrainer):
         attention_mask = inputs['rejected_attention_mask'].to(self.args.device)
         rejected_labels = inputs['rejected_labels'].to(self.args.device)
 
-        outs = classifier(input_ids, attention_mask)
-        clf_loss = criterion(outs, rejected_labels)
-        clf_loss.backward()
+        chosen_ids = inputs['chosen_input_ids'].to(self.args.device)
+        chosen_attention_mask = inputs['chosen_attention_mask'].to(self.args.device)
+        chosen_labels = inputs['chosen_labels'].to(self.args.device)
 
+        outs_rejected = classifier(input_ids, attention_mask)
+        outs_chosen = classifier(chosen_ids, chosen_attention_mask)
+
+        outputs = torch.cat((outs_rejected, outs_chosen), dim=0)  # shape (2 * batch_size, 2)
+
+        # Create the targets
+        targets_rejected = torch.zeros(outs_rejected.size(0), dtype=torch.long).to(self.args.device)  # shape (batch_size,)
+        targets_chosen = torch.ones(outs_chosen.size(0), dtype=torch.long).to(self.args.device)  # shape (batch_size,)
+        targets = torch.cat((targets_rejected, targets_chosen), dim=0)  # shape (2 * batch_size,)
+        
+        clf_loss = criterion(outputs, targets)
+        
 
         lambda_ = 0.2
-        print(loss) 
-        loss = loss.to(self.args.device) + (lambda_ * clf_loss).to(self.args.device)
-        print(loss)
+        loss = (loss +lambda_ * clf_loss).to(self.args.device)
+        loss.backward()
         self.store_metrics(metrics, train_eval="train")
 
         if return_outputs:
