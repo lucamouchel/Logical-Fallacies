@@ -134,7 +134,8 @@ def get_training_args(args):
             warmup_steps=args.warmup_steps,                           
             weight_decay=args.weight_decay,                         
             adam_epsilon=args.adam_epsilon,                         
-            save_steps=args.save_steps,                       
+            save_steps=args.save_steps,            
+            eval_steps=2,           
             logging_steps=args.logging_steps,                      
             save_total_limit=2,                         
             gradient_accumulation_steps=args.gradient_accumulation_steps

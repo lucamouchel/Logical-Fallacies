@@ -4,7 +4,7 @@ import torch
 from transformers import BertModel, BertTokenizer
 import torch.nn as nn
 from contextlib import contextmanager, nullcontext
-
+import torch.nn.functional as F
 from transformers import PreTrainedModel
 
 class FallacyClassifier(torch.nn.Module):
@@ -21,12 +21,12 @@ class FallacyClassifier(torch.nn.Module):
     def forward(self, input_ids, attention_mask):
         with torch.no_grad():
             outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        pooled_output = outputs.pooler_output  # Use the pooled output for classification
+        pooled_output = outputs.pooler_output
         return self.classifier(pooled_output)
 
     
 hidden_dim = 256
-output_dim = 2
+output_dim = 1
 dropout = 0.5
 
 criterion = nn.CrossEntropyLoss()
@@ -35,46 +35,164 @@ classifier = FallacyClassifier(hidden_dim, output_dim, dropout).to('cuda')
 class CustomDPO(DPOTrainer):
     def __init__(self, *args, **kwargs):
         super(CustomDPO, self).__init__(*args, **kwargs)
-    
-    def compute_loss(
+        self.fallacy_clf = classifier
+
+    def get_batch_loss_metrics(
         self,
-        model: Union[PreTrainedModel, nn.Module],
-        inputs: Dict[str, Union[torch.Tensor, Any]],
-        return_outputs=False,
-    ) -> Union[torch.Tensor, Tuple[torch.Tensor, Dict[str, torch.Tensor]]]:
-     
-        compute_loss_context_manager = torch.cuda.amp.autocast if self._peft_has_been_casted_to_bf16 else nullcontext
+        model,
+        batch: Dict[str, Union[List, torch.LongTensor]],
+        train_eval: Literal["train", "eval"] = "train",
+    ):
+        """Compute the DPO loss and other metrics for the given batch of inputs for train or test."""
+        metrics = {}
+        (
+            policy_chosen_logps,
+            policy_rejected_logps,
+            policy_chosen_logits,
+            policy_rejected_logits,
+        ) = self.concatenated_forward(model, batch)
 
+        # if reference_chosen_logps and reference_rejected_logps in batch use them, otherwise use the reference model
+        if "reference_chosen_logps" in batch and "reference_rejected_logps" in batch:
+            reference_chosen_logps = batch["reference_chosen_logps"]
+            reference_rejected_logps = batch["reference_rejected_logps"]
+        else:
+            with torch.no_grad():
+                if self.ref_model is None:
+                    with self.null_ref_context():
+                        (
+                            reference_chosen_logps,
+                            reference_rejected_logps,
+                            _,
+                            _,
+                        ) = self.concatenated_forward(self.model, batch)
+                else:
+                    (
+                        reference_chosen_logps,
+                        reference_rejected_logps,
+                        _,
+                        _,
+                    ) = self.concatenated_forward(self.ref_model, batch)
 
-        with compute_loss_context_manager():
-            loss, metrics = self.get_batch_loss_metrics(model, inputs, train_eval="train")
+        losses, chosen_rewards, rejected_rewards = self.dpo_loss(
+            policy_chosen_logps,
+            policy_rejected_logps,
+            reference_chosen_logps,
+            reference_rejected_logps,
+            fallacy_clf=classifier,
+            chosen_inputs={'input_ids': batch['chosen_input_ids'], 'attention_mask': batch['chosen_attention_mask']},
+            rejected_inputs={'input_ids': batch['rejected_input_ids'], 'attention_mask': batch['rejected_attention_mask']}
+        )
+        reward_accuracies = (chosen_rewards > rejected_rewards).float()
 
-        input_ids = inputs['rejected_input_ids'].to(self.args.device)
-        attention_mask = inputs['rejected_attention_mask'].to(self.args.device)
-        rejected_labels = inputs['rejected_labels'].to(self.args.device)
+        prefix = "eval_" if train_eval == "eval" else ""
+        metrics[f"{prefix}rewards/chosen"] = chosen_rewards.mean().cpu()
+        metrics[f"{prefix}rewards/rejected"] = rejected_rewards.mean().cpu()
+        metrics[f"{prefix}rewards/accuracies"] = reward_accuracies.mean().cpu()
+        metrics[f"{prefix}rewards/margins"] = (chosen_rewards - rejected_rewards).mean().cpu()
+        metrics[f"{prefix}logps/rejected"] = policy_rejected_logps.detach().mean().cpu()
+        metrics[f"{prefix}logps/chosen"] = policy_chosen_logps.detach().mean().cpu()
+        metrics[f"{prefix}logits/rejected"] = policy_rejected_logits.detach().mean().cpu()
+        metrics[f"{prefix}logits/chosen"] = policy_chosen_logits.detach().mean().cpu()
 
-        chosen_ids = inputs['chosen_input_ids'].to(self.args.device)
-        chosen_attention_mask = inputs['chosen_attention_mask'].to(self.args.device)
-        chosen_labels = inputs['chosen_labels'].to(self.args.device)
+        return losses.mean(), metrics
 
-        outs_rejected = classifier(input_ids, attention_mask)
-        outs_chosen = classifier(chosen_ids, chosen_attention_mask)
+    def dpo_loss(
+        self,
+        policy_chosen_logps: torch.FloatTensor,
+        policy_rejected_logps: torch.FloatTensor,
+        reference_chosen_logps: torch.FloatTensor,
+        reference_rejected_logps: torch.FloatTensor,
+        fallacy_clf: nn.Module = None,
+        chosen_inputs=None,
+        rejected_inputs=None,
+    ) -> Tuple[torch.FloatTensor, torch.FloatTensor, torch.FloatTensor]:
+        """Compute the DPO loss for a batch of policy and reference model log probabilities.
 
-        outputs = torch.cat((outs_rejected, outs_chosen), dim=0)  # shape (2 * batch_size, 2)
+        Args:
+            policy_chosen_logps: Log probabilities of the policy model for the chosen responses. Shape: (batch_size,)
+            policy_rejected_logps: Log probabilities of the policy model for the rejected responses. Shape: (batch_size,)
+            reference_chosen_logps: Log probabilities of the reference model for the chosen responses. Shape: (batch_size,)
+            reference_rejected_logps: Log probabilities of the reference model for the rejected responses. Shape: (batch_size,)
 
-        # Create the targets
-        targets_rejected = torch.zeros(outs_rejected.size(0), dtype=torch.long).to(self.args.device)  # shape (batch_size,)
-        targets_chosen = torch.ones(outs_chosen.size(0), dtype=torch.long).to(self.args.device)  # shape (batch_size,)
-        targets = torch.cat((targets_rejected, targets_chosen), dim=0)  # shape (2 * batch_size,)
+        Returns:
+            A tuple of three tensors: (losses, chosen_rewards, rejected_rewards).
+            The losses tensor contains the DPO loss for each example in the batch.
+            The chosen_rewards and rejected_rewards tensors contain the rewards for the chosen and rejected responses, respectively.
+        """
+        pi_logratios = policy_chosen_logps - policy_rejected_logps
+        if self.reference_free:
+            ref_logratios = torch.tensor([0], dtype=pi_logratios.dtype, device=pi_logratios.device)
+        else:
+            ref_logratios = reference_chosen_logps - reference_rejected_logps
+
+        pi_logratios = pi_logratios.to(self.accelerator.device)
+        ref_logratios = ref_logratios.to(self.accelerator.device)
+        logits = pi_logratios - ref_logratios
+
+        # The beta is a temperature parameter for the DPO loss, typically something in the range of 0.1 to 0.5.
+        # We ignore the reference model as beta -> 0. The label_smoothing parameter encodes our uncertainty about the labels and
+        # calculates a conservative DPO loss.
+        if self.loss_type == "sigmoid":
+            losses = (
+                -F.logsigmoid(self.beta * logits) * (1 - self.label_smoothing)
+                - F.logsigmoid(-self.beta * logits) * self.label_smoothing
+            )
+
+        elif self.loss_type == "hinge":
+            losses = torch.relu(1 - self.beta * logits)
+        elif self.loss_type == "ipo":
+            # eqn (17) of the paper where beta is the regularization parameter for the IPO loss, denoted by tau in the paper.
+            losses = (logits - 1 / (2 * self.beta)) ** 2
+        elif self.loss_type == "kto_pair":
+            # eqn (7) of the HALOs paper
+            chosen_KL = (policy_chosen_logps - reference_chosen_logps).mean().clamp(min=0)
+            rejected_KL = (policy_rejected_logps - reference_rejected_logps).mean().clamp(min=0)
+
+            chosen_logratios = policy_chosen_logps - reference_chosen_logps
+            rejected_logratios = policy_rejected_logps - reference_rejected_logps
+            # As described in the KTO report, the KL term for chosen (rejected) is estimated using the rejected (chosen) half.
+            losses = torch.cat(
+                (
+                    1 - F.sigmoid(self.beta * (chosen_logratios - rejected_KL)),
+                    1 - F.sigmoid(self.beta * (chosen_KL - rejected_logratios)),
+                ),
+                0,
+            )
+        else:
+            raise ValueError(
+                f"Unknown loss type: {self.loss_type}. Should be one of ['sigmoid', 'hinge', 'ipo', 'kto_pair']"
+            )
         
-        clf_loss = criterion(outputs, targets)
-        
+        if fallacy_clf:
+            chosen_logits = fallacy_clf(**chosen_inputs)
+            rejected_logits = fallacy_clf(**rejected_inputs)
+            criterion = nn.BCEWithLogitsLoss()
+            binary_labels = torch.cat([torch.ones_like(chosen_logits), torch.zeros_like(rejected_logits)], dim=0)
+            chosen_logits_flat = chosen_logits.view(-1)
+            
+            rejected_logits_flat = rejected_logits.view(-1)
+            binary_labels_flat = binary_labels.view(-1)
 
-        lambda_ = 0.2
-        loss = (loss +lambda_ * clf_loss).to(self.args.device)
-        loss.backward()
-        self.store_metrics(metrics, train_eval="train")
+            # Compute binary classification loss
+            binary_classification_loss = criterion(
+                torch.cat([chosen_logits_flat, rejected_logits_flat], dim=0), binary_labels_flat
+            )
 
-        if return_outputs:
-            return (loss, metrics)
-        return loss
+            losses = losses.mean()
+            losses = losses + binary_classification_loss ## add losses together
+
+            classifier_chosen_scores = torch.sigmoid(chosen_logits).detach().squeeze(-1) 
+            classifier_rejected_scores = torch.sigmoid(rejected_logits).detach().squeeze(-1) 
+
+        chosen_rewards = (
+            (self.beta * classifier_chosen_scores) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
+            * (policy_chosen_logps.to(self.accelerator.device) - reference_chosen_logps.to(self.accelerator.device))
+            .detach()
+        ) 
+        rejected_rewards = (
+            (self.beta * (1-classifier_rejected_scores)) ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
+            * (policy_rejected_logps.to(self.accelerator.device) - reference_rejected_logps.to(self.accelerator.device)).detach()
+        )
+
+        return losses, chosen_rewards, rejected_rewards
