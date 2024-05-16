@@ -14,7 +14,7 @@ from tqdm import tqdm
 import gc
 import sys 
 sys.path.append('src/')
-from DPO.custom_dpo import CustomDPO
+from custom_dpo_trainer import CustomDPO
 
 from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM

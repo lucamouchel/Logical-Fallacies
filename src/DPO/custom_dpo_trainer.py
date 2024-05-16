@@ -164,6 +164,7 @@ class CustomDPO(DPOTrainer):
                 f"Unknown loss type: {self.loss_type}. Should be one of ['sigmoid', 'hinge', 'ipo', 'kto_pair']"
             )
         
+        ####### MODIFS HERE
         if fallacy_clf:
             chosen_logits = fallacy_clf(**chosen_inputs)
             rejected_logits = fallacy_clf(**rejected_inputs)
@@ -194,5 +195,9 @@ class CustomDPO(DPOTrainer):
             (self.beta * (1-classifier_rejected_scores)) ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
             * (policy_rejected_logps.to(self.accelerator.device) - reference_rejected_logps.to(self.accelerator.device)).detach()
         )
+
+        print(losses)
+        print(chosen_rewards)
+        print(rejected_rewards)
 
         return losses, chosen_rewards, rejected_rewards
