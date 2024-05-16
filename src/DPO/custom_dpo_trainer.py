@@ -6,11 +6,14 @@ import torch.nn as nn
 from contextlib import contextmanager, nullcontext
 import torch.nn.functional as F
 from transformers import PreTrainedModel
+import torch.optim as optim
 
+# Inside CustomDPO class __init__ method
 class FallacyClassifier(torch.nn.Module):
     def __init__(self, hidden_dim, output_dim, dropout):
         super(FallacyClassifier, self).__init__()
         self.bert = BertModel.from_pretrained('bert-base-uncased')
+
         self.classifier = nn.Sequential(
             nn.Linear(self.bert.config.hidden_size, hidden_dim),
             nn.ReLU(),
@@ -30,12 +33,13 @@ output_dim = 1
 dropout = 0.5
 
 criterion = nn.CrossEntropyLoss()
-classifier = FallacyClassifier(hidden_dim, output_dim, dropout).to('cuda')
+
 
 class CustomDPO(DPOTrainer):
     def __init__(self, *args, **kwargs):
         super(CustomDPO, self).__init__(*args, **kwargs)
-        self.fallacy_clf = classifier
+        self.fallacy_clf = FallacyClassifier(hidden_dim, output_dim, dropout).to('cuda')
+        self.optimizer = optim.Adam(self.fallacy_clf.parameters(), lr=1e-4)
 
     def get_batch_loss_metrics(
         self,
@@ -79,7 +83,7 @@ class CustomDPO(DPOTrainer):
             policy_rejected_logps,
             reference_chosen_logps,
             reference_rejected_logps,
-            fallacy_clf=classifier,
+            fallacy_clf=self.fallacy_clf,
             chosen_inputs={'input_ids': batch['chosen_input_ids'], 'attention_mask': batch['chosen_attention_mask']},
             rejected_inputs={'input_ids': batch['rejected_input_ids'], 'attention_mask': batch['rejected_attention_mask']}
         )
@@ -168,23 +172,29 @@ class CustomDPO(DPOTrainer):
         if fallacy_clf:
             chosen_logits = fallacy_clf(**chosen_inputs)
             rejected_logits = fallacy_clf(**rejected_inputs)
-            criterion = nn.BCEWithLogitsLoss()
             binary_labels = torch.cat([torch.ones_like(chosen_logits), torch.zeros_like(rejected_logits)], dim=0)
-            chosen_logits_flat = chosen_logits.view(-1)
-            
-            rejected_logits_flat = rejected_logits.view(-1)
-            binary_labels_flat = binary_labels.view(-1)
-
-            # Compute binary classification loss
+        
             binary_classification_loss = criterion(
-                torch.cat([chosen_logits_flat, rejected_logits_flat], dim=0), binary_labels_flat
+                torch.cat([chosen_logits.view(-1), rejected_logits.view(-1)], dim=0), binary_labels.view(-1)
             )
 
+            
             losses = losses.mean()
             losses = losses + binary_classification_loss ## add losses together
 
+
             classifier_chosen_scores = torch.sigmoid(chosen_logits).detach().squeeze(-1) 
             classifier_rejected_scores = torch.sigmoid(rejected_logits).detach().squeeze(-1) 
+
+            fallacy_clf.zero_grad()
+
+            nn.utils.clip_grad_norm_(fallacy_clf.parameters(), max_norm=1.0)  
+            self.optimizer.step()
+            self.optimizer.zero_grad()  
+
+        else:
+            classifier_chosen_scores = 1
+            classifier_rejected_scores = 1
 
         chosen_rewards = (
             (self.beta * classifier_chosen_scores) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
