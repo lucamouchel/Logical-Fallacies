@@ -1,13 +1,11 @@
 from trl import DPOTrainer
 from typing import Any, Callable, Dict, List, Literal, Optional, Tuple, Union
 import torch 
-from transformers import BertModel, BertTokenizer
+from transformers import BertModel, BertTokenizer, AutoModelForSequenceClassification
 import torch.nn as nn
-from contextlib import contextmanager, nullcontext
 import torch.nn.functional as F
 from transformers import PreTrainedModel
 import torch.optim as optim
-
 # Inside CustomDPO class __init__ method
 class FallacyClassifier(torch.nn.Module):
     def __init__(self, hidden_dim, output_dim, dropout):
@@ -38,9 +36,11 @@ criterion = nn.CrossEntropyLoss()
 class CustomDPO(DPOTrainer):
     def __init__(self, *args, **kwargs):
         super(CustomDPO, self).__init__(*args, **kwargs)
-        self.fallacy_clf = FallacyClassifier(hidden_dim, output_dim, dropout).to('cuda')
-        self.optimizer = optim.Adam(self.fallacy_clf.parameters(), lr=1e-4)
-
+        self.fallacy_clf = AutoModelForSequenceClassification.from_pretrained('models/fallacy_clf/howey_electra-large-mnli', num_labels=2).to('cuda')
+        self.optimizer = optim.AdamW(
+            list(self.model.parameters()) + list(self.fallacy_clf.parameters()),
+            lr=self.args.learning_rate
+        )
     def get_batch_loss_metrics(
         self,
         model,
@@ -170,44 +170,56 @@ class CustomDPO(DPOTrainer):
         
         ####### MODIFS HERE
         if fallacy_clf:
-            chosen_logits = fallacy_clf(**chosen_inputs)
-            rejected_logits = fallacy_clf(**rejected_inputs)
-            binary_labels = torch.cat([torch.ones_like(chosen_logits), torch.zeros_like(rejected_logits)], dim=0)
-        
-            binary_classification_loss = criterion(
-                torch.cat([chosen_logits.view(-1), rejected_logits.view(-1)], dim=0), binary_labels.view(-1)
-            )
+            chosen_logits = fallacy_clf(**chosen_inputs).logits[:,1]
+            rejected_logits = fallacy_clf(**rejected_inputs).logits[:,1]
+
+
+            classifier_chosen_scores = F.logsigmoid(chosen_logits).squeeze(-1)  # assuming logits are (batch_size, 1)
+            classifier_rejected_scores = F.logsigmoid(rejected_logits).squeeze(-1)  # assuming logits are (batch_size, 1)
 
             
-            losses = losses.mean()
-            losses = losses + binary_classification_loss ## add losses together
-
-
-            classifier_chosen_scores = torch.sigmoid(chosen_logits).detach().squeeze(-1) 
-            classifier_rejected_scores = torch.sigmoid(rejected_logits).detach().squeeze(-1) 
-
-            fallacy_clf.zero_grad()
-
-            nn.utils.clip_grad_norm_(fallacy_clf.parameters(), max_norm=1.0)  
-            self.optimizer.step()
-            self.optimizer.zero_grad()  
-
+            ## we want to reduce loss if the chosen score is higher than the rejected score
+            ## so we do 1-classifier_chosen_scores + classifier_rejected_scores. 
+            # We want the loss to increase if the classifier is confident that the chosen score is a fallacy
+            fallacy_penalty = (1 + classifier_chosen_scores) - classifier_rejected_scores
+            losses = losses + 0.6*fallacy_penalty
         else:
             classifier_chosen_scores = 1
             classifier_rejected_scores = 1
 
+        ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the chosen sample - hence 1-sigmoid
         chosen_rewards = (
-            (self.beta * classifier_chosen_scores) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
+            (self.beta * (2*classifier_chosen_scores)) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
             * (policy_chosen_logps.to(self.accelerator.device) - reference_chosen_logps.to(self.accelerator.device))
             .detach()
         ) 
+
+        ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the rejected sample - hence 1-sigmoid
         rejected_rewards = (
-            (self.beta * (1-classifier_rejected_scores)) ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
-            * (policy_rejected_logps.to(self.accelerator.device) - reference_rejected_logps.to(self.accelerator.device)).detach()
+            (self.beta * 2* (1-classifier_rejected_scores)) ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
+            * (policy_rejected_logps.to(self.accelerator.device) - reference_rejected_logps.to(self.accelerator.device))
+            .detach()
         )
 
-        print(losses)
-        print(chosen_rewards)
-        print(rejected_rewards)
-
         return losses, chosen_rewards, rejected_rewards
+
+    
+    def training_step(self, model: nn.Module, inputs: Dict[str, Union[torch.Tensor, Any]]) -> torch.Tensor:
+        model.train()
+        self.fallacy_clf.train()
+        inputs = self._prepare_inputs(inputs)
+
+
+        with self.compute_loss_context_manager():
+            loss = self.compute_loss(model, inputs)
+
+        if self.args.n_gpu > 1:
+            loss = loss.mean() 
+        
+        self.optimizer.zero_grad()
+        self.accelerator.backward(loss)
+        self.optimizer.step()
+
+        return loss.detach() / self.args.gradient_accumulation_steps
+
+

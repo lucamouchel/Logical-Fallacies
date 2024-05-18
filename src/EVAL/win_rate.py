@@ -53,19 +53,25 @@ def main():
     
     with open(f'results/{args.model_name}/sft_args.json', 'r') as f:
         sft_args = json.load(f)
-        
-    combinations = [['sft', 'kto'], ['sft', 'cpo']]
+        sft_args = [arg[1] for arg in sft_args]
+
+    combinations = [['sft', 'dpo_custom']]
     for combination in combinations:
         to_compare = combination[1]
         if to_compare != 'human':
-            with open(f'results/{args.model_name}/{combination[1]}_args.json', 'r') as f:
+            with open(f'results/{args.model_name}/{combination[1]}.json', 'r') as f:
                 arguments = json.load(f)
+                arguments = [arg[1] for arg in arguments]
 
         wins = {'sft': 0, to_compare: 0, 'tie': 0}
         for i, entry in tqdm(test_set.iterrows()):
+            if i == len(sft_args)-1:
+                break
+
             if i % 201 == 0 and i != 0:
                 print("going to sleep to not overcook gpt4")
                 time.sleep(60) 
+
             topic = entry.topic
             stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
             y_sft = sft_args[i]
@@ -84,6 +90,9 @@ def main():
                     wins[to_compare] += 1
                 elif response == 3:
                     wins['tie'] += 1
+
+                if i%10 == 0:
+                    print(wins)
             except:
                 save_to(wins, name='wins.json', output_dir=f'results/{args.model_name}/')
                 continue

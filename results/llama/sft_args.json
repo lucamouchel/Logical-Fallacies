@@ -1,402 +1,802 @@
 [
-    "Cosmetics surgury is not dangerous.",
-    "The Lgbt community is a minority.",
-    "Subidized student loan payments are a good thing.",
-    "Gender is a defining characteristic of humanity.",
-    "The loudest people have the most power.  If you change the laws, the loud people will be happy.",
-    "Parades celebrating homsexual behavior are not good for society.",
-    "Journalists are not making enough money.",
-    "Child actor's lives are not normal.",
-    "Laws should be for everyone.  If a law is unfair, it should change.",
-    "Prostitution is illegal in many countries and it should be made illegal globally.",
-    "Compensation should not be based on what a company decides.",
-    "People have a right not to trust the medical profession.",
-    "Surrogates are not exploited because they are paid.",
-    "Economic sanctions are effective because they force countries to change their ways.",
-    "Naturoapthy is not safe.",
-    "Television is a great way to teach kiddos.",
-    "IP rights are not a right.  They are a privilege.",
-    "Homepathic medicine is not regulated.",
-    "Television is not good for kiddos.",
-    "Stays at homes dads are lazy.",
-    "An unnatural pregancy should not be allowed.",
-    "Cosmestic surgury for kids is dangerous.",
-    "Racially profilings is a way to keep people safe.",
-    "Capital punishments are necessary to protect society.",
-    "Safer spaces are not needed.",
-    "IP is a scam.  It is not a legitimate protection for inventors.",
-    "Safe spaces do not allow people to learn how to deal with conflict.",
-    "Women are not slaves.  They should not be forced to do anything.",
-    "Old adults have experience, and they are more productive.",
-    "Homepathy is not regulated and can lead to serious problems.",
-    "Naturopathic medicine is not as effective as other medicine.",
-    "People have the right of self defense.",
-    "Capital Punishment should be abolished.",
-    "Exploring space is not important.  It's a waste of time and money.",
-    "Economics sanctions are meant to affect the government and not the people.",
-    "Legalizing sex selection is wrong.  It is immoral.",
-    "Stay at Home Dads are not equal to stay home Moms.",
-    "A two- party system works well.",
-    "People are not entitled to their basic needs, and they should work to get them.",
-    "The gun control laws should be enforced.",
-    "Prohibiting prostitution is not a bad thing.",
-    "Capital punishments are a part of the law.",
-    "The black markets are a large part of the economy.  They are not going away.",
-    "Being virgins is not a bad thing.  It is better to be a Virgin than a slut.",
-    "A company needs to be competitive.  Older employees may not be as competitve.",
-    "Having weapon protects citizens from crime.",
-    "Surrogacy is exploitative.",
-    "Retiring is a way to end a career.",
-    "Economics sanctions are not very harsh.",
-    "Cosmestic surgury for children should not be illegal.",
-    "Television is not a necessary.  It is an entertainment.",
-    "Naturoapthy is safe.",
-    "A two-part system is more efficient.",
-    "Televangelists are intruding on people's privacy.",
-    "Being an actor is a good way for children to make money.",
-    "Not everyone can vote.",
-    "A child might not be able to be raised by the surrogeate.",
-    "Telementary is a great way to make money.",
-    "Judicial imparity is a myth.",
-    "Alternative medicine is not a real medicine.  It is a placebo.",
-    "Sex selection is a choice and it is not a bias.",
-    "A gender-neutral language is expensive.",
-    "Miners are old and wise enough.",
-    "Genders are different.  It is important to use gender specific language.",
-    "Bans on weapon can limit arms holder.",
-    "People are more likely to support a party of their interest if there is more than one party.",
-    "Capital punishments are not cruel.  They are the most humane way to deal with criminals.",
-    "A multiparty system is a complex system that can be difficult to manage.",
-    "Professional people are not always needed.  People with no professional training can do good things.",
-    "Economy sanctioning is a good way to control bad behavior.",
-    "Prostitution is not a safe profession.",
-    "Bans on weapons should be enforced.",
-    "Flagg are symbols of a nation.",
-    "Intellectual property is a good thing.  It protects people's ideas.",
-    "Capital Punishment is a serious punishement that can dter crime and criminals.",
-    "Mandatory age retirements are needed to keep the workforce diverse.",
-    "Whales are not cattle.  They are a different species.",
-    "Child actor regulations are not needed.  Children should have the right to pursue their dreams.",
-    "Creating safe space for people who need it can help them.",
-    "Not all people believe in the same thing.  Some people do not believe.",
-    "Fostering children is not a good idea.",
-    "Space travel is expensive and not necessary.",
-    "Higher education is already available.",
-    "Capital Punishment does not deters crime because criminals are not rational.",
-    "Legalising prostitution doesn't reduce the disease risk.  It only moves it underground.",
-    "Stays at Home Dads do not have a good reason to stay home.",
-    "Prohibiting prostitution will keep people from being exploited.",
-    "Student loan is not a right, it is a privilege.",
-    "Freedom of expression is a right that should be protected.",
-    "Space explorations is a good investment.",
-    "Surrogacies are not always successful.",
-    "Public defender are not always good.",
-    "People who are in a safe place are not vulnerables.",
-    "People should not be forced to follow a religion.",
-    "Black market sales will continue.",
-    "Freedom of expression is not important.",
-    "Everyone should have a voice in government.  If they are not voting, then they do not have that voice.",
-    "Children need to learn that they are not allowed to break the rules.",
-    "Legally trading organs would not exploiting the rich.",
-    "Public defenders help to ensure that the right to a defense is upheld.",
-    "The Church of Scientology has the right to be secret.  It is not a crime to keep your religion private.",
-    "People should not be allowed to make choices about voting.",
-    "Defense counsels are important in ensuring that defendants are not imprison without a fair trial.",
-    "The fostering system provides stability for kids.",
-    "People should not hunt.",
-    "The church has been accused of many things.  It should be shut down.",
-    "Company conflicts can not be blamed on members.",
-    "People who are religious want to pray in school.",
-    "Abandoning intellectual property rights would not have any negative effects.",
-    "Zero tolerances are needed to keep order in schools.",
-    "Companies should compensate all employees.",
-    "Criminals don' t have free speach.",
-    "Multi party systems are more complicated than single party.",
-    "Bullying is wrong, and punishing both parties is not the answer.",
-    "A woman should not be forced to bear a child.",
-    "Kiddies should be protected from exposure to other religion's prayers.",
-    "An executive is not more valuable than a worker.  They have the same job.",
-    "If someone is in the military, then they are not allowed to have any choice of lawyer, so why should a civilian have that right?",
-    "Judicial Activism can be dangerous.",
-    "Holocast deniers are dangerous.",
-    "When an executive is compensation well it does not mean they will work hard.  They can just be lazy.",
-    "An executive is more responsible for a company's success.  They should be paid more.",
-    "Forcing prayer is not a bad thing.",
-    "People should have the right to defend themselves.",
-    "Televangelists should not be restricted.",
-    "Retiring is a good idea.",
-    "Punishing a child for not praying is not fair.",
-    "Men have been controlling women for a long time.  By making prostitition illegal men can continue to control women.",
-    "Freedoms are not absolute.  Religion is no exception.",
-    "Our voting systems are good.  They are not perfect, but they are the best we have.",
-    "Zero- tolerance policies are not harassing.",
-    "Pupils should be allowed to pray in school.",
-    "Some people don't have the money to support a stay at home parent.",
-    "Voting is a right and duty of citizens.",
-    "Public defender are not as good as private ones.",
-    "Surrogacies are dangerous for children.",
-    "People shouldn't be forced to follow a religion.",
-    "Subscribing to journalistic publications is a choice.",
-    "Organ trade is a crime.  It is illegal.",
-    "Political prisoners are not criminals.  They are people who speak their minds.",
-    "Zero- tolerance policy helps to avoid confusion.",
-    "Mandated retirements protect workers from being overworked.",
-    "The holocast is not a myth.  It happened.",
-    "People who have guns will continue to have them, so abolishing guns is a good idea.",
-    "Representation is a right, not a choice.",
-    "Safer places are free from discrimination.",
-    "Scientology is a dangerous cult.",
-    "People are already donating to the site.  It does not need to be taxed.",
-    "The holocast is a terrible event that will never be repeated.  It is not likely that people will denying it.",
-    "Television is a way to learn about other cultures.",
-    "People should be able to hire a private attorney.  Private attorneys are more experienced and have more time to devote to the",
-    "Safe spaces are not a good idea.  They allow people to be free with their speech.",
-    "School prayer is a right of freedom of religion.",
-    "Racially profilings is not biases.  It is a way to identify people who are committing crimes.",
-    "Public defenders are not meant to be wealth dependent.",
-    "Companies should not be allowed to pay executors more than the workers.",
-    "Zero- tolerance is a good policy to have in schools.",
-    "Fostering is not a good thing for a child.",
-    "Public defenders are free.",
-    "Gender neutrality is not the same as gender equity.  Equity means everyone is treated equally.",
-    "Schools should be a place where all religions are respected.",
-    "Voters should be required to vote.",
-    "The Holocausted should not be taught in school.",
-    "Televangelism is legal.",
-    "Scientologists are not forced to participate.",
-    "Assisting suicides is wrong.",
-    "Schools should not be used to promote religion.",
-    "Natural medication is safe and effective.",
-    "Zero- tolerance makes students feel unsafe.",
-    "People do not have a right when it comes to their bodies.  They should not be allowed to kill themselves.",
-    "Executive work too much.",
-    "Surrogacies can be dangerous for children.",
-    "Cosmestic surgury is not riskey for minors.",
-    "Everyone should have access to the same quality of lawyer.",
-    "Journalists can make a living.",
-    "People should be able to say what they want, even if it is offensive.",
-    "Schools should not be allowed to have prayer.  It is a violation of the first and 14th ammendments.",
-    "Executive do not work hard.",
-    "People are not allowed money for things they don't need.",
-    "Televangelists are not telemarks.  They are religious people.",
-    "Zero-tolerance policies are unfair.",
-    "Lgbtq toleration is not imperitive.",
-    "People who can afford a good lawyer should do so.  If they cannot afford one, they should not be able to have a fair trial.",
-    "Children need to be sheltered from their mistakes.  It is better to protect them from the world.",
-    "This would allow for people to be more honest about their gender.",
-    "Pay day loas are not bad for everyone.",
-    "If it'll cause harm, it shouldn't be legal.",
-    "Children are capable of praying at a young age.",
-    "Pride paraders can find other ways to celebrate their pride.",
-    "Public defender's are not paid well enough to care about you.",
-    "Subidizing loas is not necessary.",
-    "Zero- tolerance is a way to keep order in schools.",
-    "Pay day loasns are very expensive.",
-    "Subroagation is not a good idea.",
-    "Telementers can offer a lot of things.",
-    "Mandating a retiring age can be discriminatory.",
-    "Homepathy is a natural medicine.",
-    "Pay day loan companies are a service that helps people in need.",
-    "The death sentence deters people from crime.",
-    "Executives work hard and deserved their pay.",
-    "Zero tolerances can be too harsh.",
-    "More usage would mean more people would be represented.  This would help make the trias fair.",
-    "Body parts should be sold.",
-    "A vowed celibeacy is not a requirement for anyone.",
-    "School is a place of learning, and prayer is an important part of many religions.",
-    "School prayer is a personal choice.  It does not force religion.",
-    "Substantially subsidized wiki would not be sustainable.",
-    "Payday loan companies are predatory.  Regulation could help to fix this.",
-    "Foster care does not help children.",
-    "Zero tolerances policies are strict.",
-    "Schools are a place for learning.  Religion is not necessary to learn.",
-    "Fostering is a noble cause.  Children need to be cared for and foster care is the best way to do that.",
-    "Public defender law is a good way to start in the field of law.",
-    "Compensation is a personal matter.",
-    "Breaks at work are important.",
-    "Plastics surgury is not necessary.",
-    "Public defense is not a right.",
-    "Schools are a place of learning.  They should be uniform.",
-    "Parades celebrating homossexual marriage are not harmful.",
-    "People who have multiple offenses should not be treated as lightly as others who commit a single offense.",
-    "People should be able to choose whether or not to go to the polls.  Forced voting is not a good idea.",
-    "Public defenders are not always the best.  They can be too busy.",
-    "Compulsion is necessary for some things.",
-    "School children should be able to express themselves.",
-    "Executives are paid too much.",
-    "People should be able to pick their defenders.  It is a right.",
-    "Celiacs are more likely to be responsible with their sexuality.",
-    "Studying is a serious thing.  Dressing inappropriately is distracting.",
-    "Whales are a valuable source of food.",
-    "Pay day loan companies are not the only ones that can provide loands.",
-    "Sales are not always good for everyone.  Some people are exploited.",
-    "Three strike laws do not help crime.",
-    "This would not get people their desired gender.  It would just make sure that they have a gender that is safe.",
-    "Poorer people do not have the same opportunities as richer people.",
-    "Subsidies are not a solution to unemploymnet.",
-    "The flag is a symbol of the nation.  It does not have to be desacrated to show disrespect.",
-    "Bans will help businesses.",
-    "Student loan debt is too high.",
-    "Safe spaces are not necessary.",
-    "Schools should not be able to dictate what a child wears.",
-    "The 3 strikers law does not work.",
-    "Student loan debt is a major problem.  It is not fair to subsudize it.",
-    "Activists often push for leniency in judgement.",
-    "People have the right to choose who they want to defend them.",
-    "Whales are not endangerded.  They are a common species.",
-    "Lawyers should not be allowed to advertise.  They should have to be referred.",
-    "Biological relationships are not always strong enough to overcome abuse.",
-    "Schools should not be allowed to force students to wear uniform.",
-    "People work for money, not because they are motivate.",
-    "Whales are an important part of the ocean ecology.  It would be better to find a way to keep them in the oceans",
-    "Space travel is dangerous, so it should be avoided.",
-    "A business should not be banned.",
-    "Companies need to be run by people who are willing to work for less.",
-    "Space explorations have been ongoing for a long time, but it is not complete.",
-    "The three strikers are not crimials.  They are just people who make a mistake.",
-    "Americans are not responsible enough to own guns.",
-    "Three strike law is a good deterrent for people who commit crimes.",
-    "Drugs are illegal.  People who break the law should be punished.",
-    "Payday loans are helpful for those who are in need of money.",
-    "Mercenary groups are not well regulated.  They are dangerous.",
-    "This would be unfair.  It would create a racial divide.",
-    "Payday loan companies are held accountable to their customers.  They have to provide a service that meets the needs of their clients.",
-    "Mental illness is not a physical disability.",
-    "Schools should be able to choose what they want to wear.",
-    "Execution is not the only thing that is important.  There are many other things that are important as well.",
-    "They are not dangerous.  There is no proof that they are dangerous, and they do not do anything wrong.",
-    "Three-Strikers are dangerous people.",
-    "Students should be allowed to wear whatever they want.",
-    "Actors are not forced to act.  They are adults and can choose to do other things.",
-    "Children who wear school clothes are not allowed to show their individual style.",
-    "Payday lenders are a necessary service for those in need.",
-    "Gender-free language is a waste of time.",
-    "The punishments should be for what the person is doing currently, not for past crims.",
-    "Legalizing prostitutes would not cause underaged people to be trapped in the sex trade.",
-    "Pasts offences can be used to predict future offending.",
-    "Bureaucracy is a necessary evil.  Children need to be placed in the right home.",
-    "The government has a responsibility to protect its citizens.  If the military is privately owned, it will not do this.",
-    "Three strike laws are not effective.",
-    "Assisting someone to die is not murder.  It is compassion.",
-    "School uniform helps children not to worry about what they wear.",
-    "Genders are not the same.",
-    "Private companies are not reliable.  The government should supply the military.",
-    "Adoption is not for everyone.  Some people do not want to give their children up.",
-    "A candidate is not likely to get the majority of the votes in a multi party system.",
-    "Minor crimnals are often dumb and don;t know the consequences of their actions.",
-    "Journalism is a demanding field.",
-    "Pay day loan companies target the most vulnerable.",
-    "Burn the Flag Day is a way to protest the government.  It is not offending anyone.",
-    "Three strikers are more likely to get caught.",
-    "Prostitution is not illegal in some countries and it should be allowed.",
-    "Pay day loan companies are not always trustworthy.",
-    "The constitution gives us the right.  It's not up to the government to decide.",
-    "School uniform costs are not too high.",
-    "If a person owns a gun, it is not likely that it will be taken from them.",
-    "School uniform is a way of making students feel equal.",
-    "Wikipedia is open source, anyone can edit it, so we can trust it.",
-    "The law is not effective.",
-    "Mandated retirements can be unfair to some.",
-    "School uniform policies should be dropped because they are not fair to all students.",
-    "Payday loan companies are not predatory.  They are a service to those who need money.",
-    "School uniform is expensive.",
-    "Three strikers are often people who have made mistakes.  They are not criminals.",
-    "Three strike laws are too lenient.  They allow for people to make mistakes, and get away with it.",
-    "Schools should not force children into uniform.  Children should be allowed to wear what they want.",
-    "School uniform is not a good idea.",
-    "The three strike law does not give a person a chance to redeem themselves.",
-    "Payday loans can be very expensive.",
-    "Private military contractors are a good thing.  They are cheaper and more efficient.",
-    "Pay day loasns are expensive.",
-    "The men who are targeted by the three strike and your out laws are men in color, who have been target for a long time.",
-    "School uniform helps to create a sense of community.",
-    "Schools should be required to have uniform policies.",
-    "The three strike law is not fair.  It is a bad law.",
-    "Some people cannot afford uniform.",
-    "Pay day loas are a good way to get money when you need it.",
-    "Some clothe should not be worn in public.",
-    "School uniform is a good thing because it makes sure that students are not teasing each other.",
-    "School uniform is not a requirement.  It's a choice.",
-    "This loan is allowed and it is legal.  It is not a scam.",
-    "Schools that don't have uniform policies have more equality.",
-    "People should be able to have monitary gain from the war, because they are the ones that are fighting.",
-    "Pay day loasn can be dangerous.",
-    "Private companies should be allowed to work with each other.",
-    "Private military companies have a duty to protect the public.",
-    "Pay day loands are good for people who need a little extra cash.",
-    "Social Media is a great way to communicate with people.",
-    "People commiting small crimes should be punished.",
-    "Social Media can be used for bullying.",
-    "Schools are not for smart people.",
-    "The law is not fair.  People are not given a second chance.",
-    "The law is not unfounded.  It is a deterrent.",
-    "Private companies are not necessarily bad.  They can be good for a country.",
-    "Schools can save money by requiring uniform clothe.",
-    "The 3 strikers law has been in effect for a long time.  It's been effective for many years.",
-    "A company that is not profit driven will not be as efficient.",
-    "The law keeps violent criminals off the streets.",
-    "Private military contractors are not allowed to commit atrocious acts.",
-    "Three-Strike Offenders can be rehabbed.",
-    "Private military companies are not any more dangerous than private weapons and vehicle companies because they are all private.",
-    "School uniform costs are a burden on poor people.",
-    "Commiting 4 offences is a sign of a dangerous person.",
-    "Private military contractors are dangerous.",
-    "International law is not always followed.",
-    "Private companies have no obligation to follow the law, so they can go where they want.",
-    "Private military contractors are a necessary evil.  They are necessary to protect the country.",
-    "Companies operating in the US need no protection.  They are already protected by the constitution.",
-    "Private military companies are not regulated and can be dangerous.",
-    "Private armys are not accountable to the public.",
-    "Private companies are not as reliable as the government.",
-    "Missionaries are not always good.  They can be bad.",
-    "Missionaries are doing a great job.",
-    "Missionary work is not for everyone.  Some people are not cut out for it.",
-    "Missionary work is not for everyone.  Only people with a strong faith can do it well.",
-    "People can be wrong.  Someone could say something that is not true.",
-    "When we force people to do something, it's not a choice.  It'll be like a dictatorship.",
-    "People can protect their selves without bearing arms.",
-    "Fostering a kid is not easy.",
-    "Forced voting is not a good idea because it will force people who are not interested in voting to come and vote.",
-    "Voters should be encouraged to vote.",
-    "Intellection property is not complex.  It is a basic right.",
-    "Safer spaces aren't necessary.  They are an excuse to not be able to handle things.",
-    "Student loan debt is a problem.",
-    "Telemarks are a good way to get information.",
-    "Studying can be stressful.",
-    "Televangelists are not a benefit to anyone.",
-    "Some politicians are corrupt and people should care.",
-    "Whaling can be banned without causing a new blackmarket.",
-    "Telemarketers offer many things to people.",
-    "Homepathy is not tested.",
-    "People do have other ways to defend themselves.",
-    "People don't have a choice when it comes to the government.",
-    "People who are not economical viability should not vote because they will not be able to make decisions.",
-    "Studying is a choice.",
-    "Business owners should have the freedom to pay as they please.",
-    "Executives do not work hard enough for their pay.",
-    "People are looking for a new place to live.",
-    "The current system is outdated.",
-    "Surrogacies are not always safe.",
-    "Telemarks are often scams.",
-    "Safe places help mentally challenged people.",
-    "Surrogacies are not acts of creation.  They are acts that are done to create life.",
-    "A child who is adopted is not a product of immorality.",
-    "Organ donation is not bad and it is good for people.",
-    "Assisting a person to die is not the right thing to do.",
-    "If people don' t vote, they don t care about the outcome of the election.",
-    "Gender-specific language is outdated.",
-    "People should not be misled about cancer cure.",
-    "Economics sanctions is not a solution to bad behaviour of country on other.",
-    "Multi-party system will be difficult to manage.",
-    "Voters should be required to vote.",
-    "Assisting suicides is a good thing.",
-    "Space explorations are important for future generations.",
-    "People who don't vote are not exercising their rights.",
-    "College is expensive and not everyone can afford it.",
-    "Childhood is a time to be a child.  Allowing child actors to act is wrong.",
-    "Telemarks are annoying.",
-    "Actors have a lot of time off between jobs.",
-    "The military needs all the help they can get.  People with all skill sets should be encouraged to join.",
-    "School is a place where children are taught.  Prayer is not a good thing to teach children.",
-    "A vote for a multi party system is a vote against a candidate."
+    [
+        0.9256990551948547,
+        "Cosmetics surgury is a choice and shouldn't be restricted."
+    ],
+    [
+        0.0004216281231492758,
+        "The LBGT community is not a minority group, and should not be given special treatment."
+    ],
+    [
+        0.9258701801300049,
+        "Subidized student loan helps students."
+    ],
+    [
+        0.0004160095704719424,
+        "The value of children is not equal."
+    ],
+    [
+        0.00042234998545609415,
+        "If a minority of people is being treated unfairly, it's not right."
+    ],
+    [
+        0.00042205661884509027,
+        "Celebrating homophobia is wrong."
+    ],
+    [
+        0.00041931416490115225,
+        "Journalists are in a difficult financial position and need subsides."
+    ],
+    [
+        0.0004389300011098385,
+        "Child actor lives normal life."
+    ],
+    [
+        0.000417605071561411,
+        "If a group of people is loud enough, it's not fair to ignore them when they have a valid point."
+    ],
+    [
+        0.0004209640610497445,
+        "Prostitution is illegal.  It should be legalized."
+    ],
+    [
+        0.0004212304193060845,
+        "Compensation is not the same for everyone.  It is unfair to expect everyone to get the exact same amount."
+    ],
+    [
+        0.0004147464351262897,
+        "Homeopthic medicine is a choice."
+    ],
+    [
+        0.0004163083212915808,
+        "Surrogates are paid, so it is not exploitative."
+    ],
+    [
+        0.00042519005364738405,
+        "Economic sanctions are effective in many cases."
+    ],
+    [
+        0.9262269735336304,
+        "Naturoapthy is not regulated.  People can be harmed by naturopatty."
+    ],
+    [
+        0.00041907504783011973,
+        "Television is educational.  It can teach our children about the world around them."
+    ],
+    [
+        0.9244881868362427,
+        "IP rights are a form of monopoly.  Monopolies are bad."
+    ],
+    [
+        0.00041512539610266685,
+        "Homepathic medicine is not regulated."
+    ],
+    [
+        0.0004188304010313004,
+        "Television is not good for kiddos.  It can make them lazy and not want to do anything."
+    ],
+    [
+        0.9266636371612549,
+        "Stays at homes dads are lazy and tend to do nothing."
+    ],
+    [
+        0.0004619130922947079,
+        "Artificial pregancy is dangerous."
+    ],
+    [
+        0.9273643493652344,
+        "Cosmestic surgury is not safe for a child."
+    ],
+    [
+        0.00044270389480516315,
+        "Racially profil is fair because it helps to catch criminals."
+    ],
+    [
+        0.000467299745650962,
+        "Capital punishments are a deterrent."
+    ],
+    [
+        0.0004119515360798687,
+        "Safer spaces are not a right."
+    ],
+    [
+        0.00044099349179305136,
+        "IP rights are a barrier to innovation."
+    ],
+    [
+        0.9261573553085327,
+        "Safe spaces do not provide a safe space.  They are not safe."
+    ],
+    [
+        0.0004161258111707866,
+        "Women who sell themselves are being taken advantage of.  They deserve better."
+    ],
+    [
+        0.0004225695156492293,
+        "Old people are the ones with the experience."
+    ],
+    [
+        0.0004128964792471379,
+        "Homepathy is not regulated by the government."
+    ],
+    [
+        0.0004193533677607775,
+        "Natropathy is not always the best way to heal.  It can be dangerous."
+    ],
+    [
+        0.000424775033025071,
+        "People have the right and freedom to choose what they want to do with their lives."
+    ],
+    [
+        0.000432694359915331,
+        "Capital execution is not a gentle way to kill someone."
+    ],
+    [
+        0.00041736371349543333,
+        "Space exploration is not important.  We should be more concerned with the problems here on earth."
+    ],
+    [
+        0.9271517992019653,
+        "Economics sanctions affect the government more."
+    ],
+    [
+        0.9265897870063782,
+        "Sex selective abortion is bad for society.  It makes people think that they can choose the gender of their children."
+    ],
+    [
+        0.0004192350315861404,
+        "Stay at Home Dads are not financially stable enough to support their families."
+    ],
+    [
+        0.0004167625738773495,
+        "A two party system works best."
+    ],
+    [
+        0.0004140567034482956,
+        "People shouldn't be forced to rely on the government for their needs, they should get out and get a job."
+    ],
+    [
+        0.000418648385675624,
+        "The constitution does not allow people to carry guns."
+    ],
+    [
+        0.923428475856781,
+        "Prositution is a crime."
+    ],
+    [
+        0.0004362975596450269,
+        "Capital punishments are the most effective way to get rid of criminals."
+    ],
+    [
+        0.0004344401531852782,
+        "The black markets are not always illegal.  They are sometimes used to bypass laws."
+    ],
+    [
+        0.00041281816083937883,
+        "Being virgins is not a personal choice.  They are born that way."
+    ],
+    [
+        0.0004181806871201843,
+        "People should be judged on their performance, not on the number of years they have been in the workplace."
+    ],
+    [
+        0.0004515402251854539,
+        "Right to bear arms is a constitutional right."
+    ],
+    [
+        0.000414285488659516,
+        "Surrogacy is a form of slavery."
+    ],
+    [
+        0.0004245602758601308,
+        "Retiring is the time to enjoy life."
+    ],
+    [
+        0.00042285866220481694,
+        "Economy is the backbone of any nation."
+    ],
+    [
+        0.9272071123123169,
+        "Cosmestic surgury is a personal choice."
+    ],
+    [
+        0.00041432539001107216,
+        "Television is not a need, but a luxury.  It can be replaced with other forms of entertainment."
+    ],
+    [
+        0.9166209697723389,
+        "Naturoapthy is not dangerous."
+    ],
+    [
+        0.000407584011554718,
+        "A party system is easier to manage."
+    ],
+    [
+        0.0004333147662691772,
+        "Televangelists are annoying."
+    ],
+    [
+        0.0004258376720827073,
+        "Being an actor is a good thing for children to do."
+    ],
+    [
+        0.00040900352178141475,
+        "Not everyone has the ability to vote."
+    ],
+    [
+        0.9221323132514954,
+        "A child's parents can't be replaced.  Surrogates are not the same as biological parents."
+    ],
+    [
+        0.00041585040162317455,
+        "Televangelists are not intruding."
+    ],
+    [
+        0.0004349622467998415,
+        "Judicial imparity can be achieved through education."
+    ],
+    [
+        0.00041687701013870537,
+        "Many types are not scientifically proven."
+    ],
+    [
+        0.8528792262077332,
+        "Legalised selection is a right for women."
+    ],
+    [
+        0.0004171916807536036,
+        "A lot of money is needed to change the language."
+    ],
+    [
+        0.00042172218672931194,
+        "Miners are mature enough."
+    ],
+    [
+        0.000422317796619609,
+        "Genders should be acknowledged."
+    ],
+    [
+        0.0004167323641013354,
+        "A ban on weapons is necessary to limit the number of people who can have them."
+    ],
+    [
+        0.0004218826361466199,
+        "Political parties can be formed by people who have same interest."
+    ],
+    [
+        0.9231456518173218,
+        "Capital punishments are not cruel to the victim of a crime because the crime is also not."
+    ],
+    [
+        0.9199265837669373,
+        "A mult party political structure is not good for a country.  It creates confusion."
+    ],
+    [
+        0.0004193639615550637,
+        "Recruited people are not always the best."
+    ],
+    [
+        0.9268168210983276,
+        "Economy sanction is a good way to stop war."
+    ],
+    [
+        0.00042221194598823786,
+        "Prostitution is not a good thing."
+    ],
+    [
+        0.0004704174934886396,
+        "Arms holdings will not be limited by banning weapons."
+    ],
+    [
+        0.0004227171593811363,
+        "Flag symbolize the pride of a nation."
+    ],
+    [
+        0.00041590689215809107,
+        "Abandoning intellectual rights would be bad for business."
+    ],
+    [
+        0.0004939735517837107,
+        "Capital Punishment is a serious punishement for serious crimes."
+    ],
+    [
+        0.00041964687989093363,
+        "Mandatory age limits are a good thing.  They ensure that the workforce is diverse."
+    ],
+    [
+        0.0004119020886719227,
+        "Whales are different from cattle.  They don't need to be killed."
+    ],
+    [
+        0.0004508114361669868,
+        "Child labor should not be bans."
+    ],
+    [
+        0.0004191439365968108,
+        "People are entitled to feel safe.  Creating safe zones can help them feel better."
+    ],
+    [
+        0.9257912039756775,
+        "Not all religions are compatible with one another.  Some religous holidays interfere with other religons' holiday celebrations."
+    ],
+    [
+        0.0004204609140288085,
+        "Fostering children is not a good idea."
+    ],
+    [
+        0.0004265222232788801,
+        "Space is too dangerous to explore."
+    ],
+    [
+        0.00040634992183186114,
+        "Higher education is only for those who are smart enough to get it."
+    ],
+    [
+        0.0004232528153806925,
+        "Capital Punishment is cruel."
+    ],
+    [
+        0.9271826148033142,
+        "Legalising prostitition will increase the number of prostituited women."
+    ],
+    [
+        0.9249087572097778,
+        "Stays at Home dad should not be allowed to stay at the home."
+    ],
+    [
+        0.00041903011151589453,
+        "Legalized prostitution will not end the problem."
+    ],
+    [
+        0.00041970491292886436,
+        "Student loan is a personal choice and should not be made to be a burden on tax payers."
+    ],
+    [
+        0.0004199146060273051,
+        "Freedom of expression is a right.  It is the foundation of democracy."
+    ],
+    [
+        0.9263114333152771,
+        "Space explorations helps in the development of technology."
+    ],
+    [
+        0.00044471301953308284,
+        "Surrogacies can cause a lot of problems for families."
+    ],
+    [
+        0.00042067343019880354,
+        "People who can afford a good lawyer will not be forced to use a public one."
+    ],
+    [
+        0.0004086582048330456,
+        "People are not vulnerables in a safe place."
+    ],
+    [
+        0.0004180526011623442,
+        "Religion is not a choice.  It is a belief."
+    ],
+    [
+        0.000421577860834077,
+        "There is no way to stop the black markets.  They are too profitable."
+    ],
+    [
+        0.00041851209243759513,
+        "Freedom of expression is not a right.  It is a privilege."
+    ],
+    [
+        0.0004178866511210799,
+        "Voting is a duty.  Everyone should vote for their political party."
+    ],
+    [
+        0.0004244337906129658,
+        "Children should be held accountable for their actions."
+    ],
+    [
+        0.00040551621350459754,
+        "Organ trade is a big business, and the rich will pay for it."
+    ],
+    [
+        0.00042092674993909895,
+        "Public defenders are the only way people can get a fair trial."
+    ],
+    [
+        0.0004720287397503853,
+        "The Church of Scientology has a right to privacy.  It is not illegal to be secret."
+    ],
+    [
+        0.00042101083090528846,
+        "People should not be allowed to choose their leaders."
+    ],
+    [
+        0.9091816544532776,
+        "Defense lawyers are important to criminal defendants."
+    ],
+    [
+        0.00041403970681130886,
+        "Foster children are not abused."
+    ],
+    [
+        0.0004194493521936238,
+        "There are other ways to get food without hunting."
+    ],
+    [
+        0.0004153614863753319,
+        "The church should be allowed to practice.  This is a free country."
+    ],
+    [
+        0.000426100188633427,
+        "Conflict is a good thing.  It brings out the best in people."
+    ],
+    [
+        0.000419676915043965,
+        "School should not be forced to allow prayer because it is a private matter."
+    ],
+    [
+        0.00044543639523908496,
+        "Abandoning intellectual property rights would be good for innovation."
+    ],
+    [
+        0.0004334287950769067,
+        "Zero tolerances are necessary to keep order in schools."
+    ],
+    [
+        0.00041694656829349697,
+        "Executives are not the only ones who work for a company."
+    ],
+    [
+        0.00041642223368398845,
+        "Criminals are not martyr for their cause."
+    ],
+    [
+        0.0004400215984787792,
+        "Multi party systems are not for everyone."
+    ],
+    [
+        0.0004234923399053514,
+        "Pretending to be a victim is a good way to get out of trouble."
+    ],
+    [
+        0.00042349175782874227,
+        "Women should not be allowed to make decisions for others."
+    ],
+    [
+        0.000418648385675624,
+        "Kiddies are not old enough to understand religion."
+    ],
+    [
+        0.0004129640001337975,
+        "Money is earned, not given."
+    ],
+    [
+        0.00042728325934149325,
+        "Some people are not able to afford a high level attorney."
+    ],
+    [
+        0.0004241725255269557,
+        "Judicial Activism is a bad thing, and it should be limited."
+    ],
+    [
+        0.9186159372329712,
+        "Holocause deniers are a threat to society."
+    ],
+    [
+        0.00041445059468969703,
+        "The company does not always improve.  Executives do not work hard enough."
+    ],
+    [
+        0.0004226627352181822,
+        "An executive is responsible for a lot of people and should be compensated for it."
+    ],
+    [
+        0.0004130566958338022,
+        "Forcing prayer is a violation of religious freedom."
+    ],
+    [
+        0.0004311107040848583,
+        "People should have the right to defend themselves."
+    ],
+    [
+        0.9270831346511841,
+        "Telementalers are not a big deal."
+    ],
+    [
+        0.0004344078479334712,
+        "Mandatory retirement protects the economy."
+    ],
+    [
+        0.00041247004992328584,
+        "Separating Church and State is essential to the freedom of religion."
+    ],
+    [
+        0.9266364574432373,
+        "Men want to have sex with women for free.  By not allowing prostitutes to be paid for their services men feel like they have control over"
+    ],
+    [
+        0.00041448159026913345,
+        "Freedoms of speech and religion are often conflated.  This is incorrect."
+    ],
+    [
+        0.00041916072950698435,
+        "We should not replace our current system, because it is working."
+    ],
+    [
+        0.000507387681864202,
+        "Zero tolerance punishments are the same for everyone, and are not biased."
+    ],
+    [
+        0.0004089200810994953,
+        "Purely voluntary prayer is not a violation of the church/state separation."
+    ],
+    [
+        0.0004243525327183306,
+        "If a person wants to take care of their own children, they should be allowed to do so."
+    ],
+    [
+        0.0004169199091847986,
+        "People who don't vote have no say in the government."
+    ],
+    [
+        0.0004167732840869576,
+        "Public defender's are important to the justice system."
+    ],
+    [
+        0.0004486961115617305,
+        "Surrogacies are not for everyone.  Some people are too religious to participate."
+    ],
+    [
+        0.0004237136454321444,
+        "Religion is a personal decision and should be respected."
+    ],
+    [
+        0.0004165316349826753,
+        "Subidized journalists are not always reliable."
+    ],
+    [
+        0.00041582007543183863,
+        "Organ trade is a crime.  Money is made off of it."
+    ],
+    [
+        0.9270485043525696,
+        "Political prisoners are imprisoned for their political beliefs."
+    ],
+    [
+        0.0004215517546981573,
+        "There are some behaviors that are not acceptable."
+    ],
+    [
+        0.9265115857124329,
+        "Manditory retirements allows the elder to enjoy their golden years."
+    ],
+    [
+        0.000471944862511009,
+        "The holocast is important for remembering the past.  If it is not remembered it could happen."
+    ],
+    [
+        0.00040730941691435874,
+        "The right of the people to bear and keep arms is in the constitution.  It is not a right that can be taken away."
+    ],
+    [
+        0.00042127943015657365,
+        "People should not have a choice in who represents them.  This would lead to chaos."
+    ],
+    [
+        0.00041894137393683195,
+        "Safer places are better."
+    ],
+    [
+        0.00042028844472952187,
+        "Scientology is a dangerous cult."
+    ],
+    [
+        0.00042238764581270516,
+        "Donations are not always reliable."
+    ],
+    [
+        0.9262149333953857,
+        "The holocast was a terrible event, but people have to move on.  People denying the event is not likely a precursor to another"
+    ],
+    [
+        0.0004227799945510924,
+        "Television is a form of entertainment."
+    ],
+    [
+        0.00041968008736148477,
+        "Public defenders are not always reliable."
+    ],
+    [
+        0.0004293224192224443,
+        "Safe spaces can be taken advantage of by bullies."
+    ],
+    [
+        0.00041508363210596144,
+        "School prayer is a constitutional right."
+    ],
+    [
+        0.9276189804077148,
+        "Raciall profilin is not biassed against whites."
+    ],
+    [
+        0.0004170512838754803,
+        "The public defense system is not meant for wealth people."
+    ],
+    [
+        0.00042254451545886695,
+        "It is wrong to compensate the executive at the expense of other workers."
+    ],
+    [
+        0.0004172688059043139,
+        "Zero- tolerance has been shown to work in some places.  It's not a perfect solution, but it'll work."
+    ],
+    [
+        0.0004191861080471426,
+        "Fostering is not a good option for many children, because they are not properly cared for."
+    ],
+    [
+        0.00041792148840613663,
+        "A public defense is affordable to everyone."
+    ],
+    [
+        0.00041917432099580765,
+        "Gender neutrality doesn't change the way people think."
+    ],
+    [
+        0.0004302866873331368,
+        "Prayer is a good thing."
+    ],
+    [
+        0.000418959156377241,
+        "Voter suppression is a problem.  Mandatory voting helps to combat this."
+    ],
+    [
+        0.0004374853742774576,
+        "The Holocauster should be taught."
+    ],
+    [
+        0.00043957505840808153,
+        "Telementering is not harmful to the environment."
+    ],
+    [
+        0.00041706699994392693,
+        "Scientologists are not forced to do anything.  They can leave the religion if they want."
+    ],
+    [
+        0.9221430420875549,
+        "Assisting suicides is wrong."
+    ],
+    [
+        0.0004159723175689578,
+        "School is for learning, not praying."
+    ],
+    [
+        0.00041834081639535725,
+        "People can take medicinal herbs."
+    ],
+    [
+        0.0004220558039378375,
+        "Zero- tolerance can be a double edged sword."
+    ],
+    [
+        0.0004182853735983372,
+        "People should not be allowed to have surgeries if they are not necessary."
+    ],
+    [
+        0.00043403657036833465,
+        "Executive do not work hard."
+    ],
+    [
+        0.0004175044014118612,
+        "Surrogacies can result in a lot of problems."
+    ],
+    [
+        0.928146243095398,
+        "Cosmeic surgeries are safe."
+    ],
+    [
+        0.00042641229811124504,
+        "It is not fair to people who can't afford it."
+    ],
+    [
+        0.00041222217259928584,
+        "Journalists have no need for subsides."
+    ],
+    [
+        0.0004146041173953563,
+        "The First Amendment guarantees free expression, even if it is offensive."
+    ],
+    [
+        0.0004176745715085417,
+        "Schools are public, and should not force religion on children."
+    ],
+    [
+        0.8254034519195557,
+        "Executive take a lot of vacations."
+    ],
+    [
+        0.00043205529800616205,
+        "Lawyering is a service that should not be priced.  It is not a luxury."
+    ],
+    [
+        0.9259588122367859,
+        "Televsion advertisements are not targeted.  This makes them less effective."
+    ],
+    [
+        0.00043932560947723687,
+        "Zero Tolerance is too broad."
+    ],
+    [
+        0.00046683402615599334,
+        "Tolerance of LBGTQ is not necessary.  They are not the only people who are being discriminated against."
+    ],
+    [
+        0.00042581194429658353,
+        "People can afford to pay a professional lawyer."
+    ],
+    [
+        0.00042792808380909264,
+        "Children need to be supervised closely to make sure they are safe."
+    ],
+    [
+        0.0004182503034826368,
+        "People would not be able choose their child's gender."
+    ],
+    [
+        0.9108231067657471,
+        "Pay day loas are useful to people who need money right away."
+    ],
+    [
+        0.00042167899664491415,
+        "Some things are harming to others."
+    ],
+    [
+        0.00044385986984707415,
+        "Children know exactly what it means when their pray in school, they just don't know the words to the prayer."
+    ],
+    [
+        0.9265080094337463,
+        "Pride parde is not important to the LBGTQ community."
+    ],
+    [
+        0.0004128282016608864,
+        "Public defender do not have the same motivation as private lawyers."
+    ],
+    [
+        0.9168124198913574,
+        "Subidizing loams is an unfair way of helping students because it is not an equal opportunity."
+    ],
+    [
+        0.905753493309021,
+        "Zero-Tolerence policies are important for school safety."
+    ],
+    [
+        0.9221204519271851,
+        "Pay day loasns are not good for your credit, so people shouldn' t use them."
+    ],
+    [
+        0.0010952308075502515,
+        "Subroagation is not fair to the victim."
+    ],
+    [
+        0.9239134788513184,
+        "Telementarketing is a legitimate business that has many benefits to people."
+    ],
+    [
+        0.0004151248140260577,
+        "Mandated retirements will limit the number of workers."
+    ],
+    [
+        0.0004170300089754164,
+        "Homepathy is a form of medicine that can help people in need."
+    ],
+    [
+        0.000415462302044034,
+        "Pay day loan companies are not the only source of debts."
+    ],
+    [
+        0.00041791211697272956,
+        "The death sentence deters people from killing."
+    ],
+    [
+        0.0004222789139021188,
+        "Executives are paid well because they are responsible for a large amount of revenue."
+    ]
 ]

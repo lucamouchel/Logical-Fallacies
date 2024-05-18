@@ -9,3 +9,4 @@ peft
 nltk
 scikit-learn
 sentencepiece
+trl

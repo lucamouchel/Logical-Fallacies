@@ -5,20 +5,14 @@ import transformers
 from transformers import TrainingArguments
 from datasets import Dataset
 import argparse
-import string 
 import pandas as pd 
-from peft import LoraConfig, TaskType, get_peft_model
 from datetime import datetime
-import torch
-from tqdm import tqdm
-import gc
 import sys 
 sys.path.append('src/')
 from custom_dpo_trainer import CustomDPO
 
 from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM
-import utils
 #from utils import get_training_args
 
 task='arguments'
@@ -39,7 +33,7 @@ def parse_args():
     parser.add_argument('--save-steps', default=500, type=int)
     parser.add_argument('--logging-steps', default=300, type=int)
     parser.add_argument('--output-dir', default='models')
-    parser.add_argument('--max-length', default=512, type=int)
+    parser.add_argument('--max-length', default=128, type=int)
     parser.add_argument('--use-peft', default='false')
     parser.add_argument('--peft-config-r', default=16, type=int)
     parser.add_argument('--peft-config-lora-alpha', default=32, type=int)
@@ -47,6 +41,7 @@ def parse_args():
     parser.add_argument('--low-resource', action='store_true')
     return parser.parse_args()
 
+## python src/DPO/dpo.py --ref-model-path=models/arguments/sft_llama --beta=0.3 --n-epochs=3 
 def put_capital_stance(prompt, task):
     if task == 'claims': ## claims data is already mapped to capital stance
         return prompt 
@@ -85,15 +80,16 @@ def main():
     args.output_dir = output_directory.replace(' ', '_')
         
     model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
+   # ref_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
     tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_path)
 
     model.enable_input_require_grads()
 
-    with open('/root/Logical-Fallacies/data/dpo/arguments/test.json', 'r') as f:
+    with open('data/dpo/arguments/test.json', 'r') as f:
         test_data = json.load(f)
+        test_data = test_data[:30]
         test_data = Dataset.from_dict(pd.DataFrame(test_data))
         test_data = test_data.map(lambda sample: map_data(sample, task=task))
-
 
     training_args = DPOConfig(
             output_dir=args.output_dir,               
@@ -105,24 +101,27 @@ def main():
             weight_decay=args.weight_decay,                         
             adam_epsilon=args.adam_epsilon,                         
             save_steps=args.save_steps,            
-            eval_steps=2,           
-            logging_steps=args.logging_steps,                      
-            save_total_limit=2,                         
+            eval_steps=400,          
+            evaluation_strategy='steps', 
+            logging_steps=10,                      
+            save_total_limit=1,                         
             gradient_accumulation_steps=args.gradient_accumulation_steps,
             beta=args.beta,
             max_prompt_length=150,
             max_length=args.max_length,
             is_encoder_decoder=False,
+            generate_during_eval=True,
     )
 
     dpo_trainer = CustomDPO(
         model=model,
+        ref_model=None,
         args=training_args,
         train_dataset=train_data,
         eval_dataset=test_data,
         tokenizer=tokenizer,
     )
-    
+
     dpo_trainer.train()
     print("SAVING MODEL at ", args.output_dir)
     
@@ -130,6 +129,8 @@ def main():
         json.dump(vars(args), f, indent=4)
     
     dpo_trainer.save_model(args.output_dir)
+    if isinstance(dpo_trainer, CustomDPO):
+        dpo_trainer.fallacy_clf.save_pretrained(f'models/fallacy_clf/howey_electra-large-mnli_{datetime.now()}')
 
    
 if __name__ == '__main__':
