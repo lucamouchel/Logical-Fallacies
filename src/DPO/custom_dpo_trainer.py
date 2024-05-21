@@ -173,34 +173,43 @@ class CustomDPO(DPOTrainer):
             chosen_logits = fallacy_clf(**chosen_inputs).logits[:,1]
             rejected_logits = fallacy_clf(**rejected_inputs).logits[:,1]
 
-
-            classifier_chosen_scores = F.logsigmoid(chosen_logits).squeeze(-1)  # assuming logits are (batch_size, 1)
-            classifier_rejected_scores = F.logsigmoid(rejected_logits).squeeze(-1)  # assuming logits are (batch_size, 1)
-
+            classifier_chosen_scores = F.logsigmoid(chosen_logits)  # assuming logits are (batch_size, 1)
+            classifier_rejected_scores = F.logsigmoid(rejected_logits)# assuming logits are (batch_size, 1)
             
             ## we want to reduce loss if the chosen score is higher than the rejected score
             ## so we do 1-classifier_chosen_scores + classifier_rejected_scores. 
             # We want the loss to increase if the classifier is confident that the chosen score is a fallacy
             fallacy_penalty = (1 + classifier_chosen_scores) - classifier_rejected_scores
-            losses = losses + 0.6*fallacy_penalty
+            print("LOSS BEFORE PENALTY: " , losses)
+            losses = losses + 0.01*fallacy_penalty
+            print("LOSS AFTER PENALTY: " , losses)
         else:
             classifier_chosen_scores = 1
             classifier_rejected_scores = 1
 
         ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the chosen sample - hence 1-sigmoid
         chosen_rewards = (
-            (self.beta * (2*classifier_chosen_scores)) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
+            (self.beta ) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
             * (policy_chosen_logps.to(self.accelerator.device) - reference_chosen_logps.to(self.accelerator.device))
             .detach()
         ) 
+        
+        print("CHOSEN REWARDS: ", chosen_rewards)
+        print(1+classifier_chosen_scores)
+        chosen_rewards = chosen_rewards * (-classifier_chosen_scores)
+        print("CHOSEN REWARDS AFTER: ", chosen_rewards)
 
         ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the rejected sample - hence 1-sigmoid
         rejected_rewards = (
-            (self.beta * 2* (1-classifier_rejected_scores)) ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
+            (self.beta ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
             * (policy_rejected_logps.to(self.accelerator.device) - reference_rejected_logps.to(self.accelerator.device))
             .detach()
-        )
-
+       )) 
+        
+        print("REJECTED REWARDS: ", rejected_rewards)
+        rejected_rewards = rejected_rewards * (-classifier_rejected_scores)
+        print("REJECTED REWARDS AFTER: ", rejected_rewards)
+        print("*"*50)
         return losses, chosen_rewards, rejected_rewards
 
     
@@ -219,6 +228,7 @@ class CustomDPO(DPOTrainer):
         self.optimizer.zero_grad()
         self.accelerator.backward(loss)
         self.optimizer.step()
+        self.fallacy_clf.zero_grad()
 
         return loss.detach() / self.args.gradient_accumulation_steps
 
