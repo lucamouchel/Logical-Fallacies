@@ -7,56 +7,42 @@ import torch.nn.functional as F
 from transformers import PreTrainedModel
 import torch.optim as optim
 # Inside CustomDPO class __init__ method
+import wandb
+CLASSES = {'Not a Fallacy': 0,  'faulty generalization': 1, 'false causality': 2, 'fallacy of relevance': 3, 'fallacy of extension': 4, 'equivocation': 5, 'ad populum': 6, 'appeal to emotion': 7, 'ad hominem': 8, 'circular reasoning': 9, 'fallacy of credibility': 10, 'fallacy of logic': 11, 'false dilemma': 12, 'intentional': 13}
+wandb.init(mode="disabled") 
 class FallacyClassifier(torch.nn.Module):
-    def __init__(self, hidden_dim, output_dim, dropout):
+    def __init__(self):
         super(FallacyClassifier, self).__init__()
-        self.bert = BertModel.from_pretrained('bert-base-uncased')
-
+        
         self.classifier = nn.Sequential(
-            nn.Linear(self.bert.config.hidden_size, hidden_dim),
+            nn.Linear(32000, 32000),
             nn.ReLU(),
-            nn.Dropout(dropout),
-            nn.Linear(hidden_dim, output_dim)
+            # nn.Dropout(dropout),
+            nn.Linear(32000, 14)
         )  
         
-    def forward(self, input_ids, attention_mask):
-        with torch.no_grad():
-            outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        pooled_output = outputs.pooler_output
-        return self.classifier(pooled_output)
+    def forward(self, x):
+        outputs = torch.mean(x, dim=1)
+        outputs = self.classifier(outputs)
+        return outputs 
 
-    
-hidden_dim = 256
-output_dim = 1
-dropout = 0.5
-
-criterion = nn.CrossEntropyLoss()
-
+fallacy_classifier = FallacyClassifier().to('cuda')
 
 class CustomDPO(DPOTrainer):
     def __init__(self, *args, **kwargs):
         super(CustomDPO, self).__init__(*args, **kwargs)
-        self.fallacy_clf = AutoModelForSequenceClassification.from_pretrained('models/fallacy_clf/howey_electra-large-mnli', num_labels=2).to('cuda')
+        self.fallacy_clf = fallacy_classifier
         self.optimizer = optim.AdamW(
             list(self.model.parameters()) + list(self.fallacy_clf.parameters()),
             lr=self.args.learning_rate
         )
-    def get_batch_loss_metrics(
-        self,
-        model,
-        batch: Dict[str, Union[List, torch.LongTensor]],
-        train_eval: Literal["train", "eval"] = "train",
-    ):
+        
+    def get_batch_loss_metrics(self, model, batch: Dict[str, Union[List, torch.LongTensor]], train_eval: Literal["train", "eval"] = "train"):
         """Compute the DPO loss and other metrics for the given batch of inputs for train or test."""
         metrics = {}
-        (
-            policy_chosen_logps,
-            policy_rejected_logps,
-            policy_chosen_logits,
-            policy_rejected_logits,
-        ) = self.concatenated_forward(model, batch)
 
-        # if reference_chosen_logps and reference_rejected_logps in batch use them, otherwise use the reference model
+        policy_chosen_logps,policy_rejected_logps, policy_chosen_logits, policy_rejected_logits = self.concatenated_forward(model, batch)
+
         if "reference_chosen_logps" in batch and "reference_rejected_logps" in batch:
             reference_chosen_logps = batch["reference_chosen_logps"]
             reference_rejected_logps = batch["reference_rejected_logps"]
@@ -64,19 +50,10 @@ class CustomDPO(DPOTrainer):
             with torch.no_grad():
                 if self.ref_model is None:
                     with self.null_ref_context():
-                        (
-                            reference_chosen_logps,
-                            reference_rejected_logps,
-                            _,
-                            _,
-                        ) = self.concatenated_forward(self.model, batch)
+                        reference_chosen_logps, reference_rejected_logps, _, _ = self.concatenated_forward(self.model, batch)
                 else:
-                    (
-                        reference_chosen_logps,
-                        reference_rejected_logps,
-                        _,
-                        _,
-                    ) = self.concatenated_forward(self.ref_model, batch)
+                    reference_chosen_logps, reference_rejected_logps, _, _ = self.concatenated_forward(self.ref_model, batch)
+
 
         losses, chosen_rewards, rejected_rewards = self.dpo_loss(
             policy_chosen_logps,
@@ -84,9 +61,11 @@ class CustomDPO(DPOTrainer):
             reference_chosen_logps,
             reference_rejected_logps,
             fallacy_clf=self.fallacy_clf,
-            chosen_inputs={'input_ids': batch['chosen_input_ids'], 'attention_mask': batch['chosen_attention_mask']},
-            rejected_inputs={'input_ids': batch['rejected_input_ids'], 'attention_mask': batch['rejected_attention_mask']}
+            chosen_inputs=policy_chosen_logits,
+            rejected_inputs=policy_rejected_logits,
+            fallacy_types=batch['fallacy_type']    
         )
+
         reward_accuracies = (chosen_rewards > rejected_rewards).float()
 
         prefix = "eval_" if train_eval == "eval" else ""
@@ -110,7 +89,9 @@ class CustomDPO(DPOTrainer):
         fallacy_clf: nn.Module = None,
         chosen_inputs=None,
         rejected_inputs=None,
+        fallacy_types=None
     ) -> Tuple[torch.FloatTensor, torch.FloatTensor, torch.FloatTensor]:
+        
         """Compute the DPO loss for a batch of policy and reference model log probabilities.
 
         Args:
@@ -129,10 +110,11 @@ class CustomDPO(DPOTrainer):
             ref_logratios = torch.tensor([0], dtype=pi_logratios.dtype, device=pi_logratios.device)
         else:
             ref_logratios = reference_chosen_logps - reference_rejected_logps
-
+        
         pi_logratios = pi_logratios.to(self.accelerator.device)
         ref_logratios = ref_logratios.to(self.accelerator.device)
         logits = pi_logratios - ref_logratios
+
 
         # The beta is a temperature parameter for the DPO loss, typically something in the range of 0.1 to 0.5.
         # We ignore the reference model as beta -> 0. The label_smoothing parameter encodes our uncertainty about the labels and
@@ -148,21 +130,6 @@ class CustomDPO(DPOTrainer):
         elif self.loss_type == "ipo":
             # eqn (17) of the paper where beta is the regularization parameter for the IPO loss, denoted by tau in the paper.
             losses = (logits - 1 / (2 * self.beta)) ** 2
-        elif self.loss_type == "kto_pair":
-            # eqn (7) of the HALOs paper
-            chosen_KL = (policy_chosen_logps - reference_chosen_logps).mean().clamp(min=0)
-            rejected_KL = (policy_rejected_logps - reference_rejected_logps).mean().clamp(min=0)
-
-            chosen_logratios = policy_chosen_logps - reference_chosen_logps
-            rejected_logratios = policy_rejected_logps - reference_rejected_logps
-            # As described in the KTO report, the KL term for chosen (rejected) is estimated using the rejected (chosen) half.
-            losses = torch.cat(
-                (
-                    1 - F.sigmoid(self.beta * (chosen_logratios - rejected_KL)),
-                    1 - F.sigmoid(self.beta * (chosen_KL - rejected_logratios)),
-                ),
-                0,
-            )
         else:
             raise ValueError(
                 f"Unknown loss type: {self.loss_type}. Should be one of ['sigmoid', 'hinge', 'ipo', 'kto_pair']"
@@ -170,19 +137,32 @@ class CustomDPO(DPOTrainer):
         
         ####### MODIFS HERE
         if fallacy_clf:
-            chosen_logits = fallacy_clf(**chosen_inputs).logits[:,1]
-            rejected_logits = fallacy_clf(**rejected_inputs).logits[:,1]
+            chosen_clf = fallacy_classifier(chosen_inputs)
+            rejected_clf = fallacy_classifier(rejected_inputs)
 
-            classifier_chosen_scores = F.logsigmoid(chosen_logits)  # assuming logits are (batch_size, 1)
-            classifier_rejected_scores = F.logsigmoid(rejected_logits)# assuming logits are (batch_size, 1)
+            rejected_targets = torch.tensor(fallacy_types).view(-1).to('cuda')
+            chosen_targets = torch.zeros(chosen_clf.size(0), dtype=torch.long).to('cuda')
+
+            concatenated_outputs = torch.cat([chosen_clf, rejected_clf], dim=0)
+            concatenated_targets = torch.cat([chosen_targets, rejected_targets], dim=0)
+            #clf_loss = F.cross_entropy(concatenated_outputs, concatenated_targets)
+            ## the whole loss makes model crash - cuda out of memory
+            clf_loss = F.cross_entropy(rejected_clf, rejected_targets)
+            # chosen_loss = F.cross_entropy(chosen_clf, chosen_targets)
+
+
+            # clf_loss = chosen_loss + rejected_loss
+            print(losses)
+            losses = losses + 0.1*clf_loss
+            print(losses)
             
-            ## we want to reduce loss if the chosen score is higher than the rejected score
-            ## so we do 1-classifier_chosen_scores + classifier_rejected_scores. 
-            # We want the loss to increase if the classifier is confident that the chosen score is a fallacy
-            fallacy_penalty = (1 + classifier_chosen_scores) - classifier_rejected_scores
-            print("LOSS BEFORE PENALTY: " , losses)
-            losses = losses + 0.01*fallacy_penalty
-            print("LOSS AFTER PENALTY: " , losses)
+            
+            chosen_confidence = F.softmax(chosen_clf, dim=1)[:, 0]
+            rejected_confidence = F.softmax(rejected_clf, dim=1)[range(rejected_clf.size(0)), torch.tensor(fallacy_types).view(-1).to('cuda')]
+            ## both confidence scores will increase over time -- we must do 1-classifier_rejected_scores so that the rejected rewards decrease over time
+            classifier_chosen_scores = chosen_confidence 
+            classifier_rejected_scores = 1-rejected_confidence
+
         else:
             classifier_chosen_scores = 1
             classifier_rejected_scores = 1
@@ -192,43 +172,49 @@ class CustomDPO(DPOTrainer):
             (self.beta ) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
             * (policy_chosen_logps.to(self.accelerator.device) - reference_chosen_logps.to(self.accelerator.device))
             .detach()
-        ) 
+        ) * 4*classifier_chosen_scores
         
-        print("CHOSEN REWARDS: ", chosen_rewards)
-        print(1+classifier_chosen_scores)
-        chosen_rewards = chosen_rewards * (-classifier_chosen_scores)
-        print("CHOSEN REWARDS AFTER: ", chosen_rewards)
-
+       
         ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the rejected sample - hence 1-sigmoid
         rejected_rewards = (
             (self.beta ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
             * (policy_rejected_logps.to(self.accelerator.device) - reference_rejected_logps.to(self.accelerator.device))
             .detach()
-       )) 
+       )) * 4*classifier_rejected_scores
         
-        print("REJECTED REWARDS: ", rejected_rewards)
-        rejected_rewards = rejected_rewards * (-classifier_rejected_scores)
-        print("REJECTED REWARDS AFTER: ", rejected_rewards)
         print("*"*50)
         return losses, chosen_rewards, rejected_rewards
 
     
     def training_step(self, model: nn.Module, inputs: Dict[str, Union[torch.Tensor, Any]]) -> torch.Tensor:
         model.train()
-        self.fallacy_clf.train()
+
+    
         inputs = self._prepare_inputs(inputs)
-
-
+        
         with self.compute_loss_context_manager():
             loss = self.compute_loss(model, inputs)
 
         if self.args.n_gpu > 1:
             loss = loss.mean() 
-        
-        self.optimizer.zero_grad()
+            
+        print(loss)
+
         self.accelerator.backward(loss)
+
+        total_params = 0
+        updated_params = 0
+        
+        params = (fallacy_classifier.named_parameters())
+        for name, param in params:
+            if param.grad is not None:
+                print(f'{name} gradient: {param.grad.sum()}')
+            else:
+                print(f'{name} has no gradient')
+        
         self.optimizer.step()
-        self.fallacy_clf.zero_grad()
+        # self.fallacy_clf.zero_grad()
+        self.optimizer.zero_grad()
 
         return loss.detach() / self.args.gradient_accumulation_steps
 
