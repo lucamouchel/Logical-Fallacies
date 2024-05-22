@@ -189,6 +189,7 @@ class CustomDPO(DPOTrainer):
     def training_step(self, model: nn.Module, inputs: Dict[str, Union[torch.Tensor, Any]]) -> torch.Tensor:
         model.train()
 
+        self.optimizer.zero_grad()
     
         inputs = self._prepare_inputs(inputs)
         
@@ -214,7 +215,6 @@ class CustomDPO(DPOTrainer):
         
         self.optimizer.step()
         # self.fallacy_clf.zero_grad()
-        self.optimizer.zero_grad()
 
         return loss.detach() / self.args.gradient_accumulation_steps
 
