@@ -36,16 +36,17 @@ def evaluate(dataset):
     f_rates = {}
     data = []
 
-    with open(args.file_path, 'r') as f:
+    with open('src/EVAL/generated_arguments2.json', 'r') as f:
             arguments = json.load(f) 
+            arguments= [arg['argument'] for arg in arguments]
 
     for i, entry in tqdm(dataset.iterrows(), total=len(dataset)):
+        if i == 149:
+            break
         topic = entry.topic
         stance = 'supporting' if entry.label==1 else 'counter'
         y = arguments[i]
-        if i%20==0:
-            print("Fallacy rate so far: ", f_rate) 
-            print(f_rates)
+       
         feedback = get_gpt_feedback(topic, y, stance=stance, type_=args.type)
         if feedback['fallacy_type']!='None' :
             f_rate+=1
@@ -53,14 +54,18 @@ def evaluate(dataset):
             f_rates[feedback['fallacy_type']] += 1
         else:
             f_rates[feedback['fallacy_type']] = 1
+
+        if i%10==0:
+            print("Fallacy rate so far: ", f_rate) 
+            print(f_rates)
         data.append(feedback)
 
-    save_to(data, name=f'f-rate.json', output_dir=f'results/mistral/arguments/{args.type}_2/')
+    save_to(data, name=f'f-rate.json', output_dir=f'results/llama/arguments/{args.type}/')
     print(f_rates)
     print(f"f rate for {args.type}", f_rate)
     print("FALLACY TYPES")
     
-    save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/mistral/arguments/{args.type}_2/')
+    save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/llama/arguments/{args.type}/')
     for k,v in f_rates.items():
         print(k.upper(), ':', v)
 

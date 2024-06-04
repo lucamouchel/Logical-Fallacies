@@ -4,66 +4,135 @@ import torch
 from transformers import BertModel, BertTokenizer, AutoModelForSequenceClassification
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import PreTrainedModel
+from transformers import PreTrainedModel, AutoTokenizer
 import torch.optim as optim
+from utils import remove_incomplete_last_sentence
+from trl.models import create_reference_model
 # Inside CustomDPO class __init__ method
 import wandb
+from copy import deepcopy
+from  transformers.utils import is_sagemaker_mp_enabled
+if is_sagemaker_mp_enabled():
+    from transformers.trainer_pt_utils import smp_forward_backward
 CLASSES = {'Not a Fallacy': 0,  'faulty generalization': 1, 'false causality': 2, 'fallacy of relevance': 3, 'fallacy of extension': 4, 'equivocation': 5, 'ad populum': 6, 'appeal to emotion': 7, 'ad hominem': 8, 'circular reasoning': 9, 'fallacy of credibility': 10, 'fallacy of logic': 11, 'false dilemma': 12, 'intentional': 13}
-wandb.init(mode="disabled") 
-class FallacyClassifier(torch.nn.Module):
-    def __init__(self):
-        super(FallacyClassifier, self).__init__()
-        
-        self.classifier = nn.Sequential(
-            nn.Linear(32000, 32000),
-            nn.ReLU(),
-            # nn.Dropout(dropout),
-            nn.Linear(32000, 14)
-        )  
-        
-    def forward(self, x):
-        outputs = torch.mean(x, dim=1)
-        outputs = self.classifier(outputs)
-        return outputs 
 
-fallacy_classifier = FallacyClassifier().to('cuda')
 
+
+#fallacy_classifier = AutoModelForSequenceClassification.from_pretrained('models/fallacy/clf').to('cuda')
+#fallacy_tokenizer = AutoTokenizer.from_pretrained('models/fallacy/clf')
 class CustomDPO(DPOTrainer):
-    def __init__(self, *args, **kwargs):
+    def __init__(self, custom_eval_steps, lambda_, *args, **kwargs):
         super(CustomDPO, self).__init__(*args, **kwargs)
-        self.fallacy_clf = fallacy_classifier
-        self.optimizer = optim.AdamW(
-            list(self.model.parameters()) + list(self.fallacy_clf.parameters()),
-            lr=self.args.learning_rate
-        )
+        self.ref_model = deepcopy(self.model)
+        self.lambda_ = lambda_
+        self.ref_model.print_trainable_parameters()
+        for _, param in self.ref_model.named_parameters():
+            param.requires_grad = False
+        self.ref_model = self.ref_model.eval()
+       
+
+        #self.fallacy_clf = fallacy_classifier
+        #self.fallacy_tokenizer = fallacy_tokenizer
+        self.custom_eval_steps = custom_eval_steps
+        self.current_train_steps = 0
+        self.optimizer2 = optim.Adam(
+             list(self.model.classification_head.parameters()),
+             lr=5e-4
+         )
+    
+    def print_inference(self, batch):
+        if self.current_train_steps % self.custom_eval_steps == 0:
+            prompt_input_ids = batch['prompt_input_ids']
+            prompt_attention_mask = batch['prompt_attention_mask']
+            with torch.no_grad():
+                print("PROMPTS: ", batch['prompt']) 
+                outs = self.model.generate(prompt_input_ids, attention_mask=prompt_attention_mask, max_new_tokens=50, num_return_sequences=1, do_sample=True, temperature=0.7, pad_token_id=self.tokenizer.eos_token_id )
+                decoded = self.tokenizer.batch_decode(outs, skip_special_tokens=True)
+                print("GENERATED: ", list(map(lambda y: y.split('### Argument: ')[-1].strip(), decoded)))
         
+                if self.ref_model is None:
+                    with self.null_ref_context():
+                        outs_ref = self.model.generate(prompt_input_ids, attention_mask=prompt_attention_mask, max_new_tokens=100, num_return_sequences=1, do_sample=True, temperature=0.7, pad_token_id=self.tokenizer.eos_token_id, )        
+                else: 
+                    outs_ref = self.ref_model.generate(prompt_input_ids, attention_mask=prompt_attention_mask, max_new_tokens=100, num_return_sequences=1, do_sample=True, temperature=0.7, pad_token_id=self.tokenizer.eos_token_id, )
+                decoded_ref = self.tokenizer.batch_decode(outs_ref, skip_special_tokens=True)
+                print("GENERATED RESPONSES REF: ", list(map(lambda y: y.split('### Argument: ')[-1].strip(), decoded_ref)))
+
+    def concatenated_forward(self, model: nn.Module, batch: Dict[str, Union[List, torch.LongTensor]]):
+        """Run the given model on the given batch of inputs, concatenating the chosen and rejected inputs together.
+
+        We do this to avoid doing two forward passes, because it's faster for FSDP.
+        """
+        self.print_inference(batch)
+
+        concatenated_batch = self.concatenated_inputs(
+            batch,
+            is_encoder_decoder=self.is_encoder_decoder,
+            label_pad_token_id=self.label_pad_token_id,
+            padding_value=self.padding_value,
+            device=self.accelerator.device,
+        )
+        len_chosen = batch["chosen_labels"].shape[0]
+        model_kwargs = (
+            {
+                "labels": concatenated_batch["concatenated_labels"],
+                "decoder_input_ids": concatenated_batch.pop("concatenated_decoder_input_ids", None),
+            }
+            if self.is_encoder_decoder
+            else {}
+        )
+        outputs = model(
+            concatenated_batch["concatenated_input_ids"],
+            attention_mask=concatenated_batch["concatenated_attention_mask"],
+            output_hidden_states=True,
+            **model_kwargs,
+        )
+
+        all_logits = outputs.logits
+        hidden_states = outputs.hidden_states
+        all_logps, _ = self.get_batch_logps(
+            all_logits,
+            concatenated_batch["concatenated_labels"],
+            #average_log_prob=self.loss_type == "ipo",
+            is_encoder_decoder=False,
+            label_pad_token_id=self.label_pad_token_id,
+        )
+        chosen_logps = all_logps[:len_chosen]
+        rejected_logps = all_logps[len_chosen:]
+        chosen_logits = all_logits[:len_chosen]
+        rejected_logits = all_logits[len_chosen:]
+        return chosen_logps, rejected_logps, chosen_logits, rejected_logits, hidden_states
+    
+
     def get_batch_loss_metrics(self, model, batch: Dict[str, Union[List, torch.LongTensor]], train_eval: Literal["train", "eval"] = "train"):
         """Compute the DPO loss and other metrics for the given batch of inputs for train or test."""
         metrics = {}
+        policy_chosen_logps,policy_rejected_logps, policy_chosen_logits, policy_rejected_logits, policy_hidden_states = self.concatenated_forward(model, batch)
+        
+        # if "reference_chosen_logps" in batch and "reference_rejected_logps" in batch:
+        #     reference_chosen_logps = batch["reference_chosen_logps"]
+        #     reference_rejected_logps = batch["reference_rejected_logps"]
+        # else:
+        with torch.no_grad():
+            if self.ref_model is None:
+                with self.null_ref_context():
+                    reference_chosen_logps, reference_rejected_logps, _, _, ref_hidden_states = self.concatenated_forward(self.model, batch)
+            else:
+                reference_chosen_logps, reference_rejected_logps, _, _ , ref_hidden_states= self.concatenated_forward(self.ref_model, batch)
 
-        policy_chosen_logps,policy_rejected_logps, policy_chosen_logits, policy_rejected_logits = self.concatenated_forward(model, batch)
+        policy_hidden_states, ref_hidden_states = policy_hidden_states[-1], ref_hidden_states[-1]
+        policy_last_hidden_states = policy_hidden_states[:, -1, :]
+        ref_last_hidden_states = ref_hidden_states[:, -1, :]
 
-        if "reference_chosen_logps" in batch and "reference_rejected_logps" in batch:
-            reference_chosen_logps = batch["reference_chosen_logps"]
-            reference_rejected_logps = batch["reference_rejected_logps"]
-        else:
-            with torch.no_grad():
-                if self.ref_model is None:
-                    with self.null_ref_context():
-                        reference_chosen_logps, reference_rejected_logps, _, _ = self.concatenated_forward(self.model, batch)
-                else:
-                    reference_chosen_logps, reference_rejected_logps, _, _ = self.concatenated_forward(self.ref_model, batch)
-
-
-        losses, chosen_rewards, rejected_rewards = self.dpo_loss(
+        losses, chosen_rewards, rejected_rewards, clf_loss, chosen_preds, rejected_preds, chosen_loss, rejected_loss = self.dpo_loss(
             policy_chosen_logps,
             policy_rejected_logps,
             reference_chosen_logps,
             reference_rejected_logps,
-            fallacy_clf=self.fallacy_clf,
-            chosen_inputs=policy_chosen_logits,
-            rejected_inputs=policy_rejected_logits,
-            fallacy_types=batch['fallacy_type']    
+            batch=batch,
+            policy_last_hidden_states=policy_last_hidden_states,
+            ref_last_hidden_states=ref_last_hidden_states,
+            # fallacy_clf=self.fallacy_clf,
         )
 
         reward_accuracies = (chosen_rewards > rejected_rewards).float()
@@ -78,6 +147,14 @@ class CustomDPO(DPOTrainer):
         metrics[f"{prefix}logits/rejected"] = policy_rejected_logits.detach().mean().cpu()
         metrics[f"{prefix}logits/chosen"] = policy_chosen_logits.detach().mean().cpu()
 
+        chosen_accuracy = (chosen_preds == 0).float().detach().mean()   
+        rejected_accuracy = (rejected_preds == torch.tensor(batch['fallacy_type']).to('cuda')).float().detach().mean()
+    
+        metrics[f"{prefix}clf_loss"] = clf_loss.detach().mean().cpu()
+        metrics[f"{prefix}clf/chosen_loss"] = chosen_loss.detach().mean().cpu()
+        metrics[f"{prefix}clf/rejected_loss"] = rejected_loss.detach().mean().cpu()
+        metrics[f"{prefix}clf/chosen_accuracy"] = chosen_accuracy.mean().cpu()
+        metrics[f"{prefix}clf/rejected_accuracy"] = rejected_accuracy.mean().cpu()
         return losses.mean(), metrics
 
     def dpo_loss(
@@ -87,9 +164,9 @@ class CustomDPO(DPOTrainer):
         reference_chosen_logps: torch.FloatTensor,
         reference_rejected_logps: torch.FloatTensor,
         fallacy_clf: nn.Module = None,
-        chosen_inputs=None,
-        rejected_inputs=None,
-        fallacy_types=None
+        batch=None,
+        policy_last_hidden_states=None,
+        ref_last_hidden_states=None,
     ) -> Tuple[torch.FloatTensor, torch.FloatTensor, torch.FloatTensor]:
         
         """Compute the DPO loss for a batch of policy and reference model log probabilities.
@@ -135,34 +212,37 @@ class CustomDPO(DPOTrainer):
                 f"Unknown loss type: {self.loss_type}. Should be one of ['sigmoid', 'hinge', 'ipo', 'kto_pair']"
             )
         
+
         ####### MODIFS HERE
-        if fallacy_clf:
-            chosen_clf = fallacy_classifier(chosen_inputs)
-            rejected_clf = fallacy_classifier(rejected_inputs)
-
-            rejected_targets = torch.tensor(fallacy_types).view(-1).to('cuda')
-            chosen_targets = torch.zeros(chosen_clf.size(0), dtype=torch.long).to('cuda')
-
-            concatenated_outputs = torch.cat([chosen_clf, rejected_clf], dim=0)
-            concatenated_targets = torch.cat([chosen_targets, rejected_targets], dim=0)
-            #clf_loss = F.cross_entropy(concatenated_outputs, concatenated_targets)
-            ## the whole loss makes model crash - cuda out of memory
-            clf_loss = F.cross_entropy(rejected_clf, rejected_targets)
-            # chosen_loss = F.cross_entropy(chosen_clf, chosen_targets)
-
-
-            # clf_loss = chosen_loss + rejected_loss
-            print(losses)
-            losses = losses + 0.1*clf_loss
-            print(losses)
+        if policy_last_hidden_states is not None:
+        
+            clf_logits_policy = self.model.classification_head(policy_last_hidden_states)
+            #clf_logits_ref = self.ref_model.classification_head(ref_last_hidden_states).to('cuda')
+            concatenated_length = clf_logits_policy.size(0)
             
+            chosen_logits = clf_logits_policy[:concatenated_length//2]
+            rejected_logits = clf_logits_policy[concatenated_length//2:]
             
-            chosen_confidence = F.softmax(chosen_clf, dim=1)[:, 0]
-            rejected_confidence = F.softmax(rejected_clf, dim=1)[range(rejected_clf.size(0)), torch.tensor(fallacy_types).view(-1).to('cuda')]
-            ## both confidence scores will increase over time -- we must do 1-classifier_rejected_scores so that the rejected rewards decrease over time
-            classifier_chosen_scores = chosen_confidence 
-            classifier_rejected_scores = 1-rejected_confidence
+            chosen_targets = torch.zeros(chosen_logits.size(0), dtype=torch.long).to('cuda')
+            rejected_targets = torch.tensor(batch['fallacy_type']).to('cuda')
 
+            class_weights = [0.05, 0.15, 0.09, 0.07, 0.07, 0.03, 0.1, 0.07, 0.11, 0.07, 0.07, 0.06, 0.06, 0.06]
+            weights = torch.tensor(class_weights, dtype=torch.float).to('cuda')
+            loss_fct = torch.nn.CrossEntropyLoss(weight=weights)
+            chosen_loss = loss_fct(chosen_logits, chosen_targets)
+            rejected_loss = loss_fct(rejected_logits, rejected_targets)
+            clf_loss = chosen_loss + rejected_loss
+            losses = losses + self.lambda_*clf_loss
+            
+            chosen_probabilities = torch.softmax(chosen_logits, dim=1)  ## batch size x num_classes
+            chosen_confidence_scores = chosen_probabilities[:, 0] ## batch size, 1
+
+            rejected_probabilities = torch.softmax(rejected_logits, dim=1) ## batch size x num_classes
+            rejected_confidence_scores = rejected_probabilities[range(rejected_probabilities.size(0)), rejected_targets] ## batch size, 1
+            # if clf is confident in classifying the chosen response as non fallacy -- increase chosen reward 
+            # if clf is confident in classifying the rejected response as fallacy -- increase rejected reward by smaller amount            
+            #classifier_chosen_scores = torch.tensor([2*score if score > 0.75 else score for score in chosen_confidence_scores]).to('cuda')
+            #classifier_rejected_scores = torch.tensor([2*score if score > 0.75 else score for score in rejected_confidence_scores]).to('cuda')
         else:
             classifier_chosen_scores = 1
             classifier_rejected_scores = 1
@@ -172,50 +252,51 @@ class CustomDPO(DPOTrainer):
             (self.beta ) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
             * (policy_chosen_logps.to(self.accelerator.device) - reference_chosen_logps.to(self.accelerator.device))
             .detach()
-        ) * 4*classifier_chosen_scores
-        
-       
+        ) #* classifier_chosen_scores
+        # print("REWARDS")
+        # print(chosen_rewards)
         ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the rejected sample - hence 1-sigmoid
         rejected_rewards = (
             (self.beta ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
             * (policy_rejected_logps.to(self.accelerator.device) - reference_rejected_logps.to(self.accelerator.device))
             .detach()
-       )) * 4*classifier_rejected_scores
+       )) #* classifier_rejected_scores
         
-        print("*"*50)
-        return losses, chosen_rewards, rejected_rewards
+        # print("*"*50)
+        # print("LOSS DPO : ", losses)
+        # 
+        if self.current_train_steps % 5 == 0:
+            print("CHOSEN preds: ", torch.argmax(chosen_probabilities, dim=1))
+            print("-"*50)
+            print("TRUE LABELS: ", rejected_targets)
+            print("REJECTED preds: ", torch.argmax(rejected_probabilities, dim=1))
+            print("-"*50)
+        return losses, chosen_rewards, rejected_rewards, clf_loss, chosen_probabilities.argmax(-1), rejected_probabilities.argmax(-1), chosen_loss, rejected_loss
 
+    
+    
     
     def training_step(self, model: nn.Module, inputs: Dict[str, Union[torch.Tensor, Any]]) -> torch.Tensor:
-        model.train()
-
-        self.optimizer.zero_grad()
-    
-        inputs = self._prepare_inputs(inputs)
         
+        self.current_train_steps += 1
+        model.train()
+        inputs = self._prepare_inputs(inputs)
+        self.optimizer2.zero_grad()
+        if is_sagemaker_mp_enabled():
+            loss_mb = smp_forward_backward(model, inputs, self.args.gradient_accumulation_steps)
+            return loss_mb.reduce_mean().detach().to(self.args.device)
+
         with self.compute_loss_context_manager():
             loss = self.compute_loss(model, inputs)
 
+        del inputs
+        torch.cuda.empty_cache()
+
         if self.args.n_gpu > 1:
-            loss = loss.mean() 
-            
-        print(loss)
+            loss = loss.mean()  # mean() to average on multi-gpu parallel training
 
         self.accelerator.backward(loss)
-
-        total_params = 0
-        updated_params = 0
-        
-        params = (fallacy_classifier.named_parameters())
-        for name, param in params:
-            if param.grad is not None:
-                print(f'{name} gradient: {param.grad.sum()}')
-            else:
-                print(f'{name} has no gradient')
-        
-        self.optimizer.step()
-        # self.fallacy_clf.zero_grad()
-
+        self.optimizer2.step()
         return loss.detach() / self.args.gradient_accumulation_steps
-
-
+    
+    

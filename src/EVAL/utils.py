@@ -40,12 +40,12 @@ def generate(prompt: str, model, tokenizer, **generate_kwargs):
 def get_gpt_feedback(topic, argument, stance, type_='dpo'):
     fallacy_types = pd.read_csv('data/LOGIC/mappings.csv')['Original Name'].unique()
     fallacy_types = [f for f in fallacy_types if f != 'miscellaneous']
-    s0 = f"Consider the following topic and {stance} argument:\nTopic: {topic}\nArgument: {argument}\n"
-    s1 = f"""Out of all the following logical fallacy types\n{fallacy_types}\nwould you qualify this argument as one of these logical fallacies? If not - return "None"."""
-    s2 = f"If the given argument is a logical fallacy, which type is it? Let fallacy_type be your answer.\n"
+    s0 = f"Consider the following topic and the {stance} argument:\nTopic: {topic}\nArgument: {argument}\n"
+    s1 = f"""Out of all the fallacy types: {fallacy_types}, would you qualify this argument as a logical fallacy? If not - return "None"."""
+    s2 = f"If the given argument is a logical fallacy, which type is it? Let fallacy_type be your answer. Please be lenient in your judgment.\n" 
     s3 = f"""Your task is to complete the following json: {'{'} "type": "{type_}",\n "fallacy_type": <> {'}'}."""
     prompt = s0 + s1 + s2 + s3
-    response = process_gpt_output(get_gpt_response(prompt, model='gpt-4'))
+    response = process_gpt_output(get_gpt_response(prompt, model='gpt-4o'))
     if response is None:
         print("RETURNED NONE")
         response = {'type': type_, 'fallacy_type': 'None'}

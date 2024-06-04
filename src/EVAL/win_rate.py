@@ -30,9 +30,10 @@ def compare_models(stance, topic, arguments):
     possible_answers = ''
     for i, argument in enumerate(arguments):
         possible_answers += f"{i+1}. {argument}\n"
-    prompt = f"""Which of these {stance} arguments is better for the topic: {topic} Please consider the fact that some of these arguments might be in the form of logical fallacies. If one of the arguments is a logical fallacy, it should not be the best. 
+    prompt = f"""Which of these {stance} arguments is better for the topic: {topic} Please consider the fact that some of these arguments might be in the form of logical fallacies. Please evaluate the arguments and whether they are logical fallacies. If one of the arguments is a logical fallacy, it should not be the best. 
     \nArguments: \n{possible_answers}\nIf the arguments are equally good, return number {len(arguments) + 1}.\nThe better argument is number:"""
-    
+
+
     response = get_gpt_response(prompt, necessary_tokens=1, model='gpt-4')
     try:
         response = int(response)
@@ -46,26 +47,31 @@ def compare_models(stance, topic, arguments):
    
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model-name', required=True)
+    parser.add_argument('--model-name', default='llama')
     args = parser.parse_args() 
     
-    test_set = pd.read_json('data/argumentation/test_cckg.json')
+    test_set = pd.read_json('data/argumentation/test_cckg.json')[:150]
     
     with open(f'results/{args.model_name}/sft_args.json', 'r') as f:
         sft_args = json.load(f)
         sft_args = [arg[1] for arg in sft_args]
 
-    combinations = [['sft', 'dpo_custom']]
+    combinations = [['sft', 'cpo_lambda_0.3']]
     for combination in combinations:
         to_compare = combination[1]
         if to_compare != 'human':
-            with open(f'results/{args.model_name}/{combination[1]}.json', 'r') as f:
+            with open(f'src/EVAL/generated_arguments2.json', 'r') as f:
                 arguments = json.load(f)
-                arguments = [arg[1] for arg in arguments]
+                #arguments = [arg[1] for arg in arguments]
+        new_args = []
+        for sample in arguments:
+            new_args.append(sample['argument'])
 
+
+        arguments = new_args
         wins = {'sft': 0, to_compare: 0, 'tie': 0}
         for i, entry in tqdm(test_set.iterrows()):
-            if i == len(sft_args)-1:
+            if i == 149:
                 break
 
             if i % 201 == 0 and i != 0:
@@ -91,12 +97,13 @@ def main():
                 elif response == 3:
                     wins['tie'] += 1
 
-                if i%10 == 0:
+                if i%5 == 0:
                     print(wins)
             except:
                 save_to(wins, name='wins.json', output_dir=f'results/{args.model_name}/')
-                continue
+                exit()
             
+        print(wins)
         save_to(wins, name=f'sft_vs_{to_compare}.json', output_dir=f'results/{args.model_name}/')
 
 if __name__ == "__main__":
