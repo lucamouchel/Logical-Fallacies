@@ -65,8 +65,8 @@ def map_data(example):
 
     return {
         'prompt': '<s> [INST] ### Prompt: ' + prompt + f" [/INST]\n### Argument: " ,
-        'chosen': example['chosen'] + ' [Not a logical fallacy] </s>',
-        'rejected': example['rejected'] +  f" [{INVERSE[example['fallacy_type']]}] </s>",
+        'chosen': example['chosen'] + ' </s>',
+        'rejected': example['rejected'] +  " </s>",
         'fallacy_type': example['fallacy_type']
     }
     

@@ -25,24 +25,23 @@ openai.api_key = OPENAI_API_KEY
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--file-path', default=None)
-    parser.add_argument('--type')
+    parser.add_argument('--file-path', default="FWEg")
+    parser.add_argument('--type', default="AAA")
     return parser.parse_args()
 
-dataset = pd.read_json('data/argumentation/test_cckg.json')
+dataset = pd.read_json('data/argumentation/test_cckg.json')[:200]
+dataset.reset_index(drop=True, inplace=True)
 def evaluate(dataset):
     args = parse_args()
     f_rate = 0
     f_rates = {}
     data = []
 
-    with open('src/EVAL/generated_arguments2.json', 'r') as f:
+    with open('results/mistral_bis/mistral_again.json', 'r') as f:
             arguments = json.load(f) 
-            arguments= [arg['argument'] for arg in arguments]
+            # arguments= [arg['argument'] for arg in arguments]
 
     for i, entry in tqdm(dataset.iterrows(), total=len(dataset)):
-        if i == 149:
-            break
         topic = entry.topic
         stance = 'supporting' if entry.label==1 else 'counter'
         y = arguments[i]
@@ -60,12 +59,12 @@ def evaluate(dataset):
             print(f_rates)
         data.append(feedback)
 
-    save_to(data, name=f'f-rate.json', output_dir=f'results/llama/arguments/{args.type}/')
+    save_to(data, name=f'new_f-rate.json', output_dir=f'results/mistral_bis/{args.type}/')
     print(f_rates)
     print(f"f rate for {args.type}", f_rate)
     print("FALLACY TYPES")
     
-    save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/llama/arguments/{args.type}/')
+    save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/llama_bis_51/{args.type}/')
     for k,v in f_rates.items():
         print(k.upper(), ':', v)
 

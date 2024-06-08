@@ -33,24 +33,24 @@ def main():
     args = parser.parse_args()
     
     model = AutoPeftModelForCausalLM.from_pretrained(args.model_path, device_map='auto')
-    clf = transformers.AutoModelForSequenceClassification.from_pretrained('models/fallacy/clf').to('cuda')
-    clf_tokenizer = transformers.AutoTokenizer.from_pretrained('models/fallacy/clf')
+    # clf = transformers.AutoModelForSequenceClassification.from_pretrained('models/fallacy/clf').to('cuda')
+    # clf_tokenizer = transformers.AutoTokenizer.from_pretrained('models/fallacy/clf')
     model.eval()
-    clf.eval()
+    # clf.eval()
     ### SFT and DPO have the same tokenizer -- but not sure for the other two
     tokenizer = transformers.AutoTokenizer.from_pretrained(args.model_path)
     test_set = pd.read_json('data/argumentation/test_cckg.json')[:150]
-    def fallacy_probas(arguments):
-        inputs = clf_tokenizer(arguments, add_special_tokens=True, return_tensors='pt', padding=True, truncation=True).to('cuda')
-        with torch.no_grad():
-            out = clf(**inputs)    
-            logits = out.logits
-            if logits.shape[1] == 2:
-                fallacy_logits = logits[:, 1]
-                print("GOOD")
-                return torch.sigmoid(fallacy_logits).tolist()
-            else: 
-                return torch.softmax(logits, dim=1)[:, 0].tolist()
+#    ; def fallacy_probas(arguments):
+        # inputs = clf_tokenizer(arguments, add_special_tokens=True, return_tensors='pt', padding=True, truncation=True).to('cuda')
+        # with torch.no_grad():
+        #     out = clf(**inputs)    
+        #     logits = out.logits
+        #     if logits.shape[1] == 2:
+        #         fallacy_logits = logits[:, 1]
+        #         print("GOOD")
+        #         return torch.sigmoid(fallacy_logits).tolist()
+        #     else: 
+        #         return torch.softmax(logits, dim=1)[:, 0].tolist()
     
     def generate(prompt: str, model, tokenizer,n=5, **generate_kwargs):
         """Main function for each worker process (may be only 1 for BasicTrainer/TensorParallelTrainer)."""
@@ -103,16 +103,16 @@ def main():
         
         
 
-    save_to(data, name=f'f-rate_{date}.json', output_dir=f'results/{args.model_name}/arguments/{args.type}/')
+    save_to(data, name=f'f-rate_{date}.json', output_dir=f'results/mistral_bis/{args.type}/')
     print(f_rates)
     print(f"f rate for {args.type}:", f_rate)
     print("FALLACY TYPES")
     
-    save_to(f_rates, name=f'fallacy_counts_{date}.json', output_dir=f'results/{args.model_name}/arguments/{args.type}/')
+    save_to(f_rates, name=f'fallacy_counts_{date}.json', output_dir=f'results/mistral_bis/{args.type}/')
     for k,v in f_rates.items():
         print(k.upper(), ':', v)
         
-    save_to(arguments, name=f'{args.type}_{date}.json', output_dir=f'results/{args.model_name}/')
+    save_to(arguments, name=f'{args.type}_{date}.json', output_dir=f'results/mistral_bis/')
 
         
 if __name__ == "__main__":

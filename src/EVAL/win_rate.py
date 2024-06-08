@@ -34,7 +34,7 @@ def compare_models(stance, topic, arguments):
     \nArguments: \n{possible_answers}\nIf the arguments are equally good, return number {len(arguments) + 1}.\nThe better argument is number:"""
 
 
-    response = get_gpt_response(prompt, necessary_tokens=1, model='gpt-4')
+    response = get_gpt_response(prompt, necessary_tokens=1, model='gpt-4o')
     try:
         response = int(response)
         return response
@@ -51,29 +51,29 @@ def main():
     args = parser.parse_args() 
     
     test_set = pd.read_json('data/argumentation/test_cckg.json')[:150]
-    
+
     with open(f'results/{args.model_name}/sft_args.json', 'r') as f:
         sft_args = json.load(f)
-        sft_args = [arg[1] for arg in sft_args]
+        #sft_args = [arg[1] for arg in sft_args]
+
 
     combinations = [['sft', 'cpo_lambda_0.3']]
     for combination in combinations:
         to_compare = combination[1]
         if to_compare != 'human':
-            with open(f'src/EVAL/generated_arguments2.json', 'r') as f:
+            with open(f'results/mistral_bis/dpo_results/f-rate_2024-06-05 11:28:39.612164.json', 'r') as f:
                 arguments = json.load(f)
-                #arguments = [arg[1] for arg in arguments]
-        new_args = []
-        for sample in arguments:
-            new_args.append(sample['argument'])
+                arguments = [arg['argument'] for arg in arguments]
 
+       
+        # new_args = []
+        # for sample in arguments:
+        #     new_args.append(sample['argument'])
 
-        arguments = new_args
         wins = {'sft': 0, to_compare: 0, 'tie': 0}
         for i, entry in tqdm(test_set.iterrows()):
-            if i == 149:
-                break
-
+            
+            
             if i % 201 == 0 and i != 0:
                 print("going to sleep to not overcook gpt4")
                 time.sleep(60) 
@@ -87,24 +87,32 @@ def main():
             else:
                 y = arguments[i]
             
+            winner = []
             try:
                 response = compare_models(stance, topic, [y_sft, y])
                 assert type(response) == int
                 if response == 1:
                     wins['sft'] += 1
+                    winner.append('sft')
                 elif response == 2:
                     wins[to_compare] += 1
+                    winner.append(to_compare)
                 elif response == 3:
                     wins['tie'] += 1
+                    winner.append('tie')
 
                 if i%5 == 0:
                     print(wins)
+                if i == len(arguments)- 1:
+                    break
             except:
                 save_to(wins, name='wins.json', output_dir=f'results/{args.model_name}/')
                 exit()
-            
+        from collections import Counter
+        print(Counter(winner))
+        save_to(winner, name="winners.json", output_dir='src/EVAL/AMT/')
         print(wins)
-        save_to(wins, name=f'sft_vs_{to_compare}.json', output_dir=f'results/{args.model_name}/')
+        # save_to(wins, name=f'sft_vs_{to_compare}2.json', output_dir=f'results/{args.model_name}/')
 
 if __name__ == "__main__":
     main()

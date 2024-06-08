@@ -226,7 +226,7 @@ class CustomDPO(DPOTrainer):
             chosen_targets = torch.zeros(chosen_logits.size(0), dtype=torch.long).to('cuda')
             rejected_targets = torch.tensor(batch['fallacy_type']).to('cuda')
 
-            class_weights = [0.05, 0.15, 0.09, 0.07, 0.07, 0.03, 0.1, 0.07, 0.11, 0.07, 0.07, 0.06, 0.06, 0.06]
+            class_weights = [0.03, 0.15, 0.09, 0.07, 0.07, 0.03, 0.1, 0.07, 0.11, 0.07, 0.07, 0.06, 0.06, 0.06]
             weights = torch.tensor(class_weights, dtype=torch.float).to('cuda')
             loss_fct = torch.nn.CrossEntropyLoss(weight=weights)
             chosen_loss = loss_fct(chosen_logits, chosen_targets)
@@ -235,36 +235,20 @@ class CustomDPO(DPOTrainer):
             losses = losses + self.lambda_*clf_loss
             
             chosen_probabilities = torch.softmax(chosen_logits, dim=1)  ## batch size x num_classes
-            chosen_confidence_scores = chosen_probabilities[:, 0] ## batch size, 1
-
             rejected_probabilities = torch.softmax(rejected_logits, dim=1) ## batch size x num_classes
-            rejected_confidence_scores = rejected_probabilities[range(rejected_probabilities.size(0)), rejected_targets] ## batch size, 1
-            # if clf is confident in classifying the chosen response as non fallacy -- increase chosen reward 
-            # if clf is confident in classifying the rejected response as fallacy -- increase rejected reward by smaller amount            
-            #classifier_chosen_scores = torch.tensor([2*score if score > 0.75 else score for score in chosen_confidence_scores]).to('cuda')
-            #classifier_rejected_scores = torch.tensor([2*score if score > 0.75 else score for score in rejected_confidence_scores]).to('cuda')
-        else:
-            classifier_chosen_scores = 1
-            classifier_rejected_scores = 1
 
         ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the chosen sample - hence 1-sigmoid
         chosen_rewards = (
             (self.beta ) ## multiply the chosen rewards by sigmoid of the chosen logits after feeding them through the classifier. This way, we can give more weight to the chosen rewards that the classifier is more confident about.
             * (policy_chosen_logps.to(self.accelerator.device) - reference_chosen_logps.to(self.accelerator.device))
             .detach()
-        ) #* classifier_chosen_scores
-        # print("REWARDS")
-        # print(chosen_rewards)
-        ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the rejected sample - hence 1-sigmoid
+        ) 
         rejected_rewards = (
             (self.beta ### multiply the rejected rewards by 1 - sigmoid of the rejected logits after feeding them through the classifier. This way, we can give more weight to the rejected rewards that the classifier is confident about.
             * (policy_rejected_logps.to(self.accelerator.device) - reference_rejected_logps.to(self.accelerator.device))
             .detach()
-       )) #* classifier_rejected_scores
+       ))
         
-        # print("*"*50)
-        # print("LOSS DPO : ", losses)
-        # 
         if self.current_train_steps % 5 == 0:
             print("CHOSEN preds: ", torch.argmax(chosen_probabilities, dim=1))
             print("-"*50)

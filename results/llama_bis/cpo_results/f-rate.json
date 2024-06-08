@@ -3,13 +3,13 @@
         "type": "None",
         "fallacy_type": "None",
         "topic": "There should be no age restrictions on cosmetic surgery.",
-        "argument": "Young people have money and are old enough to know what they want."
+        "argument": "Cosmetic surgery is a choice and shouldn't be restricted."
     },
     {
         "type": "None",
         "fallacy_type": "None",
         "topic": "Creating awareness of the LGBT community, decreases discrimination.",
-        "argument": "Lgbtq are still discriminated against and not given the same rights as others."
+        "argument": "The LBGT community is not a minority group, and should not be given special treatment."
     },
     {
         "type": "None",
@@ -33,7 +33,7 @@
         "type": "logical fallacy",
         "fallacy_type": "appeal to emotion",
         "topic": "There should not be parades that celebrate homosexuality.",
-        "argument": "Homosexualsity is not something to celebrates."
+        "argument": "Homosexualsity is not something to celebrate."
     },
     {
         "type": "None",
@@ -105,7 +105,7 @@
         "type": "None",
         "fallacy_type": "None",
         "topic": "Homeopathic remedies can be bad for your health.",
-        "argument": "HomeopATHY is not proven to work and can cause more harm than good."
+        "argument": "Homeopathy is not proven to work and can cause more harm than good."
     },
     {
         "type": "None",
@@ -892,5 +892,311 @@
         "fallacy_type": "None",
         "topic": "When people deny terrible past events like the holocaust it is more likely to happen again.",
         "argument": "People learn from the past and will be more apt to remember it in the future."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Television focuses people's attention away from healthier activities.",
+        "argument": "People watch television with commercials and also can get information from it."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Everyone should have to use a public defender, so that wealthy people invest in the public defender system.",
+        "argument": "Public defenders are enough for people to plead guilty."
+    },
+    {
+        "type": "logical fallacy",
+        "fallacy_type": "faulty generalization",
+        "topic": "safe spaces allow for freedom of expression.",
+        "argument": "Safe spaces are artificial environments that don't allow people to express themselves."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "school prayer should not be allowed in schools.",
+        "argument": "Prayer in school is not mandatory and does not coerce anyone to participate."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Racial profiling is biased against anyone who isn't white.",
+        "argument": "Racial profiles are most common among blacks, but can be gathered on anyone."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "the public defender system can benefit from wealthy people investment and thus should be made mandatory..",
+        "argument": "Public defenders are already paid for by the government so there is no need for wealth investments."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Compensating only the executives greatly is not ideal.",
+        "argument": "Executive compensation is very high and not fair."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "zero-tolerance policies have shown that they don't reduce violence or drug use by kids.",
+        "argument": "Zero- tolerance policy shows kidds that there are consequences for their bad behavior."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Foster care is a positive for children.",
+        "argument": "Foster Care breaks up families."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "everyone should have to use a public defender.",
+        "argument": "Public defenders are more fair."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Practicing gender neutral language creates gender equality.",
+        "argument": "Gender inequality will continue to exist even if we adopt gender-neutral language."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "School prayer should not be in schools.",
+        "argument": "School prayer is harmless."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Voting should not be mandated.",
+        "argument": "Voting is the foundation of our government."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "The holocaust should never be denied.",
+        "argument": "The holocuast should be remembered but is best learned about in history class."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Telemarketing is good for the economy, and is a legitimate form of marketing.",
+        "argument": "Telemarks are a way for companies to sell products."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Scientology is a cult.",
+        "argument": "Scientology has helped people."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Assisted suicide is good for terminal patients who are suffering.",
+        "argument": "Terminal patients have enough suffering without being encouraged to end their lives."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "School prayer is a positive for society.",
+        "argument": "Prayer in schools is awkward for some people and should not be forced."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "People should not take natural medicines without seeking medical help.",
+        "argument": "Some natural remedies can help cure illnesses."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "zero-tolerance policies make schools safer for both students and teachers.",
+        "argument": "Zero- tolerance policy is harsh and can cause people to act out even more."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "People have the right to what they want to do with their body",
+        "argument": "Bodily autonomy cannot be justified by culture and cannot make us not hurt others."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Executive are hard working.",
+        "argument": "Executive do not work as hard as other class of people."
+    },
+    {
+        "type": "logical fallacy",
+        "fallacy_type": "faulty generalization",
+        "topic": "Surrogacy ensures that a child is raised by at least one biological parent.",
+        "argument": "Surrogates often keep the child and collect the money."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Cosmetic surgery is risky for minor that is why it should be banned.",
+        "argument": "Minor can take care of themselves, so they can make their own decisions."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "If someone can afford a good lawyer, they should be allowed, so they get the best representation they can get.",
+        "argument": "People who have more money still have privilege."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Journalism is not in need of subsidies.",
+        "argument": "Journalism already receives advertisement revenue."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Even with free speech there are limits, and if you are triggering violence, you shouldn't get a platform.",
+        "argument": "People shouldn\u2019t be censored for their views."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "School prayer goes against first amendment rights of kids by forcing beliefs.",
+        "argument": "Kids can pray on their own time."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "faulty generalization",
+        "topic": "Executive are hard working.",
+        "argument": "Executive are lazy."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "People should be allowed to higher expensive lawyers if they can afford to do it.",
+        "argument": "It is not fair for people to be able to pay more for legal representation than others."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Telemarketing makes advertising",
+        "argument": "Telemarks makes it easy for advertisers to sell to us."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Zero tolerance policy should not be implemented.",
+        "argument": "Zero tolerances policies can cause abuse."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "LGBTQ tolerance is imperative.",
+        "argument": "Lgbtq+ are not necessarily more deserving than anyone else."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "People should pay for a lawyer if they can",
+        "argument": "People who are accused of a crime should have a right to a legal representative."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "children need the room to grow and learn from mistakes",
+        "argument": "Children don't need to be allowed to make mistakes, they need adults to guide them."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "This system would get rid of people being able to get their preferred gender for their children.",
+        "argument": "Letting people choose the gender of their kids is wrong."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Payday loans should not exist.",
+        "argument": "Payday Loans are accessible to the poor."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "If something's not harmful it should be allowed.",
+        "argument": "If something is dangerous it shouldn't be permitted."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Children do not know what they are saying when they pray at school.",
+        "argument": "Prayer in schools does not harm children and is a positive experience for them."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Cancelling pride parades does harm to LGBTQ+ people",
+        "argument": "Cancellations of pride events do not do lasting harm, as they are only a day or so."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "public defenders care more about your best interests than their paid counterparts",
+        "argument": "Public defender are government employees and as such are bound to the same ethics rules as any other government employee."
+    },
+    {
+        "type": "logical fallacy",
+        "fallacy_type": "faulty generalization",
+        "topic": "Subsidized loans are an important way to support students.",
+        "argument": "Subsidiized student loas are a bad way for students to not have to pay."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "zero-tolerance policies don't make sense because innocent students often get punished.",
+        "argument": "Innocent people rarely get caught in criminal activity, but sometimes do."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Payday loans work for people who need immediate money, and don't have good credit.",
+        "argument": "People can's afford to pay back payday loan."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Subrogation should not be prohibited.",
+        "argument": "Subrogated insurance claims can be a bad thing for policyholders."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Telemarketers has nothing to offer only to rip people off their money",
+        "argument": "Telemarks is a source of income to many people, it also helps business grows."
+    },
+    {
+        "type": "logical fallacy",
+        "fallacy_type": "faulty generalization",
+        "topic": "Mandatory retirement age will allow young workers to be able to predictably enter the workforce.",
+        "argument": "Young people are impatient and would find it difficult to wait until a mandatory age to retire."
+    },
+    {
+        "type": "logical fallacy",
+        "fallacy_type": "faulty generalization",
+        "topic": "Homeopathy can be a source of first aid and immediate medication",
+        "argument": "HomeopATHY can help alleviate pains and also cure some diseases immediately."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "Payday loans cause debt and should be banned.",
+        "argument": "Payday lending does not create debilitating debts for most people."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "People are deterred from committing criminal acts by the death penalty.",
+        "argument": "Criminals are less likely to offend if they know they will be executed."
+    },
+    {
+        "type": "None",
+        "fallacy_type": "None",
+        "topic": "executives deserve their compensation.",
+        "argument": "Compensation reflects the responsibility and risk taken by executives."
     }
 ]

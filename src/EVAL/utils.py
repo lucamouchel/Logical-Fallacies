@@ -173,15 +173,19 @@ def evaluate_out_of_domain(eval_type, type_='ppo', model_name='llama'):
     data = []
     
     
-    with open(f'results/out_of_domain/llama/{eval_type}/generated_{eval_type}_{type_}.json', 'r') as f:
+    with open(f'src/TRANSFER/generated_debates_custom_cpo.json', 'r') as f:
         data = json.load(f) 
     
     results = []
+    i = 0
     for entry in tqdm(data):
+        i+=1
         try:
             topic = entry['topic']
             stance = entry['stance']
             y = entry['generated']
+            y = remove_incomplete_last_sentence(y)
+
             feedback = get_gpt_feedback(topic, y, stance=stance, type_=type_)
             if feedback['fallacy_type']!='None' :
                 f_rate+=1
@@ -190,8 +194,12 @@ def evaluate_out_of_domain(eval_type, type_='ppo', model_name='llama'):
             else:
                 f_rates[feedback['fallacy_type']] = 1
 
+            if i % 10 == 0:
+                print(f_rates)
+            
             results.append(feedback)
         except:
+            print(f_rates)
             continue
 
     save_to(results, name=f'f-rate.json', output_dir=f'results/out_of_domain/{model_name}/{eval_type}/{type_}/')

@@ -1,0 +1,902 @@
+[
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "There should be no age restrictions on cosmetic surgery.",
+        "argument": "Older people often have more wrinkles, and cosmetically-assisted surgery is safer the earlier in life one undergoes it."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "Creating awareness of the LGBT community, decreases discrimination.",
+        "argument": "Discrimination is a choice."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Subsidizing student loans is bad.",
+        "argument": "By subsidizing loans, we allow students to not be burdened by their past."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "The sex of a child does not define their value.",
+        "argument": "Some people prefer boys or girls and this is problematic for gender equality."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "argument": "Some people have more influence than Others."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "ad populum",
+        "topic": "There should not be parades that celebrate homosexuality.",
+        "argument": "Some people think that homosexualITY is wrong and should be judged as such."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Journalism is not in need of subsidies.",
+        "argument": "Some journalists are not very good and need help to improve."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Child actors do not live normal lives.",
+        "argument": "Many child actors have gone on to live very normal adult lives with the help and guidance of their parents and support teams."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "ad populum",
+        "topic": "Just because a few people are louder than others, laws shouldn't be changed to accommodate them.",
+        "argument": "If a group of people is large enough, their demands should be heard."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "prostitution has been in existence for long and should not be illegal",
+        "argument": "Prostitution is an indecent activity that should be banned."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Companies should be allowed to decide workers' pay.",
+        "argument": "Minimum wage is a fair floor."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "People who don't trust doctors have the right to try whatever homeopathic remedies they want.",
+        "argument": "It's important to respect other people'sbeliefs."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "France, German, Italy, and Spain all believe surrogacy is exploitation, and have it prohibited.",
+        "argument": "Surrogacies allow infertile couples to have children of their own DNA."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Most economic sanction are not effective.",
+        "argument": "Some sanctions have helped stop some evil dictators from getting what they want."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Naturopathy does not harm people.",
+        "argument": "There have been cases where naturopATHY has harmed people because some natural remedies are toxic when consumed in large quantities."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Television can be hazardous to our kids",
+        "argument": "There are plenty of educational programs on television that are not detrimental to kids."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "IP copyrights should be banned.",
+        "argument": "By banning copyright on ip, people can use and share information more freely."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Homeopathic remedies can be bad for your health.",
+        "argument": "Overdosing on homeopathy can cause harmful side effects from the small amounts of active ingredients."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "Television can be hazardous to our kids",
+        "argument": "Children who watch too much television are more likely to have behavior problems, according to studies. Children Who Are Heavy Viewers of Television Are More Likely to Have Been Physically Abused. children who are traumatized are likely more"
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Stay at home Dads tends to be lazy",
+        "argument": "Famous stay at dad tends forsake their responsibility by indulging in luxury while their partners work, this should not be encouraged."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Anything other than natural pregnancy methods should be prohibited.",
+        "argument": "Fertility treatments can mess with hormones."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Cosmetic surgery for children is safe.",
+        "argument": "Children are still developing and may change their minds about appearances."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Racial profiling is not fair to people.",
+        "argument": "Criminal activity is widespread in some particular races, and therefore it is appropriate to target those races."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Getting rid of capital punishment lets people know that all killing is wrong.",
+        "argument": "People know it's wrong to kill already."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Safe spaces should be allowed.",
+        "argument": "Not everyone can guard a safe space."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "IP copyrights should be banned.",
+        "argument": "Copyrights prevent people from using information."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "safe spaces are necessary.",
+        "argument": "Safe spaces can be mismanaged and dangerous kids can disrupt the space."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Women should be allowed to sell their bodies.",
+        "argument": "The body is temple of one's soul."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Older adult has less strength, so bringing the younger ones increase productivity",
+        "argument": "Productivity of an individual does not depend on their age."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Homeopathy can be dangerous because it is unregulated.",
+        "argument": "If homeopathic remedies are not tested, there may be hidden contaminants that could harm people who take them."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Naturopathic methods are always a good idea because they'll work even just as a placebo.",
+        "argument": "Placebos are misleading and natural remedies might fail, so it's better to rely on doctors."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "People should not have a right to own guns.",
+        "argument": "The right for citizens to bear arms is in the constitution."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Capital punishment is always brutal.",
+        "argument": "It does not matter if capital punishment has been done before, it is still brutal every time."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "It is important to explore space, so that we can learn more about our own world.",
+        "argument": "The world needs more money spent on improving the environment."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Economic sanction affects the citizens more than the governments",
+        "argument": "The citizens are the last to benefit from the sanctions."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "legalizing Sex selection reduces over population",
+        "argument": "Sex Selection is immoral and it should be illegal, whatever the consequence."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "stay at home Dad allows for gender equality at work",
+        "argument": "When a man stays at homes, it shows that men are not equal in the workforce."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "A multi-party system is good.",
+        "argument": "Multi-parties create divisions within a group and are unnecessary."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "People should be allowed to meet their base needs.",
+        "argument": "It is not our responsibility to provide for our own basic needs, it is the government's fault for not providing enough aid that we are in this position. It'ss the governments fault, not the individuals."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "The right to bear arms helps people defend themselves.",
+        "argument": "Defending yourself is rarely done with a gun."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "ad populum",
+        "topic": "Prostitution should not be a criminal offense.",
+        "argument": "The very fact that it is an aspect of many people's lives that is not acceptable shows that morals should dictate criminality."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "ad populum",
+        "topic": "It's impossible to abolish capital punishment.",
+        "argument": "Many Americans support capital punishments."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Some actions may abolish the black market.",
+        "argument": "Many markets are best left in a free state."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "Being a virgin is a choice",
+        "argument": "Sex is natural and being avirgin should not be a choices."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "A system that fires competent employees due to age is cruel.",
+        "argument": "An age based firing system is meant to keep the workforce young and fresh, so that there are always talented individuals in the company."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Having right to hold weapon is dangerous",
+        "argument": "Right to bear arms is a danger only if the arms are misused."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "We should not ban surrogate mothers.",
+        "argument": "Surro gate mothers are in essence selling their bodies, we should ban Surrogacy because it is against women's rights."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Retirement should not be mandatory.",
+        "argument": "Many people are not able to care for themselves as they age."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Economic sanction helps suppress power of current regime.",
+        "argument": "Sanctioning helps to limit regime by limiting their source of funding."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Cosmetic surgery for minors should be banned.",
+        "argument": "Young people are old enough to know who they are and want cosmetic procedures."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Television cannot be abandoned as it is a necessity",
+        "argument": "With the rise of smartphones and other media devices television can be watched via apps and therefore abandoned physically."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Naturopathy does not harm people.",
+        "argument": "There have been no reported deaths from using naturopATHY."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "A multi-party system would be more representative of the populace.",
+        "argument": "Multi-parties create divisions within a government and delay decision making."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Telemarketing is intrusive.",
+        "argument": "Most people prefer to be contacted by text or email."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Being a child actor does harm to children.",
+        "argument": "Child actors are still learning a trade, and can use the money and skills they acquire for their benefit."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Compulsory voting including the whole electorate is unrealistic.",
+        "argument": "There are many different voting systems used worldwide, and compulsive voting with the entire electoral body is not one of them."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "A surrogate might try to keep the child.",
+        "argument": "It is immoral for a surrogate to try and keep a child they did not give birth to."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Telemarketing is intrusive.",
+        "argument": "Many people rely on telemarketing to get information about products."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Judges should be impartial in their ruling.",
+        "argument": "Some judges have a preferred outcome."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "Many people benefit from alternative types of medicine, such as diet, exercise, and massage.",
+        "argument": "There are no real alternatives to medicine."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "legalised sex selection causes biases among genders",
+        "argument": "Legalised Sex Selection will not be adopted much and therefore willnot cause biased among gender."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Adopting gender neutral language would be expensive and we can use those resources in other places.",
+        "argument": "Changing to gender-neutral language in laws would cost money in advertisements to let people know about the changes."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Minors are not old enough to make complex emotional decisions.",
+        "argument": "Teenagers are almost adults and are capable of making most decisions for themselves."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Gender neutral language is good for equality.",
+        "argument": "Using gender neutral langauge makes people who are not gender non-conforming feel left out."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Banning of weapon limits arms holders.",
+        "argument": "Arms holdings should not be banned as it limits people who choose to bear arms."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "People tends to participate in politics and support their parties of interest when there are many political parties.",
+        "argument": "Political parties are numerous and people participates in them."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Abolishing capital punishment is cruel for the victims of crime.",
+        "argument": "Murderers deserve the same fate, as society has taken away the death penalty from them."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "A multi party system allows for diversity in political system",
+        "argument": "Multi party systems are chaotic."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Recruitment of professional people is important for good work to happen.",
+        "argument": "Anyone can do the work of professionals if they try hard enough."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Economic sanctions should cease to exist.",
+        "argument": "Some countries have been punished correctly and have learned their lesson."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Making prostitution legal benefits sex workers.",
+        "argument": "Prostitution is immoral and should not be legal."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Banning of weapon limits arms holders.",
+        "argument": "Criminals will always find ways to obtain weapons regardless of laws."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Flags are just material products and should not be held in such high esteem.",
+        "argument": "A flag is a symbol of a community and is more than just a material product."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Abolishing intellectual property rights is good.",
+        "argument": "It is not right to take someone's creations and make money off of them."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Capital punishment acts as a deterrent to serious crime.",
+        "argument": "The loss of life is more serious than any other crime, and therefore justice is served when a punishment is commensurate with the crime; i.e. when life begets life."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "Abolishing mandatory retirement will help end age discrimination.",
+        "argument": "By not forcing people to retire, companies can keep younger workers, reducing the need to hire new workers and thus reducing an incentive to end Age Discrimination, by reducing its necessity."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "If it's okay to kill cattle for meat, then a whale is an animal, and killing them should be allowed.",
+        "argument": "Cattle are kept on ranches, Whales are in the ocean."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Child actors should be regulated, not banned.",
+        "argument": "It is irresponsible to exploit children, even with regulations."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Creating artificial safe spaces can be counter productive.",
+        "argument": "Safe spaces are not enforced, and are opt-in."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "All people are guaranteed the right to celebrate in accordance with their beliefs.",
+        "argument": "No one has theright to impose their belief on others when it comes to celebrations."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Foster care brings good to disadvantaged children.",
+        "argument": "Many bad things happen to kids in foster care."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "Space exploration brings about new discoveries",
+        "argument": "There are things to explore on earth that should be explored first."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "higher education should be more available to all people.",
+        "argument": "Not everyone wants to go to college."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Capital punishment acts as a deterrent to serious crime.",
+        "argument": "Crime rates are not affected by capital punishment."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Legalizing prostitution reduces the risk of disease",
+        "argument": "Prostitutes are often abused by clients and legalizing it will not change that."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Stay at home Dad has a reason for staying home",
+        "argument": "Money is not an issue for both parents, so either one can work outside the home."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Prostitution should be legalized.",
+        "argument": "Women are not livestock; they are people."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "Student loans should be subsidized in other to ease financial hardship on students",
+        "argument": "Students should not be given money that they have to pay back."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "freedom of speech is paramount",
+        "argument": "The 1st amendment is a constitutional right."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "space exploration should be considered a waste of resources",
+        "argument": "Space exploration pushes the limits of science and can lead to discoveries."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Surrogacy makes parent happy",
+        "argument": "It is immoral and unlawful to rent out one's womb for money, let alone surrendering the baby to the real parent, who has the money to afford surrogancy."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Making defendants all use public defenders will make the system more fair.",
+        "argument": "Defendants have the right to choose their own counsel."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "People in safe space are vulnerable",
+        "argument": "Safe space does not enable any form of violence."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "people should follow whichever religion they choose.",
+        "argument": "Religion should not be a choice."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Something might stop black market organ sales.",
+        "argument": "If people want to buy and sell body parts, they will find a way."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "freedom of speech is paramount.",
+        "argument": "Words can be painful."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "ad populum",
+        "topic": "Some people are politically apathetic, they should not be forced to vote.",
+        "argument": "Everyone should vote, whether they want to or not. 273 out of 300 people polled agreed with this statement. Out of the 7 people who disagreed, 5 were in the minority group that doesn't"
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "Children are still learning, and a zero tolerance policy doesn't allow them to make mistakes.",
+        "argument": "Kids need to know the difference between right and wrong."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Legalized organ trade would exploit the poor.",
+        "argument": "If legalized, organ traffic would be monitored, reducing exploitation."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "The job of a public defender is to help insure the rights of the people.",
+        "argument": "Public defenders are needed to protect the liberties of all people, regardless of their alleged crimes."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "fallacy of relevance",
+        "topic": "The church of scientology is bad because of how secretive it is.",
+        "argument": "Scientologists are against politics so they are not bad, because they have freedom to not support any political party."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "people should make their own choice to vote.",
+        "argument": "It is important that everyone votes the same way."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Defendants in criminal cases should not be barred from counseling as they are likely to be imprisoned.",
+        "argument": "Counseling can help defendants be better people."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "The lack of stability in the foster system is bad for children.",
+        "argument": "Some children in unstable foster homes would not have had a safe, consistent alternative."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "People tends to do anything like hunting to provide food for their family",
+        "argument": "Hunting is an inhumane treatment to animals, it should be banned."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "the church of scientology should not be banned.",
+        "argument": "The church Of scientoloy should be allowed to be shut down."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "Company members can be lead into conflict.",
+        "argument": "Members of a company are not forced to do anything."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "School prayer should be allowed because in religious communities, people want prayer to be included in their daily lives.",
+        "argument": "Religious communities have the right to express their beliefs."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Abolishing intellectual rights will have negative consequences.",
+        "argument": "Intellectual property has outlived its purpose and should be abolished."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "zero tolerance policies are too tough on children.",
+        "argument": "Zero tolerance is a deterrant for bad behavior."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Compensating only the executives greatly is not ideal.",
+        "argument": "Lower level employees deserve compensation as well."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Criminalizing holocaust denial allows the deniers to become martyrs for free speech, and the government can't deconstruct their argument for the public.",
+        "argument": "The government will be able to deconstruction any denier argument in public, holocuast denials are not about free speach."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Multi-party systems represent everyone's perspectives.",
+        "argument": "Multiparty systems may still not represent all opinions properly."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Punishing the person being bullied the same as the bully isn't right.",
+        "argument": "Victims are not the cause of their own abuse."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "Deciding to carry a pregnancy for the genetic mom is a woman's choice.",
+        "argument": "If a genetic mother cannot have children then the woman who is pregnant is not helping her by carrying a child for her."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Kids should not be exposed to prayer from other religions.",
+        "argument": "Each religion has its own place of worship."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "A job title doesn't entitle an executive to more money.",
+        "argument": "Some executive have very long job titles, but with very little or no extra money attached to it."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "If a person is accused of a crime, they have a right to find any lawyer they want, and not have to use a low level lawyer.",
+        "argument": "Some people can only afford low cost lawyers."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Since every situation is different, there shouldn't be a limit on judicial activism.",
+        "argument": "Judicial activation can cause confusion."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Holocaust denial should not be criminalized.",
+        "argument": "The denials of the holocaist are offensive to Jews."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "When executives are compensated well they tend to work harder to improve the company",
+        "argument": "Some executive are selfish and will use the money for themselves and not work hard to increase the growth of thecompany."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "A job title doesn't entitle an executive to more money.",
+        "argument": "Executive titles come with more responsibilities and thus more pay is justified."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Forced prayer should not be in school.",
+        "argument": "Some people do not believe in forced prayer and it is not fair to make them do it."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "people should be able to choose their own defense.",
+        "argument": "Some defenses are more effective than others for different people."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Telemarketers should be banned.",
+        "argument": "There are many legitimate telemarketers that should not be prohibited."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "Retirement should not be mandatory.",
+        "argument": "Many people do not save enough money for retirement, and need the mandatory retirement age to ensure they can no longer work, so they do no further harm to their social security."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Prayer in schools is a definite violation of separating church and state.",
+        "argument": "Public schools are state-sponsed and prayer in state schools would be endorsing religion."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "By banning prostitution men are trying to take control of women's bodies",
+        "argument": "Women are not allowed to make their own choices."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Freedom of religion is paramount.",
+        "argument": "Religion should be in favor of equality."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Our current voting system should be replaced.",
+        "argument": "The current system works well enough."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "zero-tolerance is too harsh of a punishment for minors",
+        "argument": "Minors should be held accountable just as much as adults for their actions."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "Prayer in schools violates the separation of church and state.",
+        "argument": "It is not prayer that is objectionable, but rather the disorganized chaos of students praying that offends people."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "It's fine for a parent to stay home, but nobody else has to ensure that a parent can stay home.",
+        "argument": "Kids need their parents, and sometimes both parents have to work."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Some people are politically apathetic, they should not be forced to vote.",
+        "argument": "Everybody should vote, as it is a right and a privilege."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "public defenders should be mandated.",
+        "argument": "Public defendERS are more accessible."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Surrogacy is an advantage for people.",
+        "argument": "It is immoral and unsafe for women to rent their womb, and it should be illegal."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false causality",
+        "topic": "People should follow whichever religion they choose.",
+        "argument": "If one chooses to blindly worship the wrong entity, they risk ruining their life."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Subsidizing journalism allows for efficient information.",
+        "argument": "When journalisms is subsidized there is a bias in information given by journalists."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Making organ trade legal will enable criminal make less money off it",
+        "argument": "Organ trade is less lucrative for criminals if it is legal."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "People locked away for speaking their mind are political prisoners.",
+        "argument": "Prison is not a punishment for some as they gain notoriety and their message gets heard by many."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "false dilemma",
+        "topic": "Bad behavior is subjective, and each case should be dealt with individually. So there should be no zero-tolerance policies.",
+        "argument": "Zero- tolerance policies are a good thing."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Mandatory retirement hurts elderly workers.",
+        "argument": "Old workers have worked long enough."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "If the holocaust is denied there is more chance that it will happen again.",
+        "argument": "Holocaunt is terrible thing to happen to people."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "Abolishing the right to keep and bear arms will not prevent people from obtaining guns.",
+        "argument": "By abolishing right, criminals will find ways to obtain guns and use them against law abiding citizens."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "people should have their choice of representation.",
+        "argument": "People of color and other minorities are represented enough in the media."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "appeal to emotion",
+        "topic": "Safe places grant asylum from prejudice.",
+        "argument": "Grants for safe places are a good idea because sometimes people need protection from other people. Like right now. Right now people are very very mean. Please stop being mean right away. Mean people make otherpeople cry. And cryingsad. Cry"
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "The church of scientology should be banned, because it's actually a cult and not a religion.",
+        "argument": "Scientology is a doomsday cult."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "People should not have to pay tax for a site that already runs well on donations.",
+        "argument": "St. Jude's doesn't need money since it runs ondonations alone."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "faulty generalization",
+        "topic": "When people deny terrible past events like the holocaust it is more likely to happen again.",
+        "argument": "People learn from mistakes."
+    },
+    {
+        "type": "cpo_results",
+        "fallacy_type": "None",
+        "topic": "Television focuses people's attention away from healthier activities.",
+        "argument": "People can choose to do as they please with television; it doesn't force anyone to watch it."
+    }
+]
