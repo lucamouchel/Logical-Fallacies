@@ -1,0 +1,602 @@
+[
+    {
+        "type": "cpo",
+        "fallacy_type": "false causality",
+        "topic": " The EU should have a president elected directly by the people. ",
+        "argument": "Not having a President would impede the operation of the EU."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "circular reasoning",
+        "topic": " Denial of the Holocaust should be illegal. ",
+        "argument": "The Holocost should never be denied."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Prostitution should be legal. ",
+        "argument": "Prostition is the only profession where consent is necessary."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Fat air passengers should be charged extra for their extra weight. ",
+        "argument": "Not all fat people are fit."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The Commonwealth should be abolished. ",
+        "argument": "The Commonwealth is a mutual agreement."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " The assassination of a dictator can be justified. ",
+        "argument": "The assassation of dictators is never justifiable, and only makes things worse."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Mandating calorie counts on restaurant menus is good public policy. ",
+        "argument": "Restaurant menials can be confusing."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Schools have the right to search students' lockers. ",
+        "argument": "School locks can be easily opened by the school forcing students to unlock their lockets."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " High speed rail development is generally good policy. ",
+        "argument": "High speed railway can be expensive."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Marriage to more than one person should be legal. ",
+        "argument": "Polygamy is immoral."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Children should be allowed to work in the performing arts or professional sports. ",
+        "argument": "Child labor is not acceptable and can be dangerous for young bodies."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Assisted suicide should be legalized. ",
+        "argument": "No one has the right to take away someone else's right. If someone wants to die, why should we make them suffer."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false causality",
+        "topic": " It is ethical for colleges, parents, or employers to get information about people from social networking websites. ",
+        "argument": "People's lives are changed through social media."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Prostitution should be legal. ",
+        "argument": "Prostition is the only profession where consensual discrimination is legal, and no one gets hurt."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " The assassination of a dictator can be justified. ",
+        "argument": "The assassation of dictators is never justifiable, and only makes things worse."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Iraq should be partitioned into three autonomous sectarian regions. ",
+        "argument": "Arabs and Kurds are very different."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Governments should completely ban laser pointers. ",
+        "argument": "Laser pointers are not harmful if used correctly."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Year-round schools are a good idea. ",
+        "argument": "Year-ound schools would overwhelm some areas."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " A 700 mile fence on the US-Mexico border is justified. ",
+        "argument": "A 10-foot tall fencing would make it harder for people to enter the country."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Counter-terrorism efforts should include full-body scans at airports. ",
+        "argument": "Full- body scanners at the airport do a good job."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " The assassination of a dictator can be justified. ",
+        "argument": "The assassation of dictators is never justifiable, and only makes things worse."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The Three Gorges Dam is a good idea. ",
+        "argument": "The Three-Gorgers Dam provides power."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Tibet should seek and gain independence. ",
+        "argument": "Independence would be a bad idea for Tibets economy."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Human reproductive cloning should be banned and punishments leveled against it. ",
+        "argument": "Human repoductivecloning is not moral."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false causality",
+        "topic": " Security regulations for flying are too strict. ",
+        "argument": "Flying is safer than it was in the past."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Governments should introduce identity cards and require each citizen to carry one. ",
+        "argument": "Identity cards are bulky and difficult to carrying around. Its better to use technology to identify people."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " Pornography offers a valuable public service. ",
+        "argument": "Pornographic sites are popular but are no substitute for mainstream news sites."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " The 2010 US health care reform legislation is a good idea. ",
+        "argument": "The 1993 healthcare bill was better than what we have now."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false dilemma",
+        "topic": " The EU Constitution reform treaty is a good idea. ",
+        "argument": "The EU needs to do some self examination and possibly break up."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " The Hijab should be banned in schools, public buildings or society in general. ",
+        "argument": "The Hijabs are not necessary."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Denial of the Holocaust should be illegal. ",
+        "argument": "The Holocast should not be up for debate."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Physical force is a justifiable method of punishing criminals. ",
+        "argument": "Physical forces could leave marks on crimoms and make a lawsuit possible."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " Network neutrality legislation is a good idea. ",
+        "argument": "Network neutralty legislations would be a bad way to regulate and does not address larger issues."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " 9/11 suspects should be tried in NY courts, as ordered by US AG Eric Holder. ",
+        "argument": ""
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Handguns should be banned in Washington, DC. ",
+        "argument": "Handgons are used for protection as well."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Devolution in Scotland and Wales is a good idea. ",
+        "argument": "Devolution allows for different rules for each country."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " The idea of missile defenses in the Czech Republic and Poland is justified. ",
+        "argument": "Missile defenders are glass domes. It's better to have them in a strategic location than just any location."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The veto powers of the permanent members of the UN Security Council should be abolished. ",
+        "argument": "The veto powers are too much power and not democratic."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false dilemma",
+        "topic": " Compulsory national service is a good idea. ",
+        "argument": "National service can be a dangerous idea during a time of crisis."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " The US policy of No Growth Budgets in the United Nations is justified. ",
+        "argument": "The US is the single largest funder of the UN, they should have special treatment."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Colonizing the Moon is a good idea. ",
+        "argument": "The Moon has black helium that can be used for energy."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Gay marriage should be legalized. ",
+        "argument": "Gay marriage is no different than straight marriage."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "equivocation",
+        "topic": " Assisted suicide should be legalized. ",
+        "argument": "No one has the right to take another life, but killing someone to end their pain is acceptable."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Assisted suicide should be legalized. ",
+        "argument": "No one has the right to take away someone else's choice."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false causality",
+        "topic": " Marriage to more than one person should be legal. ",
+        "argument": "Multiple marriage would cause less legal complications than illegal multi marriage."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " All cell phone use in cars should be banned. ",
+        "argument": "Cell phones are a part of life and should not be baned."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false dilemma",
+        "topic": " Govts should mandate that people buy private health insurance, or face penalties. ",
+        "argument": "People should be free to choose what health Inspect they like. It's no one else' business what they do. What they want."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Human reproductive cloning should be banned and punishments leveled against it. ",
+        "argument": "Human receptive would be very dangerous for science."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Big, liberal government is better than small, conservative government. ",
+        "argument": "Big government has more money to meet needs."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " The assassination of a dictator can be justified. ",
+        "argument": "An assassinated dictators would be a favor to the people."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "equivocation",
+        "topic": " Gay marriage should be legalized. ",
+        "argument": "Gay marriage is not the same thing as a marriage."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " The United States should withdraw from the United Nations. ",
+        "argument": "The United Nation has inefficient policies."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Limits or regulations should be placed on how candidates raise funds, and/or spend them, during political campaigns. ",
+        "argument": "Candidates are not always honest about their spending."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Big, liberal government is better than small, conservative government. ",
+        "argument": "Liberal government would abuse its citizens."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Iraq should be partitioned into three autonomous sectarian regions. ",
+        "argument": "Arabs and Kurds are very different."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Fusion power represents the future of energy generation. ",
+        "argument": "Fusion energy is much more efficient than other sources of power."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The US government should fund embryonic stem cell research. ",
+        "argument": "Embryotic stem cells are important for medicine."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Men found guilty of sex crimes should be chemically castrated. ",
+        "argument": "Most sex offenders are male."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Network neutrality legislation is a good idea. ",
+        "argument": "Network neutralty legislations would be a bad way to regulate and does not address the larger issue."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Denial of the Holocaust should be illegal. ",
+        "argument": "Holocauster denial offers no real consequences."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Tibet should seek and gain independence. ",
+        "argument": "Independence for Tibbet would be harmful to the region. This is China after all, and they will not willingly give up control."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " 9/11 suspects should be tried in NY courts, as ordered by US AG Eric Holder. ",
+        "argument": "9128254223527514321Criminal activity took place in many states."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The morning-after pill should be banned. ",
+        "argument": "The morning after pill is safe for a woman's body."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The 2010 US health care reform legislation is a good idea. ",
+        "argument": "Millions of Americans have no healthcare."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Cell phone use by minors (16 to 18 in the United States) while driving should be banned. ",
+        "argument": "It is illegal to use cell phones while driving and this should also apply to minORS."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Marijuana should be legalized. ",
+        "argument": "Marijuanna is not harmful."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The UN should increase humanitarian aid to poor nations. ",
+        "argument": "Poor nations suffer from poverty."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Bosnia and Herzegovina should accede to the European Union. ",
+        "argument": "Bosnia And Herzgovina is not economically ready to acceded to European union. Its GDP is too low."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The EU Constitution reform treaty is a good idea. ",
+        "argument": "The EU needs to do some major reforming, but this reform treatment is not the correct path."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Advertising for tobacco products should be banned. ",
+        "argument": "Not all products are babied from advertising and tobatico products is no exception."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The US government should fund embryonic stem cell research. ",
+        "argument": "Embryotic stem cells could lead to a cure for disease."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Social networking sites are generally beneficial to our world. ",
+        "argument": "Social networking can bring people together."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " The EU Constitution reform treaty is a good idea. ",
+        "argument": "The EU needs to do some rethinking."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Gay marriage should be legalized. ",
+        "argument": "Gay marriage is immoral."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false causality",
+        "topic": " Advertising for tobacco products should be banned. ",
+        "argument": "Advertizing for cigarette products makes their cheaper available and attracts young people."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Corps. have a right to free speech and to spend w/o limit in elections. ",
+        "argument": "Corps. spending in election is not in a corporations best interest. It is undemocratic."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false causality",
+        "topic": " The European Union should have its own standing army. ",
+        "argument": "Not having a standing Army is bad for security."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " The 2010 US health care reform legislation is a good idea. ",
+        "argument": "The 1993 healthcare reform attempt did not work well either."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " Sex toys should be banned. ",
+        "argument": "Sex toy sales have increased during lockdown."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " A nuclear Iran is intolerable, justifying military action to prevent. ",
+        "argument": "Iran has promised to destroy the world."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false dilemma",
+        "topic": " Airport security profiling is a good idea. ",
+        "argument": "Air travel is accessible to everyone; airport security profile is not."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Human reproductive cloning should be banned and punishments leveled against it. ",
+        "argument": "Human receptivecloning is not moral."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false causality",
+        "topic": " Handguns should be banned in Washington, DC. ",
+        "argument": "Washington, Dc has some of the worst gun violence in the country."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " Barack Obama is justified in his willingness to talk to foreign leaders without preconditions. ",
+        "argument": "Foreign leaders have the right to meet with whomever they choose."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " All cell phone use in cars should be banned. ",
+        "argument": "There are too many accidents involving cell phones in vehicles."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The US should maintain landmines in the KDZ b/w North and South Korea. ",
+        "argument": "Landminesa are dangerous for people."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of extension",
+        "topic": " Instant replay call reviews should be implemented in baseball. ",
+        "argument": "Instant instant replays are a intricate task and should not be done in football. it takes to long between plays."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Governments should introduce identity cards and require each citizen to carry one. ",
+        "argument": "Identity cards can be used to identify criminals."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "false causality",
+        "topic": " Gene patents, particularly related to food and agricultural products, are a good idea. ",
+        "argument": "Food scarcity can be alleviated through increased production."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Assisted suicide should be legalized. ",
+        "argument": "Assisted dying is murder."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "circular reasoning",
+        "topic": " Airport security profiling is a good idea. ",
+        "argument": "It is not a bad idea to profile airport passengers."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " The minimum age of candidacy should be 18. ",
+        "argument": "Youths are capable of leading, they only need proper training and education. Its why we have ministry of youth in our country."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Governments should legalise all drugs. ",
+        "argument": "Some druGS Are very dangerous."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Social security should be privatized. ",
+        "argument": "Millions of people depend on social security."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Mass migration, especially from developing to developed countries, is a good force. ",
+        "argument": "Mass migration allows people to have more resources."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "faulty generalization",
+        "topic": " Everyone should have to carry a national identity card. ",
+        "argument": "National identity cards are bulky."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " Abortions should be limited to 3 months within conception. ",
+        "argument": "40 weeks is too long for an abortion, because a child grows in the womb during the first 12 weeks."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "appeal to emotion",
+        "topic": " Men found guilty of sex crimes should be chemically castrated. ",
+        "argument": "This is not a deterrent; this is NOT something that can be done to men who commit sex Crimes."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "None",
+        "topic": " NATO should continue to expand into East Europe and possible beyond. ",
+        "argument": "NATO keeps members safe."
+    },
+    {
+        "type": "cpo",
+        "fallacy_type": "fallacy of relevance",
+        "topic": " The EU should have a president elected directly by the people. ",
+        "argument": "The president of europe should be chosen by traditional means. its too important."
+    }
+]

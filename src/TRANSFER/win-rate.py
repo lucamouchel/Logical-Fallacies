@@ -19,7 +19,6 @@ import time
 sys.path.append('src/')  
 from DPO.env import OPENAI_API_KEY
 from DPO.utils import save_to, get_gpt_response
-from utils import generate
 
 warnings.filterwarnings("ignore")
 openai.api_key = OPENAI_API_KEY
@@ -49,45 +48,38 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model-name', default='llama')
     args = parser.parse_args() 
-    
-    test_set = pd.read_json('data/argumentation/test_cckg.json')
+     
+    debate_data = pd.read_csv('data/test_debate.txt', header=None, sep='\t')
+    debate_data = debate_data.sample(n=100, random_state=42).reset_index(drop=True)
+   
+    #test_set = pd.read_json('data/argumentation/test_cckg.json')
 
-    with open(f'results/{args.model_name}/sft_args.json', 'r') as f:
+    with open(f'results/out_of_domain/sft/f-rate_sft.json', 'r') as f:
         sft_args = json.load(f)
-        #sft_args = [arg[1] for arg in sft_args]
+        sft_args = [arg['argument'] for arg in sft_args]
 
 
-    combinations = [['sft', 'cpo_lambda_0.3']]
+    combinations = [['sft', 'custom_cpo']]
     for combination in combinations:
         to_compare = combination[1]
-        if to_compare != 'human':
-            with open(f'results/llama_bis/cpo_results/f-rate.json', 'r') as f:
-                arguments = json.load(f)
-                arguments = [arg['argument'] for arg in arguments]
+        
+        with open(f'results/out_of_domain/{to_compare}/f-rate_{to_compare}.json', 'r') as f:
+            arguments = json.load(f)
+            arguments = [arg['argument'] for arg in arguments]
 
        
-        # new_args = []
-        # for sample in arguments:
-        #     new_args.append(sample['argument'])
 
         wins = {'sft': 0, to_compare: 0, 'tie': 0}
         winner = []
 
-        for i, entry in tqdm(test_set.iterrows()):
-            
-            
-            if i % 201 == 0 and i != 0:
-                print("going to sleep to not overcook gpt4")
-                time.sleep(60) 
+        for i, entry in tqdm(debate_data.iterrows()):
 
-            topic = entry.topic
-            stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
-            y_sft = sft_args[i][1]
-            
-            
-            
+            topic = entry[3]
+            stance = 'supporting' if entry[6] == 'support' else 'counter'
+
+            y_sft = sft_args[i]
             y = arguments[i]
-    
+           
             try:
                 response = compare_models(stance, topic, [y_sft, y])
                 assert type(response) == int
@@ -106,12 +98,13 @@ def main():
                 if i == len(arguments)- 1:
                     break
             except:
-                save_to(wins, name='wins.json', output_dir=f'results/{args.model_name}/')
+                save_to(wins, name='wins.json', output_dir=f'results/out_of_domain/{to_compare}/')
                 exit()
         from collections import Counter
         print(Counter(winner))
-        save_to(winner, name="winners.json", output_dir='src/EVAL/AMT/')
         print(wins)
+        save_to(wins, name='wins.json', output_dir=f'results/out_of_domain/{to_compare}/')
+
         # save_to(wins, name=f'sft_vs_{to_compare}2.json', output_dir=f'results/{args.model_name}/')
 
 if __name__ == "__main__":
