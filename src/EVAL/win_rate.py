@@ -57,25 +57,19 @@ def main():
         #sft_args = [arg[1] for arg in sft_args]
 
 
-    combinations = [['sft', 'cpo_lambda_0.3']]
+    combinations = [['sft', 'dpo'], ['sft', 'ppo'], ['sft', 'cpo'], ['sft', 'kto'], ['sft', 'fipo']]
     for combination in combinations:
         to_compare = combination[1]
-        if to_compare != 'human':
-            with open(f'results/llama_bis/cpo_results/f-rate.json', 'r') as f:
-                arguments = json.load(f)
-                arguments = [arg['argument'] for arg in arguments]
+        with open(f'results/llama_bis/arguments/{to_compare}/f-rate.json', 'r') as f:
+            arguments = json.load(f)
+            arguments = [arg['argument'] for arg in arguments]
 
-       
-        # new_args = []
-        # for sample in arguments:
-        #     new_args.append(sample['argument'])
 
         wins = {'sft': 0, to_compare: 0, 'tie': 0}
         winner = []
 
         for i, entry in tqdm(test_set.iterrows()):
-            
-            
+    
             if i % 201 == 0 and i != 0:
                 print("going to sleep to not overcook gpt4")
                 time.sleep(60) 
@@ -83,11 +77,10 @@ def main():
             topic = entry.topic
             stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
             y_sft = sft_args[i][1]
-            
-            
-            
             y = arguments[i]
-    
+
+            print(y, y_sft)
+            exit()
             try:
                 response = compare_models(stance, topic, [y_sft, y])
                 assert type(response) == int
