@@ -1,6 +1,15 @@
-# logical-fallacy-LLMs
+# A Logical Fallacy-Informed Framework for Argument Generation
 
-![image](https://github.com/lucamouchel/logical-fallacy-LLMs/assets/73081373/6eb2773f-55ab-4b82-b5ce-5adc68684a95)
+This repository is the official implementation of the paper entitled "_A Logical Fallacy-Informed Framework for Argument Generation_", by Luca Mouchel, Debjit Paul, Shaobo Cui, Robert West, Antoine Bosselut and Boi Faltings.
+
+The pipeline supports any causal and sequence-to-sequence models from HuggingFace and consists of the following stages: 
+- Data Collection with ChatGPT
+- Supervised Fine-Tuning (SFT)
+- Preference Optimization with existing methods (DPO, KTO, CPO, PPO) and our method (FIPO)
+
+## Automatically Collecting Data with ChatGPT 
+The scripts for this step are in `src/aug`
+
 
 ## Training the Binary Classifier: 
 ```
