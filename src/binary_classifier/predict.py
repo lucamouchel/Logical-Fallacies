@@ -1,6 +1,5 @@
 
-from cProfile import label
-from Trainer import Classifier
+from trainer import Classifier
 import os
 import argparse
 
