@@ -16,7 +16,6 @@ import pathlib
 warnings.filterwarnings("ignore")
 
 data_dir = 'data/argumentation/'
-RUN_CHAT_GPT = True
 train_cckg, dev_cckg, test_cckg = load_data('cckg')
 train_cckg['fallacy_type'] = 'No Fallacy'
 dev_cckg['fallacy_type'] = 'No Fallacy'
@@ -69,17 +68,13 @@ def chat_completion(messages, model="gpt-3.5-turbo", return_text=True, model_arg
             time.sleep(60)
             continue
 
-def get_gpt_response(input_, model='gpt-3.5-turbo', i=0):
-    if RUN_CHAT_GPT == True:
-        return chat_completion([{"role": "assistant", "content": input_}], model=model, return_text=True, model_args={
+def get_gpt_response(input_, model='gpt-3.5-turbo'):
+    return chat_completion([{"role": "assistant", "content": input_}], model=model, return_text=True, model_args={
                     "temperature": 0.0,
                     "max_tokens": 150,
-                    "top_p": 0.3,
                     "frequency_penalty": 0,
                     "presence_penalty": 0
-                    }, i=i)
-    else: 
-        raise ValueError("You cannot currently use GPT")
+                    })
     
     
 def generate_with_GPT(data_source: pd.DataFrame=train_cckg, fallacy_distributions: dict=fallacy_distributions):
@@ -112,7 +107,7 @@ def generate_with_GPT(data_source: pd.DataFrame=train_cckg, fallacy_distribution
         else: seen_topic.add(topic)
         data_for_topic = data_source[data_source.topic==topic]
         num_topic_occurences = data_for_topic.shape[0]
-        if num_topic_occurences>1:
+        if num_topic_occurences > 1:
             majority_stance = data_for_topic['label'].sum()
             if majority_stance < 0:
                 stance = 'counter'
@@ -131,7 +126,7 @@ def generate_with_GPT(data_source: pd.DataFrame=train_cckg, fallacy_distribution
             prompt = generate_prompt(topic=topic, fallacy_type=fallacy_type, arg_type=stance)
             try:
                 i+=1
-                response = get_gpt_response(input=prompt, i=i)
+                response = get_gpt_response(input=prompt)
                 gpt_result.append(json.loads(response))
             except:
                 # in case there is an unfortunate parsing error, then we just write everything we have, to not lose it
@@ -146,5 +141,4 @@ def generate_with_GPT(data_source: pd.DataFrame=train_cckg, fallacy_distribution
         json.dump(gpt_result, json_file, indent=4, sort_keys=False)
             
         
-
 generate_with_GPT(train_cckg)

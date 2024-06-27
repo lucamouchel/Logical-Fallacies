@@ -1,25 +1,13 @@
 import json
-from operator import is_
 from trl import DPOTrainer, DPOConfig
 import transformers
-from transformers import TrainingArguments
-from datasets import Dataset
 import argparse
-import pandas as pd 
 from datetime import datetime
 import sys 
 sys.path.append('src/')
-from custom_dpo_trainer import CustomDPO
-import datasets
-datasets.builder.has_sufficient_disk_space = lambda needed_bytes, directory='.': True
-import torch
-import torch.nn as nn
-from transformers import AutoModelForCausalLM
 from datasets import load_dataset
-from peft import AutoPeftModelForCausalLM
-#from utils import get_training_args
+from peft import AutoPeftModelForCausalLM, AutoPeftModelForSeq2SeqLM
 
-task='arguments'
 
 CLASSES = {'Not a Fallacy': 0,  'faulty generalization': 1, 'false causality': 2, 'fallacy of relevance': 3, 'fallacy of extension': 4, 'equivocation': 5, 
            'ad populum': 6, 'appeal to emotion': 7, 'ad hominem': 8, 'circular reasoning': 9, 'fallacy of credibility': 10, 'fallacy of logic': 11, 
@@ -29,7 +17,7 @@ INVERSE = {v: k for k, v in CLASSES.items()}
 def parse_args():
     parser = argparse.ArgumentParser() 
     parser.add_argument('--data-dir', default='data/dpo/')
-    parser.add_argument('--ref-model-path', default='models/arguments/sft_llama')
+    parser.add_argument('--ref-model-path', default='models/sft_llama')
     parser.add_argument('--beta', default=0.1, type=float)
     parser.add_argument('--n-epochs', default=4, type=int)
     parser.add_argument('--batch-size', default=8, type=int)
@@ -41,14 +29,8 @@ def parse_args():
     parser.add_argument('--adam-epsilon', default=1e-8, type=float)
     parser.add_argument('--save-steps', default=500, type=int)
     parser.add_argument('--logging-steps', default=300, type=int)
-    parser.add_argument('--output-dir', default='models_BIS')
+    parser.add_argument('--output-dir', default='models')
     parser.add_argument('--max-length', default=128, type=int)
-    parser.add_argument('--use-peft', default='false')
-    parser.add_argument('--peft-config-r', default=16, type=int)
-    parser.add_argument('--peft-config-lora-alpha', default=32, type=int)
-    parser.add_argument('--peft-config-lora-dropout', default=0.05, type=float)
-    parser.add_argument('--low-resource', action='store_true')
-    parser.add_argument('--lambda-value', default=0.1, type=float)
     return parser.parse_args()
 
 
@@ -76,30 +58,28 @@ def main():
     if args.data_dir[-1] != '/':
         args.data_dir += '/'
 
-    input_dir=args.data_dir + task + '/'
+    input_dir=args.data_dir  + '/'
 
     train_data = load_dataset('json', data_files=input_dir + 'train.json', split='train') 
     train_data = train_data.map(map_data)
     
     ref_model_path = args.ref_model_path    
-    model_name = 'llama' if 'llama' in ref_model_path.lower() else "mistral"
+
+    model_name = ref_model_path.split('/')[-1].split("_")[-1].lower()
     if '/' in model_name:
-        output_directory =f'{args.output_dir}/{task}/dpo_{model_name.split("/")[-1]}_{datetime.now()}'
+        output_directory =f'{args.output_dir}/dpo_{model_name.split("/")[-1]}_{datetime.now()}'
     else: 
-        output_directory =f'{args.output_dir}/{task}/dpo_{model_name}_{datetime.now()}'
+        output_directory =f'{args.output_dir}/dpo_{model_name}_{datetime.now()}'
     args.output_dir = output_directory.replace(' ', '_')
         
-    
-    from peft import PeftModel
-    model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, is_trainable=True, device_map='auto')
-    #ref_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, device_map='auto')
-    tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_path)
-    use_custom_model = True
+    if 't5' in ref_model_path.lower():
+        model = AutoPeftModelForSeq2SeqLM.from_pretrained(ref_model_path, is_trainable=True, device_map='auto')
+        is_encoder_decoder = True
+    else:
+       model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, is_trainable=True, device_map='auto')
+       is_encoder_decoder = False
 
-    
-    model.print_trainable_parameters()  
-    if use_custom_model:
-        model.classification_head = nn.Linear(model.config.hidden_size, len(CLASSES), device='cuda')
+    tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_path)
 
     model.print_trainable_parameters()
 
@@ -121,47 +101,25 @@ def main():
             beta=args.beta,
             max_prompt_length=128,
             max_length=args.max_length,
-            is_encoder_decoder=False,
+            is_encoder_decoder=is_encoder_decoder,
             generate_during_eval=True,
     )
 
-
-    with open('data/dpo/arguments/dpo_with_fallacies_test.json', 'r') as f:
-        test_data = json.load(f)
-        test_data = pd.DataFrame(test_data)[:10]
-        test_data = Dataset.from_pandas(test_data)
-        test_data = test_data.map(map_data)
-    
-    #ref_model.print_trainable_parameters()
-
-    dpo_trainer = CustomDPO(
+    dpo_trainer = DPOTrainer(
         model=model,
         ref_model=None,
         args=training_args,
         train_dataset=train_data,
-        eval_dataset=test_data,
         tokenizer=tokenizer,
-        custom_eval_steps=150,
-        lambda_=args.lambda_value,
     )   
-    try:
-        dpo_trainer.train()
-        print("SAVING MODEL at ", args.output_dir)
-        
-        with open(args.output_dir + '/args.json', 'w') as f:
-            json.dump(vars(args), f, indent=4)
-        
-        dpo_trainer.save_model(args.output_dir)
 
-        if isinstance(dpo_trainer, CustomDPO):
-            torch.save(model.classification_head.state_dict(), args.output_dir + '/classification_head.pth')
-            
-    except KeyboardInterrupt:
-        import os
-        if not os.listdir(args.output_dir):
-            os.rmdir(args.output_dir)
-
+    dpo_trainer.train()
+    print("SAVING MODEL at ", args.output_dir)
     
+    with open(args.output_dir + '/args.json', 'w') as f:
+        json.dump(vars(args), f, indent=4)
+    
+    dpo_trainer.save_model(args.output_dir)
     
 if __name__ == '__main__':
     main()

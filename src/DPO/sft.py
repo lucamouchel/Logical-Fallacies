@@ -8,19 +8,19 @@ from transformers import TrainingArguments
 import argparse
 import torch
 from utils import get_training_args
-from peft import LoraConfig, TaskType, get_peft_model
+from peft import LoraConfig, TaskType, PeftModel
 from datetime import datetime
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import load_dataset
 
-def formatting_prompts_func(example, task='gsm8k'):
+def formatting_prompts_func(example):
     ## Task = argument or claim
     data = []
-    for i in range(len(example['question'])):
-        prompt = example['question'][i]
-        completion = example['answer'][i]
-        text = f"<s> [INST] ### Given the math word problem generate explanation and final answer: {prompt} [/INST] \n### Answer: {completion} </s>"
-        data.append(text)     
+    for i in range(len(example['prompt'])):
+        prompt = example['prompt'][i]
+        completion = example['argument'][i]
+        text = f"<s> [INST] ### Prompt: {prompt} [/INST] \n### Argument: {completion} </s>"
+        data.append(text)      
     return data
 
 def parse_args():
@@ -39,7 +39,6 @@ def parse_args():
     parser.add_argument('--save-steps', default=80, type=int)
     parser.add_argument('--logging-steps', default=80, type=int)
     parser.add_argument('--output-dir', default='models')
-    parser.add_argument('--task', required=True) ## arguments or claims
     parser.add_argument('--max-length', default=512, type=int)
     parser.add_argument('--use-peft', default='false')
     parser.add_argument('--peft-config-r', default=16, type=int)
@@ -52,17 +51,16 @@ def main():
     args = parse_args()
     
     model_name = args.model_name
-    task = args.task 
     if args.data_dir[-1] != '/':
         args.data_dir += '/'
 
-    input_dir = args.data_dir + task + '/'
+    input_dir = args.data_dir + '/'
     train_data = load_dataset('json', data_files=input_dir + 'train.json', split='train')
  
     if "/" in model_name :
-        output_directory =f'{args.output_dir}/{task}/sft_{model_name.split("/")[-1]}_trl_{datetime.now()}'
+        output_directory =f'{args.output_dir}/sft_{model_name.split("/")[-1]}_trl_{datetime.now()}'
     else: 
-        output_directory =f'{args.output_dir}/{task}/sft_{model_name}_trl_{datetime.now()}'
+        output_directory =f'{args.output_dir}/sft_{model_name}_trl_{datetime.now()}'
     args.output_dir = output_directory.replace(' ', '_')
     
     if 't5' in args.model_name.lower(): ### we use T5 but you can use some other model
@@ -80,7 +78,8 @@ def main():
     peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=16, lora_alpha=32, lora_dropout=0.05)
     training_args = get_training_args(args)
 
-    model = get_peft_model(model, peft_config)
+    peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=args.peft_config_r, lora_alpha=args.peft_config_lora_alpha, lora_dropout=args.peft_config_lora_dropout)
+    model = PeftModel.from_pretrained(model, is_trainable=True, config=peft_config)
     
     trainer = SFTTrainer(
         model=model,

@@ -13,7 +13,5 @@ src/DPO/env.py
 .ipynb_checkpoints/
 flan_t5_base_model/
 .cache/
-models/fallacy_clf
+models/fallacy_clf 
 results/
-models/
-models_BIS/

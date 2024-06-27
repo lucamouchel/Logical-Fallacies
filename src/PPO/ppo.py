@@ -12,10 +12,8 @@ import json
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data-dir', default='data/dpo/')
-    parser.add_argument('--model-name', default='models/Llama-2-7b-hf')
-    parser.add_argument('--ref-model-path', default='models/sft_flan-t5-large_trl')
+    parser.add_argument('--ref-model-path', required=True)
     parser.add_argument('--reward-model-path', required=True)
-    parser.add_argument('--beta', default=0.5, type=float)
     parser.add_argument('--n-epochs', default=10, type=int)
     parser.add_argument('--batch-size', default=8, type=int)
     parser.add_argument('--eval-batch-size', default=32, type=int)
@@ -28,10 +26,7 @@ def parse_args():
     parser.add_argument('--logging-steps', default=300, type=int)
     parser.add_argument('--output-dir', default='models')
     parser.add_argument('--max-length', default=128, type=int)
-    parser.add_argument('--use-peft', default='false')
-    parser.add_argument('--peft-config-r', default=16, type=int)
-    parser.add_argument('--peft-config-lora-alpha', default=32, type=int)
-    parser.add_argument('--peft-config-lora-dropout', default=0.05, type=float)
+
     return parser.parse_args()
 
 def get_training_args(args):
@@ -51,25 +46,23 @@ def get_training_args(args):
         )       
     
 def map_data(sample):
-    ## sample has prompt + argument -- we use the sft training prompts
     prompt = '<s> [INST] ### Prompt: ' + sample['prompt'] + f" [/INST]\n### Argument:"
     sample['query'] = prompt
     return sample
 
 
 def main():
-    #wandb.init(mode="disabled")
+
     args = parse_args()
     train_data = load_dataset('json', data_files='data/sft/arguments/train.json', split='train')
     
     #### PPO expects only the prompts and then uses the sft model and reward model to do stuff
-    model_name = args.model_name
-    training_args = get_training_args(args)
+    model_name = args.ref_model_path.split('/')[-1].split("_")[-1].lower()
     
     if '/' in model_name:
-        output_directory =f'models/arguments/ppo_{model_name.split("/")[-1]}_{datetime.now()}'
+        output_directory =f'models/ppo_{model_name.split("/")[-1]}_{datetime.now()}'
     else:
-        output_directory =f'models/arguments/ppo_{model_name}_{datetime.now()}'
+        output_directory =f'models/ppo_{model_name}_{datetime.now()}'
     args.output_dir = output_directory.replace(' ', '_')
     
     pathlib.Path(args.output_dir).mkdir(parents=True, exist_ok=True)
@@ -82,7 +75,7 @@ def main():
         batch_size=args.batch_size, 
         ppo_epochs=args.n_epochs, 
         mini_batch_size=args.batch_size,
-        gradient_accumulation_steps=1,
+        gradient_accumulation_steps=args.gradient_accumulation_steps,
         reward_model=args.reward_model_path,
         model_name=model_name
         )
@@ -105,7 +98,7 @@ def main():
         "no_repeat_ngram_size": 2,
     }
 
-    for epoch in tqdm(range(trainer.config.ppo_epochs)):
+    for _ in tqdm(range(trainer.config.ppo_epochs)):
         for j, batch in tqdm(enumerate(trainer.dataloader)):
             queries = batch['query']
             
@@ -115,15 +108,13 @@ def main():
             responses = [trainer.generate(ids, return_prompt=False, **generation_kwargs, pad_token_id=tokenizer.pad_token_id)[0].to('cuda:0') for ids in input_ids]
             batch['response'] = [tokenizer.decode(r.squeeze(), skip_special_tokens=True) for r in responses]
         
-            #texts = [f"{p} {r}" for p, r in zip(batch['query'], batch['response'])]
-            #print(texts)
             tokens = reward_tokenizer(batch['response'], padding=True, truncation=True)
             tokens = {k: torch.tensor(v).to('cuda:1') for k, v in tokens.items()}
             rewards = reward_model(**tokens)
             rewards = rewards.logits[:, 0]
             rewards = [torch.tensor(r).to('cuda:0') for r in rewards]
             
-            if j % 1 == 0 and j != 0:
+            if j % 100 == 0 and j != 0:
                 for i, (response, reward)in enumerate(zip(batch['response'], rewards)):
                     print("TOPIC: ", batch['query'][i].split('topic: ')[-1])
                     print("STANCE: ", 'SUPPORTING' if 'SUPPORTING' in batch['query'][i] else 'COUNTER')

@@ -18,17 +18,6 @@ def save_to(data, name, output_dir):
         json.dump(data, json_file, indent=4, sort_keys=False)
     
     
-def low_resource_data(data):
-    ### data format = ['prompt': .., 'chosen': .., 'rejected': ..}
-    new_data = []
-    chosen_for_now = []
-    for sample in data:
-        if chosen_for_now.count(sample['chosen']) > 2:
-            continue
-        
-        new_data.append(sample)
-        chosen_for_now.append(sample['chosen'])
-    return new_data
 
 def chat_completion(messages, model="gpt-3.5-turbo", return_text=True, model_args=None):
     if model_args is None:
