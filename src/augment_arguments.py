@@ -12,7 +12,9 @@ import openai
 import time 
 import random
 import pathlib
+from EVAL.env import OPENAI_API_KEY
 
+openai.api_key = OPENAI_API_KEY
 warnings.filterwarnings("ignore")
 
 data_dir = 'data/argumentation/'

@@ -20,7 +20,7 @@ sys.path.append('src/')
 from src.utils import save_to
 warnings.filterwarnings("ignore")
 from EVAL.utils import get_gpt_feedback
-from DPO.env import OPENAI_API_KEY 
+from env import OPENAI_API_KEY 
 openai.api_key = OPENAI_API_KEY
 GENERATION_KWARGS = {'max_new_tokens': 50, 'no_repeat_ngram_size': 2, 'do_sample': True, 'top_p': 0.9, 'top_k':10}
 

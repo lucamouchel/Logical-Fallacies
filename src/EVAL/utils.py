@@ -19,7 +19,7 @@ from datasets import load_dataset
 from transformers import RagRetriever, RagSequenceForGeneration, RagTokenizer, AutoTokenizer, pipeline
 sys.path.append('src/')  
 import nltk
-from DPO.env import OPENAI_API_KEY
+from env import OPENAI_API_KEY
 from datetime import datetime
 from src.utils import save_to, process_gpt_output, get_gpt_response
 warnings.filterwarnings("ignore")

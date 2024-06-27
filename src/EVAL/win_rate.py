@@ -17,7 +17,7 @@ from peft import AutoPeftModelForCausalLM
 import time
 
 sys.path.append('src/')  
-from DPO.env import OPENAI_API_KEY
+from env import OPENAI_API_KEY
 from src.utils import save_to, get_gpt_response
 from utils import generate
 

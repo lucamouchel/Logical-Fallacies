@@ -16,7 +16,7 @@ import argparse
 from peft import AutoPeftModelForCausalLM
 import sys
 sys.path.append('src/')
-from DPO.env import OPENAI_API_KEY
+from env import OPENAI_API_KEY
 from src.utils import save_to, process_gpt_output, get_gpt_response
 from EVAL.utils import evaluate
 
