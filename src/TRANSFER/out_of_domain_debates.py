@@ -16,7 +16,7 @@ import argparse
 import sys 
 from datetime import datetime
 sys.path.append('src/')
-from DPO.utils import save_to
+from src.utils import save_to
 from EVAL.utils import get_gpt_feedback, remove_incomplete_last_sentence
 from EVAL.utils import generate
 from peft import AutoPeftModelForCausalLM

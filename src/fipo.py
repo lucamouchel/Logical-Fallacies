@@ -8,8 +8,8 @@ import string
 import pandas as pd 
 from peft import LoraConfig, TaskType, get_peft_model
 from datetime import datetime
-from FIPOTrainer import FIPOTrainer
-from FIPOConfig import FIPOConfig
+from FIPO.FIPOTrainer import FIPOTrainer
+from FIPO.FIPOConfig import FIPOConfig
 import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoTokenizer
@@ -18,8 +18,8 @@ import sys
 sys.path.append('src/')
 from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM
-import DPO.utils
-from DPO.utils import get_training_args
+import src.utils
+from src.utils import get_training_args
 import torch.nn as nn
 
 CLASSES = {'Not a Fallacy': 0,  'faulty generalization': 1, 'false causality': 2, 'fallacy of relevance': 3, 'fallacy of extension': 4, 'equivocation': 5, 'ad populum': 6, 'appeal to emotion': 7, 'ad hominem': 8, 'circular reasoning': 9, 'fallacy of credibility': 10, 'fallacy of logic': 11, 'false dilemma': 12, 'intentional': 13}

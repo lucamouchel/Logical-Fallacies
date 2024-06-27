@@ -17,6 +17,7 @@ warnings.filterwarnings("ignore")
 
 data_dir = 'data/argumentation/'
 train_cckg, dev_cckg, test_cckg = load_data('cckg')
+
 train_cckg['fallacy_type'] = 'No Fallacy'
 dev_cckg['fallacy_type'] = 'No Fallacy'
 test_cckg['fallacy_type'] = 'No Fallacy'

@@ -21,7 +21,7 @@ sys.path.append('src/')
 import nltk
 from DPO.env import OPENAI_API_KEY
 from datetime import datetime
-from DPO.utils import save_to, process_gpt_output, get_gpt_response
+from src.utils import save_to, process_gpt_output, get_gpt_response
 warnings.filterwarnings("ignore")
 openai.api_key = OPENAI_API_KEY
 nltk.download('punkt')
@@ -63,7 +63,7 @@ def remove_incomplete_last_sentence(text):
     else:
         return ' '.join(sentences[:-1])
 
-def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_from_file=False, use_rag=False, **kwargs):
+def evaluate(dataset, model, tokenizer, type_, model_name, eval_from_file=False, use_rag=False, **kwargs):
     f_rate = 0
     f_rates = {}
     data = []
@@ -75,7 +75,6 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_fr
         rag_model = RagSequenceForGeneration.from_pretrained('facebook/rag-token-nq', indexed_dataset=rag_dataset) 
         rag_tokenizer = AutoTokenizer.from_pretrained("facebook/rag-token-nq")
         summarizer = pipeline('summarization', max_length = 80)
-
         def get_summary(prompt):
             inputs = rag_tokenizer(prompt, max_length=80, padding=True, return_tensors='pt')
             input_ids = inputs['input_ids']
@@ -92,14 +91,14 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_fr
             return summaries[0]
 
     if eval_from_file:
-        with open(f'results/{model_name}/{type_}_args_{datetime.now()}.json', 'r') as f:
-            arguments = json.load(f) 
+        with open(f'results/{model_name}/{type_}_args.json', 'r') as f:
+            arguments = json.load(f)
 
 
     for i, entry in tqdm(dataset.iterrows(), total=len(dataset)):
         topic = entry.topic
         stance = 'supporting' if entry.label==1 else 'counter'
-        context = None
+
         if use_rag:
             context = get_summary(topic)
             prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} \n### Context: {context} [/INST]\n### Argument: "
@@ -109,10 +108,8 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_fr
         if eval_from_file:
             y = arguments[i]
         else:
-            y = generate(prompt, model, tokenizer, **kwargs)
-            y = y.split('### Argument: ')[-1].strip()
-            y = remove_incomplete_last_sentence(y)
-            print(y)
+            y = remove_incomplete_last_sentence(generate(prompt, model, tokenizer, **kwargs).split('### Argument:')[-1].strip())
+
         feedback = get_gpt_feedback(topic, y, stance=stance, type_=type_)
         if feedback['fallacy_type']!='None' :
             f_rate+=1
@@ -122,12 +119,12 @@ def evaluate(dataset, model, tokenizer, type_='ppo', model_name='llama', eval_fr
             f_rates[feedback['fallacy_type']] = 1
         data.append(feedback)
 
-    save_to(data, name=f'f-rate.json', output_dir=f'results/{model_name}/arguments/{type_}/')
+    save_to(data, name=f'f-rate.json', output_dir=f'results/{model_name}/{type_}/')
     print(f_rates)
     print(f"f rate for {type_}:", f_rate)
     print("FALLACY TYPES")
     
-    save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/{model_name}/arguments/{type_}/')
+    save_to(f_rates, name=f'fallacy_counts.json', output_dir=f'results/{model_name}/{type_}/')
     for k,v in f_rates.items():
         print(k.upper(), ':', v)
 
@@ -157,12 +154,12 @@ def evaluate_from_file(dataset, type_, model_name):
         data.append(feedback)
 
     date = datetime.now()
-    save_to(data, name=f'f-rate_{date}.json', output_dir=f'results/{model_name}/arguments/{type_}/')
+    save_to(data, name=f'f-rate_{date}.json', output_dir=f'results/{model_name}/{type_}/')
     print(f_rates)
     print(f"f rate for {type_}:", f_rate)
     print("FALLACY TYPES")
     
-    save_to(f_rates, name=f'fallacy_counts_{date}.json', output_dir=f'results/{model_name}/arguments/{type_}/')
+    save_to(f_rates, name=f'fallacy_counts_{date}.json', output_dir=f'results/{model_name}/{type_}/')
     for k,v in f_rates.items():
         print(k.upper(), ':', v)
 

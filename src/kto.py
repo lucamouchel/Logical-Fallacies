@@ -11,7 +11,7 @@ from datasets import load_dataset
 import sys
 sys.path.append('src/')
 from peft import AutoPeftModelForCausalLM
-from DPO.utils import get_training_args
+from src.utils import get_training_args
 
 def get_data():
     train_data = load_dataset('json', data_files="data/dpo/arguments/" + 'train.json', split='train') 

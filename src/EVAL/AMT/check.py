@@ -35,7 +35,7 @@ from peft import AutoPeftModelForCausalLM
 import time
 
 from DPO.env import OPENAI_API_KEY
-from DPO.utils import save_to, get_gpt_response
+from src.utils import save_to, get_gpt_response
 
 warnings.filterwarnings("ignore")
 openai.api_key = OPENAI_API_KEY

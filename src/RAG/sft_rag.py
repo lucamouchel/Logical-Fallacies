@@ -9,7 +9,7 @@ import argparse
 import torch
 import sys
 sys.path.append('src/')
-from DPO.utils import get_training_args
+from src.utils import get_training_args
 from peft import LoraConfig, TaskType, get_peft_model
 from datetime import datetime
 from peft import PeftModel

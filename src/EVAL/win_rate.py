@@ -18,7 +18,7 @@ import time
 
 sys.path.append('src/')  
 from DPO.env import OPENAI_API_KEY
-from DPO.utils import save_to, get_gpt_response
+from src.utils import save_to, get_gpt_response
 from utils import generate
 
 warnings.filterwarnings("ignore")
@@ -33,37 +33,32 @@ def compare_models(stance, topic, arguments):
     prompt = f"""Which of these {stance} arguments is better for the topic: {topic} Please consider the fact that some of these arguments might be in the form of logical fallacies. Please evaluate the arguments and whether they are logical fallacies. If one of the arguments is a logical fallacy, it should not be the best. 
     \nArguments: \n{possible_answers}\nIf the arguments are equally good, return number {len(arguments) + 1}.\nThe better argument is number:"""
 
-
     response = get_gpt_response(prompt, necessary_tokens=1, model='gpt-4')
     try:
         response = int(response)
         return response
     except:
         print("Invalid response. Please try again.")
-        print(arguments)
-        print()
-        print(response)
         return len(arguments) + 1 ### TIE
    
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model-name', default='llama')
+    parser.add_argument('--model-name', required=True, help='llama, mistral, etc...')
+    parser.add_argument('--compare-with', required=True, help="Either set only 1 alignement method e.g., 'dpo', or multiple methods separated by a semi-colon e.g., dpo;kto;fipo...")
     args = parser.parse_args() 
     
     test_set = pd.read_json('data/argumentation/test_cckg.json')
 
     with open(f'results/{args.model_name}/sft_args.json', 'r') as f:
         sft_args = json.load(f)
-        #sft_args = [arg[1] for arg in sft_args]
 
-
-    combinations = [['sft', 'dpo'], ['sft', 'ppo'], ['sft', 'cpo'], ['sft', 'kto'], ['sft', 'fipo']]
+    comparisons = args.compare_with.split(';')
+    combinations = [['sft', comparison.strip()] for comparison in comparisons]
     for combination in combinations:
         to_compare = combination[1]
-        with open(f'results/llama_bis/arguments/{to_compare}/f-rate.json', 'r') as f:
+        with open(f'results/{args.model_name}/{to_compare}/f-rate.json', 'r') as f:
             arguments = json.load(f)
             arguments = [arg['argument'] for arg in arguments]
-
 
         wins = {'sft': 0, to_compare: 0, 'tie': 0}
         winner = []
@@ -79,8 +74,6 @@ def main():
             y_sft = sft_args[i][1]
             y = arguments[i]
 
-            print(y, y_sft)
-            exit()
             try:
                 response = compare_models(stance, topic, [y_sft, y])
                 assert type(response) == int
@@ -103,9 +96,8 @@ def main():
                 exit()
         from collections import Counter
         print(Counter(winner))
-        save_to(winner, name="winners.json", output_dir='src/EVAL/AMT/')
+        save_to(winner, name="winners.json", output_dir=f'results/{args.model_name}/{to_compare}/')
         print(wins)
-        # save_to(wins, name=f'sft_vs_{to_compare}2.json', output_dir=f'results/{args.model_name}/')
 
 if __name__ == "__main__":
     main()
