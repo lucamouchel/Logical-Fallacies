@@ -2,16 +2,13 @@ import json
 from trl import CPOTrainer, CPOConfig
 import argparse
 import pandas as pd 
-from peft import LoraConfig, TaskType, get_peft_model
+from peft import LoraConfig, TaskType, get_peft_model, PeftModel
 from datetime import datetime
 from transformers import AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoTokenizer
 import sys
 sys.path.append('src/')
 from datasets import load_dataset
 import torch.nn as nn
-
-CLASSES = {'Not a Fallacy': 0,  'faulty generalization': 1, 'false causality': 2, 'fallacy of relevance': 3, 'fallacy of extension': 4, 'equivocation': 5, 'ad populum': 6, 'appeal to emotion': 7, 'ad hominem': 8, 'circular reasoning': 9, 'fallacy of credibility': 10, 'fallacy of logic': 11, 'false dilemma': 12, 'intentional': 13}
-INVERSE = {v: k for k, v in CLASSES.items()}
 
 def parse_args():
     parser = argparse.ArgumentParser() 
@@ -46,7 +43,7 @@ def put_capital_stance(prompt):
  
 def map_data(example):
     return {
-        'prompt': '<s> [INST] ### Prompt: ' + put_capital_stance(example['prompt']) + f" [/INST]\n### Argument: " ,
+        'prompt': '<s> [INST] ### Prompt: ' + put_capital_stance(example['prompt']) + f" [/INST]\n### Argument:" ,
         'chosen': example['chosen'] + ' </s>',
         'rejected': example['rejected'] + ' </s>',
     }
@@ -62,12 +59,9 @@ def main():
 
     train_data = train_data.map(lambda sample: map_data(sample))
     model_name = args.model_name
-    if '/' in model_name:
-        output_directory =f'{args.output_dir}/cpo_{model_name.split("/")[-1]}_{datetime.now()}'
-    else: 
-        output_directory =f'models/cpo_{model_name}_{datetime.now()}'
+
+    args.output_dir = f'{args.output_dir}/cpo_{model_name.split("/")[-1]}'
         
-    args.output_dir = output_directory.replace(' ', '_')
 
     if 't5' in model_name.lower():
         model = AutoModelForSeq2SeqLM.from_pretrained(model_name, device_map='auto')
@@ -79,21 +73,16 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     tokenizer.pad_token=tokenizer.unk_token
 
-    task_type = TaskType.CAUSAL_LM if is_encoder_decoder else TaskType.SEQ_2_SEQ_LM
     peft_config = LoraConfig(
-        task_type=task_type, 
+        task_type=TaskType.CAUSAL_LM if is_encoder_decoder else TaskType.SEQ_2_SEQ_LM, 
         inference_mode=False, 
         r=args.peft_config_r, 
         lora_alpha=args.peft_config_lora_alpha, 
         lora_dropout=args.peft_config_lora_dropout
         )
     
-    model = get_peft_model(model, peft_config)
-    use_custom_model = True
+    model = PeftModel.from_pretrained(model, is_trainable=True, config=peft_config)
     model.print_trainable_parameters()  
-    if use_custom_model:
-        model.classification_head = nn.Linear(model.config.hidden_size, 14, device=model.device)
-
     
     cpo_config = CPOConfig(
             output_dir=args.output_dir,               
@@ -111,11 +100,10 @@ def main():
             save_total_limit=1,                         
             gradient_accumulation_steps=args.gradient_accumulation_steps,
             beta=args.beta,
-            max_prompt_length=150,
+            max_prompt_length=args.max_length,
             max_length=args.max_length,
-            is_encoder_decoder=False,
-            generate_during_eval=False,
             is_encoder_decoder=is_encoder_decoder,
+            generate_during_eval=False,
     )
     cpo_trainer = CPOTrainer(
         model=model,
@@ -126,15 +114,10 @@ def main():
     
     cpo_trainer.train()
     print("SAVING MODEL at ", args.output_dir)
-    
     with open(args.output_dir + '/args.json', 'w') as f:
         json.dump(vars(args), f, indent=4)
-    
-    if 'mistral' in model_name.lower():
-        name='mistral'
-    elif 'llama' in model_name.lower(): 
-        name='llama'
-    cpo_trainer.save_model(f'models/cpo_{name}_{datetime.now()}')
+
+    cpo_trainer.save_model(args.output_dir)
 
    
 if __name__ == '__main__':

@@ -1,7 +1,5 @@
 wandb/
 pycache/
-logicalfallacies
-GPTprompt.ipynb
 output_fallacies.py
 runs/
 outputs/

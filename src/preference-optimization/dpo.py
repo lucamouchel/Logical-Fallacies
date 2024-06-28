@@ -9,11 +9,6 @@ from datasets import load_dataset
 from peft import AutoPeftModelForCausalLM, AutoPeftModelForSeq2SeqLM
 
 
-CLASSES = {'Not a Fallacy': 0,  'faulty generalization': 1, 'false causality': 2, 'fallacy of relevance': 3, 'fallacy of extension': 4, 'equivocation': 5, 
-           'ad populum': 6, 'appeal to emotion': 7, 'ad hominem': 8, 'circular reasoning': 9, 'fallacy of credibility': 10, 'fallacy of logic': 11, 
-           'false dilemma': 12, 'intentional': 13}
-INVERSE = {v: k for k, v in CLASSES.items()}
-
 def parse_args():
     parser = argparse.ArgumentParser() 
     parser.add_argument('--data-dir', default='data/dpo/')
@@ -33,11 +28,6 @@ def parse_args():
     parser.add_argument('--max-length', default=128, type=int)
     return parser.parse_args()
 
-
-
-## python src/DPO/dpo.py --ref-model-path=models/arguments/sft_llama --beta=0.5 --n-epochs=3 
-
-
 def map_data(example):
     prompt = example['prompt']
     if 'supporting argument' in prompt:
@@ -52,7 +42,6 @@ def map_data(example):
         'fallacy_type': example['fallacy_type']
     }
     
-
 def main():
     args = parse_args()
     if args.data_dir[-1] != '/':
@@ -64,20 +53,15 @@ def main():
     train_data = train_data.map(map_data)
     
     ref_model_path = args.ref_model_path    
-
-    model_name = ref_model_path.split('/')[-1].split("_")[-1].lower()
-    if '/' in model_name:
-        output_directory =f'{args.output_dir}/dpo_{model_name.split("/")[-1]}_{datetime.now()}'
-    else: 
-        output_directory =f'{args.output_dir}/dpo_{model_name}_{datetime.now()}'
-    args.output_dir = output_directory.replace(' ', '_')
+    model_name = ref_model_path.split('sft_')[-1]
+    args.output_dir = f'{args.output_dir}/dpo_{model_name}'
         
     if 't5' in ref_model_path.lower():
         model = AutoPeftModelForSeq2SeqLM.from_pretrained(ref_model_path, is_trainable=True, device_map='auto')
         is_encoder_decoder = True
     else:
        model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, is_trainable=True, device_map='auto')
-       is_encoder_decoder = False
+       is_encoder_decoder = False   
 
     tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_path)
 
@@ -99,7 +83,7 @@ def main():
             save_total_limit=1,                         
             gradient_accumulation_steps=args.gradient_accumulation_steps,
             beta=args.beta,
-            max_prompt_length=128,
+            max_prompt_length=args.max_length,
             max_length=args.max_length,
             is_encoder_decoder=is_encoder_decoder,
             generate_during_eval=True,

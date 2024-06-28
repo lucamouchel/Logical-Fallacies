@@ -57,14 +57,11 @@ def main():
     train_data = load_dataset('json', data_files='data/sft/arguments/train.json', split='train')
     
     #### PPO expects only the prompts and then uses the sft model and reward model to do stuff
-    model_name = args.ref_model_path.split('/')[-1].split("_")[-1].lower()
+    model_name = args.ref_model_path.split('sft_')[-1]
     
-    if '/' in model_name:
-        output_directory =f'models/ppo_{model_name.split("/")[-1]}_{datetime.now()}'
-    else:
-        output_directory =f'models/ppo_{model_name}_{datetime.now()}'
-    args.output_dir = output_directory.replace(' ', '_')
-    
+   
+    args.output_dir = f'models/ppo_{model_name}'
+       
     pathlib.Path(args.output_dir).mkdir(parents=True, exist_ok=True)
     
     with open(args.output_dir + '/args.json', 'w') as f:

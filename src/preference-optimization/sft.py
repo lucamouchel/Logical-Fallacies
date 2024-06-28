@@ -56,20 +56,14 @@ def main():
 
     input_dir = args.data_dir + '/'
     train_data = load_dataset('json', data_files=input_dir + 'train.json', split='train')
- 
-    if "/" in model_name :
-        output_directory =f'{args.output_dir}/sft_{model_name.split("/")[-1]}_trl_{datetime.now()}'
-    else: 
-        output_directory =f'{args.output_dir}/sft_{model_name}_trl_{datetime.now()}'
-    args.output_dir = output_directory.replace(' ', '_')
+    args.output_dir = f'{args.output_dir}/sft_{model_name.split("/")[-1]}'
     
+    is_encoder_decoder = 't5' in args.model_name.lower()
+
     if 't5' in args.model_name.lower(): ### we use T5 but you can use some other model
         model = transformers.T5ForConditionalGeneration.from_pretrained(model_name)
         tokenizer = transformers.T5Tokenizer.from_pretrained(model_name)
-    elif 'llama' in args.model_name.lower():
-        model = transformers.LlamaForCausalLM.from_pretrained(pretrained_model_name_or_path=model_name, device_map='auto')
-        tokenizer = transformers.LlamaTokenizer.from_pretrained(model_name)    
-    else: ## if we use Gemma we can just use the AutoModelForCausalLM
+    else:
         model = AutoModelForCausalLM.from_pretrained(model_name, device_map='auto', torch_dtype=torch.bfloat16)
         tokenizer = AutoTokenizer.from_pretrained(model_name)
 
@@ -78,7 +72,14 @@ def main():
     peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=16, lora_alpha=32, lora_dropout=0.05)
     training_args = get_training_args(args)
 
-    peft_config = LoraConfig(task_type=TaskType.CAUSAL_LM, inference_mode=False, r=args.peft_config_r, lora_alpha=args.peft_config_lora_alpha, lora_dropout=args.peft_config_lora_dropout)
+    peft_config = LoraConfig(
+            task_type=TaskType.CAUSAL_LM if not is_encoder_decoder else TaskType.SEQ_2_SEQ_LM, 
+            inference_mode=False, 
+            r=args.peft_config_r, 
+            lora_alpha=args.peft_config_lora_alpha,
+            lora_dropout=args.peft_config_lora_dropout
+        )
+    
     model = PeftModel.from_pretrained(model, is_trainable=True, config=peft_config)
     
     trainer = SFTTrainer(

@@ -49,7 +49,7 @@ def main():
     
     date = datetime.now()
     arguments = []
-    for i, entry in tqdm(test_set.iterrows(), total=len(test_set)):
+    for _, entry in tqdm(test_set.iterrows(), total=len(test_set)):
         topic = entry.topic
         stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
         prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument:"
@@ -59,7 +59,7 @@ def main():
         y = ys[0] 
         arguments.append(y)
         
-    save_to(arguments, name=f'{args.type}_{date}.json', output_dir=f'results/{args.model_name}/')
+    save_to(arguments, name=f'{args.type}_args.json', output_dir=f'results/{args.model_name}/')
   
 if __name__ == "__main__":
     main()

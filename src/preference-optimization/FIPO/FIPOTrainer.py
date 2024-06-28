@@ -12,10 +12,11 @@ if is_sagemaker_mp_enabled():
 parent_class = CPOTrainer
 
 class FIPOTrainer(parent_class):
-    def __init__(self, custom_eval_steps, *args, **kwargs):
+    def __init__(self, lambda_, custom_eval_steps, *args, **kwargs):
         super(FIPOTrainer, self).__init__(*args, **kwargs)
         self.optimizer2 = optim.Adam(self.model.classification_head.parameters(), lr=5e-4)
         self.custom_eval_steps = custom_eval_steps
+        self.lambda_ = lambda_
         self.current_train_steps = 0
 
     def print_inference(self, batch):
@@ -184,7 +185,7 @@ class FIPOTrainer(parent_class):
             chosen_loss = loss_fct(chosen_logits, chosen_targets)
             rejected_loss = loss_fct(rejected_logits, rejected_targets)
             clf_loss = chosen_loss + rejected_loss
-            losses = losses + 0.3*clf_loss
+            losses = losses + self.lambda_*clf_loss
 
             chosen_probabilities = torch.softmax(chosen_logits, dim=1)  ## batch size x num_classes
             rejected_probabilities = torch.softmax(rejected_logits, dim=1)  ## batch size x num_classes

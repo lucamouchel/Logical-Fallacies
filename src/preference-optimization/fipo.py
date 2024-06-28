@@ -6,7 +6,7 @@ from datasets import Dataset
 import argparse
 import string 
 import pandas as pd 
-from peft import LoraConfig, TaskType, get_peft_model
+from peft import LoraConfig, TaskType, get_peft_model, PeftModel
 from datetime import datetime
 from FIPO.FIPOTrainer import FIPOTrainer
 from FIPO.FIPOConfig import FIPOConfig
@@ -75,13 +75,8 @@ def main():
 
     train_data = train_data.map(lambda sample: map_data(sample))
     model_name = args.model_name
-    if '/' in model_name:
-        output_directory =f'{args.output_dir}/cpo_{model_name.split("/")[-1]}_{datetime.now()}'
-    else: 
-        output_directory =f'models/cpo_{model_name}_{datetime.now()}'
-        
-    args.output_dir = output_directory.replace(' ', '_')
-
+    args.output_dir = f'{args.output_dir}/fipo_{model_name}'
+    
     if 't5' in model_name.lower():
         model = AutoModelForSeq2SeqLM.from_pretrained(model_name, device_map='auto')
         is_encoder_decoder = True
@@ -101,13 +96,11 @@ def main():
         lora_dropout=args.peft_config_lora_dropout
         )
     
-    model = get_peft_model(model, peft_config)
-    use_custom_model = True
+    model = PeftModel.from_pretrained(model, is_trainable=True, config=peft_config)
     model.print_trainable_parameters()  
-    if use_custom_model:
-        model.classification_head = nn.Linear(model.config.hidden_size, 14, device=model.device)
-
     
+    model.classification_head = nn.Linear(model.config.hidden_size, len(CLASSES), device=model.device)
+
     cpo_config = FIPOConfig(
             output_dir=args.output_dir,               
             overwrite_output_dir=False,                  
@@ -145,9 +138,9 @@ def main():
     with open(args.output_dir + '/args.json', 'w') as f:
         json.dump(vars(args), f, indent=4)
     
-    fipo_trainer.save_model(f'models/fipo_{model_name}_{datetime.now()}')
+    fipo_trainer.save_model(args.output_dir)
 
-   
+
 if __name__ == '__main__':
     main()
 

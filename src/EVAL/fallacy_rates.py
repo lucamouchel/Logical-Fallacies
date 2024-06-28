@@ -33,7 +33,7 @@ def parse_args():
 def main(): 
     args = parse_args()
     test_set = pd.read_json('data/argumentation/test_cckg.json')
-    evaluate(test_set, model=None, tokenizer=None, type_=args.alignment_method, eval_from_file=True, model_name=args.model_name, use_rag=False)
+    evaluate(test_set, type_=args.alignment_method, model_name=args.model_name)
     
 if __name__ == "__main__":
     main()

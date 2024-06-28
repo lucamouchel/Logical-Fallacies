@@ -10,7 +10,7 @@ from datetime import datetime
 from datasets import load_dataset
 import sys
 sys.path.append('src/')
-from peft import AutoPeftModelForCausalLM
+from peft import AutoPeftModelForCausalLM, AutoPeftModelForSeq2SeqLM
 from src.utils import get_training_args
 
 def get_data():
@@ -77,27 +77,23 @@ def main():
         args.data_dir += '/'
 
     train_data = get_data()
-    model_name = args.ref_model_path.split('/')[-1].split("_")[-1].lower()
+    model_name = args.ref_model_path.split('sft_')[-1]
     ref_model_path = args.ref_model_path    
-    if '/' in model_name:
-        output_directory =f'{args.output_dir}/kto_{model_name.split("/")[-1]}_{datetime.now()}'
-    else: 
-        output_directory =f'models/kto_{model_name}_{datetime.now()}'
+    args.output_dir = f'{args.output_dir}/kto_{model_name}'
         
-    args.output_dir = output_directory.replace(' ', '_')
     training_args = get_training_args(args)
+
     is_encoder_decoder='t5' in model_name.lower()
 
     if 't5' in model_name.lower():
-        model = transformers.AutoModelForSeq2SeqLM.from_pretrained(ref_model_path)
-        ref_model = transformers.AutoModelForSeq2SeqLM.from_pretrained(ref_model_path)
+        model = transformers.AutoPeftModelForSeq2SeqLM.from_pretrained(ref_model_path, is_trainable=True, device_map='auto')
+        ref_model = transformers.AutoPeftModelForSeq2SeqLM.from_pretrained(ref_model_path, is_trainable=False, device_map='auto')
     else:
         model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, is_trainable=True, device_map='auto')
-        ref_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, is_trainable=True, device_map='auto')
+        ref_model = AutoPeftModelForCausalLM.from_pretrained(ref_model_path, is_trainable=False, device_map='auto')
 
     tokenizer = transformers.AutoTokenizer.from_pretrained(ref_model_path)
 
-   
     training_args = get_training_args(args)
     training_args = KTOConfig(
         beta=args.beta,
@@ -108,7 +104,7 @@ def main():
         is_encoder_decoder=is_encoder_decoder,
         **training_args.to_dict()
     )
-    model.enable_input_require_grads()
+
     kto_trainer = KTOTrainer(
         model=model,
         ref_model=ref_model,
@@ -123,7 +119,7 @@ def main():
     with open(args.output_dir + '/args.json', 'w') as f:
         json.dump(vars(args), f, indent=4)
     
-    kto_trainer.save_model('models/arguments/kto_mistral')
+    kto_trainer.save_model(args.output_dir)
 
    
 if __name__ == '__main__':
