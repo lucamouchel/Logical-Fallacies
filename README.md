@@ -2,13 +2,24 @@
 
 This repository is the official implementation of the paper entitled "_A Logical Fallacy-Informed Framework for Argument Generation_", by Luca Mouchel, Debjit Paul, Shaobo Cui, Robert West, Antoine Bosselut and Boi Faltings.
 
-The pipeline supports any causal and sequence-to-sequence models from HuggingFace and consists of the following stages: 
+The pipeline supports any **causal** and **sequence-to-sequence** models from HuggingFace and consists of the following stages: 
 - Data Collection with ChatGPT
 - Supervised Fine-Tuning (SFT)
 - Preference Optimization with existing methods (DPO, KTO, CPO, PPO) and our method (FIPO)
+- _win-rate_ and _fallacy-rate_ evaluations with GPT-4
+
 
 ## Automatically Collecting Data with ChatGPT 
-The scripts for this step are in `src/aug`
+The scripts for this step are in `src/augment_arguments.py`
+
+## Superised Fine-Tuning (SFT)
+To implement SFT, you can run 
+```bash
+python src/preference-optimization/trainer.py --train-using=SFT --train-data=data/sft/train.json --model-name=<HF model-id> --use-peft=True 
+```
+
+## Preference Optimization
+
 
 
 ## Training the Binary Classifier: 
