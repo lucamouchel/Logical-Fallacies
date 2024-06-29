@@ -31,12 +31,12 @@ For methods requiring a reference model, you don't have to specify the model-id,
 #### DPO
 the required arguments are the following - and you can add extra training arguments as mentioned above
 ```bash
-python src/preference-optimization/trainer.py --train-using=DPO --beta=<> --ref-model-path=<Path to SFT model> 
+python src/preference-optimization/trainer.py --train-using=DPO --beta=<> --ref-model-path=<Path to SFT model> --train-data=data/preference-data/train.json
 ```
 #### KTO
 For KTO, we have two additional arguments, which both default to `1.0`
-```bash
-python src/preference-optimization/trainer.py --train-using=KTO --beta=<> --ref-model-path=<Path to SFT model> --desirable-weight=<> --undesirable-weight=<>
+```bash 
+python src/preference-optimization/trainer.py --train-using=KTO --beta=<> --ref-model-path=<Path to SFT model> --desirable-weight=<> --undesirable-weight=<> --train-data=data/preference-data/train.json
 ```
 
 #### PPO 
@@ -44,19 +44,19 @@ PPO requires explicit reward modelling - for which we need a reward model.
 The reward model we pick is a binary fallacy argument classifier (0 - not a fallacy; 1 - fallacy) which uses the preferred and dispreferred arguments in the preference dataset.
 You can train the binary classifier using: 
 ```bash
-python src/fallacy_classifier/train.py --language-model=<> --epochs=<> --batch-size=<> --val-batch-size=<> --lr=<> --data-dir=<> --gradient-accumulation=<>
+python src/fallacy_classifier/train.py --language-model=<> --epochs=<> --batch-size=<> --val-batch-size=<> --lr=<> --data-dir=<> --gradient-accumulation=<> --train-data=data/preference-data/train.json
 ```
 By default, we use the `howey/electra-large-mnli` language model. The classifier is then saved in the folder `models/fallacy_clf/.`
 You can then run PPO using
 ```bash
-python src/preference-optimization/trainer.py --train-using=PPO --ref-model-path=<Path to SFT model> --reward-model-path=models/fallacy_clf/<> 
+python src/preference-optimization/trainer.py --train-using=PPO --ref-model-path=<Path to SFT model> --reward-model-path=models/fallacy_clf/<> --train-data=data/preference-data/train.json
 ```
 
 ### Reference Free Methods (CPO, FIPO)
 These methods are easier to run. Here you should not specify a reference model-path, instead, specify the huggingface model-id (e.g., meta-llama/Llama-2-7b-hf)
 #### CPO
 ```bash
-python src/preference-optimization/trainer.py --train-using=CPO --model-name=<HF model id> --beta=<> 
+python src/preference-optimization/trainer.py --train-using=CPO --model-name=<HF model id> --beta=<> --train-data=data/preference-data/train.json
 ```
 
 #### FIPO
@@ -67,7 +67,7 @@ where in our case $\theta$ is CPO, and $\mathcal{L} _ \text{FI}$ is the addition
 You can also specify the weighting scheme - either uniform or frequency. The frequency works better, as it gives a larger weight to fallacy types occuring more often - teaching the model to learn more from certain fallacy types, rather than having the same penalty for all types.
 To run FIPO:
 ```bash
-python src/preference-optimization/trainer.py --train-using=FIPO --model-name=<HF model id> --lambda-value=<> --weighting-scheme=<frequency or uniform> --beta=<> 
+python src/preference-optimization/trainer.py --train-using=FIPO --model-name=<HF model id> --lambda-value=<> --weighting-scheme=<frequency or uniform> --beta=<> --train-data=data/preference-data/train.json
 ```
 
 # Examples 
