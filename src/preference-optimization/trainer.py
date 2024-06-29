@@ -39,11 +39,11 @@ def parse_args():
     parser = argparse.ArgumentParser() 
 
     parser.add_argument('--train-using', type=str, required=True, help="training to perform -- either sft or preference optimization (sft, dpo, cpo, kto, fipo, ppo)")
-    parser.add_argument('--train-data', type=str, default='data/dpo/train.json', help='path to json training data - for sft and preference optimization')
+    parser.add_argument('--train-data', type=str, default='data/preference-data/train.json', help='path to json training data - for sft and preference optimization')
     parser.add_argument('--model-name', type=str, default=None, help="huggingface model-id e.g., meta-llama/Llama-2-7b-hf")
 
     ## Specific to preference optimization
-    parser.add_argument('--beta', default=0.1, type=float)
+    parser.add_argument('--beta', default=0.1, type=float)  
     parser.add_argument('--ref-model-path', default=None)
 
     ## Specific to PEFT
@@ -59,6 +59,8 @@ def parse_args():
 
     ## Specific to FIPO
     parser.add_argument('--lambda-value', default=0.3, type=float)
+    parser.add_argument('--weighting-scheme', default='frequency', type=str, help='frequency or uniform')
+
 
     ## Specific to PPO
     parser.add_argument('--reward-model-path')
@@ -322,8 +324,12 @@ def main():
         )
     elif args.train_using == 'fipo':
         from collections import Counter
-        fallacy_frequencies = {k: round(v/len(train_data), 3) for k, v in sorted(Counter(train_data['fallacy_type']).items())}
-        class_weights = [min(fallacy_frequencies.values())] + list(fallacy_frequencies.values())
+        assert args.weighting_scheme in ['frequency', 'uniform'], "weighting scheme must be either 'frequency' or 'uniform'"
+        if args.weighting_scheme == 'frequency':
+            fallacy_frequencies = {k: round(v/len(train_data), 3) for k, v in sorted(Counter(train_data['fallacy_type']).items())}
+            class_weights = [min(fallacy_frequencies.values())] + list(fallacy_frequencies.values())
+        else:
+            class_weights = [1/(len(CLASSES)+1)] * (len(CLASSES) + 1)
 
         config = FIPOConfig(
             **preference_optimization_args,
