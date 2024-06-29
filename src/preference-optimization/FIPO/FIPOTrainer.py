@@ -12,11 +12,12 @@ if is_sagemaker_mp_enabled():
 parent_class = CPOTrainer
 
 class FIPOTrainer(parent_class):
-    def __init__(self, lambda_, custom_eval_steps, *args, **kwargs):
+    def __init__(self, lambda_: float, custom_eval_steps: int, clf_loss_class_weights: torch.tensor, *args, **kwargs):
         super(FIPOTrainer, self).__init__(*args, **kwargs)
         self.optimizer2 = optim.Adam(self.model.classification_head.parameters(), lr=5e-4)
         self.custom_eval_steps = custom_eval_steps
         self.lambda_ = lambda_
+        self.clf_loss_class_weights = clf_loss_class_weights
         self.current_train_steps = 0
 
     def print_inference(self, batch):
@@ -179,9 +180,7 @@ class FIPOTrainer(parent_class):
             
             chosen_targets = torch.zeros(chosen_logits.size(0), dtype=torch.long).to('cuda')
             rejected_targets = torch.tensor(batch['fallacy_type'], dtype=torch.long).to('cuda')
-
-            class_weights = [0.03, 0.15, 0.09, 0.07, 0.07, 0.03, 0.1, 0.07, 0.11, 0.07, 0.07, 0.06, 0.06, 0.06]
-            loss_fct = torch.nn.CrossEntropyLoss(weight=torch.tensor(class_weights).to('cuda'))
+            loss_fct = torch.nn.CrossEntropyLoss(weight=self.clf_loss_class_weights)
             chosen_loss = loss_fct(chosen_logits, chosen_targets)
             rejected_loss = loss_fct(rejected_logits, rejected_targets)
             clf_loss = chosen_loss + rejected_loss
@@ -189,13 +188,7 @@ class FIPOTrainer(parent_class):
 
             chosen_probabilities = torch.softmax(chosen_logits, dim=1)  ## batch size x num_classes
             rejected_probabilities = torch.softmax(rejected_logits, dim=1)  ## batch size x num_classes
-            print("CHOSEN preds: ", torch.argmax(chosen_probabilities, dim=1))
-            print("-"*50)
-            print("TRUE LABELS: ", batch['fallacy_type'])
-            print("REJECTED preds: ", torch.argmax(rejected_probabilities, dim=1))
-            print("-"*50)
-        # ## if the model is confident that the chosen score is a fallacy -- e.g., sigmoid > 0.5, then the reward should be small for the chosen sample - hence 1-sigmoid
-       
+            
         return losses, chosen_rewards, rejected_rewards,chosen_probabilities, rejected_probabilities, clf_loss# F.sigmoid(chosen_logits), F.sigmoid(rejected_logits)
 
     def training_step(self, model: nn.Module, inputs: Dict[str, Union[torch.Tensor, Any]]) -> torch.Tensor:
