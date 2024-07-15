@@ -51,24 +51,42 @@ You can then run PPO using
 ```bash
 python src/preference-optimization/trainer.py --train-using=PPO --ref-model-path=<Path to SFT model> --reward-model-path=models/fallacy_clf/<> --train-data=data/preference-data/train.json
 ```
+The rewards used during the PPO phase are the "_not a fallacy_" logits - i.e., 
+```python
+tokens = reward_tokenizer(generated_responses)
+rewards = reward_model(**tokens)[:, 0] ## the model outputs two logits in the form [not a fallacy logit, is a fallacy logit]
+```
+we use the not a fallacy logits as rewards.
 
 ### Reference Free Methods (CPO, FIPO)
-These methods are easier to run. Here you should not specify a reference model-path, instead, specify the huggingface model-id (e.g., meta-llama/Llama-2-7b-hf)
+These methods are easier to run. Here you should not specify a reference model path, instead, specify the huggingface model-id (e.g., meta-llama/Llama-2-7b-hf)
 #### CPO
 ```bash
 python src/preference-optimization/trainer.py --train-using=CPO --model-name=<HF model id> --beta=<> --train-data=data/preference-data/train.json
 ```
 
 #### FIPO
-This is the method we introduce in the our paper, it uses CPO as the backbone preference optimization method, and adds a classification loss on top. The loss is defined by
+This is the method we introduce in our paper, it uses CPO as the backbone preference optimization method, and adds a classification loss on top. The loss is defined by
 
 $$\mathcal{L}_{\text{FIPO}} =  \mathcal{L} _ \theta +\lambda\mathcal{L} _ \text{FI} $$
-where in our case $\theta$ is CPO, and $\mathcal{L} _ \text{FI}$ is the additional loss, as a weighted cross-entropy loss and $\lambda$ is a weighting parameter
-You can also specify the weighting scheme - either uniform or frequency. The frequency works better, as it gives a larger weight to fallacy types occuring more often - teaching the model to learn more from certain fallacy types, rather than having the same penalty for all types.
+
+where in our case $\theta$ is CPO, and $\mathcal{L} _ \text{FI}$ is the additional loss, as a weighted cross-entropy loss and $\lambda$ is a weighting parameter.
+
+You can also specify the weighting scheme - either uniform or frequency. The frequency works better, as it gives a larger weight to fallacy types occurring more often - teaching the model to learn more from certain fallacy types, rather than having the same penalty for all types.
 To run FIPO:
 ```bash
 python src/preference-optimization/trainer.py --train-using=FIPO --model-name=<HF model id> --lambda-value=<> --weighting-scheme=<frequency or uniform> --beta=<> --train-data=data/preference-data/train.json
 ```
 
 # Examples 
-### DPO
+### DPO with Llama-2
+Here is an example of running the pipeline:
+
+1. SFT -
+```bash
+python src/preference-optimization/trainer.py --train-using=SFT --train-data=data/sft/train.json --model-name=meta-llama/Llama-2-7b-hf --use-peft=True
+```
+2. DPO -
+```bash
+python src/preference-optimization/trainer.py --train-using=DPO --train-data=data/preference_optimization/train.json --ref-model-path=models/sft_Llama-2-7b-hf
+```
