@@ -12,7 +12,7 @@ src/DPO/env.py
 models/fallacy_clf 
 src/EVAL/env.py
 results/
-EVAL/AMT/
+src/EVAL/AMT/
 data/LOGIC/
 models/
 models_BIS/
