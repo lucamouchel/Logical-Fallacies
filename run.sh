@@ -1,2 +1,0 @@
-python src/preference-optimization/trainer.py --train-using=FIPO --model-name=meta-llama/Llama-2-7b-hf  --lambda-value=0.3 --weighting-scheme=uniform --beta=0.1 --train-data=data/preference-data/train.json --output-dir=models_rebuttal
-python src/preference-optimization/trainer.py --train-using=FIPO --model-name=meta-llama/Llama-2-7b-hf  --lambda-value=0.3 --weighting-scheme=frequency --beta=0.1 --train-data=data/preference-data/train.json --output-dir=models_rebuttal --uniform-data

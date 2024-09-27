@@ -8,11 +8,11 @@ cache_dir/
 src/env.py
 .env.py
 src/DPO/env.py
-.ipynb_checkpoints/
-flan_t5_base_model/
 .cache/
 models/fallacy_clf 
 results/
 EVAL/AMT/
 data/LOGIC/
 models/
+models_BIS/
+models_rebuttal/
