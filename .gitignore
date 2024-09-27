@@ -10,6 +10,7 @@ src/env.py
 src/DPO/env.py
 .cache/
 models/fallacy_clf 
+src/EVAL/env.py
 results/
 EVAL/AMT/
 data/LOGIC/
