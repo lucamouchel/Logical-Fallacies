@@ -8,6 +8,12 @@ The pipeline supports any **causal** and **sequence-to-sequence** models from Hu
 - Preference Optimization with existing methods (DPO, KTO, CPO, PPO) and our method (FIPO)
 - _win-rate_ and _fallacy-rate_ evaluations with GPT-4
 
+## Environment Installation
+We use a python environment using `virtualenv`. To create an environment and install the required packages, follow the next steps:
++ `pip install virtualenv`
++ `virtualenv fallacies`
++ `source fallacies/bin/activate`
++ `pip install -r requirements.txt`
 
 ## Automatically Collecting Data with ChatGPT 
 The scripts for this step are in `src/augment_arguments.py`
