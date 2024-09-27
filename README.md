@@ -1,6 +1,6 @@
 # A Logical Fallacy-Informed Framework for Argument Generation
 
-This repository is the official implementation of the paper entitled "_A Logical Fallacy-Informed Framework for Argument Generation_", by Luca Mouchel, Debjit Paul, Shaobo Cui, Robert West, Antoine Bosselut and Boi Faltings.
+This repository is the official implementation of the paper entitled "_A Logical Fallacy-Informed Framework for Argument Generation_", by [...] <!-- Luca Mouchel, Debjit Paul, Shaobo Cui, Robert West, Antoine Bosselut and Boi Faltings. -->
 
 The pipeline supports any **causal** and **sequence-to-sequence** models from HuggingFace and consists of the following stages: 
 - Data Collection with ChatGPT
