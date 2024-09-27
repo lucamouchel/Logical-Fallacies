@@ -1,0 +1,12 @@
+torch
+tqdm
+transformers
+datasets
+wandb
+pandas
+openai==0.27.2
+peft
+nltk
+scikit-learn
+sentencepiece
+trl==0.9.6

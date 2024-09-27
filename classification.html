@@ -1,0 +1,594 @@
+
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+
+<!-- BOOTSTRAP CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+
+<!-- HITPUB CSS -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+<style id="hitpub_css">
+  /***********************************************
+  MOSAIC BOOSTRAP OVERWRITES
+  ***********************************************/
+  #hitinfo .card {
+      border-radius: 0;
+  }
+   #hitinfo button.btn-link {
+      color: #fff;
+      text-decoration: none;
+   }
+  
+  
+  #hitinfo button.btn-link:hover {
+      text-decoration: none;
+  }
+  #hit ul.question-choice {
+      list-style-type: none;
+  }
+  
+  /***********************************************
+  MOSAIC GENERAL STYLING
+  ***********************************************/
+  body {
+      font-family: "Open Sans", "Roboto", sans-serif;
+      line-height: 1.25;
+  }
+  textarea#feedback {
+      width: 100%
+  }
+  input#submitButton {
+      margin: auto;
+      display: block;
+      background-color: #2172a4;
+      color: #fff;
+      font-size: 1.125rem;
+      padding: .5rem 1rem;
+      cursor: pointer;
+      border-radius: 1rem;
+  }
+  input#submitButton:hover {
+      background-color: #06486F;
+  }
+  
+  input[type="radio"] {
+      cursor: pointer;
+  }
+  
+  div.goal-category {
+      border-bottom: solid 1px #ccc;
+      padding: 1rem 1rem;
+  }
+  
+  li {
+      margin:0.6em;
+  }
+  
+  table {
+      width: 80%;
+      margin: 5px;
+  }
+  
+  tr {
+      border:1px solid #ccc;
+  }
+  
+  th {
+      width:20%;
+      background-color:#fff;
+      font-weight:normal;
+      text-align: center;
+      padding:0.5em;
+  }
+  
+  
+  td {
+      padding-left:20px;
+      padding-right:10px;
+  }
+  hr {
+    border: none;
+    background-color: lightgray;
+    height: 3px;
+}
+
+  
+  
+  
+  /***********************************************
+  HIT CUSTOM GENERAL STYLING
+  ***********************************************/
+  div.card-header {
+      background-color: #06486F;
+  }
+  div.card-header h5 {
+      color: #fff !important;
+  }
+  
+  
+  .question-choice-container label.btn {
+      background-color: #eee;
+      border: #ccc 1px solid;
+      margin-left: 0 !important;
+      color: black;
+  }
+  
+  
+  .legend {
+      margin-top: .33rem;
+      font-weight: normal;
+      padding-left: 40px;
+  }
+  .legend .label{
+      font-style: italic;
+  }
+  
+  .emphasize {
+      font-weight: bold;
+      color: black;
+      font-style: italic;
+  }
+  
+  .btn-group-container {
+      align:left;
+      padding:0;
+  }
+  
+  .example {
+      pointer-events:none;
+  }
+  
+  .title {
+      font-style: italic;
+  }
+  
+  .entity {
+      color: blue;
+      font-weight: bold;
+  }
+  
+  .use {
+      color: purple;
+      font-weight: bold;
+  }
+  
+  .btn-group-xs > .btn, .btn-xs {
+    padding: .4rem .4rem;
+    font-size: .8rem;
+    line-height: 1.2;
+    border-radius: .2rem;
+  }
+  
+  .card-body {
+      background-color:#fbfbfb;
+  }
+  
+  .concept_a {
+    color: #0072B2;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .concept_b {
+    color: #D55E00;
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .sm-bold {
+      font-weight:bold;
+      font-style: italic;
+      font-size: 80%;
+  }
+  
+  
+  label[for="0"]:hover, label[for="0"].active {
+      background-color:  #347C17 !important;
+      color: white;
+  }
+  label[for="1"]:hover, label[for="1"].active {
+      background-color: #C35817 !important;
+      color: white;
+  }
+  
+    label[for="2"]:hover, label[for="2"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="3"]:hover, label[for="3"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="4"]:hover, label[for="4"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="5"]:hover, label[for="5"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="6"]:hover, label[for="6"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="7"]:hover, label[for="7"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="8"]:hover, label[for="8"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="9"]:hover, label[for="9"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="10"]:hover, label[for="10"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }   
+
+    label[for="11"]:hover, label[for="11"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="12"]:hover, label[for="12"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+    label[for="13"]:hover, label[for="13"].active {
+        background-color: #C35817 !important;
+        color: white;
+    }
+
+
+
+  
+  
+
+</style>
+
+<!-- HIT START -->
+<div id="hit" class="container">
+
+  <!-- ACCORDION START -->
+  <div class="col-12 accordion" id="hitinfo">
+      
+      <!-- POLICY START -->
+      <div class="card">
+          <div class="card-header id="policyHeading">
+              <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#policy" aria-expanded="true" aria-controls="policy">
+                      Acceptance and Privacy Policies (click to expand/collapse)
+                  </button>
+              </h5>
+          </div>
+          <div class="collapse" id="policy" aria-labelledby="policyHeading" data-parent="#hitinfo">
+              <div class="card-body">
+                  <div class="card-content">
+                    <h5>Acceptance Policy</h5>
+                    <p>There is no obligation to participate in the task. We will not reject a job unless we observe the evidence of malicious behavior, such as random clicks or very short session times.</p>
+
+                    <h5>Privacy Policy</h5>
+                    <p>We may incidentally collect some personal data for the purpose of our research project, according to art. 36c and seq. of the ETH Act. Our target is to process and publish only anonymized data. Raw data will be kept confidential and secure. Only anonymized or aggregated personal data may be shared with other research partners.</p>
+                    <p>Having established this, however, we should not collect any personal data in this task.</p>
+                    <p>We are using the services of Amazon Mechanical Turk, Inc. and its affiliates, c/o Amazon.com, Inc., P.O. Box 81226, Seattle, WA 98108-1226, USA. Hence, the privacy policy of Amazon will apply for the processing of your personal information by Amazon.</p>
+                    <p>If you wish to raise a complaint on how we have handled your personal data, or if you want to know if we hold personal data about you, you can contact our Data Protection Officer (dpo@epfl.ch) who will investigate the matter.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- POLICY END -->
+      
+      <!-- INSTRUCTIONS START -->
+      <div class="card">
+          <div class="card-header id="instructionsHeading">
+              <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#instructions" aria-expanded="true" aria-controls="instructions">
+                      Instructions (click to expand/collapse)
+                  </button>
+              </h5>
+          </div>
+          <div class="collapse show" id="instructions" aria-labelledby="instructionsHeading" data-parent="#hitinfo">
+              <div class="card-body">
+                  <div class="card-content">
+                      <p style="font-size: 12px; margin:0 0 0.5em 0;"><em>(WARNING: This HIT may contain adult content. Worker discretion is advised.)</em></p>
+
+                      <p>Thanks for participating in this HIT!</p>
+
+                      <hr/>
+                      In this HIT, you will be working on logical fallacies in argumentation.
+                        <p><strong>Logical Fallacies:</strong>
+                            A logical fallacy is an error in reasoning that undermines the logical validity of an argument. It occurs when an argument is based on faulty logic, misleading reasoning, or incorrect assumptions, leading to a conclusion that is not logically justified by the premises.</p>
+                     <p> </p>
+
+                            <p>Given a <strong>topic</strong>, a <strong>stance (supporting or countering)</strong>, an <strong>argument</strong> that adresses the topic, and a <strong>fallacy-type</strong> predicted by an AI model, you are tasked with agreeing or disagreeing with the prediction.</p>
+
+                      <p><strong>Firstly, it is important to define all the possible fallacy types.</strong></p>
+                    <ul>
+                        <li><strong>Faulty Generalization</strong>: An informal fallacy wherein a conclusion is drawn about all or many instances of a phenomenon on the basis of one or a few instances of that phenomenon. Is an example of jumping to conclusions. </li> Example: <em>Annie must like Starbucks because all white girls like Starbucks.</em>
+
+                        <li><strong>False Causality</strong>: Statement that jumps to a conclusion implying a causal relationship without supporting evidence. </li> Example: <em>Every time I go to sleep the sun goes down. Therefore, my sleeping causes the sun to set.</em></li>
+                        <li><strong>Ad Hominem</strong>: A fallacy that involves a personal attack on the arguer rather than the argument. </li> Example: <em>We cannot listen to John’s opinion on global warming because he is a tree hugger.</em>
+                        <li><strong>Circular Reasoning</strong>: When the end of an argument comes back to the beginning without having proven itself. </li> Example: <em>God exists because the Bible says so. The Bible is a reliable source because it is the  word of God.</em>
+                        <li><strong>Fallacy of Relevance</strong>: An argument that may be persuasive, but is logically irrelevant to the issue at hand. </li> Example: <em>You're complaining because you have to walk to school? I used to have to give my parents my entire paycheck.</em>
+                        <li><strong>Ad populum</strong>: A fallacious argument which is based on affirming that something is real or better because the majority thinks so. </li> Example: <em> Most people think the world is flat, therefore it is flat.</em>
+                        <li><strong>Fallacy of Logic</strong>: An error in the logical structure of an argument. </li> Example: <em>Sandra is an angel from heaven. She gave me a free lunch today.</em>
+                        <li><strong>Appeal to Emotion</strong>: An argument that relies on the manipulation of emotions, rather than valid logic, to persuade. </li> Example: <em>It is an outrage that the school wants to remove the vending machines. This is taking our freedom away! </em>
+                        <li><strong>False Dilemma</strong>: Presenting only two options or sides when there are many options or sides. </li> Example: <em>To get better schools, we have to raise taxes. If we don't, we can't have better schools.</em>
+                        <li><strong>Equivocation</strong>: When a key term or phrase in an argument isused in an ambiguous way, with one meaning in one portion of the argument and then another meaning in another portion of the argument. </li> Example: <em>Of course I can read Spanish! Look, I just finished this book by Jorge Luis Borges!</em> 
+                        <li><strong>Fallacy of Extension</strong>: Attacking an exaggerated or caricatured version of your opponent’s position. </li> Example: <em>Mayor Blake wants to create more bicycle lanes in Lowell. Why is he forcing us to give up our cars and bike everywhere?</em>
+                        <li><strong>Fallacy of Credibility</strong>: Attempts to disprove an argument by attacking the character of the speaker. </li> Example: <em> My minister says the Covid vaccine will cause genetic mutations. He has a college degree, and is a holy man, so he must be right.</em>
+                        <li><strong>Intentional</strong>: Some intentional (sometimes subconscious) action/choice to incorrectly support an argument. </li> Example: <em>We haven’t found the ruins of Troy, so the city of Troy didn’t really exist.</em>
+                    </ul>
+
+
+                      <p>An example of a an argument (without a logical fallacy) would be:</p>
+                      <ul>
+                        <li><strong>Topic</strong>: Television can be hazardous to our kids.</li>
+                        <li><strong>Stance</strong>: Supporting</li>
+                        <li><strong>Argument</strong>: Television scenes shows scenes that are not meant for kids to watch and that should not be allowed.</li>
+                      </ul>
+
+                      <p>An example of a fallacious argument for the same topic would be:</p>
+                      <ul>
+                        <li><strong>Example 1</strong>: Everyone lets their kids watch television, so it must be safe for them. (Ad populum)</li>
+                        <li><strong>Example 2</strong>: Watching television leads to violent behavior in children. (False causality) </li>
+                        <li><strong>Example 3</strong>: All children who watch television excessively will have poor academic performance. (Faulty generalization) </li>
+
+                      </ul>
+
+                      <p>With this example, we can better define all elements involved:</p>
+                      <ol>
+                        <li>A <strong>Topic</strong> refers to the subject or issue that is being discussed. It is the focal point around which the argument revolves,</li>
+                        <li>The <strong>stance</strong> refers to a position or perspective that an individual takes regarding a particular topic. It represents their viewpoint, beliefs, or opinions on the subject matter being discussed. In our case, the stance will be either <strong>supporting</strong> or <strong>counter</strong> </li>
+                        <li>The <strong>argument</strong> is a reasoned or logical presentation of ideas or opinions aimed at persuading others or establishing a particular viewpoint as valid or true. It typically involves the exchange of assertions, evidence, and reasoning to support a claim or position.</li>
+                      </ol>
+
+                    
+                      <p><strong>Your task is to evaluate whether the given argument is potentially any of these fallacies, with respect to a given topic and a stance. If it is, you must specify the fallacy type.</strong></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- INSTRUCTIONS END -->
+      <!-- EXAMPLES START -->
+      <div class="card">
+          <div class="card-header id="trHeading">
+              <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#dosdonts" aria-expanded="true" aria-controls="dosdonts">
+                      Dos and Don'ts (click to expand/collpase)
+                  </button>
+              </h5>
+          </div>
+          <div class="collapse" id="dosdonts" aria-labelledby="trHeading" data-parent="#hitinfo">
+              <div class="card-body">
+                  <div class="card-content col-12">
+
+                      <p class="mb-2"><b>Important notes to consider:</b></p> 
+                      <p style="font-size: 12px;"><em>Note, there are many other considerations, but these are the most important.</em></p>
+                      <ul>
+                        <li><strong>Do not evaluate the argument independently of the topic.</strong> Pay close attention to the structure of the argument and if it matches one of the possible fallacy types.</li>
+                        <li>Please think about each example carefully and do your best to <strong>avoid any gender, racial, religious, sexual orientation or any other bias while evaluating the norms</strong>.</li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- INSTRUCTIONS END -->
+      <!-- EXAMPLES START -->
+      <div class="card">
+          <div class="card-header id="examplesHeading">
+              <h5 class="mb-0">
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#examples" aria-expanded="true" aria-controls="examples">
+                      Examples (click to expand/collapse)
+                  </button>
+              </h5>
+          </div>
+          <div class="collapse" id="examples" aria-labelledby="examplesHeading" data-parent="#hitinfo">
+              <div class="card-body">
+                  <div class="card-content col-12">
+                      
+                    <h5>Example 1:</h5>
+                    <p style="margin:0"><strong>Topic</strong>: Subsidizing student loans is bad.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Counter</p>
+                    <p><strong>Argument</strong>: Student loans are often the only way that the poor can afford to go to college.</p>
+                    <ul>
+                      <li><strong style="color:#347C17;">Not a Fallacy</strong></li>
+                    </ul>
+
+                    <h5>Example 2:</h5>
+                    <p style="margin:0"><strong>Topic</strong>: Subsidizing student loans is bad.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Counter</p>
+                    <p><strong>Argument</strong>: So you think all students should be burdened with overwhelming debt?</p>
+                    <ul>
+                      <li><strong style="color:#C35817;">Fallacy of extension</strong></li>
+                    </ul>
+
+
+                    <h5>Example 3:</h5>
+                    <p style="margin:0"><strong>Topic</strong>: There should not be parades that celebrate homosexuality.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Counter</p>
+                    <p><strong>Argument</strong>: Nobody should be restricted from expressing their point of view.</p>
+                    <ul>
+                      <li><strong style="color:#347C17;">Not a Fallacy</strong></li>
+                    </ul>
+
+                    <h5>Example 4:</h5>
+                    <p style="margin:0"><strong>Topic</strong>: There should not be parades that celebrate homosexuality.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Counter</p>
+                    <p><strong>Argument</strong>: Homosexuals should be allowed to have a parade.</p>
+                    <ul>
+                      <li><strong style="color:#347C17;">Not a Fallacy</strong></li>
+                    </ul>
+
+                    <h5>Example 5:</h5>
+                    <p style="margin:0"><strong>Topic</strong>: Capital punishment is always brutal.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Supporting</p>
+                    <p><strong>Argument</strong>: Capital punishment is brutal because it involves the use of brutal methods.</p>
+                    <ul>
+                      <li><strong style="color:#C35817;">Circular Reasoning</strong></li>
+                    </ul>
+
+                    <h5>Example 6:</h5>
+                    <p style="margin:0"><strong>Topic</strong>: Urbanization causes increases in crime rates and pollution.</p>
+                    <p style="margin:0"><strong>Stance</strong>: Counter</p>
+                    <p><strong>Argument</strong>: We should not believe that urbanization causes increases in crime rates and pollution because the person making this claim has no expertise in urban planning or environmental science.</p>
+                    <ul>
+                      <li><strong style="color:#C35817;">Ad Hominem</strong></li>
+                    </ul>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- EXAMPLES END -->
+  </div>
+  <!-- ACCORDION END -->
+
+  <!-- MTURK INPUT START -->
+  <div class="col-12 mt-3 mb-1 border-top">
+
+      <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
+          <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+          <input type='hidden' name='ee' id='ee'/>
+
+          <!-- QUESTION MACRO START -->
+          
+          <div id="question-1" class="question">
+              <div class="question-header question-choice-container pl-5 mb-2 pt-2 pb-2 border-bottom">
+                <p>Recall that: </p>
+                <p> You must select one of 3 choices. Either select <strong><em>Agree</em></strong> if you think the argument matches the predicted fallacy type. Otherwise you must select <strong><em>Disagree</em></strong>if you disagree with the prediction and <strong><em>Unsure</em></strong> if you have doubts with regards to the prediction.</p>
+                
+                  <div class="row"> </div>
+                    <p><strong>Topic</strong>: ${topic}</p>
+                    <p><strong>Stance</strong>: ${stance}</p>
+                    <p><strong>Argument</strong>: ${argument}</p>
+                    <p><strong>Predicted Fallacy Type</strong>: ${fallacy_type}</p>
+
+                    <p>Definition of ${fallacy_type}: <span id="fallacyDefinition">${fallacy_type}</span></p>
+
+                 
+
+                
+          <script>
+            // Function to display the fallacy definition based on the fallacy_type variable
+            function displayFallacyDefinition(fallacy_type) {
+                var fallacyDefinition = document.getElementById('fallacyDefinition');
+        
+                console.log(fallacy_type);
+                switch (fallacy_type) {
+                    case 'Faulty Generalization':
+                        fallacyDefinition.textContent = "An informal fallacy wherein a conclusion is drawn about all or many instances of a phenomenon on the basis of one or a few instances. Example: Annie must like Starbucks because all white girls like Starbucks.";
+                        break;
+                    case 'False Causality':
+                        fallacyDefinition.textContent = "A statement that jumps to a conclusion implying a causal relationship without supporting evidence. Example: Every time I go to sleep the sun goes down. Therefore, my sleeping causes the sun to set.";
+                        break;
+                    case 'Ad Hominem':
+                        fallacyDefinition.textContent = "A fallacy that involves a personal attack on the arguer rather than the argument. Example: We cannot listen to John’s opinion on global warming because he is a tree hugger.";
+                        break;
+                    case 'Circular Reasoning':
+                        fallacyDefinition.textContent = "When the end of an argument comes back to the beginning without having proven itself. Example: God exists because the Bible says so. The Bible is a reliable source because it is the word of God.";
+                        break;
+                    case 'Fallacy of Relevance':
+                        fallacyDefinition.textContent = "An argument that may be persuasive, but is logically irrelevant to the issue at hand. Example: You're complaining because you have to walk to school? I used to have to give my parents my entire paycheck.";
+                        break;
+                    case 'Ad Populum':
+                        fallacyDefinition.textContent = "A fallacious argument which is based on affirming that something is real or better because the majority thinks so. Example: Most people think the world is flat, therefore it is flat.";
+                        break;
+                    case 'Fallacy of Logic':
+                        fallacyDefinition.textContent = "An error in the logical structure of an argument. Example: Sandra is an angel from heaven. She gave me a free lunch today.";
+                        break;
+                    case 'Appeal to Emotion':
+                        fallacyDefinition.textContent = "An argument that relies on the manipulation of emotions, rather than valid logic, to persuade. Example: It is an outrage that the school wants to remove the vending machines. This is taking our freedom away!";
+                        break;
+                    case 'False Dilemma':
+                        fallacyDefinition.textContent = "Presenting only two options or sides when there are many options or sides. Example: To get better schools, we have to raise taxes. If we don't, we can't have better schools.";
+                        break;
+                    case 'Equivocation':
+                        fallacyDefinition.textContent = "When a key term or phrase in an argument is used in an ambiguous way. Example: Of course I can read Spanish! Look, I just finished this book by Jorge Luis Borges!";
+                        break;
+                    case 'Fallacy of Extension':
+                        fallacyDefinition.textContent = "Attacking an exaggerated or caricatured version of your opponent’s position. Example: Mayor Blake wants to create more bicycle lanes in Lowell. Why is he forcing us to give up our cars and bike everywhere?";
+                        break;
+                    case 'Fallacy of Credibility':
+                        fallacyDefinition.textContent = "Attempts to disprove an argument by attacking the character of the speaker. Example: My minister says the Covid vaccine will cause genetic mutations. He has a college degree, so he must be right.";
+                        break;
+                    case 'Intentional Fallacy':
+                        fallacyDefinition.textContent = "Some intentional (sometimes subconscious) action/choice to incorrectly support an argument. Example: We haven’t found the ruins of Troy, so the city of Troy didn’t really exist.";
+                        break;
+                    default:
+                        fallacyDefinition.textContent = "No definition available for the selected fallacy type.";
+                }
+                displayFallacyDefinition(fallacy_type);
+            }
+        
+
+            // Call this function and pass in the fallacy_type variable
+        </script>
+        
+
+
+          <!-- GOAL CAT END -->
+
+          <!-- OPTIONAL FEEDBACK --> 
+          <div class="row mt-5">
+              <div class="col-8 offset-2 col-lg-6 offset-lg-3">
+                  <p>(Optional) Please let us know if anything was unclear, if you experienced any issues, or if you have any other fedback for us.</p>
+                  <textarea id="feedback" name="feedback" rows=3></textarea>
+              </div>
+          </div>
+
+          <!-- SUBMIT BUTTON --> 
+          <div class="row mt-5">
+              <div class="col-2 offset-5">
+                  <input id="submitButton" onclick="getnext()" type="submit" value="Submit">
+              </div>
+          </div>
+
+      </form>
+      <script language='Javascript'>turkSetAssignmentID();</script>
+  </div>
+  <!-- MTURK INPUT END -->
+
+</div>
+<!-- HIT END -->
+
+<!-- BOOSTRAP JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- HITPUB JS -->
+<script id="hitpub_js">
+// TimeMe.js
+(function () { var e, t; e = this, t = function () { var r = { startStopTimes: {}, idleTimeoutMs: 3e4, currentIdleTimeMs: 0, checkStateRateMs: 250, active: !1, idle: !1, currentPageName: "default-page-name", timeElapsedCallbacks: [], userLeftCallbacks: [], userReturnCallbacks: [], trackTimeOnElement: function (e) { var t = document.getElementById(e); t && (t.addEventListener("mouseover", function () { r.startTimer(e) }), t.addEventListener("mousemove", function () { r.startTimer(e) }), t.addEventListener("mouseleave", function () { r.stopTimer(e) }), t.addEventListener("keypress", function () { r.startTimer(e) }), t.addEventListener("focus", function () { r.startTimer(e) })) }, getTimeOnElementInSeconds: function (e) { var t = r.getTimeOnPageInSeconds(e); return t || 0 }, startTimer: function (e, t) { if (e || (e = r.currentPageName), void 0 === r.startStopTimes[e]) r.startStopTimes[e] = []; else { var n = r.startStopTimes[e], i = n[n.length - 1]; if (void 0 !== i && void 0 === i.stopTime) return } r.startStopTimes[e].push({ startTime: t || new Date, stopTime: void 0 }), r.active = !0, r.idle = !1 }, stopAllTimers: function () { for (var e = Object.keys(r.startStopTimes), t = 0; t < e.length; t++)r.stopTimer(e[t]) }, stopTimer: function (e, t) { e || (e = r.currentPageName); var n = r.startStopTimes[e]; void 0 !== n && 0 !== n.length && (void 0 === n[n.length - 1].stopTime && (n[n.length - 1].stopTime = t || new Date), r.active = !1) }, getTimeOnCurrentPageInSeconds: function () { return r.getTimeOnPageInSeconds(r.currentPageName) }, getTimeOnPageInSeconds: function (e) { var t = r.getTimeOnPageInMilliseconds(e); return void 0 === t ? void 0 : t / 1e3 }, getTimeOnCurrentPageInMilliseconds: function () { return r.getTimeOnPageInMilliseconds(r.currentPageName) }, getTimeOnPageInMilliseconds: function (e) { var t = r.startStopTimes[e]; if (void 0 !== t) { for (var n = 0, i = 0; i < t.length; i++) { var s = t[i].startTime, o = t[i].stopTime; void 0 === o && (o = new Date), n += o - s } return Number(n) } }, getTimeOnAllPagesInSeconds: function () { for (var e = [], t = Object.keys(r.startStopTimes), n = 0; n < t.length; n++) { var i = t[n], s = r.getTimeOnPageInSeconds(i); e.push({ pageName: i, timeOnPage: s }) } return e }, setIdleDurationInSeconds: function (e) { var t = parseFloat(e); if (!1 !== isNaN(t)) throw { name: "InvalidDurationException", message: "An invalid duration time (" + e + ") was provided." }; return r.idleTimeoutMs = 1e3 * e, this }, setCurrentPageName: function (e) { return r.currentPageName = e, this }, resetRecordedPageTime: function (e) { delete r.startStopTimes[e] }, resetAllRecordedPageTimes: function () { for (var e = Object.keys(r.startStopTimes), t = 0; t < e.length; t++)r.resetRecordedPageTime(e[t]) }, resetIdleCountdown: function () { r.idle && r.triggerUserHasReturned(), r.idle = !1, r.currentIdleTimeMs = 0 }, callWhenUserLeaves: function (e, t) { this.userLeftCallbacks.push({ callback: e, numberOfTimesToInvoke: t }) }, callWhenUserReturns: function (e, t) { this.userReturnCallbacks.push({ callback: e, numberOfTimesToInvoke: t }) }, triggerUserHasReturned: function () { if (!r.active) for (var e = 0; e < this.userReturnCallbacks.length; e++) { var t = this.userReturnCallbacks[e], n = t.numberOfTimesToInvoke; (isNaN(n) || void 0 === n || 0 < n) && (t.numberOfTimesToInvoke -= 1, t.callback()) } r.startTimer() }, triggerUserHasLeftPage: function () { if (r.active) for (var e = 0; e < this.userLeftCallbacks.length; e++) { var t = this.userLeftCallbacks[e], n = t.numberOfTimesToInvoke; (isNaN(n) || void 0 === n || 0 < n) && (t.numberOfTimesToInvoke -= 1, t.callback()) } r.stopAllTimers() }, callAfterTimeElapsedInSeconds: function (e, t) { r.timeElapsedCallbacks.push({ timeInSeconds: e, callback: t, pending: !0 }) }, checkState: function () { for (var e = 0; e < r.timeElapsedCallbacks.length; e++)r.timeElapsedCallbacks[e].pending && r.getTimeOnCurrentPageInSeconds() > r.timeElapsedCallbacks[e].timeInSeconds && (r.timeElapsedCallbacks[e].callback(), r.timeElapsedCallbacks[e].pending = !1); !1 === r.idle && r.currentIdleTimeMs > r.idleTimeoutMs ? (r.idle = !0, r.triggerUserHasLeftPage()) : r.currentIdleTimeMs += r.checkStateRateMs }, visibilityChangeEventName: void 0, hiddenPropName: void 0, listenForVisibilityEvents: function () { void 0 !== document.hidden ? (r.hiddenPropName = "hidden", r.visibilityChangeEventName = "visibilitychange") : void 0 !== document.mozHidden ? (r.hiddenPropName = "mozHidden", r.visibilityChangeEventName = "mozvisibilitychange") : void 0 !== document.msHidden ? (r.hiddenPropName = "msHidden", r.visibilityChangeEventName = "msvisibilitychange") : void 0 !== document.webkitHidden && (r.hiddenPropName = "webkitHidden", r.visibilityChangeEventName = "webkitvisibilitychange"), document.addEventListener(r.visibilityChangeEventName, function () { document[r.hiddenPropName] ? r.triggerUserHasLeftPage() : r.triggerUserHasReturned() }, !1), window.addEventListener("blur", function () { r.triggerUserHasLeftPage() }), window.addEventListener("focus", function () { r.triggerUserHasReturned() }), document.addEventListener("mousemove", function () { r.resetIdleCountdown() }), document.addEventListener("keyup", function () { r.resetIdleCountdown() }), document.addEventListener("touchstart", function () { r.resetIdleCountdown() }), window.addEventListener("scroll", function () { r.resetIdleCountdown() }), setInterval(function () { r.checkState() }, r.checkStateRateMs) }, websocket: void 0, websocketHost: void 0, setUpWebsocket: function (e) { if (window.WebSocket && e) { var t = e.websocketHost; try { r.websocket = new WebSocket(t), window.onbeforeunload = function () { r.sendCurrentTime(e.appId) }, r.websocket.onopen = function () { r.sendInitWsRequest(e.appId) }, r.websocket.onerror = function (e) { console && console.log("Error occurred in websocket connection: " + e) }, r.websocket.onmessage = function (e) { console && console.log(e.data) } } catch (e) { console && console.error("Failed to connect to websocket host.  Error:" + e) } } return this }, websocketSend: function (e) { r.websocket.send(JSON.stringify(e)) }, sendCurrentTime: function (e) { var t = { type: "INSERT_TIME", appId: e, timeOnPageMs: r.getTimeOnCurrentPageInMilliseconds(), pageName: r.currentPageName }; r.websocketSend(t) }, sendInitWsRequest: function (e) { var t = { type: "INIT", appId: e }; r.websocketSend(t) }, initialize: function (e) { var t = r.idleTimeoutMs || 30, n = r.currentPageName || "default-page-name", i = void 0, s = void 0; e && (t = e.idleTimeoutInSeconds || t, n = e.currentPageName || n, i = e.websocketOptions, s = e.initialStartTime), r.setIdleDurationInSeconds(t).setCurrentPageName(n).setUpWebsocket(i).listenForVisibilityEvents(), r.startTimer(void 0, s) } }; return r }, "undefined" != typeof module && module.exports ? module.exports = t() : "function" == typeof define && define.amd ? define([], function () { return e.TimeMe = t() }) : e.TimeMe = t() }).call(this);
+
+TimeMe.initialize({
+  currentPageName: "task",
+  idleTimeoutInSeconds: 30
+});
+
+$(document).ready(function() {
+  $('#submitButton').click(function () {
+    try {
+      $('input[name=ee]').attr('value', TimeMe.getTimeOnCurrentPageInSeconds());
+    } catch {
+    }
+    return true;
+  });
+});
+</script>
