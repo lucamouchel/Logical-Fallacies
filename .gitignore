@@ -18,8 +18,9 @@ models/
 models_BIS/
 models_rebuttal/
 EVAL/AMT
-src/preference-optimization/
 src/preference-optimization/kto.py
 src/preference-optimization/ppo.py
-src/preference-optimization/sft.py
 src/preference-optimization/dpo.py
+src/preference-optimization/cpo.py
+src/preference-optimization/fipo.py
+src/preference-optimization/sft.py
