@@ -16,3 +16,9 @@ data/LOGIC/
 models/
 models_BIS/
 models_rebuttal/
+EVAL/AMT
+src/preference_optimization/cpo.py
+src/preference_optimization/dpo.py
+src/preference_optimization/kto.py
+src/preference_optimization/ppo.py
+src/preference_optimization/sft.py
