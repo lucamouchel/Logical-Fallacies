@@ -41,15 +41,10 @@ def main():
     for _, entry in tqdm(test_set[:200].iterrows(), total=len(test_set)):
         topic = entry.topic
         stance = 'SUPPORTING' if entry.label == 1 else 'COUNTER'
-        topic = "Space exploration should be considered a waste of resources."
-        stance='COUNTER'
         prompt = f"<s> [INST] ### Prompt:  Generate a {stance} argument for the topic: {topic} [/INST]\n### Argument:"
-        ys = generate(prompt, model, tokenizer, n=3, **GENERATION_KWARGS)
-        print(ys)
-        exit()
+        ys = generate(prompt, model, tokenizer, n=1, **GENERATION_KWARGS)
         ys = list(map(lambda y : y.split('### Argument:')[-1].strip(), ys))
         y = ys[0] 
-        print(y)
         arguments.append(y)
         
     save_to(arguments, name=f'{args.type}_args.json', output_dir=f'results/{args.model_name}/')

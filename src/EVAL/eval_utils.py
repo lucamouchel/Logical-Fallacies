@@ -31,7 +31,7 @@ def evaluate(dataset, type_, model_name):
     f_rates = {}
     data = []
 
-    with open(f'models_rebuttal/results/{model_name}/{type_}_args.json', 'r') as f:
+    with open(f'results/{model_name}/{type_}_args.json', 'r') as f:
         arguments = json.load(f)
 
 
