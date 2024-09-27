@@ -2,8 +2,8 @@ import logging
 import torch
 
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
-from tqdm import tqdm, trange
-
+from tqdm import tqdm
+from sklearn.metrics import accuracy_score, f1_score
 from transformers import (
     AdamW,
     AutoModel,
@@ -11,9 +11,12 @@ from transformers import (
 )
 
 from LoadData import DatasetLoader
-import metrics
 logger = logging.getLogger(__name__)
 
+def compute(predictions, labels):
+    accuracy = accuracy_score(labels, predictions)
+    f1 = f1_score(labels, predictions, average='weighted')
+    return accuracy, f1
 
 class Classifier:
     def __init__(self,
@@ -175,7 +178,7 @@ class Classifier:
                                                 per_gpu_eval_batch_size=per_gpu_train_batch_size,
                                                 model=model,
                                             )
-                        accuracy, f1 = metrics.compute(predictions=preds, labels=val_labels)
+                        accuracy, f1 = compute(predictions=preds, labels=val_labels)
 
                         if accuracy > best_acc or f1 > best_f1:
                             model_to_save = (
@@ -231,18 +234,13 @@ class Classifier:
                                         )                   
                 else:
                     outs = model(input_ids=batch[0].to(self.device),
-                                attention_mask=batch[1].to(self.device),
-                                )
-                    
+                                attention_mask=batch[1].to(self.device))
                 logits = outs.logits.to(self.device) 
-                
-                   
                 probs = torch.softmax(logits, dim=1)    
                 zero = 0
                 ones=0
                 for proba in probs:
                     argmax = torch.argmax(proba).cpu().detach().numpy()
-
                     if argmax == 0:
                         zero += 1
                     elif argmax == 1:
@@ -250,6 +248,6 @@ class Classifier:
                     preds.append(torch.argmax(proba).cpu().detach().numpy())
 
         if labels is not None:
-            accuracy, f1 = metrics.compute(predictions=preds, labels=labels)
+            accuracy, f1 = compute(predictions=preds, labels=labels)
             print(f"accuracy: {accuracy}, f1: {f1}")
         return preds
