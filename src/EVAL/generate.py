@@ -12,7 +12,7 @@ import warnings
 import torch
 warnings.filterwarnings("ignore")
 
-GENERATION_KWARGS = {'max_new_tokens': 50, 'no_repeat_ngram_size': 2, 'do_sample': True, 'top_p': 0.75, 'top_k':15}
+GENERATION_KWARGS = {'max_new_tokens': 50, 'no_repeat_ngram_size': 2, 'do_sample': True, 'top_p': 0.75, 'top_k':10}
 
 def main():
     parser = argparse.ArgumentParser()
