@@ -1,6 +1,6 @@
 torch
 tqdm
-transformers
+transformers==4.42.3
 datasets
 wandb
 pandas
