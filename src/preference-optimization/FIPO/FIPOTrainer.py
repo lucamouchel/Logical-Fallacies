@@ -9,10 +9,10 @@ from  transformers.utils import is_sagemaker_mp_enabled
 if is_sagemaker_mp_enabled():
     from transformers.trainer_pt_utils import smp_forward_backward
 
-parent_class = CPOTrainer
 
-class FIPOTrainer(parent_class):
+class FIPOTrainer(CPOTrainer):
     def __init__(self, lambda_: float, custom_eval_steps: int, clf_loss_class_weights: torch.tensor, *args, **kwargs):
+        if 'ref_model' in kwargs.keys(): kwargs.pop('ref_model')
         super(FIPOTrainer, self).__init__(*args, **kwargs)
         self.optimizer2 = optim.Adam(self.model.classification_head.parameters(), lr=5e-4)
         self.custom_eval_steps = custom_eval_steps

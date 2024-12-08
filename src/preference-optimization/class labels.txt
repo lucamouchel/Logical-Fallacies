@@ -1,0 +1,14 @@
+'Not a Fallacy': 0
+'faulty generalization': 1
+'false causality': 2
+'fallacy of relevance': 3
+'fallacy of extension': 4
+'equivocation': 5
+'ad populum': 6
+'appeal to emotion': 7
+'ad hominem': 8
+'circular reasoning': 9
+'fallacy of credibility': 10
+'fallacy of logic': 11
+'false dilemma': 12
+'intentional': 13
