@@ -1,0 +1,502 @@
+[
+    {
+        "topic":"Cannabis should be legal.",
+        "argument":"It's not a bad thing to make marijuana more available.",
+        "label":1
+    },
+    {
+        "topic":"women should be allowed in combat.",
+        "argument":"Many women are in combat.",
+        "label":1
+    },
+    {
+        "topic":"Algorithmic trading should not be banned.",
+        "argument":"Many people trade via algorithmic trading.",
+        "label":1
+    },
+    {
+        "topic":"algorithmic trading minimize rash, emotional decisions by investors",
+        "argument":"risky investing will be harder under an algorithm",
+        "label":1
+    },
+    {
+        "topic":"Marijuana should be legally permissible, as it is proven to have medical benefits and can give relief against pain.",
+        "argument":"While there are some benefits, allowing smoke into your lungs is dangerous and there are other ways to alleviate pain.",
+        "label":-1
+    },
+    {
+        "topic":"Algorithmic trading is helpful in cost reduction.",
+        "argument":"Algorithmic trading is practical because it reduces cost.",
+        "label":1
+    },
+    {
+        "topic":"A tool available is algorithmic trading.",
+        "argument":"Computers can make predictions about stocks.",
+        "label":1
+    },
+    {
+        "topic":"The Olympic Games are a waste of resources",
+        "argument":"The Olympics are not a bad way to take political pressures off for a short time.",
+        "label":-1
+    },
+    {
+        "topic":"The olympics are full of corruption.",
+        "argument":"Far too many Olympians have been abusing drugs.",
+        "label":1
+    },
+    {
+        "topic":"the olympic games are not worth it.",
+        "argument":"The olympic games are costly.",
+        "label":1
+    },
+    {
+        "topic":"The Olympic games are too expensive.",
+        "argument":"The Olympic games cost a lot of money.",
+        "label":1
+    },
+    {
+        "topic":"Targeted killings are useful.",
+        "argument":"Targeted killings take out the terrible people.",
+        "label":1
+    },
+    {
+        "topic":"It is not fair to keep women out of the military because they are just as able as men to fight for America.",
+        "argument":"Many females have been shining examples of fine soldiers.",
+        "label":1
+    },
+    {
+        "topic":"Women should be allowed in combat",
+        "argument":"Women are fit for jobs in the military that are free from any kind of combat.",
+        "label":-1
+    },
+    {
+        "topic":"women do not belong in combat.",
+        "argument":"Men and women have equal rights.",
+        "label":-1
+    },
+    {
+        "topic":"Women should be allowed in the military",
+        "argument":"Women have advantages over men in many areas not including physical strength,",
+        "label":1
+    },
+    {
+        "topic":"The three-strike laws don't make sense, because they catch people that should have been punished to the highest degree earlier.",
+        "argument":"People deserve second chances.",
+        "label":-1
+    },
+    {
+        "topic":"factory farming should be banned.",
+        "argument":"Factory farming is great for the food supply.",
+        "label":-1
+    },
+    {
+        "topic":"missionary work should be banned.",
+        "argument":"missionary work helps the poor.",
+        "label":-1
+    },
+    {
+        "topic":"factory farming is useful for society.",
+        "argument":"Factory farming feeds millions for an affordable cost.",
+        "label":1
+    },
+    {
+        "topic":"factory farming should not be allowed.",
+        "argument":"Factory farming is not nice to animals.",
+        "label":1
+    },
+    {
+        "topic":"factory agriculture is efficient.",
+        "argument":"Factory agriculture centers around mass production.",
+        "label":1
+    },
+    {
+        "topic":"Missionary work should not exist.",
+        "argument":"Missionary work turns children against their parents.",
+        "label":1
+    },
+    {
+        "topic":"Children with learning disabilities are often put in special classes that don't challenge them enough and they end up far behind their peer.",
+        "argument":"Special education classes can be challenging to a lot of children but not challenging enough for most.",
+        "label":1
+    },
+    {
+        "topic":"Factory farming is good.",
+        "argument":"It is good for food production to increase.",
+        "label":1
+    },
+    {
+        "topic":"People rely on factory farming for cheap meals.",
+        "argument":"Millions rely on factory farming for cheap meat that is not healthy.",
+        "label":1
+    },
+    {
+        "topic":"Intelligence tests devalue talents that society needs, because they only measure certain types of intelligence.",
+        "argument":"Common sense is different than intelligence.",
+        "label":1
+    },
+    {
+        "topic":"IQ tests are important to differentiate.",
+        "argument":"IQ tests separate based upon ability.",
+        "label":1
+    },
+    {
+        "topic":"Every religion needs to be respected and allowed to be practiced.",
+        "argument":"religion is behind most wars.",
+        "label":-1
+    },
+    {
+        "topic":"Factory farming contributes significantly to the food supply.",
+        "argument":"Factory farming feeds millions.",
+        "label":1
+    },
+    {
+        "topic":"Holocaust denial should be allowed.",
+        "argument":"Holocaust denial is covered under free speech but is highly offensive to those who lived through it.",
+        "label":-1
+    },
+    {
+        "topic":"schools should have a zero tolerance policy.",
+        "argument":"Schools should not be criminalizing students.",
+        "label":-1
+    },
+    {
+        "topic":"Universal public defenders would mean a more equitable justice system.",
+        "argument":"Public defenders ensure that those with limited means are represented.",
+        "label":1
+    },
+    {
+        "topic":"children should not be punished for self defense.",
+        "argument":"Children should be able to protect themselves.",
+        "label":1
+    },
+    {
+        "topic":"The church of scientology causes financial and psychological harm to its members.",
+        "argument":"Scientologists leave the organization",
+        "label":1
+    },
+    {
+        "topic":"It is not right to deny a thing that has proven to be true.",
+        "argument":"The proven fact must be accepted without denial.",
+        "label":1
+    },
+    {
+        "topic":"Public defenders should be a mandatory part of the legal system",
+        "argument":"Public defenders being mandatory would avoid people using their power and privilege to break laws.",
+        "label":1
+    },
+    {
+        "topic":"school prayer should be in schools.",
+        "argument":"School prayer brings people together.",
+        "label":1
+    },
+    {
+        "topic":"the church of scientology is an abusive scam",
+        "argument":"the church of scientology should not be given tax exempt status",
+        "label":1
+    },
+    {
+        "topic":"Prayer should be in school.",
+        "argument":"Kids need structure of school prayer.",
+        "label":1
+    },
+    {
+        "topic":"Payday loans help those people who have bad credit and need money right away.",
+        "argument":"Payday loans support those people who need the money everyday.",
+        "label":1
+    },
+    {
+        "topic":"school prayer should be encouraged.",
+        "argument":"School prayer is necessary in schools.",
+        "label":1
+    },
+    {
+        "topic":"Cities that have three-strike laws have less crime.",
+        "argument":"Criminals are less likely to act criminally if they know they will have a harsher sentence.",
+        "label":1
+    },
+    {
+        "topic":"some families don't have money for school uniforms",
+        "argument":"They divide the students from the others.",
+        "label":1
+    },
+    {
+        "topic":"Payday loans should be banned because they don't hold the standard that institutions for middle class people hold.",
+        "argument":"Some believe that payday loans should be banned and they are correct because these loans don't hold the same standards as the loans middle class people get.",
+        "label":1
+    },
+    {
+        "topic":"Payday loans have high interest rates, and then people can't afford their payments.",
+        "argument":"Payday loans don't come for free.",
+        "label":1
+    },
+    {
+        "topic":"we should not use private military companies",
+        "argument":"the best way to help the troops is partnership with official allies",
+        "label":1
+    },
+    {
+        "topic":"School uniforms are good at making more united communities.",
+        "argument":"School uniforms are bad at highlighting individuals, which creates some sense of equality.",
+        "label":1
+    },
+    {
+        "topic":"A past financial situation leads to sometimes needing help from payday loans.",
+        "argument":"Whether any payday loans are beneficial or not they can get you through til next pay week.",
+        "label":1
+    },
+    {
+        "topic":"As long as it's within reason, students should be able to express themselves without care for what a third party says.",
+        "argument":"different minds have different thoughts.",
+        "label":1
+    },
+    {
+        "topic":"Private military companies care more about money than safety.",
+        "argument":"Private military contracts have inflated.",
+        "label":1
+    },
+    {
+        "topic":"Social media is a faster way of providing information to customers",
+        "argument":"Social media is a source of information to customers that is so reliable and fast",
+        "label":1
+    },
+    {
+        "topic":"Private army firms ought not to be prohibited because they deliver our states with guns.",
+        "argument":"Private companies that distribute arms to our nations really shouldn't be forbidden.",
+        "label":1
+    },
+    {
+        "topic":"foster care kids tend to not be looked after enough.",
+        "argument":"Social services tends to be swamped but do not neglect foster children.",
+        "label":-1
+    },
+    {
+        "topic":"The right to bear arms is incredibly important.",
+        "argument":"Freedom depends on the right to bear arms.",
+        "label":1
+    },
+    {
+        "topic":"Surrogacy ensures that a child is raised by at least one biological parent.",
+        "argument":"Parents would prefer to be biologically related to their child.",
+        "label":1
+    },
+    {
+        "topic":"Telemarketing is capable of being useful.",
+        "argument":"There are many people who would not be exposed to certain products if telemarketing did not exist.",
+        "label":1
+    },
+    {
+        "topic":"Surrogacy is an advantage for people.",
+        "argument":"People who cannot have kids of their own have the opportunity of surrogacy.",
+        "label":1
+    },
+    {
+        "topic":"Subsidizing wikipedia would be a nonsense exercise.",
+        "argument":"Subsidizing Wikipedia would aid people in finding unbiased facts on the internet.",
+        "label":-1
+    },
+    {
+        "topic":"Racial profiling is discriminatory.",
+        "argument":"Racial profiling is a form of discrimination.",
+        "label":1
+    },
+    {
+        "topic":"When journalists get financial support, they feel an obligation to report the truth from reliable sources.",
+        "argument":"If you know you're receiving money, then you feel like you have to earn that money by reporting the truth.",
+        "label":1
+    },
+    {
+        "topic":"everyone should be able to keep and bear arms.",
+        "argument":"The right to keep and bear arms protects others.",
+        "label":1
+    },
+    {
+        "topic":"Surrogacy is immoral as rich people take advantage of poor women.",
+        "argument":"Surrogacy allows people to lend their womb because they are in need of money, which should not be allowed",
+        "label":1
+    },
+    {
+        "topic":"People should not watch television.",
+        "argument":"Too much television is said to be bad for children and leads to learning disabilities.",
+        "label":1
+    },
+    {
+        "topic":"People have the right to bear arm in other to protect themselves from danger",
+        "argument":"Arm bearing should not be abolished because everyone has the right to bear them for protection",
+        "label":1
+    },
+    {
+        "topic":"Suicide is morally wrong ad it is a criminal offense so, it should not be assisted",
+        "argument":"Assisted suicide helps victims get ou of their problem",
+        "label":-1
+    },
+    {
+        "topic":"money is used by everyone",
+        "argument":"Everyone needs money in other to go on with their day today transactions",
+        "label":1
+    },
+    {
+        "topic":"Stay at home dads should be subsidized.",
+        "argument":"Children with a father figure at home perform better in school.",
+        "label":1
+    },
+    {
+        "topic":"Television is fun and part of us already",
+        "argument":"Almost everyone has a television in their house",
+        "label":1
+    },
+    {
+        "topic":"Children in need can be identified by having safe space",
+        "argument":"Safe space enables kids in need of treatment to be identified",
+        "label":1
+    },
+    {
+        "topic":"Wikipedia is a source of Information for everyone",
+        "argument":"Wikipedia gives us information needed",
+        "label":1
+    },
+    {
+        "topic":"safe space enable people to have a place they are accepted",
+        "argument":"everyone can stay in a safe space and will not be criticised nor judged",
+        "label":1
+    },
+    {
+        "topic":"Everyone is welcome in a pride parade.",
+        "argument":"Pride is not just for the LGBT community, and is a positive recognition of diversity.",
+        "label":1
+    },
+    {
+        "topic":"Practicing gender neutral language creates gender equality.",
+        "argument":"Gender inequality is a serious issue in the US, and adopting gender neutral language is a reasonable first step.",
+        "label":1
+    },
+    {
+        "topic":"If it would help their confidence, a minor should be allowed to have cosmetic surgery.",
+        "argument":"Confidence is important for adulthood, and if getting cosmetic surgery as a minor would help that, it's important.",
+        "label":1
+    },
+    {
+        "topic":"Subsidizing student loans is bad.",
+        "argument":"By subsidizing student loans, we take away incentives for students to perform well.",
+        "label":1
+    },
+    {
+        "topic":"Flag burning should be legal.",
+        "argument":"People should be encouraged to express themselves in ways that don't physically hurt others.",
+        "label":1
+    },
+    {
+        "topic":"College students cannot afford college.",
+        "argument":"In the USA higher education is not free.",
+        "label":1
+    },
+    {
+        "topic":"Pride parades are vital for spreading acceptance.",
+        "argument":"Pride parades are vital for visibility, which is vital for spreading acceptance.",
+        "label":1
+    },
+    {
+        "topic":"Economic sanction should be in place because of some stubborn countries",
+        "argument":"Sanctioning should be in place because of some conflict demanding countries.",
+        "label":1
+    },
+    {
+        "topic":"Child acting harms children.",
+        "argument":"Many child actors are abused.",
+        "label":1
+    },
+    {
+        "topic":"Foster care harms children.",
+        "argument":"Children who go through foster care are more likely to deal with mental health issues.",
+        "label":1
+    },
+    {
+        "topic":"Mandatory retirement keeps the workforce fresh.",
+        "argument":"Mandatory retirement allows people to know for a certainty when they will have to stop working.",
+        "label":1
+    },
+    {
+        "topic":"Mandatory retirement is out of step with society.",
+        "argument":"An aging workforce prevents opportunities for the young, leaving mandatory retirement as the only solution.",
+        "label":-1
+    },
+    {
+        "topic":"Wikipedia should be subsidized.",
+        "argument":"The massive amount of information made freely available on Wikipedia is an important rationale to not refuse subsidies.",
+        "label":1
+    },
+    {
+        "topic":"If the Marijuana smoke didn't reach the lungs then I should be legal.",
+        "argument":"Smoking Marijuana can't be damaging if the smoke doesn't reach the lungs, and this should change the laws towards it.",
+        "label":1
+    },
+    {
+        "topic":"Cannabis smoking should be legal.",
+        "argument":"Cannabis smoking has risks, but is far better than many other recreational substances.",
+        "label":1
+    },
+    {
+        "topic":"Governments will eventually become too reliant on targeted killing which will lead to the death of innocents.",
+        "argument":"Governments will see targeted killing as an easy solution to complex security issues which need long term solutions.",
+        "label":1
+    },
+    {
+        "topic":"The Olympic games are outdated and uninteresting.",
+        "argument":"The Olympic games are a longstanding tradition",
+        "label":-1
+    },
+    {
+        "topic":"large buildings are built at a great expense but usually are never used.",
+        "argument":"large buildings rejuvenate a city.",
+        "label":-1
+    },
+    {
+        "topic":"Targeting killing make the world less dangerous and should continue.",
+        "argument":"Targeted killings can kill people other than the target.",
+        "label":-1
+    },
+    {
+        "topic":"Blockages make people feel isolated, leading to anger and violence.",
+        "argument":"People understand the need for blockages.",
+        "label":-1
+    },
+    {
+        "topic":"Women should be able to serve in combat.",
+        "argument":"Women and men have differences.",
+        "label":-1
+    },
+    {
+        "topic":"Due to lack of oversight private military companies do harm.",
+        "argument":"The military is open and honest compared a private company due to oversight.",
+        "label":-1
+    },
+    {
+        "topic":"missionary work should no longer exist.",
+        "argument":"Missionary work focuses on the disadvantaged.",
+        "label":-1
+    },
+    {
+        "topic":"factory agriculture plays a key role in mass production of products and bringing a high level of technology.",
+        "argument":"factory agriculture rely too much on machines.",
+        "label":-1
+    },
+    {
+        "topic":"social media is a positive for society.",
+        "argument":"People don't need social media to spend time with others.",
+        "label":-1
+    },
+    {
+        "topic":"Social media creates FOMO culture which is bad.",
+        "argument":"Fear of missing out is a common feeling people experience.",
+        "label":1
+    },
+    {
+        "topic":"IQ tests give a general idea of IQ or a starting point to evaluate someone's IQ.",
+        "argument":"IQ tests are can not be considered accurate because someone can have a skill set that isn't on the test.",
+        "label":-1
+    },
+    {
+        "topic":"Libertarianism would neglect citizens.",
+        "argument":"Libertarianism is not in favor of social programs.",
+        "label":1
+    }
+]
