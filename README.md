@@ -1,6 +1,6 @@
 # A Logical Fallacy-Informed Framework for Argument Generation
 
-This repository is the official implementation of the paper entitled "_A Logical Fallacy-Informed Framework for Argument Generation_", by [...] <!-- Luca Mouchel, Debjit Paul, Shaobo Cui, Robert West, Antoine Bosselut and Boi Faltings. -->
+This repository is the official implementation of the paper entitled "_A Logical Fallacy-Informed Framework for Argument Generation_", by Luca Mouchel, Debjit Paul, Shaobo Cui, Robert West, Antoine Bosselut and Boi Faltings, to be published at __NAACL 2025__.
 
 The pipeline supports any **causal** and **sequence-to-sequence** models from HuggingFace and consists of the following stages: 
 - Data Collection with ChatGPT
@@ -95,4 +95,14 @@ python src/preference-optimization/trainer.py --train-using=SFT --train-data=dat
 2. DPO -
 ```bash
 python src/preference-optimization/trainer.py --train-using=DPO --train-data=data/preference_optimization/train.json --ref-model-path=models/sft_Llama-2-7b-hf
+```
+If you find this code useful or our paper useful to your research, please cite: 
+
+```bib
+@article{mouchel2024logical,
+  title={A logical fallacy-informed framework for argument generation},
+  author={Mouchel, Luca and Paul, Debjit and Cui, Shaobo and West, Robert and Bosselut, Antoine and Faltings, Boi},
+  journal={arXiv preprint arXiv:2408.03618},
+  year={2024}
+}
 ```
